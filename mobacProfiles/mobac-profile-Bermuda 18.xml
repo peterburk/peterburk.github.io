@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Bermuda 18" version="1">
+    <Layer name="Bermuda 18">
+        <PolygonMap name="Bermuda 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>81/103</point>
+                <point>81/103</point>
+                <point>81/103</point>
+                <point>81/103</point>
+                <point>81/103</point>
+                <point>81/103</point>
+                <point>82/103</point>
+                <point>81/103</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>163/207</point>
+                <point>163/207</point>
+                <point>163/207</point>
+                <point>163/207</point>
+                <point>163/207</point>
+                <point>163/207</point>
+                <point>164/207</point>
+                <point>163/207</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>327/414</point>
+                <point>327/414</point>
+                <point>327/414</point>
+                <point>327/414</point>
+                <point>327/414</point>
+                <point>327/414</point>
+                <point>328/414</point>
+                <point>327/414</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="512/768" maxTileCoordinate="767/1023">
+            <polygon>
+                <point>655/829</point>
+                <point>655/829</point>
+                <point>655/829</point>
+                <point>655/829</point>
+                <point>655/829</point>
+                <point>655/829</point>
+                <point>656/829</point>
+                <point>655/829</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1280/1536" maxTileCoordinate="1535/1791">
+            <polygon>
+                <point>1311/1659</point>
+                <point>1310/1659</point>
+                <point>1310/1659</point>
+                <point>1310/1659</point>
+                <point>1311/1659</point>
+                <point>1311/1658</point>
+                <point>1312/1658</point>
+                <point>1311/1659</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="2560/3072" maxTileCoordinate="2815/3327">
+            <polygon>
+                <point>2623/3318</point>
+                <point>2620/3319</point>
+                <point>2620/3319</point>
+                <point>2620/3319</point>
+                <point>2622/3318</point>
+                <point>2623/3316</point>
+                <point>2624/3316</point>
+                <point>2623/3318</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="5120/6400" maxTileCoordinate="5375/6655">
+            <polygon>
+                <point>5246/6637</point>
+                <point>5241/6639</point>
+                <point>5240/6639</point>
+                <point>5240/6638</point>
+                <point>5244/6636</point>
+                <point>5247/6632</point>
+                <point>5248/6632</point>
+                <point>5246/6637</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="10240/13056" maxTileCoordinate="10751/13311">
+            <polygon>
+                <point>10492/13275</point>
+                <point>10483/13278</point>
+                <point>10481/13278</point>
+                <point>10480/13277</point>
+                <point>10488/13273</point>
+                <point>10495/13264</point>
+                <point>10497/13265</point>
+                <point>10492/13275</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="20736/26368" maxTileCoordinate="21247/26623">
+            <polygon>
+                <point>20984/26551</point>
+                <point>20967/26557</point>
+                <point>20962/26557</point>
+                <point>20960/26555</point>
+                <point>20976/26547</point>
+                <point>20991/26529</point>
+                <point>20995/26531</point>
+                <point>20984/26551</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="41728/52992" maxTileCoordinate="42239/53247">
+            <polygon>
+                <point>41968/53102</point>
+                <point>41935/53115</point>
+                <point>41924/53115</point>
+                <point>41921/53111</point>
+                <point>41953/53094</point>
+                <point>41983/53059</point>
+                <point>41990/53063</point>
+                <point>41968/53102</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="83712/105984" maxTileCoordinate="84223/106239">
+            <polygon>
+                <point>83937/106205</point>
+                <point>83871/106231</point>
+                <point>83849/106231</point>
+                <point>83842/106222</point>
+                <point>83907/106188</point>
+                <point>83966/106119</point>
+                <point>83980/106127</point>
+                <point>83937/106205</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="167680/212224" maxTileCoordinate="168191/212479">
+            <polygon>
+                <point>167874/212411</point>
+                <point>167743/212462</point>
+                <point>167699/212462</point>
+                <point>167684/212445</point>
+                <point>167815/212376</point>
+                <point>167932/212238</point>
+                <point>167961/212255</point>
+                <point>167874/212411</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="335360/424448" maxTileCoordinate="336127/424959">
+            <polygon>
+                <point>335748/424822</point>
+                <point>335486/424925</point>
+                <point>335398/424925</point>
+                <point>335369/424891</point>
+                <point>335631/424753</point>
+                <point>335864/424477</point>
+                <point>335922/424511</point>
+                <point>335748/424822</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="670720/848896" maxTileCoordinate="671999/849919">
+            <polygon>
+                <point>671496/849644</point>
+                <point>670972/849850</point>
+                <point>670797/849850</point>
+                <point>670739/849782</point>
+                <point>671263/849506</point>
+                <point>671729/848954</point>
+                <point>671845/849023</point>
+                <point>671496/849644</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1341440/1697792" maxTileCoordinate="1343743/1699839">
+            <polygon>
+                <point>1342992/1699288</point>
+                <point>1341944/1699701</point>
+                <point>1341594/1699701</point>
+                <point>1341478/1699564</point>
+                <point>1342526/1699012</point>
+                <point>1343458/1697909</point>
+                <point>1343691/1698047</point>
+                <point>1342992/1699288</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="2682880/3395584" maxTileCoordinate="2687487/3399423">
+            <polygon>
+                <point>2685985/3398576</point>
+                <point>2683888/3399403</point>
+                <point>2683189/3399403</point>
+                <point>2682956/3399128</point>
+                <point>2685053/3398025</point>
+                <point>2686917/3395819</point>
+                <point>2687383/3396094</point>
+                <point>2685985/3398576</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="5365760/6791424" maxTileCoordinate="5374975/6798847">
+            <polygon>
+                <point>5371971/6797153</point>
+                <point>5367777/6798807</point>
+                <point>5366378/6798807</point>
+                <point>5365912/6798256</point>
+                <point>5370107/6796051</point>
+                <point>5373835/6791638</point>
+                <point>5374767/6792189</point>
+                <point>5371971/6797153</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="10731776/13583104" maxTileCoordinate="10749695/13597695">
+            <polygon>
+                <point>10743942/13594307</point>
+                <point>10735554/13597615</point>
+                <point>10732757/13597615</point>
+                <point>10731825/13596512</point>
+                <point>10740214/13592102</point>
+                <point>10747670/13583276</point>
+                <point>10749535/13584379</point>
+                <point>10743942/13594307</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Bermuda 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="21463552/27166464" maxTileCoordinate="21499135/27195391">
+            <polygon>
+                <point>21487885/27188615</point>
+                <point>21471108/27195230</point>
+                <point>21465515/27195230</point>
+                <point>21463651/27193025</point>
+                <point>21480428/27184204</point>
+                <point>21495341/27166552</point>
+                <point>21499070/27168759</point>
+                <point>21487885/27188615</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

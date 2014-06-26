@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Vatican 18" version="1">
+    <Layer name="Vatican 18">
+        <PolygonMap name="Vatican 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>136/95</point>
+                <point>136/95</point>
+                <point>136/95</point>
+                <point>136/95</point>
+                <point>136/95</point>
+                <point>136/95</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="256/0" maxTileCoordinate="511/255">
+            <polygon>
+                <point>273/190</point>
+                <point>273/190</point>
+                <point>273/190</point>
+                <point>273/190</point>
+                <point>273/190</point>
+                <point>273/190</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="512/256" maxTileCoordinate="767/511">
+            <polygon>
+                <point>547/380</point>
+                <point>547/380</point>
+                <point>547/380</point>
+                <point>547/380</point>
+                <point>547/380</point>
+                <point>547/380</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="1024/512" maxTileCoordinate="1279/767">
+            <polygon>
+                <point>1094/761</point>
+                <point>1094/761</point>
+                <point>1094/761</point>
+                <point>1094/760</point>
+                <point>1094/760</point>
+                <point>1094/761</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="2048/1280" maxTileCoordinate="2303/1535">
+            <polygon>
+                <point>2189/1522</point>
+                <point>2189/1522</point>
+                <point>2189/1522</point>
+                <point>2189/1521</point>
+                <point>2189/1521</point>
+                <point>2189/1522</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="4352/2816" maxTileCoordinate="4607/3071">
+            <polygon>
+                <point>4379/3044</point>
+                <point>4378/3044</point>
+                <point>4378/3044</point>
+                <point>4378/3043</point>
+                <point>4379/3043</point>
+                <point>4379/3044</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="8704/5888" maxTileCoordinate="8959/6143">
+            <polygon>
+                <point>8758/6088</point>
+                <point>8757/6088</point>
+                <point>8757/6088</point>
+                <point>8757/6087</point>
+                <point>8758/6087</point>
+                <point>8758/6088</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="17408/12032" maxTileCoordinate="17663/12287">
+            <polygon>
+                <point>17516/12176</point>
+                <point>17515/12176</point>
+                <point>17515/12176</point>
+                <point>17515/12175</point>
+                <point>17516/12175</point>
+                <point>17516/12176</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="34816/24320" maxTileCoordinate="35071/24575">
+            <polygon>
+                <point>35032/24352</point>
+                <point>35030/24352</point>
+                <point>35030/24352</point>
+                <point>35030/24350</point>
+                <point>35032/24350</point>
+                <point>35032/24352</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="69888/48640" maxTileCoordinate="70143/48895">
+            <polygon>
+                <point>70065/48705</point>
+                <point>70061/48705</point>
+                <point>70061/48705</point>
+                <point>70061/48700</point>
+                <point>70065/48700</point>
+                <point>70065/48705</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="140032/97280" maxTileCoordinate="140287/97535">
+            <polygon>
+                <point>140130/97410</point>
+                <point>140123/97410</point>
+                <point>140123/97410</point>
+                <point>140123/97400</point>
+                <point>140130/97400</point>
+                <point>140130/97410</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="280064/194560" maxTileCoordinate="280319/195071">
+            <polygon>
+                <point>280261/194820</point>
+                <point>280246/194820</point>
+                <point>280246/194820</point>
+                <point>280246/194800</point>
+                <point>280261/194800</point>
+                <point>280261/194820</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="560384/389376" maxTileCoordinate="560639/389887">
+            <polygon>
+                <point>560522/389640</point>
+                <point>560492/389640</point>
+                <point>560492/389640</point>
+                <point>560492/389601</point>
+                <point>560522/389601</point>
+                <point>560522/389640</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="1120768/779008" maxTileCoordinate="1121279/779519">
+            <polygon>
+                <point>1121044/779281</point>
+                <point>1120985/779281</point>
+                <point>1120985/779281</point>
+                <point>1120985/779203</point>
+                <point>1121044/779203</point>
+                <point>1121044/779281</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="2241792/1558272" maxTileCoordinate="2242303/1558783">
+            <polygon>
+                <point>2242088/1558563</point>
+                <point>2241971/1558563</point>
+                <point>2241971/1558563</point>
+                <point>2241971/1558407</point>
+                <point>2242088/1558407</point>
+                <point>2242088/1558563</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="4483840/3116800" maxTileCoordinate="4484351/3117311">
+            <polygon>
+                <point>4484177/3117127</point>
+                <point>4483943/3117127</point>
+                <point>4483943/3117127</point>
+                <point>4483943/3116814</point>
+                <point>4484177/3116814</point>
+                <point>4484177/3117127</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="8967680/6233600" maxTileCoordinate="8968447/6234367">
+            <polygon>
+                <point>8968354/6234254</point>
+                <point>8967887/6234254</point>
+                <point>8967887/6234254</point>
+                <point>8967887/6233628</point>
+                <point>8968354/6233628</point>
+                <point>8968354/6234254</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="17935616/12467200" maxTileCoordinate="17936895/12468735">
+            <polygon>
+                <point>17936708/12468509</point>
+                <point>17935775/12468509</point>
+                <point>17935775/12468509</point>
+                <point>17935775/12467256</point>
+                <point>17936708/12467256</point>
+                <point>17936708/12468509</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Vatican 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="35871488/24934400" maxTileCoordinate="35873535/24937215">
+            <polygon>
+                <point>35873416/24937018</point>
+                <point>35871551/24937018</point>
+                <point>35871551/24937018</point>
+                <point>35871551/24934513</point>
+                <point>35873416/24934513</point>
+                <point>35873416/24937018</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

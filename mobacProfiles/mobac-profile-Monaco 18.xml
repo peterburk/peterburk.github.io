@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Monaco 18" version="1">
+    <Layer name="Monaco 18">
+        <PolygonMap name="Monaco 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>133/93</point>
+                <point>133/93</point>
+                <point>133/93</point>
+                <point>133/93</point>
+                <point>133/93</point>
+                <point>133/93</point>
+                <point>133/93</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="256/0" maxTileCoordinate="511/255">
+            <polygon>
+                <point>266/186</point>
+                <point>266/186</point>
+                <point>266/186</point>
+                <point>266/186</point>
+                <point>266/186</point>
+                <point>266/186</point>
+                <point>266/186</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="512/256" maxTileCoordinate="767/511">
+            <polygon>
+                <point>533/373</point>
+                <point>532/373</point>
+                <point>532/373</point>
+                <point>533/373</point>
+                <point>533/373</point>
+                <point>533/373</point>
+                <point>533/373</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="1024/512" maxTileCoordinate="1279/767">
+            <polygon>
+                <point>1066/746</point>
+                <point>1065/746</point>
+                <point>1065/746</point>
+                <point>1066/746</point>
+                <point>1066/746</point>
+                <point>1066/746</point>
+                <point>1066/746</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="2048/1280" maxTileCoordinate="2303/1535">
+            <polygon>
+                <point>2132/1493</point>
+                <point>2131/1493</point>
+                <point>2131/1493</point>
+                <point>2132/1493</point>
+                <point>2132/1493</point>
+                <point>2132/1493</point>
+                <point>2132/1493</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="4096/2816" maxTileCoordinate="4351/3071">
+            <polygon>
+                <point>4265/2986</point>
+                <point>4263/2987</point>
+                <point>4263/2986</point>
+                <point>4264/2986</point>
+                <point>4264/2986</point>
+                <point>4265/2986</point>
+                <point>4265/2986</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="8448/5888" maxTileCoordinate="8703/6143">
+            <polygon>
+                <point>8530/5973</point>
+                <point>8527/5974</point>
+                <point>8527/5973</point>
+                <point>8528/5972</point>
+                <point>8529/5972</point>
+                <point>8530/5972</point>
+                <point>8530/5973</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="16896/11776" maxTileCoordinate="17151/12031">
+            <polygon>
+                <point>17061/11946</point>
+                <point>17055/11949</point>
+                <point>17055/11946</point>
+                <point>17057/11944</point>
+                <point>17058/11944</point>
+                <point>17061/11945</point>
+                <point>17061/11946</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="34048/23808" maxTileCoordinate="34303/24063">
+            <polygon>
+                <point>34122/23893</point>
+                <point>34111/23898</point>
+                <point>34111/23893</point>
+                <point>34115/23888</point>
+                <point>34116/23888</point>
+                <point>34122/23890</point>
+                <point>34122/23893</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="68096/47616" maxTileCoordinate="68351/47871">
+            <polygon>
+                <point>68244/47786</point>
+                <point>68222/47796</point>
+                <point>68222/47786</point>
+                <point>68230/47776</point>
+                <point>68233/47776</point>
+                <point>68244/47781</point>
+                <point>68244/47786</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="136192/95488" maxTileCoordinate="136703/95743">
+            <polygon>
+                <point>136489/95573</point>
+                <point>136445/95593</point>
+                <point>136445/95573</point>
+                <point>136460/95553</point>
+                <point>136467/95553</point>
+                <point>136489/95563</point>
+                <point>136489/95573</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="272640/190976" maxTileCoordinate="273151/191231">
+            <polygon>
+                <point>272979/191146</point>
+                <point>272891/191186</point>
+                <point>272891/191146</point>
+                <point>272921/191106</point>
+                <point>272935/191106</point>
+                <point>272979/191126</point>
+                <point>272979/191146</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="545536/382208" maxTileCoordinate="546047/382463">
+            <polygon>
+                <point>545958/382293</point>
+                <point>545783/382373</point>
+                <point>545783/382293</point>
+                <point>545842/382212</point>
+                <point>545871/382212</point>
+                <point>545958/382252</point>
+                <point>545958/382293</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="1091328/764416" maxTileCoordinate="1092095/764927">
+            <polygon>
+                <point>1091917/764586</point>
+                <point>1091567/764747</point>
+                <point>1091567/764586</point>
+                <point>1091684/764424</point>
+                <point>1091742/764424</point>
+                <point>1091917/764505</point>
+                <point>1091917/764586</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="2182912/1528832" maxTileCoordinate="2183935/1529599">
+            <polygon>
+                <point>2183834/1529172</point>
+                <point>2183135/1529494</point>
+                <point>2183135/1529172</point>
+                <point>2183368/1528849</point>
+                <point>2183484/1528849</point>
+                <point>2183834/1529010</point>
+                <point>2183834/1529172</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="4366080/3057664" maxTileCoordinate="4367871/3059199">
+            <polygon>
+                <point>4367668/3058344</point>
+                <point>4366270/3058989</point>
+                <point>4366270/3058344</point>
+                <point>4366736/3057699</point>
+                <point>4366969/3057699</point>
+                <point>4367668/3058021</point>
+                <point>4367668/3058344</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="8732416/6115328" maxTileCoordinate="8735487/6118143">
+            <polygon>
+                <point>8735337/6116689</point>
+                <point>8732540/6117979</point>
+                <point>8732540/6116689</point>
+                <point>8733472/6115398</point>
+                <point>8733939/6115398</point>
+                <point>8735337/6116043</point>
+                <point>8735337/6116689</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="17464832/12230656" maxTileCoordinate="17470719/12236031">
+            <polygon>
+                <point>17470674/12233378</point>
+                <point>17465081/12235958</point>
+                <point>17465081/12233378</point>
+                <point>17466945/12230797</point>
+                <point>17467878/12230797</point>
+                <point>17470674/12232087</point>
+                <point>17470674/12233378</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Monaco 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="34929920/24461568" maxTileCoordinate="34941439/24472063">
+            <polygon>
+                <point>34941348/24466756</point>
+                <point>34930163/24471916</point>
+                <point>34930163/24466756</point>
+                <point>34933891/24461594</point>
+                <point>34935756/24461594</point>
+                <point>34941348/24464175</point>
+                <point>34941348/24466756</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

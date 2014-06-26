@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="American Samoa 18" version="1">
+    <Layer name="American Samoa 18">
+        <PolygonMap name="American Samoa 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>6/138</point>
+                <point>6/138</point>
+                <point>6/138</point>
+                <point>6/138</point>
+                <point>6/138</point>
+                <point>6/138</point>
+                <point>6/138</point>
+                <point>6/138</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/256" maxTileCoordinate="255/511">
+            <polygon>
+                <point>13/276</point>
+                <point>13/276</point>
+                <point>13/276</point>
+                <point>13/276</point>
+                <point>13/276</point>
+                <point>13/276</point>
+                <point>13/276</point>
+                <point>13/276</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="0/512" maxTileCoordinate="255/767">
+            <polygon>
+                <point>26/553</point>
+                <point>26/553</point>
+                <point>26/553</point>
+                <point>26/553</point>
+                <point>26/552</point>
+                <point>26/553</point>
+                <point>26/553</point>
+                <point>26/553</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="0/1024" maxTileCoordinate="255/1279">
+            <polygon>
+                <point>52/1106</point>
+                <point>52/1106</point>
+                <point>52/1106</point>
+                <point>52/1106</point>
+                <point>52/1105</point>
+                <point>53/1106</point>
+                <point>53/1106</point>
+                <point>52/1106</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="0/2048" maxTileCoordinate="255/2303">
+            <polygon>
+                <point>105/2213</point>
+                <point>105/2213</point>
+                <point>104/2212</point>
+                <point>105/2212</point>
+                <point>105/2211</point>
+                <point>107/2212</point>
+                <point>106/2212</point>
+                <point>105/2213</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="0/4352" maxTileCoordinate="255/4607">
+            <polygon>
+                <point>210/4426</point>
+                <point>210/4426</point>
+                <point>208/4425</point>
+                <point>211/4424</point>
+                <point>211/4423</point>
+                <point>214/4424</point>
+                <point>212/4424</point>
+                <point>210/4426</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="256/8704" maxTileCoordinate="511/8959">
+            <polygon>
+                <point>421/8852</point>
+                <point>420/8852</point>
+                <point>417/8850</point>
+                <point>422/8848</point>
+                <point>423/8847</point>
+                <point>429/8848</point>
+                <point>425/8848</point>
+                <point>421/8852</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="768/17664" maxTileCoordinate="1023/17919">
+            <polygon>
+                <point>843/17704</point>
+                <point>840/17704</point>
+                <point>835/17700</point>
+                <point>844/17697</point>
+                <point>847/17695</point>
+                <point>858/17696</point>
+                <point>851/17697</point>
+                <point>843/17704</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="1536/35328" maxTileCoordinate="1791/35583">
+            <polygon>
+                <point>1687/35408</point>
+                <point>1680/35409</point>
+                <point>1671/35400</point>
+                <point>1689/35394</point>
+                <point>1694/35391</point>
+                <point>1716/35393</point>
+                <point>1703/35394</point>
+                <point>1687/35408</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="3328/70656" maxTileCoordinate="3583/70911">
+            <polygon>
+                <point>3375/70816</point>
+                <point>3360/70819</point>
+                <point>3342/70801</point>
+                <point>3378/70789</point>
+                <point>3389/70782</point>
+                <point>3433/70786</point>
+                <point>3407/70789</point>
+                <point>3375/70816</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="6656/141312" maxTileCoordinate="6911/141823">
+            <polygon>
+                <point>6750/141632</point>
+                <point>6721/141639</point>
+                <point>6684/141602</point>
+                <point>6757/141579</point>
+                <point>6779/141564</point>
+                <point>6866/141572</point>
+                <point>6815/141579</point>
+                <point>6750/141632</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="13312/282880" maxTileCoordinate="13823/283391">
+            <polygon>
+                <point>13500/283264</point>
+                <point>13442/283279</point>
+                <point>13369/283204</point>
+                <point>13514/283159</point>
+                <point>13558/283129</point>
+                <point>13733/283144</point>
+                <point>13631/283159</point>
+                <point>13500/283264</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="26624/566016" maxTileCoordinate="27647/566783">
+            <polygon>
+                <point>27000/566529</point>
+                <point>26884/566559</point>
+                <point>26738/566409</point>
+                <point>27029/566318</point>
+                <point>27117/566258</point>
+                <point>27466/566288</point>
+                <point>27262/566318</point>
+                <point>27000/566529</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="53248/1132288" maxTileCoordinate="55039/1133311">
+            <polygon>
+                <point>54001/1133058</point>
+                <point>53768/1133118</point>
+                <point>53477/1132818</point>
+                <point>54059/1132637</point>
+                <point>54234/1132517</point>
+                <point>54933/1132577</point>
+                <point>54525/1132637</point>
+                <point>54001/1133058</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="106752/2264832" maxTileCoordinate="110079/2266367">
+            <polygon>
+                <point>108003/2266117</point>
+                <point>107537/2266237</point>
+                <point>106954/2265636</point>
+                <point>108119/2265275</point>
+                <point>108469/2265035</point>
+                <point>109867/2265155</point>
+                <point>109051/2265275</point>
+                <point>108003/2266117</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="213760/4529920" maxTileCoordinate="219903/4532479">
+            <polygon>
+                <point>216006/4532234</point>
+                <point>215074/4532475</point>
+                <point>213909/4531272</point>
+                <point>216239/4530551</point>
+                <point>216938/4530070</point>
+                <point>219734/4530311</point>
+                <point>218103/4530551</point>
+                <point>216006/4532234</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="427776/9060096" maxTileCoordinate="439551/9064959">
+            <polygon>
+                <point>432013/9064469</point>
+                <point>430149/9064950</point>
+                <point>427819/9062545</point>
+                <point>432479/9061102</point>
+                <point>433877/9060141</point>
+                <point>439469/9060622</point>
+                <point>436207/9061102</point>
+                <point>432013/9064469</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="855552/18120192" maxTileCoordinate="879103/18129919">
+            <polygon>
+                <point>864026/18128939</point>
+                <point>860298/18129901</point>
+                <point>855638/18125091</point>
+                <point>864958/18122205</point>
+                <point>867754/18120282</point>
+                <point>878939/18121244</point>
+                <point>872415/18122205</point>
+                <point>864026/18128939</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="American Samoa 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="1711104/36240384" maxTileCoordinate="1757951/36259839">
+            <polygon>
+                <point>1728053/36257879</point>
+                <point>1720596/36259803</point>
+                <point>1711276/36250183</point>
+                <point>1729917/36244411</point>
+                <point>1735509/36240564</point>
+                <point>1757879/36242488</point>
+                <point>1744830/36244411</point>
+                <point>1728053/36257879</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

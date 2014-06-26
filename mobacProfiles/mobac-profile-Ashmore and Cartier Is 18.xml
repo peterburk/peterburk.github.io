@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Ashmore and Cartier Is 18" version="1">
+    <Layer name="Ashmore and Cartier Is 18">
+        <PolygonMap name="Ashmore and Cartier Is 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>215/136</point>
+                <point>215/136</point>
+                <point>215/136</point>
+                <point>215/136</point>
+                <point>215/136</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>431/273</point>
+                <point>431/273</point>
+                <point>431/273</point>
+                <point>431/273</point>
+                <point>431/273</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="768/512" maxTileCoordinate="1023/767">
+            <polygon>
+                <point>863/547</point>
+                <point>863/547</point>
+                <point>863/547</point>
+                <point>863/547</point>
+                <point>863/547</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="1536/1024" maxTileCoordinate="1791/1279">
+            <polygon>
+                <point>1727/1095</point>
+                <point>1727/1095</point>
+                <point>1726/1095</point>
+                <point>1726/1095</point>
+                <point>1727/1095</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="3328/2048" maxTileCoordinate="3583/2303">
+            <polygon>
+                <point>3454/2190</point>
+                <point>3454/2190</point>
+                <point>3453/2190</point>
+                <point>3453/2190</point>
+                <point>3454/2190</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="6656/4352" maxTileCoordinate="6911/4607">
+            <polygon>
+                <point>6908/4381</point>
+                <point>6908/4381</point>
+                <point>6907/4381</point>
+                <point>6907/4380</point>
+                <point>6908/4381</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="13568/8704" maxTileCoordinate="13823/8959">
+            <polygon>
+                <point>13816/8762</point>
+                <point>13817/8762</point>
+                <point>13815/8762</point>
+                <point>13815/8761</point>
+                <point>13816/8762</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="27392/17408" maxTileCoordinate="27647/17663">
+            <polygon>
+                <point>27633/17524</point>
+                <point>27634/17525</point>
+                <point>27631/17524</point>
+                <point>27631/17523</point>
+                <point>27633/17524</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="55040/34816" maxTileCoordinate="55295/35071">
+            <polygon>
+                <point>55266/35048</point>
+                <point>55268/35050</point>
+                <point>55263/35048</point>
+                <point>55263/35046</point>
+                <point>55266/35048</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="110336/69888" maxTileCoordinate="110591/70143">
+            <polygon>
+                <point>110533/70097</point>
+                <point>110537/70101</point>
+                <point>110526/70097</point>
+                <point>110526/70093</point>
+                <point>110533/70097</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="220928/140032" maxTileCoordinate="221183/140287">
+            <polygon>
+                <point>221067/140195</point>
+                <point>221074/140202</point>
+                <point>221052/140195</point>
+                <point>221052/140187</point>
+                <point>221067/140195</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="441856/280320" maxTileCoordinate="442367/280575">
+            <polygon>
+                <point>442134/280390</point>
+                <point>442149/280405</point>
+                <point>442105/280390</point>
+                <point>442105/280375</point>
+                <point>442134/280390</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="883968/560640" maxTileCoordinate="884479/560895">
+            <polygon>
+                <point>884269/560780</point>
+                <point>884299/560810</point>
+                <point>884211/560780</point>
+                <point>884211/560750</point>
+                <point>884269/560780</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="1768192/1121280" maxTileCoordinate="1768703/1121791">
+            <polygon>
+                <point>1768539/1121560</point>
+                <point>1768598/1121620</point>
+                <point>1768423/1121560</point>
+                <point>1768423/1121501</point>
+                <point>1768539/1121560</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="3536640/2242816" maxTileCoordinate="3537407/2243327">
+            <polygon>
+                <point>3537079/2243121</point>
+                <point>3537196/2243240</point>
+                <point>3536846/2243121</point>
+                <point>3536846/2243002</point>
+                <point>3537079/2243121</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="7073536/4485888" maxTileCoordinate="7074559/4486655">
+            <polygon>
+                <point>7074159/4486243</point>
+                <point>7074392/4486481</point>
+                <point>7073693/4486243</point>
+                <point>7073693/4486004</point>
+                <point>7074159/4486243</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="14147328/8971776" maxTileCoordinate="14148863/8973055">
+            <polygon>
+                <point>14148319/8972486</point>
+                <point>14148785/8972963</point>
+                <point>14147387/8972486</point>
+                <point>14147387/8972008</point>
+                <point>14148319/8972486</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="28294656/17943808" maxTileCoordinate="28297727/17946111">
+            <polygon>
+                <point>28296638/17944972</point>
+                <point>28297570/17945926</point>
+                <point>28294774/17944972</point>
+                <point>28294774/17944017</point>
+                <point>28296638/17944972</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Ashmore and Cartier Is 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="56589312/35887872" maxTileCoordinate="56595199/35891967">
+            <polygon>
+                <point>56593277/35889944</point>
+                <point>56595141/35891853</point>
+                <point>56589549/35889944</point>
+                <point>56589549/35888035</point>
+                <point>56593277/35889944</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

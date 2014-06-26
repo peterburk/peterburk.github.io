@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="San Marino 18" version="1">
+    <Layer name="San Marino 18">
+        <PolygonMap name="San Marino 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>136/93</point>
+                <point>136/93</point>
+                <point>136/93</point>
+                <point>136/93</point>
+                <point>136/93</point>
+                <point>136/93</point>
+                <point>136/93</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="256/0" maxTileCoordinate="511/255">
+            <polygon>
+                <point>273/186</point>
+                <point>273/186</point>
+                <point>273/186</point>
+                <point>273/186</point>
+                <point>273/186</point>
+                <point>273/186</point>
+                <point>273/186</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="512/256" maxTileCoordinate="767/511">
+            <polygon>
+                <point>547/372</point>
+                <point>547/372</point>
+                <point>547/372</point>
+                <point>547/372</point>
+                <point>547/372</point>
+                <point>547/372</point>
+                <point>547/372</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="1024/512" maxTileCoordinate="1279/767">
+            <polygon>
+                <point>1095/745</point>
+                <point>1094/745</point>
+                <point>1094/745</point>
+                <point>1094/744</point>
+                <point>1095/744</point>
+                <point>1095/745</point>
+                <point>1095/745</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="2048/1280" maxTileCoordinate="2303/1535">
+            <polygon>
+                <point>2190/1490</point>
+                <point>2189/1491</point>
+                <point>2189/1490</point>
+                <point>2189/1489</point>
+                <point>2190/1489</point>
+                <point>2190/1490</point>
+                <point>2190/1490</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="4352/2816" maxTileCoordinate="4607/3071">
+            <polygon>
+                <point>4380/2981</point>
+                <point>4378/2982</point>
+                <point>4378/2980</point>
+                <point>4379/2979</point>
+                <point>4380/2979</point>
+                <point>4380/2980</point>
+                <point>4380/2981</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="8704/5888" maxTileCoordinate="8959/6143">
+            <polygon>
+                <point>8760/5963</point>
+                <point>8757/5964</point>
+                <point>8756/5961</point>
+                <point>8758/5958</point>
+                <point>8760/5958</point>
+                <point>8761/5960</point>
+                <point>8760/5963</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="17408/11776" maxTileCoordinate="17663/12031">
+            <polygon>
+                <point>17520/11927</point>
+                <point>17515/11928</point>
+                <point>17512/11923</point>
+                <point>17516/11917</point>
+                <point>17521/11916</point>
+                <point>17522/11921</point>
+                <point>17520/11927</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="34816/23808" maxTileCoordinate="35071/24063">
+            <polygon>
+                <point>35041/23855</point>
+                <point>35030/23857</point>
+                <point>35025/23847</point>
+                <point>35032/23835</point>
+                <point>35043/23832</point>
+                <point>35045/23842</point>
+                <point>35041/23855</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="69888/47616" maxTileCoordinate="70143/47871">
+            <polygon>
+                <point>70083/47710</point>
+                <point>70061/47715</point>
+                <point>70050/47695</point>
+                <point>70065/47670</point>
+                <point>70087/47665</point>
+                <point>70090/47685</point>
+                <point>70083/47710</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="140032/95232" maxTileCoordinate="140287/95487">
+            <polygon>
+                <point>140166/95421</point>
+                <point>140123/95431</point>
+                <point>140101/95391</point>
+                <point>140130/95340</point>
+                <point>140174/95330</point>
+                <point>140181/95371</point>
+                <point>140166/95421</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="280064/190464" maxTileCoordinate="280575/190975">
+            <polygon>
+                <point>280333/190843</point>
+                <point>280246/190863</point>
+                <point>280202/190783</point>
+                <point>280261/190681</point>
+                <point>280348/190661</point>
+                <point>280363/190742</point>
+                <point>280333/190843</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="560384/381184" maxTileCoordinate="560895/381951">
+            <polygon>
+                <point>560667/381687</point>
+                <point>560492/381727</point>
+                <point>560405/381566</point>
+                <point>560522/381363</point>
+                <point>560696/381323</point>
+                <point>560726/381485</point>
+                <point>560667/381687</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="1120768/762624" maxTileCoordinate="1121535/763647">
+            <polygon>
+                <point>1121335/763374</point>
+                <point>1120985/763455</point>
+                <point>1120811/763132</point>
+                <point>1121044/762727</point>
+                <point>1121393/762646</point>
+                <point>1121452/762970</point>
+                <point>1121335/763374</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="2241536/1525248" maxTileCoordinate="2243071/1527039">
+            <polygon>
+                <point>2242671/1526749</point>
+                <point>2241971/1526911</point>
+                <point>2241622/1526264</point>
+                <point>2242088/1525455</point>
+                <point>2242787/1525293</point>
+                <point>2242904/1525941</point>
+                <point>2242671/1526749</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="4483072/3050496" maxTileCoordinate="4485887/3053823">
+            <polygon>
+                <point>4485342/3053499</point>
+                <point>4483943/3053823</point>
+                <point>4483244/3052529</point>
+                <point>4484177/3050911</point>
+                <point>4485575/3050587</point>
+                <point>4485808/3051882</point>
+                <point>4485342/3053499</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="8966400/6100992" maxTileCoordinate="8971775/6107647">
+            <polygon>
+                <point>8970684/6106999</point>
+                <point>8967887/6107646</point>
+                <point>8966489/6105058</point>
+                <point>8968354/6101822</point>
+                <point>8971150/6101174</point>
+                <point>8971616/6103764</point>
+                <point>8970684/6106999</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="17932800/12202240" maxTileCoordinate="17943295/12215295">
+            <polygon>
+                <point>17941368/12213999</point>
+                <point>17935775/12215292</point>
+                <point>17932979/12210117</point>
+                <point>17936708/12203644</point>
+                <point>17942300/12202348</point>
+                <point>17943232/12207528</point>
+                <point>17941368/12213999</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="San Marino 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="35865856/24404480" maxTileCoordinate="35886591/24430591">
+            <polygon>
+                <point>35882736/24427998</point>
+                <point>35871551/24430585</point>
+                <point>35865959/24420235</point>
+                <point>35873416/24407288</point>
+                <point>35884600/24404697</point>
+                <point>35886465/24415057</point>
+                <point>35882736/24427998</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

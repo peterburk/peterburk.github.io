@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="US Virgin Is 18" version="1">
+    <Layer name="US Virgin Is 18">
+        <PolygonMap name="US Virgin Is 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>81/115</point>
+                <point>82/115</point>
+                <point>82/115</point>
+                <point>81/115</point>
+                <point>81/115</point>
+                <point>81/115</point>
+                <point>81/115</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>163/230</point>
+                <point>164/230</point>
+                <point>164/230</point>
+                <point>163/230</point>
+                <point>163/230</point>
+                <point>163/230</point>
+                <point>163/230</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>327/460</point>
+                <point>328/460</point>
+                <point>328/460</point>
+                <point>327/460</point>
+                <point>327/460</point>
+                <point>327/460</point>
+                <point>327/460</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="512/768" maxTileCoordinate="767/1023">
+            <polygon>
+                <point>655/921</point>
+                <point>656/921</point>
+                <point>656/921</point>
+                <point>655/921</point>
+                <point>654/921</point>
+                <point>654/921</point>
+                <point>655/921</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1280/1792" maxTileCoordinate="1535/2047">
+            <polygon>
+                <point>1311/1842</point>
+                <point>1312/1842</point>
+                <point>1313/1842</point>
+                <point>1311/1843</point>
+                <point>1309/1843</point>
+                <point>1309/1842</point>
+                <point>1311/1842</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="2560/3584" maxTileCoordinate="2815/3839">
+            <polygon>
+                <point>2622/3684</point>
+                <point>2624/3685</point>
+                <point>2626/3685</point>
+                <point>2623/3686</point>
+                <point>2619/3686</point>
+                <point>2619/3684</point>
+                <point>2622/3684</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="5120/7168" maxTileCoordinate="5375/7423">
+            <polygon>
+                <point>5244/7369</point>
+                <point>5248/7370</point>
+                <point>5252/7370</point>
+                <point>5247/7372</point>
+                <point>5238/7373</point>
+                <point>5239/7369</point>
+                <point>5244/7369</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="10240/14592" maxTileCoordinate="10751/14847">
+            <polygon>
+                <point>10488/14738</point>
+                <point>10496/14741</point>
+                <point>10505/14741</point>
+                <point>10495/14745</point>
+                <point>10477/14746</point>
+                <point>10478/14739</point>
+                <point>10488/14738</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="20736/29440" maxTileCoordinate="21247/29695">
+            <polygon>
+                <point>20976/29476</point>
+                <point>20993/29483</point>
+                <point>21011/29483</point>
+                <point>20991/29491</point>
+                <point>20955/29493</point>
+                <point>20956/29479</point>
+                <point>20976/29476</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="41728/58880" maxTileCoordinate="42239/59135">
+            <polygon>
+                <point>41953/58952</point>
+                <point>41986/58967</point>
+                <point>42023/58967</point>
+                <point>41983/58982</point>
+                <point>41910/58986</point>
+                <point>41913/58959</point>
+                <point>41953/58952</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="83712/117760" maxTileCoordinate="84223/118015">
+            <polygon>
+                <point>83907/117904</point>
+                <point>83973/117934</point>
+                <point>84046/117934</point>
+                <point>83966/117965</point>
+                <point>83820/117973</point>
+                <point>83827/117919</point>
+                <point>83907/117904</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="167424/235776" maxTileCoordinate="168191/236031">
+            <polygon>
+                <point>167815/235808</point>
+                <point>167946/235869</point>
+                <point>168092/235869</point>
+                <point>167932/235931</point>
+                <point>167641/235946</point>
+                <point>167655/235839</point>
+                <point>167815/235808</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="335104/471552" maxTileCoordinate="336383/472063">
+            <polygon>
+                <point>335631/471617</point>
+                <point>335893/471739</point>
+                <point>336185/471739</point>
+                <point>335864/471862</point>
+                <point>335282/471892</point>
+                <point>335311/471678</point>
+                <point>335631/471617</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="670464/943104" maxTileCoordinate="672511/943871">
+            <polygon>
+                <point>671263/943235</point>
+                <point>671787/943479</point>
+                <point>672370/943479</point>
+                <point>671729/943724</point>
+                <point>670564/943785</point>
+                <point>670622/943357</point>
+                <point>671263/943235</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1340928/1886464" maxTileCoordinate="1344767/1887743">
+            <polygon>
+                <point>1342526/1886470</point>
+                <point>1343575/1886959</point>
+                <point>1344740/1886959</point>
+                <point>1343458/1887449</point>
+                <point>1341128/1887571</point>
+                <point>1341245/1886715</point>
+                <point>1342526/1886470</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="2682112/3772928" maxTileCoordinate="2689535/3775231">
+            <polygon>
+                <point>2685053/3772941</point>
+                <point>2687150/3773919</point>
+                <point>2689480/3773919</point>
+                <point>2686917/3774898</point>
+                <point>2682257/3775143</point>
+                <point>2682490/3773430</point>
+                <point>2685053/3772941</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="5364480/7545856" maxTileCoordinate="5379071/7550463">
+            <polygon>
+                <point>5370107/7545882</point>
+                <point>5374301/7547839</point>
+                <point>5378961/7547839</point>
+                <point>5373835/7549796</point>
+                <point>5364514/7550286</point>
+                <point>5364980/7546861</point>
+                <point>5370107/7545882</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="10728960/15091712" maxTileCoordinate="10758143/15100671">
+            <polygon>
+                <point>10740214/15091764</point>
+                <point>10748603/15095679</point>
+                <point>10757923/15095679</point>
+                <point>10747670/15099593</point>
+                <point>10729029/15100572</point>
+                <point>10729961/15093722</point>
+                <point>10740214/15091764</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="21457920/30183424" maxTileCoordinate="21516031/30201343">
+            <polygon>
+                <point>21480428/30183528</point>
+                <point>21497206/30191358</point>
+                <point>21515847/30191358</point>
+                <point>21495341/30199187</point>
+                <point>21458059/30201144</point>
+                <point>21459923/30187444</point>
+                <point>21480428/30183528</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+    <Layer name="US Virgin Is 18_1">
+        <PolygonMap name="US Virgin Is 18_1 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>82/114</point>
+                <point>81/114</point>
+                <point>81/114</point>
+                <point>81/114</point>
+                <point>81/114</point>
+                <point>82/114</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>164/229</point>
+                <point>163/229</point>
+                <point>163/229</point>
+                <point>163/229</point>
+                <point>163/229</point>
+                <point>164/229</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>328/458</point>
+                <point>327/458</point>
+                <point>327/458</point>
+                <point>327/458</point>
+                <point>327/458</point>
+                <point>328/458</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 03" zoom="3" mapSource="MapQuest" minTileCoordinate="512/768" maxTileCoordinate="767/1023">
+            <polygon>
+                <point>656/917</point>
+                <point>655/917</point>
+                <point>655/917</point>
+                <point>655/917</point>
+                <point>655/917</point>
+                <point>656/917</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1280/1792" maxTileCoordinate="1535/2047">
+            <polygon>
+                <point>1312/1835</point>
+                <point>1311/1835</point>
+                <point>1311/1835</point>
+                <point>1310/1835</point>
+                <point>1311/1835</point>
+                <point>1312/1835</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 05" zoom="5" mapSource="MapQuest" minTileCoordinate="2560/3584" maxTileCoordinate="2815/3839">
+            <polygon>
+                <point>2624/3671</point>
+                <point>2623/3671</point>
+                <point>2622/3671</point>
+                <point>2621/3671</point>
+                <point>2622/3670</point>
+                <point>2624/3671</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 06" zoom="6" mapSource="MapQuest" minTileCoordinate="5120/7168" maxTileCoordinate="5375/7423">
+            <polygon>
+                <point>5249/7342</point>
+                <point>5246/7343</point>
+                <point>5244/7343</point>
+                <point>5243/7342</point>
+                <point>5245/7341</point>
+                <point>5249/7342</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 07" zoom="7" mapSource="MapQuest" minTileCoordinate="10240/14592" maxTileCoordinate="10751/14847">
+            <polygon>
+                <point>10498/14684</point>
+                <point>10492/14686</point>
+                <point>10488/14686</point>
+                <point>10486/14685</point>
+                <point>10490/14682</point>
+                <point>10498/14684</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 08" zoom="8" mapSource="MapQuest" minTileCoordinate="20736/29184" maxTileCoordinate="21247/29439">
+            <polygon>
+                <point>20997/29368</point>
+                <point>20984/29372</point>
+                <point>20976/29372</point>
+                <point>20973/29370</point>
+                <point>20980/29365</point>
+                <point>20997/29368</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 09" zoom="9" mapSource="MapQuest" minTileCoordinate="41728/58624" maxTileCoordinate="42239/58879">
+            <polygon>
+                <point>41994/58737</point>
+                <point>41968/58745</point>
+                <point>41953/58745</point>
+                <point>41946/58741</point>
+                <point>41961/58730</point>
+                <point>41994/58737</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 10" zoom="10" mapSource="MapQuest" minTileCoordinate="83712/117248" maxTileCoordinate="84223/117503">
+            <polygon>
+                <point>83988/117475</point>
+                <point>83937/117490</point>
+                <point>83907/117490</point>
+                <point>83893/117483</point>
+                <point>83922/117460</point>
+                <point>83988/117475</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 11" zoom="11" mapSource="MapQuest" minTileCoordinate="167680/234752" maxTileCoordinate="168191/235007">
+            <polygon>
+                <point>167976/234950</point>
+                <point>167874/234981</point>
+                <point>167815/234981</point>
+                <point>167786/234966</point>
+                <point>167844/234920</point>
+                <point>167976/234950</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 12" zoom="12" mapSource="MapQuest" minTileCoordinate="335360/469760" maxTileCoordinate="336127/470015">
+            <polygon>
+                <point>335952/469901</point>
+                <point>335748/469963</point>
+                <point>335631/469963</point>
+                <point>335573/469932</point>
+                <point>335689/469840</point>
+                <point>335952/469901</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 13" zoom="13" mapSource="MapQuest" minTileCoordinate="670976/939520" maxTileCoordinate="671999/940031">
+            <polygon>
+                <point>671904/939803</point>
+                <point>671496/939926</point>
+                <point>671263/939926</point>
+                <point>671146/939865</point>
+                <point>671379/939681</point>
+                <point>671904/939803</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1342208/1879296" maxTileCoordinate="1343999/1880063">
+            <polygon>
+                <point>1343808/1879607</point>
+                <point>1342992/1879853</point>
+                <point>1342526/1879853</point>
+                <point>1342293/1879730</point>
+                <point>1342759/1879362</point>
+                <point>1343808/1879607</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 15" zoom="15" mapSource="MapQuest" minTileCoordinate="2684416/3758592" maxTileCoordinate="2687743/3759871">
+            <polygon>
+                <point>2687616/3759215</point>
+                <point>2685985/3759706</point>
+                <point>2685053/3759706</point>
+                <point>2684587/3759460</point>
+                <point>2685519/3758724</point>
+                <point>2687616/3759215</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 16" zoom="16" mapSource="MapQuest" minTileCoordinate="5369088/7517440" maxTileCoordinate="5375487/7519487">
+            <polygon>
+                <point>5375233/7518430</point>
+                <point>5371971/7519412</point>
+                <point>5370107/7519412</point>
+                <point>5369175/7518921</point>
+                <point>5371039/7517448</point>
+                <point>5375233/7518430</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 17" zoom="17" mapSource="MapQuest" minTileCoordinate="10738176/15034880" maxTileCoordinate="10750719/15038975">
+            <polygon>
+                <point>10750467/15036860</point>
+                <point>10743942/15038824</point>
+                <point>10740214/15038824</point>
+                <point>10738350/15037842</point>
+                <point>10742078/15034896</point>
+                <point>10750467/15036860</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_1 18" zoom="18" mapSource="MapQuest" minTileCoordinate="21476608/30069760" maxTileCoordinate="21501183/30077695">
+            <polygon>
+                <point>21500934/30073720</point>
+                <point>21487885/30077648</point>
+                <point>21480428/30077648</point>
+                <point>21476700/30075684</point>
+                <point>21484157/30069792</point>
+                <point>21500934/30073720</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+    <Layer name="US Virgin Is 18_2">
+        <PolygonMap name="US Virgin Is 18_2 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>81/114</point>
+                <point>81/114</point>
+                <point>81/114</point>
+                <point>81/114</point>
+                <point>81/114</point>
+                <point>81/114</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>163/229</point>
+                <point>163/229</point>
+                <point>163/229</point>
+                <point>163/229</point>
+                <point>163/229</point>
+                <point>163/229</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>327/458</point>
+                <point>327/458</point>
+                <point>327/458</point>
+                <point>327/458</point>
+                <point>327/458</point>
+                <point>327/458</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 03" zoom="3" mapSource="MapQuest" minTileCoordinate="512/768" maxTileCoordinate="767/1023">
+            <polygon>
+                <point>655/917</point>
+                <point>654/917</point>
+                <point>654/917</point>
+                <point>654/917</point>
+                <point>654/917</point>
+                <point>655/917</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1280/1792" maxTileCoordinate="1535/2047">
+            <polygon>
+                <point>1310/1835</point>
+                <point>1309/1835</point>
+                <point>1308/1835</point>
+                <point>1309/1835</point>
+                <point>1309/1835</point>
+                <point>1310/1835</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 05" zoom="5" mapSource="MapQuest" minTileCoordinate="2560/3584" maxTileCoordinate="2815/3839">
+            <polygon>
+                <point>2620/3671</point>
+                <point>2618/3671</point>
+                <point>2616/3670</point>
+                <point>2618/3670</point>
+                <point>2619/3670</point>
+                <point>2620/3671</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 06" zoom="6" mapSource="MapQuest" minTileCoordinate="5120/7168" maxTileCoordinate="5375/7423">
+            <polygon>
+                <point>5240/7343</point>
+                <point>5237/7343</point>
+                <point>5232/7341</point>
+                <point>5236/7340</point>
+                <point>5238/7341</point>
+                <point>5240/7343</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 07" zoom="7" mapSource="MapQuest" minTileCoordinate="10240/14592" maxTileCoordinate="10495/14847">
+            <polygon>
+                <point>10481/14686</point>
+                <point>10474/14687</point>
+                <point>10465/14682</point>
+                <point>10473/14680</point>
+                <point>10477/14682</point>
+                <point>10481/14686</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 08" zoom="8" mapSource="MapQuest" minTileCoordinate="20736/29184" maxTileCoordinate="20991/29439">
+            <polygon>
+                <point>20962/29372</point>
+                <point>20949/29374</point>
+                <point>20931/29365</point>
+                <point>20946/29361</point>
+                <point>20955/29365</point>
+                <point>20962/29372</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 09" zoom="9" mapSource="MapQuest" minTileCoordinate="41728/58624" maxTileCoordinate="41983/58879">
+            <polygon>
+                <point>41924/58745</point>
+                <point>41899/58749</point>
+                <point>41862/58730</point>
+                <point>41892/58722</point>
+                <point>41910/58730</point>
+                <point>41924/58745</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 10" zoom="10" mapSource="MapQuest" minTileCoordinate="83712/117248" maxTileCoordinate="83967/117503">
+            <polygon>
+                <point>83849/117490</point>
+                <point>83798/117498</point>
+                <point>83725/117460</point>
+                <point>83784/117444</point>
+                <point>83820/117460</point>
+                <point>83849/117490</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 11" zoom="11" mapSource="MapQuest" minTileCoordinate="167424/234752" maxTileCoordinate="167935/235007">
+            <polygon>
+                <point>167699/234981</point>
+                <point>167597/234996</point>
+                <point>167451/234920</point>
+                <point>167568/234889</point>
+                <point>167641/234920</point>
+                <point>167699/234981</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 12" zoom="12" mapSource="MapQuest" minTileCoordinate="334848/469760" maxTileCoordinate="335615/470015">
+            <polygon>
+                <point>335398/469963</point>
+                <point>335194/469993</point>
+                <point>334903/469840</point>
+                <point>335136/469779</point>
+                <point>335282/469840</point>
+                <point>335398/469963</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 13" zoom="13" mapSource="MapQuest" minTileCoordinate="669696/939520" maxTileCoordinate="670975/940031">
+            <polygon>
+                <point>670797/939926</point>
+                <point>670389/939987</point>
+                <point>669807/939681</point>
+                <point>670273/939558</point>
+                <point>670564/939681</point>
+                <point>670797/939926</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1339392/1879040" maxTileCoordinate="1341695/1880063">
+            <polygon>
+                <point>1341594/1879853</point>
+                <point>1340779/1879975</point>
+                <point>1339614/1879362</point>
+                <point>1340546/1879116</point>
+                <point>1341128/1879362</point>
+                <point>1341594/1879853</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 15" zoom="15" mapSource="MapQuest" minTileCoordinate="2679040/3758080" maxTileCoordinate="2683391/3760127">
+            <polygon>
+                <point>2683189/3759706</point>
+                <point>2681558/3759951</point>
+                <point>2679228/3758724</point>
+                <point>2681092/3758232</point>
+                <point>2682257/3758724</point>
+                <point>2683189/3759706</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 16" zoom="16" mapSource="MapQuest" minTileCoordinate="5358336/7516416" maxTileCoordinate="5366527/7519999">
+            <polygon>
+                <point>5366378/7519412</point>
+                <point>5363116/7519903</point>
+                <point>5358456/7517448</point>
+                <point>5362184/7516465</point>
+                <point>5364514/7517448</point>
+                <point>5366378/7519412</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 17" zoom="17" mapSource="MapQuest" minTileCoordinate="10716672/15032832" maxTileCoordinate="10732799/15039999">
+            <polygon>
+                <point>10732757/15038824</point>
+                <point>10726233/15039806</point>
+                <point>10716912/15034896</point>
+                <point>10724369/15032931</point>
+                <point>10729029/15034896</point>
+                <point>10732757/15038824</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="US Virgin Is 18_2 18" zoom="18" mapSource="MapQuest" minTileCoordinate="21433600/30065664" maxTileCoordinate="21465599/30079743">
+            <polygon>
+                <point>21465515/30077648</point>
+                <point>21452466/30079612</point>
+                <point>21433825/30069792</point>
+                <point>21448738/30065863</point>
+                <point>21458059/30069792</point>
+                <point>21465515/30077648</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

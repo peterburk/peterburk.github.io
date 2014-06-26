@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Angola 18" version="1">
+    <Layer name="Anguilla 18">
+        <PolygonMap name="Anguilla 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="512/768" maxTileCoordinate="767/1023">
+            <polygon>
+                <point>665/918</point>
+                <point>664/918</point>
+                <point>664/918</point>
+                <point>665/918</point>
+                <point>665/918</point>
+                <point>665/918</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1280/1792" maxTileCoordinate="1535/2047">
+            <polygon>
+                <point>1331/1837</point>
+                <point>1329/1837</point>
+                <point>1329/1837</point>
+                <point>1330/1836</point>
+                <point>1331/1836</point>
+                <point>1331/1837</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="2560/3584" maxTileCoordinate="2815/3839">
+            <polygon>
+                <point>2662/3674</point>
+                <point>2658/3675</point>
+                <point>2658/3674</point>
+                <point>2661/3673</point>
+                <point>2662/3673</point>
+                <point>2662/3674</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="5120/7168" maxTileCoordinate="5375/7423">
+            <polygon>
+                <point>5324/7348</point>
+                <point>5317/7350</point>
+                <point>5317/7349</point>
+                <point>5323/7346</point>
+                <point>5325/7346</point>
+                <point>5324/7348</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="10496/14592" maxTileCoordinate="10751/14847">
+            <polygon>
+                <point>10649/14696</point>
+                <point>10635/14701</point>
+                <point>10635/14698</point>
+                <point>10646/14692</point>
+                <point>10651/14693</point>
+                <point>10649/14696</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="21248/29184" maxTileCoordinate="21503/29439">
+            <polygon>
+                <point>21299/29393</point>
+                <point>21270/29403</point>
+                <point>21271/29397</point>
+                <point>21293/29384</point>
+                <point>21302/29386</point>
+                <point>21299/29393</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="42496/58624" maxTileCoordinate="42751/58879">
+            <polygon>
+                <point>42598/58787</point>
+                <point>42540/58806</point>
+                <point>42543/58795</point>
+                <point>42587/58768</point>
+                <point>42605/58772</point>
+                <point>42598/58787</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="84992/117504" maxTileCoordinate="85247/117759">
+            <polygon>
+                <point>85196/117575</point>
+                <point>85080/117613</point>
+                <point>85087/117590</point>
+                <point>85174/117536</point>
+                <point>85211/117544</point>
+                <point>85196/117575</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="169984/235008" maxTileCoordinate="170495/235263">
+            <polygon>
+                <point>170393/235150</point>
+                <point>170160/235226</point>
+                <point>170175/235181</point>
+                <point>170349/235073</point>
+                <point>170422/235089</point>
+                <point>170393/235150</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="340224/470016" maxTileCoordinate="340991/470527">
+            <polygon>
+                <point>340787/470300</point>
+                <point>340321/470453</point>
+                <point>340350/470362</point>
+                <point>340699/470147</point>
+                <point>340845/470178</point>
+                <point>340787/470300</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="680448/940288" maxTileCoordinate="681727/941055">
+            <polygon>
+                <point>681574/940601</point>
+                <point>680642/940907</point>
+                <point>680700/940724</point>
+                <point>681399/940294</point>
+                <point>681690/940356</point>
+                <point>681574/940601</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1361152/1880576" maxTileCoordinate="1363455/1881855">
+            <polygon>
+                <point>1363148/1881202</point>
+                <point>1361284/1881815</point>
+                <point>1361401/1881448</point>
+                <point>1362799/1880589</point>
+                <point>1363381/1880712</point>
+                <point>1363148/1881202</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="2722560/3761152" maxTileCoordinate="2726911/3763711">
+            <polygon>
+                <point>2726297/3762405</point>
+                <point>2722569/3763631</point>
+                <point>2722802/3762896</point>
+                <point>2725598/3761178</point>
+                <point>2726763/3761424</point>
+                <point>2726297/3762405</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="5445120/7522304" maxTileCoordinate="5453567/7527423">
+            <polygon>
+                <point>5452595/7524810</point>
+                <point>5445138/7527263</point>
+                <point>5445604/7525792</point>
+                <point>5451197/7522357</point>
+                <point>5453527/7522848</point>
+                <point>5452595/7524810</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="10890240/15044608" maxTileCoordinate="10907135/15054591">
+            <polygon>
+                <point>10905190/15049621</point>
+                <point>10890277/15054527</point>
+                <point>10891209/15051584</point>
+                <point>10902394/15044714</point>
+                <point>10907054/15045696</point>
+                <point>10905190/15049621</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Anguilla 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="21780480/30089216" maxTileCoordinate="21814271/30109183">
+            <polygon>
+                <point>21810380/30099243</point>
+                <point>21780554/30109054</point>
+                <point>21782418/30103168</point>
+                <point>21804788/30089429</point>
+                <point>21814109/30091392</point>
+                <point>21810380/30099243</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

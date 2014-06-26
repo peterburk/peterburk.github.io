@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Niue 18" version="1">
+    <Layer name="Niue 18">
+        <PolygonMap name="Niue 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>7/141</point>
+                <point>7/141</point>
+                <point>7/141</point>
+                <point>7/141</point>
+                <point>7/141</point>
+                <point>7/141</point>
+                <point>7/141</point>
+                <point>7/141</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/256" maxTileCoordinate="255/511">
+            <polygon>
+                <point>14/283</point>
+                <point>14/283</point>
+                <point>14/283</point>
+                <point>14/283</point>
+                <point>14/283</point>
+                <point>14/283</point>
+                <point>14/283</point>
+                <point>14/283</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="0/512" maxTileCoordinate="255/767">
+            <polygon>
+                <point>29/567</point>
+                <point>28/567</point>
+                <point>28/567</point>
+                <point>28/567</point>
+                <point>28/566</point>
+                <point>28/566</point>
+                <point>29/567</point>
+                <point>29/567</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="0/1024" maxTileCoordinate="255/1279">
+            <polygon>
+                <point>58/1134</point>
+                <point>57/1134</point>
+                <point>57/1134</point>
+                <point>57/1134</point>
+                <point>57/1133</point>
+                <point>57/1133</point>
+                <point>58/1134</point>
+                <point>58/1134</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="0/2048" maxTileCoordinate="255/2303">
+            <polygon>
+                <point>116/2269</point>
+                <point>114/2269</point>
+                <point>114/2269</point>
+                <point>114/2268</point>
+                <point>115/2267</point>
+                <point>115/2267</point>
+                <point>116/2268</point>
+                <point>116/2269</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="0/4352" maxTileCoordinate="255/4607">
+            <polygon>
+                <point>232/4538</point>
+                <point>229/4539</point>
+                <point>228/4538</point>
+                <point>229/4536</point>
+                <point>230/4535</point>
+                <point>231/4535</point>
+                <point>232/4537</point>
+                <point>232/4538</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="256/8960" maxTileCoordinate="511/9215">
+            <polygon>
+                <point>464/9076</point>
+                <point>459/9079</point>
+                <point>457/9076</point>
+                <point>459/9072</point>
+                <point>461/9071</point>
+                <point>462/9071</point>
+                <point>464/9074</point>
+                <point>464/9076</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="768/17920" maxTileCoordinate="1023/18175">
+            <polygon>
+                <point>928/18153</point>
+                <point>919/18159</point>
+                <point>914/18152</point>
+                <point>918/18145</point>
+                <point>922/18143</point>
+                <point>925/18143</point>
+                <point>929/18149</point>
+                <point>928/18153</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="1792/36096" maxTileCoordinate="2047/36351">
+            <polygon>
+                <point>1856/36307</point>
+                <point>1838/36319</point>
+                <point>1829/36305</point>
+                <point>1836/36290</point>
+                <point>1845/36286</point>
+                <point>1851/36286</point>
+                <point>1858/36299</point>
+                <point>1856/36307</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="3584/72448" maxTileCoordinate="3839/72703">
+            <polygon>
+                <point>3713/72614</point>
+                <point>3677/72638</point>
+                <point>3659/72611</point>
+                <point>3673/72580</point>
+                <point>3691/72572</point>
+                <point>3702/72572</point>
+                <point>3717/72599</point>
+                <point>3713/72614</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="7168/144896" maxTileCoordinate="7679/145407">
+            <polygon>
+                <point>7427/145229</point>
+                <point>7354/145276</point>
+                <point>7318/145222</point>
+                <point>7347/145160</point>
+                <point>7383/145145</point>
+                <point>7405/145145</point>
+                <point>7434/145198</point>
+                <point>7427/145229</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="14592/290048" maxTileCoordinate="15103/290559">
+            <polygon>
+                <point>14854/290459</point>
+                <point>14709/290552</point>
+                <point>14636/290444</point>
+                <point>14694/290320</point>
+                <point>14767/290290</point>
+                <point>14811/290290</point>
+                <point>14869/290397</point>
+                <point>14854/290459</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="29184/580352" maxTileCoordinate="29951/581119">
+            <polygon>
+                <point>29709/580919</point>
+                <point>29418/581104</point>
+                <point>29272/580888</point>
+                <point>29389/580641</point>
+                <point>29534/580580</point>
+                <point>29622/580580</point>
+                <point>29738/580795</point>
+                <point>29709/580919</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="58368/1160960" maxTileCoordinate="59647/1162239">
+            <polygon>
+                <point>59419/1161838</point>
+                <point>58836/1162208</point>
+                <point>58545/1161776</point>
+                <point>58778/1161283</point>
+                <point>59069/1161160</point>
+                <point>59244/1161160</point>
+                <point>59477/1161591</point>
+                <point>59419/1161838</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="116992/2322176" maxTileCoordinate="119039/2324479">
+            <polygon>
+                <point>118838/2323676</point>
+                <point>117673/2324416</point>
+                <point>117090/2323553</point>
+                <point>117557/2322567</point>
+                <point>118139/2322320</point>
+                <point>118489/2322320</point>
+                <point>118955/2323183</point>
+                <point>118838/2323676</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="233984/4644608" maxTileCoordinate="238079/4648959">
+            <polygon>
+                <point>237677/4647352</point>
+                <point>235347/4648832</point>
+                <point>234181/4647106</point>
+                <point>235114/4645134</point>
+                <point>236279/4644641</point>
+                <point>236978/4644641</point>
+                <point>237910/4646366</point>
+                <point>237677/4647352</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="468224/9289216" maxTileCoordinate="475903/9297919">
+            <polygon>
+                <point>475354/9294705</point>
+                <point>470694/9297665</point>
+                <point>468363/9294212</point>
+                <point>470228/9290268</point>
+                <point>472558/9289283</point>
+                <point>473956/9289283</point>
+                <point>475820/9292733</point>
+                <point>475354/9294705</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="936704/18578432" maxTileCoordinate="951807/18595583">
+            <polygon>
+                <point>950708/18589411</point>
+                <point>941388/18595330</point>
+                <point>936727/18588425</point>
+                <point>940456/18580537</point>
+                <point>945116/18578566</point>
+                <point>947912/18578566</point>
+                <point>951640/18585467</point>
+                <point>950708/18589411</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Niue 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="1873408/37157120" maxTileCoordinate="1903359/37190911">
+            <polygon>
+                <point>1901417/37178823</point>
+                <point>1882776/37190660</point>
+                <point>1873455/37176850</point>
+                <point>1880912/37161075</point>
+                <point>1890233/37157132</point>
+                <point>1895825/37157132</point>
+                <point>1903281/37170934</point>
+                <point>1901417/37178823</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

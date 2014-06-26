@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Seychelles 18" version="1">
+    <Layer name="Seychelles 18">
+        <PolygonMap name="Seychelles 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>167/131</point>
+                <point>167/131</point>
+                <point>167/131</point>
+                <point>167/131</point>
+                <point>167/131</point>
+                <point>167/131</point>
+                <point>167/131</point>
+                <point>167/131</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>334/262</point>
+                <point>334/262</point>
+                <point>334/262</point>
+                <point>334/262</point>
+                <point>334/262</point>
+                <point>334/262</point>
+                <point>334/262</point>
+                <point>334/262</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="512/512" maxTileCoordinate="767/767">
+            <polygon>
+                <point>669/525</point>
+                <point>669/525</point>
+                <point>669/525</point>
+                <point>669/525</point>
+                <point>669/525</point>
+                <point>669/525</point>
+                <point>669/524</point>
+                <point>669/525</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="1280/1024" maxTileCoordinate="1535/1279">
+            <polygon>
+                <point>1339/1050</point>
+                <point>1339/1051</point>
+                <point>1339/1051</point>
+                <point>1339/1050</point>
+                <point>1339/1050</point>
+                <point>1339/1050</point>
+                <point>1339/1049</point>
+                <point>1339/1050</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="2560/2048" maxTileCoordinate="2815/2303">
+            <polygon>
+                <point>2679/2101</point>
+                <point>2679/2102</point>
+                <point>2679/2102</point>
+                <point>2679/2101</point>
+                <point>2678/2100</point>
+                <point>2678/2100</point>
+                <point>2679/2099</point>
+                <point>2679/2101</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="5120/4096" maxTileCoordinate="5375/4351">
+            <polygon>
+                <point>5359/4202</point>
+                <point>5359/4205</point>
+                <point>5358/4204</point>
+                <point>5358/4202</point>
+                <point>5357/4201</point>
+                <point>5356/4201</point>
+                <point>5358/4199</point>
+                <point>5359/4202</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="10496/8192" maxTileCoordinate="10751/8447">
+            <polygon>
+                <point>10719/8405</point>
+                <point>10719/8410</point>
+                <point>10717/8408</point>
+                <point>10716/8405</point>
+                <point>10714/8403</point>
+                <point>10712/8402</point>
+                <point>10716/8399</point>
+                <point>10719/8405</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="21248/16640" maxTileCoordinate="21503/16895">
+            <polygon>
+                <point>21439/16811</point>
+                <point>21439/16820</point>
+                <point>21434/16816</point>
+                <point>21433/16811</point>
+                <point>21428/16807</point>
+                <point>21424/16804</point>
+                <point>21432/16799</point>
+                <point>21439/16811</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="42752/33536" maxTileCoordinate="43007/33791">
+            <polygon>
+                <point>42878/33622</point>
+                <point>42878/33641</point>
+                <point>42869/33633</point>
+                <point>42867/33622</point>
+                <point>42856/33615</point>
+                <point>42849/33608</point>
+                <point>42864/33599</point>
+                <point>42878/33622</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="85504/67072" maxTileCoordinate="85759/67327">
+            <polygon>
+                <point>85757/67245</point>
+                <point>85757/67282</point>
+                <point>85739/67267</point>
+                <point>85735/67245</point>
+                <point>85713/67230</point>
+                <point>85699/67216</point>
+                <point>85728/67198</point>
+                <point>85757/67245</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="171264/134144" maxTileCoordinate="171519/134655">
+            <polygon>
+                <point>171514/134490</point>
+                <point>171514/134564</point>
+                <point>171478/134534</point>
+                <point>171471/134490</point>
+                <point>171427/134461</point>
+                <point>171398/134432</point>
+                <point>171456/134396</point>
+                <point>171514/134490</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="342784/268544" maxTileCoordinate="343039/269311">
+            <polygon>
+                <point>343029/268981</point>
+                <point>343029/269128</point>
+                <point>342957/269069</point>
+                <point>342942/268981</point>
+                <point>342855/268923</point>
+                <point>342796/268865</point>
+                <point>342913/268792</point>
+                <point>343029/268981</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="685568/537344" maxTileCoordinate="686079/538367">
+            <polygon>
+                <point>686059/537963</point>
+                <point>686059/538256</point>
+                <point>685914/538139</point>
+                <point>685885/537963</point>
+                <point>685710/537846</point>
+                <point>685593/537730</point>
+                <point>685826/537584</point>
+                <point>686059/537963</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="1371136/1074944" maxTileCoordinate="1372159/1076735">
+            <polygon>
+                <point>1372119/1075927</point>
+                <point>1372119/1076512</point>
+                <point>1371828/1076278</point>
+                <point>1371770/1075927</point>
+                <point>1371420/1075693</point>
+                <point>1371187/1075460</point>
+                <point>1371653/1075168</point>
+                <point>1372119/1075927</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="2742272/2150144" maxTileCoordinate="2744319/2153215">
+            <polygon>
+                <point>2744239/2151855</point>
+                <point>2744239/2153024</point>
+                <point>2743657/2152557</point>
+                <point>2743540/2151855</point>
+                <point>2742841/2151387</point>
+                <point>2742375/2150920</point>
+                <point>2743307/2150336</point>
+                <point>2744239/2151855</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="5484544/4300544" maxTileCoordinate="5488639/4306175">
+            <polygon>
+                <point>5488479/4303711</point>
+                <point>5488479/4306049</point>
+                <point>5487314/4305114</point>
+                <point>5487081/4303711</point>
+                <point>5485683/4302775</point>
+                <point>5484751/4301840</point>
+                <point>5486615/4300672</point>
+                <point>5488479/4303711</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="10969344/8601344" maxTileCoordinate="10977023/8612351">
+            <polygon>
+                <point>10976959/8607422</point>
+                <point>10976959/8612098</point>
+                <point>10974629/8610228</point>
+                <point>10974163/8607422</point>
+                <point>10971367/8605551</point>
+                <point>10969503/8603681</point>
+                <point>10973231/8601344</point>
+                <point>10976959/8607422</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="21938944/17202688" maxTileCoordinate="21954047/17224447">
+            <polygon>
+                <point>21953919/17214844</point>
+                <point>21953919/17224197</point>
+                <point>21949258/17220456</point>
+                <point>21948326/17214844</point>
+                <point>21942734/17211103</point>
+                <point>21939006/17207363</point>
+                <point>21946462/17202688</point>
+                <point>21953919/17214844</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Seychelles 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="43877888/34405376" maxTileCoordinate="43907839/34448639">
+            <polygon>
+                <point>43907838/34429689</point>
+                <point>43907838/34448394</point>
+                <point>43898517/34440912</point>
+                <point>43896653/34429689</point>
+                <point>43885468/34422207</point>
+                <point>43878012/34414727</point>
+                <point>43892925/34405376</point>
+                <point>43907838/34429689</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

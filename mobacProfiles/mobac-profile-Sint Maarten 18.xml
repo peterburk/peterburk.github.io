@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Sint Maarten 18" version="1">
+    <Layer name="Sint Maarten 18">
+        <PolygonMap name="Sint Maarten 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+                <point>83/114</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+                <point>166/229</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+                <point>332/459</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="512/768" maxTileCoordinate="767/1023">
+            <polygon>
+                <point>664/919</point>
+                <point>665/919</point>
+                <point>665/919</point>
+                <point>665/919</point>
+                <point>665/919</point>
+                <point>664/919</point>
+                <point>664/919</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1280/1792" maxTileCoordinate="1535/2047">
+            <polygon>
+                <point>1329/1838</point>
+                <point>1331/1838</point>
+                <point>1331/1839</point>
+                <point>1330/1839</point>
+                <point>1330/1839</point>
+                <point>1329/1839</point>
+                <point>1329/1838</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="2560/3584" maxTileCoordinate="2815/3839">
+            <polygon>
+                <point>2659/3677</point>
+                <point>2662/3677</point>
+                <point>2662/3678</point>
+                <point>2661/3679</point>
+                <point>2660/3678</point>
+                <point>2659/3678</point>
+                <point>2659/3677</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="5120/7168" maxTileCoordinate="5375/7423">
+            <polygon>
+                <point>5319/7355</point>
+                <point>5324/7355</point>
+                <point>5324/7356</point>
+                <point>5323/7358</point>
+                <point>5320/7357</point>
+                <point>5319/7356</point>
+                <point>5319/7355</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="10496/14592" maxTileCoordinate="10751/14847">
+            <polygon>
+                <point>10638/14711</point>
+                <point>10648/14711</point>
+                <point>10648/14713</point>
+                <point>10647/14716</point>
+                <point>10641/14714</point>
+                <point>10638/14712</point>
+                <point>10638/14711</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="21248/29184" maxTileCoordinate="21503/29439">
+            <polygon>
+                <point>21277/29422</point>
+                <point>21297/29422</point>
+                <point>21297/29426</point>
+                <point>21295/29432</point>
+                <point>21282/29428</point>
+                <point>21277/29424</point>
+                <point>21277/29422</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="42496/58624" maxTileCoordinate="42751/58879">
+            <polygon>
+                <point>42554/58845</point>
+                <point>42594/58845</point>
+                <point>42594/58852</point>
+                <point>42591/58864</point>
+                <point>42565/58856</point>
+                <point>42554/58848</point>
+                <point>42554/58845</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="84992/117504" maxTileCoordinate="85247/117759">
+            <polygon>
+                <point>85109/117690</point>
+                <point>85189/117690</point>
+                <point>85189/117705</point>
+                <point>85182/117728</point>
+                <point>85131/117713</point>
+                <point>85109/117697</point>
+                <point>85109/117690</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="169984/235264" maxTileCoordinate="170495/235519">
+            <polygon>
+                <point>170218/235380</point>
+                <point>170379/235380</point>
+                <point>170379/235410</point>
+                <point>170364/235456</point>
+                <point>170262/235426</point>
+                <point>170218/235395</point>
+                <point>170218/235380</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="340224/470528" maxTileCoordinate="340991/471039">
+            <polygon>
+                <point>340437/470760</point>
+                <point>340758/470760</point>
+                <point>340758/470821</point>
+                <point>340728/470913</point>
+                <point>340525/470852</point>
+                <point>340437/470791</point>
+                <point>340437/470760</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="680704/941312" maxTileCoordinate="681727/942079">
+            <polygon>
+                <point>680875/941520</point>
+                <point>681516/941520</point>
+                <point>681516/941643</point>
+                <point>681457/941827</point>
+                <point>681050/941704</point>
+                <point>680875/941582</point>
+                <point>680875/941520</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1361664/1882880" maxTileCoordinate="1363199/1883903">
+            <polygon>
+                <point>1361750/1883041</point>
+                <point>1363032/1883041</point>
+                <point>1363032/1883286</point>
+                <point>1362915/1883654</point>
+                <point>1362100/1883409</point>
+                <point>1361750/1883164</point>
+                <point>1361750/1883041</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="2723328/3766016" maxTileCoordinate="2726143/3767551">
+            <polygon>
+                <point>2723501/3766083</point>
+                <point>2726064/3766083</point>
+                <point>2726064/3766573</point>
+                <point>2725831/3767308</point>
+                <point>2724200/3766818</point>
+                <point>2723501/3766328</point>
+                <point>2723501/3766083</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="5446912/7532032" maxTileCoordinate="5452287/7534847">
+            <polygon>
+                <point>5447002/7532167</point>
+                <point>5452129/7532167</point>
+                <point>5452129/7533147</point>
+                <point>5451663/7534617</point>
+                <point>5448400/7533637</point>
+                <point>5447002/7532657</point>
+                <point>5447002/7532167</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="10893824/15064320" maxTileCoordinate="10904319/15069439">
+            <polygon>
+                <point>10894005/15064334</point>
+                <point>10904258/15064334</point>
+                <point>10904258/15066295</point>
+                <point>10903326/15069235</point>
+                <point>10896801/15067275</point>
+                <point>10894005/15065314</point>
+                <point>10894005/15064334</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Sint Maarten 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="21787904/30128640" maxTileCoordinate="21808639/30138623">
+            <polygon>
+                <point>21788011/30128668</point>
+                <point>21808516/30128668</point>
+                <point>21808516/30132590</point>
+                <point>21806652/30138471</point>
+                <point>21793603/30134550</point>
+                <point>21788011/30130629</point>
+                <point>21788011/30128668</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

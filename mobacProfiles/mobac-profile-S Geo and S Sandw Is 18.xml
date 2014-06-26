@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="S Geo and S Sandw Is 18" version="1">
+    <Layer name="S Geo and S Sandw Is 18">
+        <PolygonMap name="S Geo and S Sandw Is 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>109/179</point>
+                <point>109/179</point>
+                <point>109/179</point>
+                <point>109/179</point>
+                <point>109/179</point>
+                <point>109/179</point>
+                <point>109/179</point>
+                <point>109/179</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/256" maxTileCoordinate="255/511">
+            <polygon>
+                <point>218/358</point>
+                <point>218/359</point>
+                <point>218/358</point>
+                <point>218/358</point>
+                <point>218/358</point>
+                <point>218/358</point>
+                <point>218/358</point>
+                <point>218/358</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/512" maxTileCoordinate="511/767">
+            <polygon>
+                <point>437/717</point>
+                <point>437/718</point>
+                <point>436/717</point>
+                <point>436/717</point>
+                <point>436/717</point>
+                <point>437/717</point>
+                <point>437/717</point>
+                <point>437/717</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="768/1280" maxTileCoordinate="1023/1535">
+            <polygon>
+                <point>874/1435</point>
+                <point>874/1436</point>
+                <point>873/1435</point>
+                <point>873/1435</point>
+                <point>873/1435</point>
+                <point>874/1435</point>
+                <point>874/1435</point>
+                <point>874/1435</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1536/2816" maxTileCoordinate="1791/3071">
+            <polygon>
+                <point>1749/2871</point>
+                <point>1749/2872</point>
+                <point>1747/2871</point>
+                <point>1747/2871</point>
+                <point>1747/2870</point>
+                <point>1748/2870</point>
+                <point>1748/2870</point>
+                <point>1749/2871</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="3328/5632" maxTileCoordinate="3583/5887">
+            <polygon>
+                <point>3498/5743</point>
+                <point>3498/5745</point>
+                <point>3494/5743</point>
+                <point>3494/5742</point>
+                <point>3495/5741</point>
+                <point>3497/5741</point>
+                <point>3497/5741</point>
+                <point>3498/5743</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="6912/11264" maxTileCoordinate="7167/11519">
+            <polygon>
+                <point>6996/11487</point>
+                <point>6996/11491</point>
+                <point>6989/11487</point>
+                <point>6988/11485</point>
+                <point>6990/11482</point>
+                <point>6995/11482</point>
+                <point>6995/11483</point>
+                <point>6996/11487</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="13824/22784" maxTileCoordinate="14079/23039">
+            <polygon>
+                <point>13993/22974</point>
+                <point>13993/22983</point>
+                <point>13979/22974</point>
+                <point>13976/22971</point>
+                <point>13981/22964</point>
+                <point>13990/22964</point>
+                <point>13991/22967</point>
+                <point>13993/22974</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="27904/45824" maxTileCoordinate="28159/46079">
+            <polygon>
+                <point>27987/45949</point>
+                <point>27987/45966</point>
+                <point>27958/45949</point>
+                <point>27952/45942</point>
+                <point>27962/45928</point>
+                <point>27980/45928</point>
+                <point>27983/45935</point>
+                <point>27987/45949</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="55808/91648" maxTileCoordinate="56063/92159">
+            <polygon>
+                <point>55975/91898</point>
+                <point>55975/91933</point>
+                <point>55916/91898</point>
+                <point>55905/91884</point>
+                <point>55924/91856</point>
+                <point>55960/91856</point>
+                <point>55967/91870</point>
+                <point>55975/91898</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="111616/183552" maxTileCoordinate="112127/184063">
+            <polygon>
+                <point>111950/183797</point>
+                <point>111950/183866</point>
+                <point>111833/183797</point>
+                <point>111811/183769</point>
+                <point>111848/183713</point>
+                <point>111920/183713</point>
+                <point>111935/183741</point>
+                <point>111950/183797</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="223488/367360" maxTileCoordinate="223999/367871">
+            <polygon>
+                <point>223900/367594</point>
+                <point>223900/367733</point>
+                <point>223667/367594</point>
+                <point>223623/367538</point>
+                <point>223696/367427</point>
+                <point>223841/367427</point>
+                <point>223870/367483</point>
+                <point>223900/367594</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="447232/734720" maxTileCoordinate="447999/735487">
+            <polygon>
+                <point>447800/735188</point>
+                <point>447800/735467</point>
+                <point>447334/735188</point>
+                <point>447246/735077</point>
+                <point>447392/734855</point>
+                <point>447683/734855</point>
+                <point>447741/734966</point>
+                <point>447800/735188</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="894464/1469696" maxTileCoordinate="895743/1470975">
+            <polygon>
+                <point>895600/1470377</point>
+                <point>895600/1470934</point>
+                <point>894668/1470377</point>
+                <point>894493/1470155</point>
+                <point>894784/1469710</point>
+                <point>895367/1469710</point>
+                <point>895483/1469932</point>
+                <point>895600/1470377</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1788928/2939392" maxTileCoordinate="1791231/2941951">
+            <polygon>
+                <point>1791200/2940755</point>
+                <point>1791200/2941869</point>
+                <point>1789336/2940755</point>
+                <point>1788987/2940310</point>
+                <point>1789569/2939421</point>
+                <point>1790734/2939421</point>
+                <point>1790967/2939865</point>
+                <point>1791200/2940755</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="3577856/5878784" maxTileCoordinate="3582463/5883903">
+            <polygon>
+                <point>3582401/5881511</point>
+                <point>3582401/5883739</point>
+                <point>3578673/5881511</point>
+                <point>3577974/5880621</point>
+                <point>3579139/5878842</point>
+                <point>3581469/5878842</point>
+                <point>3581935/5879731</point>
+                <point>3582401/5881511</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="7155712/11757568" maxTileCoordinate="7164927/11767551">
+            <polygon>
+                <point>7164803/11763023</point>
+                <point>7164803/11767478</point>
+                <point>7157346/11763023</point>
+                <point>7155948/11761243</point>
+                <point>7158278/11757685</point>
+                <point>7162939/11757685</point>
+                <point>7163871/11759463</point>
+                <point>7164803/11763023</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="14311680/23515136" maxTileCoordinate="14329855/23535103">
+            <polygon>
+                <point>14329606/23526046</point>
+                <point>14329606/23534957</point>
+                <point>14314693/23526046</point>
+                <point>14311897/23522486</point>
+                <point>14316557/23515370</point>
+                <point>14325878/23515370</point>
+                <point>14327742/23518927</point>
+                <point>14329606/23526046</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="S Geo and S Sandw Is 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="28623616/47030528" maxTileCoordinate="28659455/47069951">
+            <polygon>
+                <point>28659213/47052093</point>
+                <point>28659213/47069914</point>
+                <point>28629387/47052093</point>
+                <point>28623794/47044972</point>
+                <point>28633115/47030741</point>
+                <point>28651756/47030741</point>
+                <point>28655484/47037855</point>
+                <point>28659213/47052093</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

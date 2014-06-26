@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Nauru 18" version="1">
+    <Layer name="Nauru 18">
+        <PolygonMap name="Nauru 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>246/128</point>
+                <point>246/128</point>
+                <point>246/128</point>
+                <point>246/128</point>
+                <point>246/128</point>
+                <point>246/128</point>
+                <point>246/128</point>
+                <point>246/128</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/255">
+            <polygon>
+                <point>493/256</point>
+                <point>493/256</point>
+                <point>493/256</point>
+                <point>493/256</point>
+                <point>493/256</point>
+                <point>493/256</point>
+                <point>493/256</point>
+                <point>493/256</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="768/512" maxTileCoordinate="1023/767">
+            <polygon>
+                <point>986/513</point>
+                <point>986/513</point>
+                <point>986/513</point>
+                <point>986/513</point>
+                <point>986/513</point>
+                <point>986/513</point>
+                <point>986/513</point>
+                <point>986/513</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="1792/1024" maxTileCoordinate="2047/1279">
+            <polygon>
+                <point>1973/1026</point>
+                <point>1973/1027</point>
+                <point>1973/1027</point>
+                <point>1973/1026</point>
+                <point>1973/1026</point>
+                <point>1973/1026</point>
+                <point>1973/1026</point>
+                <point>1973/1026</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="3840/2048" maxTileCoordinate="4095/2303">
+            <polygon>
+                <point>3947/2053</point>
+                <point>3947/2054</point>
+                <point>3947/2054</point>
+                <point>3947/2053</point>
+                <point>3947/2053</point>
+                <point>3947/2053</point>
+                <point>3947/2053</point>
+                <point>3947/2053</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="7680/4096" maxTileCoordinate="7935/4351">
+            <polygon>
+                <point>7895/4107</point>
+                <point>7894/4108</point>
+                <point>7894/4108</point>
+                <point>7894/4107</point>
+                <point>7894/4107</point>
+                <point>7894/4107</point>
+                <point>7895/4107</point>
+                <point>7895/4107</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="15616/8192" maxTileCoordinate="15871/8447">
+            <polygon>
+                <point>15790/8215</point>
+                <point>15789/8217</point>
+                <point>15788/8217</point>
+                <point>15788/8215</point>
+                <point>15788/8214</point>
+                <point>15789/8214</point>
+                <point>15790/8214</point>
+                <point>15790/8215</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="31488/16384" maxTileCoordinate="31743/16639">
+            <polygon>
+                <point>31581/16431</point>
+                <point>31579/16434</point>
+                <point>31577/16434</point>
+                <point>31576/16431</point>
+                <point>31576/16429</point>
+                <point>31579/16428</point>
+                <point>31581/16429</point>
+                <point>31581/16431</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="62976/32768" maxTileCoordinate="63231/33023">
+            <polygon>
+                <point>63162/32862</point>
+                <point>63158/32868</point>
+                <point>63154/32868</point>
+                <point>63153/32862</point>
+                <point>63153/32859</point>
+                <point>63158/32857</point>
+                <point>63162/32859</point>
+                <point>63162/32862</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="126208/65536" maxTileCoordinate="126463/65791">
+            <polygon>
+                <point>126324/65725</point>
+                <point>126316/65736</point>
+                <point>126309/65736</point>
+                <point>126306/65725</point>
+                <point>126306/65718</point>
+                <point>126316/65714</point>
+                <point>126324/65718</point>
+                <point>126324/65725</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="252416/131328" maxTileCoordinate="252671/131583">
+            <polygon>
+                <point>252648/131450</point>
+                <point>252633/131472</point>
+                <point>252619/131472</point>
+                <point>252612/131450</point>
+                <point>252612/131436</point>
+                <point>252633/131428</point>
+                <point>252648/131436</point>
+                <point>252648/131450</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="505088/262656" maxTileCoordinate="505343/263167">
+            <polygon>
+                <point>505297/262901</point>
+                <point>505267/262945</point>
+                <point>505238/262945</point>
+                <point>505224/262901</point>
+                <point>505224/262872</point>
+                <point>505267/262857</point>
+                <point>505297/262872</point>
+                <point>505297/262901</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="1010432/525568" maxTileCoordinate="1010687/526079">
+            <polygon>
+                <point>1010594/525802</point>
+                <point>1010535/525890</point>
+                <point>1010477/525890</point>
+                <point>1010448/525802</point>
+                <point>1010448/525744</point>
+                <point>1010535/525715</point>
+                <point>1010594/525744</point>
+                <point>1010594/525802</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="2020864/1051392" maxTileCoordinate="2021375/1051903">
+            <polygon>
+                <point>2021188/1051605</point>
+                <point>2021071/1051780</point>
+                <point>2020955/1051780</point>
+                <point>2020897/1051605</point>
+                <point>2020897/1051488</point>
+                <point>2021071/1051430</point>
+                <point>2021188/1051488</point>
+                <point>2021188/1051605</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="4041728/2102784" maxTileCoordinate="4042495/2103807">
+            <polygon>
+                <point>4042376/2103210</point>
+                <point>4042143/2103560</point>
+                <point>4041910/2103560</point>
+                <point>4041794/2103210</point>
+                <point>4041794/2102977</point>
+                <point>4042143/2102860</point>
+                <point>4042376/2102977</point>
+                <point>4042376/2103210</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="8083456/4205568" maxTileCoordinate="8084991/4207359">
+            <polygon>
+                <point>8084753/4206421</point>
+                <point>8084287/4207120</point>
+                <point>8083821/4207120</point>
+                <point>8083588/4206421</point>
+                <point>8083588/4205954</point>
+                <point>8084287/4205721</point>
+                <point>8084753/4205954</point>
+                <point>8084753/4206421</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="16167168/8411392" maxTileCoordinate="16169727/8414463">
+            <polygon>
+                <point>16169507/8412842</point>
+                <point>16168575/8414240</point>
+                <point>16167643/8414240</point>
+                <point>16167177/8412842</point>
+                <point>16167177/8411909</point>
+                <point>16168575/8411443</point>
+                <point>16169507/8411909</point>
+                <point>16169507/8412842</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="32334336/16822784" maxTileCoordinate="32339199/16828671">
+            <polygon>
+                <point>32339015/16825684</point>
+                <point>32337151/16828480</point>
+                <point>32335287/16828480</point>
+                <point>32334355/16825684</point>
+                <point>32334355/16823819</point>
+                <point>32337151/16822887</point>
+                <point>32339015/16823819</point>
+                <point>32339015/16825684</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Nauru 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="64668672/33645568" maxTileCoordinate="64678143/33657087">
+            <polygon>
+                <point>64678031/33651368</point>
+                <point>64674303/33656961</point>
+                <point>64670575/33656961</point>
+                <point>64668711/33651368</point>
+                <point>64668711/33647639</point>
+                <point>64674303/33645775</point>
+                <point>64678031/33647639</point>
+                <point>64678031/33651368</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

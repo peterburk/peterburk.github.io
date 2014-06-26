@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="Guernsey 18" version="1">
+    <Layer name="Guernsey 18">
+        <PolygonMap name="Guernsey 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>126/87</point>
+                <point>126/87</point>
+                <point>126/87</point>
+                <point>126/87</point>
+                <point>126/87</point>
+                <point>126/87</point>
+                <point>126/87</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>252/174</point>
+                <point>252/174</point>
+                <point>252/174</point>
+                <point>252/174</point>
+                <point>252/174</point>
+                <point>252/174</point>
+                <point>252/174</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>504/349</point>
+                <point>504/349</point>
+                <point>504/349</point>
+                <point>504/349</point>
+                <point>504/349</point>
+                <point>504/349</point>
+                <point>504/349</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="768/512" maxTileCoordinate="1023/767">
+            <polygon>
+                <point>1009/699</point>
+                <point>1009/699</point>
+                <point>1008/699</point>
+                <point>1008/699</point>
+                <point>1009/698</point>
+                <point>1009/698</point>
+                <point>1009/699</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1792/1280" maxTileCoordinate="2047/1535">
+            <polygon>
+                <point>2019/1398</point>
+                <point>2018/1399</point>
+                <point>2017/1398</point>
+                <point>2017/1398</point>
+                <point>2019/1397</point>
+                <point>2019/1397</point>
+                <point>2019/1398</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="3840/2560" maxTileCoordinate="4095/2815">
+            <polygon>
+                <point>4038/2796</point>
+                <point>4037/2798</point>
+                <point>4035/2797</point>
+                <point>4035/2796</point>
+                <point>4038/2795</point>
+                <point>4038/2795</point>
+                <point>4038/2796</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="7936/5376" maxTileCoordinate="8191/5631">
+            <polygon>
+                <point>8077/5592</point>
+                <point>8075/5596</point>
+                <point>8071/5595</point>
+                <point>8071/5593</point>
+                <point>8076/5591</point>
+                <point>8077/5591</point>
+                <point>8077/5592</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="16128/11008" maxTileCoordinate="16383/11263">
+            <polygon>
+                <point>16155/11184</point>
+                <point>16151/11193</point>
+                <point>16143/11190</point>
+                <point>16142/11187</point>
+                <point>16152/11182</point>
+                <point>16154/11182</point>
+                <point>16155/11184</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="32256/22272" maxTileCoordinate="32511/22527">
+            <polygon>
+                <point>32311/22369</point>
+                <point>32303/22386</point>
+                <point>32287/22381</point>
+                <point>32285/22375</point>
+                <point>32305/22364</point>
+                <point>32309/22364</point>
+                <point>32311/22369</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="64512/44544" maxTileCoordinate="64767/44799">
+            <polygon>
+                <point>64622/44739</point>
+                <point>64607/44773</point>
+                <point>64574/44762</point>
+                <point>64571/44750</point>
+                <point>64611/44728</point>
+                <point>64618/44728</point>
+                <point>64622/44739</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="129024/89344" maxTileCoordinate="129279/89599">
+            <polygon>
+                <point>129244/89479</point>
+                <point>129215/89546</point>
+                <point>129149/89524</point>
+                <point>129142/89501</point>
+                <point>129222/89457</point>
+                <point>129236/89457</point>
+                <point>129244/89479</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="258048/178688" maxTileCoordinate="258559/179199">
+            <polygon>
+                <point>258488/178958</point>
+                <point>258430/179093</point>
+                <point>258299/179048</point>
+                <point>258284/179003</point>
+                <point>258444/178914</point>
+                <point>258473/178914</point>
+                <point>258488/178958</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="516352/357632" maxTileCoordinate="517119/358399">
+            <polygon>
+                <point>516977/357917</point>
+                <point>516860/358186</point>
+                <point>516598/358097</point>
+                <point>516569/358007</point>
+                <point>516889/357828</point>
+                <point>516947/357828</point>
+                <point>516977/357917</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="1032960/715520" maxTileCoordinate="1033983/716543">
+            <polygon>
+                <point>1033954/715835</point>
+                <point>1033721/716373</point>
+                <point>1033196/716194</point>
+                <point>1033138/716015</point>
+                <point>1033779/715656</point>
+                <point>1033895/715656</point>
+                <point>1033954/715835</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="2066176/1431296" maxTileCoordinate="2067967/1432831">
+            <polygon>
+                <point>2067908/1431671</point>
+                <point>2067442/1432747</point>
+                <point>2066393/1432388</point>
+                <point>2066277/1432030</point>
+                <point>2067558/1431312</point>
+                <point>2067791/1431312</point>
+                <point>2067908/1431671</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="4132352/2862592" maxTileCoordinate="4135935/2865663">
+            <polygon>
+                <point>4135816/2863343</point>
+                <point>4134884/2865494</point>
+                <point>4132787/2864777</point>
+                <point>4132554/2864060</point>
+                <point>4135117/2862625</point>
+                <point>4135583/2862625</point>
+                <point>4135816/2863343</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="8264960/5725184" maxTileCoordinate="8271871/5731071">
+            <polygon>
+                <point>8271633/5726686</point>
+                <point>8269769/5730988</point>
+                <point>8265575/5729555</point>
+                <point>8265109/5728121</point>
+                <point>8270235/5725251</point>
+                <point>8271167/5725251</point>
+                <point>8271633/5726686</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="16530176/11450368" maxTileCoordinate="16543487/11462143">
+            <polygon>
+                <point>16543267/11453373</point>
+                <point>16539538/11461977</point>
+                <point>16531150/11459110</point>
+                <point>16530218/11456242</point>
+                <point>16540470/11450503</point>
+                <point>16542334/11450503</point>
+                <point>16543267/11453373</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="Guernsey 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="33060352/22900992" maxTileCoordinate="33086719/22924031">
+            <polygon>
+                <point>33086534/22906747</point>
+                <point>33079077/22923955</point>
+                <point>33062300/22918221</point>
+                <point>33060436/22912485</point>
+                <point>33080941/22901006</point>
+                <point>33084669/22901006</point>
+                <point>33086534/22906747</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>

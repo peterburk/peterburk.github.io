@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas outputFormat="AFTrack" name="St Kitts and Nevis 18" version="1">
+    <Layer name="St Kitts and Nevis 18">
+        <PolygonMap name="St Kitts and Nevis 18 00" zoom="0" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>83/115</point>
+                <point>83/115</point>
+                <point>83/115</point>
+                <point>83/115</point>
+                <point>83/115</point>
+                <point>83/115</point>
+                <point>83/115</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 01" zoom="1" mapSource="MapQuest" minTileCoordinate="0/0" maxTileCoordinate="255/255">
+            <polygon>
+                <point>167/231</point>
+                <point>166/231</point>
+                <point>166/231</point>
+                <point>166/231</point>
+                <point>167/231</point>
+                <point>167/231</point>
+                <point>167/231</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 02" zoom="2" mapSource="MapQuest" minTileCoordinate="256/256" maxTileCoordinate="511/511">
+            <polygon>
+                <point>334/462</point>
+                <point>333/462</point>
+                <point>333/462</point>
+                <point>333/462</point>
+                <point>334/462</point>
+                <point>334/462</point>
+                <point>334/462</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 03" zoom="3" mapSource="MapQuest" minTileCoordinate="512/768" maxTileCoordinate="767/1023">
+            <polygon>
+                <point>668/925</point>
+                <point>667/925</point>
+                <point>667/925</point>
+                <point>667/924</point>
+                <point>668/924</point>
+                <point>668/924</point>
+                <point>668/925</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 04" zoom="4" mapSource="MapQuest" minTileCoordinate="1280/1792" maxTileCoordinate="1535/2047">
+            <polygon>
+                <point>1336/1850</point>
+                <point>1335/1850</point>
+                <point>1335/1850</point>
+                <point>1335/1849</point>
+                <point>1336/1849</point>
+                <point>1336/1849</point>
+                <point>1336/1850</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 05" zoom="5" mapSource="MapQuest" minTileCoordinate="2560/3584" maxTileCoordinate="2815/3839">
+            <polygon>
+                <point>2673/3700</point>
+                <point>2671/3700</point>
+                <point>2671/3700</point>
+                <point>2671/3698</point>
+                <point>2672/3698</point>
+                <point>2673/3699</point>
+                <point>2673/3700</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 06" zoom="6" mapSource="MapQuest" minTileCoordinate="5120/7168" maxTileCoordinate="5375/7423">
+            <polygon>
+                <point>5346/7400</point>
+                <point>5343/7401</point>
+                <point>5342/7400</point>
+                <point>5342/7397</point>
+                <point>5344/7397</point>
+                <point>5346/7398</point>
+                <point>5346/7400</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 07" zoom="7" mapSource="MapQuest" minTileCoordinate="10496/14592" maxTileCoordinate="10751/14847">
+            <polygon>
+                <point>10692/14801</point>
+                <point>10687/14803</point>
+                <point>10684/14801</point>
+                <point>10684/14794</point>
+                <point>10688/14794</point>
+                <point>10692/14797</point>
+                <point>10692/14801</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 08" zoom="8" mapSource="MapQuest" minTileCoordinate="21248/29440" maxTileCoordinate="21503/29695">
+            <polygon>
+                <point>21384/29603</point>
+                <point>21375/29607</point>
+                <point>21368/29602</point>
+                <point>21368/29588</point>
+                <point>21377/29588</point>
+                <point>21384/29594</point>
+                <point>21384/29603</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 09" zoom="9" mapSource="MapQuest" minTileCoordinate="42496/59136" maxTileCoordinate="43007/59391">
+            <polygon>
+                <point>42769/59207</point>
+                <point>42751/59215</point>
+                <point>42736/59204</point>
+                <point>42736/59177</point>
+                <point>42754/59177</point>
+                <point>42769/59188</point>
+                <point>42769/59207</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 10" zoom="10" mapSource="MapQuest" minTileCoordinate="85248/118272" maxTileCoordinate="85759/118527">
+            <polygon>
+                <point>85539/118415</point>
+                <point>85502/118431</point>
+                <point>85473/118408</point>
+                <point>85473/118354</point>
+                <point>85509/118354</point>
+                <point>85539/118377</point>
+                <point>85539/118415</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 11" zoom="11" mapSource="MapQuest" minTileCoordinate="170752/236544" maxTileCoordinate="171263/237055">
+            <polygon>
+                <point>171078/236831</point>
+                <point>171005/236862</point>
+                <point>170947/236816</point>
+                <point>170947/236709</point>
+                <point>171019/236709</point>
+                <point>171078/236755</point>
+                <point>171078/236831</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 12" zoom="12" mapSource="MapQuest" minTileCoordinate="341760/473344" maxTileCoordinate="342271/473855">
+            <polygon>
+                <point>342156/473663</point>
+                <point>342010/473724</point>
+                <point>341894/473632</point>
+                <point>341894/473419</point>
+                <point>342039/473419</point>
+                <point>342156/473510</point>
+                <point>342156/473663</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 13" zoom="13" mapSource="MapQuest" minTileCoordinate="683776/946688" maxTileCoordinate="684543/947455">
+            <polygon>
+                <point>684312/947326</point>
+                <point>684021/947448</point>
+                <point>683788/947265</point>
+                <point>683788/946838</point>
+                <point>684079/946838</point>
+                <point>684312/947021</point>
+                <point>684312/947326</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 14" zoom="14" mapSource="MapQuest" minTileCoordinate="1367552/1893632" maxTileCoordinate="1368831/1894911">
+            <polygon>
+                <point>1368624/1894653</point>
+                <point>1368042/1894897</point>
+                <point>1367576/1894531</point>
+                <point>1367576/1893677</point>
+                <point>1368158/1893677</point>
+                <point>1368624/1894043</point>
+                <point>1368624/1894653</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 15" zoom="15" mapSource="MapQuest" minTileCoordinate="2735104/3787264" maxTileCoordinate="2737407/3789823">
+            <polygon>
+                <point>2737249/3789306</point>
+                <point>2736084/3789794</point>
+                <point>2735152/3789063</point>
+                <point>2735152/3787355</point>
+                <point>2736317/3787355</point>
+                <point>2737249/3788087</point>
+                <point>2737249/3789306</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 16" zoom="16" mapSource="MapQuest" minTileCoordinate="5470208/7574528" maxTileCoordinate="5474559/7579647">
+            <polygon>
+                <point>5474498/7578613</point>
+                <point>5472168/7579589</point>
+                <point>5470304/7578126</point>
+                <point>5470304/7574711</point>
+                <point>5472634/7574711</point>
+                <point>5474498/7576175</point>
+                <point>5474498/7578613</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 17" zoom="17" mapSource="MapQuest" minTileCoordinate="10940416/15149312" maxTileCoordinate="10949119/15159295">
+            <polygon>
+                <point>10948997/15157227</point>
+                <point>10944337/15159178</point>
+                <point>10940608/15156252</point>
+                <point>10940608/15149423</point>
+                <point>10945269/15149423</point>
+                <point>10948997/15152350</point>
+                <point>10948997/15157227</point>
+            </polygon>
+        </PolygonMap>
+        <PolygonMap name="St Kitts and Nevis 18 18" zoom="18" mapSource="MapQuest" minTileCoordinate="21881088/30298624" maxTileCoordinate="21898239/30318591">
+            <polygon>
+                <point>21897995/30314455</point>
+                <point>21888674/30318356</point>
+                <point>21881217/30312504</point>
+                <point>21881217/30298847</point>
+                <point>21890538/30298847</point>
+                <point>21897995/30304701</point>
+                <point>21897995/30314455</point>
+            </polygon>
+        </PolygonMap>
+    </Layer>
+</atlas>
