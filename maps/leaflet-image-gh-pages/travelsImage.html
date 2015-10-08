@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Travels Image</title>
+        <link rel='stylesheet' type='text/css' href='css/style.css' />
+        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='initial-scale=1.0 maximum-scale=1.0'>
+        <script>window.L_PREFER_CANVAS = true;</script>
+        <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+        <!--[if lte IE 8]>
+          <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' />
+        <![endif]-->
+	<script src="../leaflet.js"></script>
+  <script src="../jquery-1.10.2.min.js"></script>
+        <style>
+            body {
+                width:600px;
+                margin:20px auto;
+            }
+            #map { width:600px; height:300px; }
+        </style>
+    </head>
+    <body>
+        <h1><a href='https://github.com/mapbox/leaflet-image'>leaflet-image</a></h1>
+        <p>turn a map into an image.</p>
+        <h2>Map</h2>
+        <div id='map'></div>
+        <h2>Image</h2>
+        <div id='images'></div>
+        <button id='output'>output</button>
+        <script src='leaflet-image.js'></script>
+        <script>
+        
+        function doImage(err, canvas) {
+alert("doImage");
+    // var img = document.createElement('img');
+//alert("img");
+    //var dimensions = map.getSize();
+// alert("dimensions");
+    //img.width = dimensions.x;
+    //img.height = dimensions.y;
+    //img.src = canvas.toDataURL();
+    //document.getElementById('images').innerHTML = '';
+    //document.getElementById('images').appendChild(img);
+}
+        
+		var map;
+
+		var mbTiles = new L.tileLayer('http://127.0.0.1/maps/mbtiles.php?db=Life14.mbtiles&z={z}&x={x}&y={y}', {
+		    tms: true,
+		    attribution: '',
+		    opacity: 1
+		});
+
+		map = new L.Map("map",{
+			layers: [mbTiles]
+		}).fitWorld();
+
+
+document.getElementById('output').addEventListener('click', function() {
+    leafletImage(map, doImage);
+});
+
+window.setTimeout(function() {
+    map.panBy([100, 100]);
+    // map.setView([0, 0], 2);
+    window.setTimeout(function() {
+        leafletImage(map, doImage);
+    }, 1000);
+}, 1000);
+
+
+        
+        
+        </script>
+    </body>
+</html>

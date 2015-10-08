@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peter Travels</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+#map {
+	width: 80%;
+	height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+	
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<div id="map" style="width: 1440px; height: 700px"></div>
+	<p></p>
+    <p>
+        <ul>
+        </ul>
+    </p>
+  <script src="jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="leaflet.css" />
+    <script src="leaflet.js"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+    <script src="leaflet-google.js"></script>
+
+	<script>
+		
+
+		var mbTiles = new L.tileLayer('', {
+		    tms: true,
+		    attribution: '',
+		    opacity: 1
+		});
+		
+
+      var map = new L.Map('map', {center: new L.LatLng(40, 20), zoom: 2});
+      var googleLayer = new L.Google('ROADMAP');
+      map.addLayer(googleLayer);
+
+
+//var jsonFilename = window.location.search.replace( "?filename=", "./" );
+
+var redStyle = {
+    "color": "#ff3300",
+    "weight": 1,
+    "opacity": 1,
+    "fillOpacity": 0.5
+};
+
+var blueStyle = {
+    "color": "#3399ff",
+    "weight": 1,
+    "opacity": 1,
+    "fillOpacity": 0.5
+};
+
+var jsonFilename = "./travels.json";
+
+  $.getJSON(jsonFilename, function(data) {
+    var geojson = L.geoJson(data, {
+      style: blueStyle,
+      onEachFeature: function (feature, layer) 
+      {
+        layer.bindPopup(feature.properties.name);
+      }
+    });
+    geojson.addTo(map);
+  });
+
+var jsonFilename = "./lived.json";
+
+  $.getJSON(jsonFilename, function(data) {
+    var geojson = L.geoJson(data, {
+      style: redStyle,
+      onEachFeature: function (feature, layer) 
+      {
+        layer.bindPopup(feature.properties.name);
+      }
+    });
+    geojson.addTo(map);
+  });
+
+		layersControl = new L.Control.Layers(baseLayers, mbTiles, {
+			collapsed: false
+		});
+
+		map.addControl(layersControl);
+	</script>
+</body>
+</html>
