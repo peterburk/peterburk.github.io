@@ -1,5 +1,7 @@
 # About Me
 
+<img class="aligncenter" alt="Photo" src="https://raw.githubusercontent.com/peterburk/peterburk.github.io/master/Photo.png">
+
 ##Current Location
 Kaohsiung, Taiwan
 
