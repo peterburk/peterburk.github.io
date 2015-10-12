@@ -1,10 +1,10 @@
-# Personal Info
+### Personal Info
 
-##Born
+####Born
 13 September 1989
 
-##Email
+####Email
 peterburk@gmail.com
 
-##Résumé
+####Résumé
 https://github.com/peterburk/resume
