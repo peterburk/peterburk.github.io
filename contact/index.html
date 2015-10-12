@@ -39,6 +39,9 @@
 					preAdd: function(result) {
 						//Replace some of the generated text
 
+						// Replace the mailto link
+						result = result.replace("mailto%3a", "mailto:");
+
 						$(thisDiv).html(result);
 					},
 					postAdd: function() {
