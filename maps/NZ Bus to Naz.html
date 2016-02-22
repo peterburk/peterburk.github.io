@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NZ Bus to Naz</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+#map {
+	width: 80%;
+	height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .labeltext { width: 120px; text-align: center; border:none; }
+
+</style>
+	
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<div id="map" style="width: 1440px; height: 700px"></div>
+	<p></p>
+    <p>
+        <ul>
+        </ul>
+    </p>
+    <link rel="stylesheet" href="leaflet.css" />
+    <script src="leaflet.js"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+    <script src="leaflet-google.js"></script>
+  <script src="jquery-1.10.2.min.js"></script>
+
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
+
+
+	<script>
+		
+
+		var mbTiles = new L.tileLayer('', {
+		    tms: true,
+		    attribution: '',
+		    opacity: 1
+		});
+		
+
+      var map = new L.Map('map', {center: new L.LatLng(0, 270), zoom: 3});
+      var googleLayer = new L.Google('ROADMAP');
+      map.addLayer(googleLayer);
+
+
+		var busString = "Manabus";
+		var busCircle = L.circleMarker([-37.956066,175.683884], { fillColor: "#f00", radius: 6 } ).bindLabel(busString, { noHide: true, opacity: 0.7, direction: 'left', offset: [10, -15] }).addTo(map);
+
+		var vodafoneString = "Vodafone";
+		var vodafoneCircle = L.circleMarker([-41, 174], { fillColor: "#f00", radius: 6 } ).bindLabel(vodafoneString, { noHide: true, opacity: 0.7, direction: 'left', offset: [10, -15] }).addTo(map);
+
+		var ihugString = "Ihug ISP";
+		var ihugCircle = L.circleMarker([33.9571, -118.4041+360], { fillColor: "#f00", radius: 6 } ).bindLabel(ihugString, { noHide: true, opacity: 0.7, direction: 'left', offset: [10, -15] }).addTo(map);
+
+		var cogentBackboneString = "Cogent Backbone";
+		var cogentBackboneCircle = L.circleMarker([38, -97+360], { fillColor: "#f00", radius: 6 } ).bindLabel(cogentBackboneString, { noHide: true, opacity: 0.7, direction: 'left', offset: [10, -15] }).addTo(map);
+
+		var cogentEuropeString = "Cogent Europe";
+		var cogentEuropeCircle = L.circleMarker([47, 8+360], { fillColor: "#f00", radius: 6 } ).bindLabel(cogentEuropeString, { noHide: true, opacity: 0.7, direction: 'right', offset: [10, -15] }).addTo(map);
+
+		//var cogentRouterString = "Cogent Router";
+		//var cogentRouterCircle = L.circleMarker([38, -97+360], { fillColor: "#f00", radius: 6 } ).bindLabel(cogentRouterString, { noHide: true, opacity: 0.7, direction: 'left', offset: [10, -15] }).addTo(map);
+
+		var proxadFranceString = "Proxad France";
+		var proxadFranceCircle = L.circleMarker([48.86, 2.35+360], { fillColor: "#f00", radius: 6 } ).bindLabel(proxadFranceString, { noHide: true, opacity: 0.7, direction: 'left', offset: [10, -15] }).addTo(map);
+
+		var nazString = "Naz";
+		var nazCircle = L.circleMarker([46.3166, 6.0692+360], { fillColor: "#f00", radius: 6 } ).bindLabel(nazString, { noHide: true, opacity: 0.7, direction: 'left', offset: [10, -15] }).addTo(map);
+
+
+		var busToVodafoneLine = L.polyline([
+			[-37.956066,175.683884],
+			[-41, 174],
+		],
+		{color: 'red', weight: 1, opacity: 0.5, smoothFactor: 1	}
+		).bindLabel('35.231 ms').addTo(map);
+
+		var vodafoneToIhugLine = L.polyline([
+			[-41, 174],
+			[33.9571, -118.4041+360],
+		],
+		{color: 'red', weight: 1, opacity: 0.5, smoothFactor: 1	}
+		).bindLabel('135.27 ms').addTo(map);
+
+		var ihugToCogentBackboneLine = L.polyline([
+			[33.9571, -118.4041+360],
+			[38, -97+360],
+		],
+		{color: 'red', weight: 1, opacity: 0.5, smoothFactor: 1	}
+		).bindLabel('31.472 ms').addTo(map);
+
+		var cogentBackboneToCogentEuropeLine = L.polyline([
+			[38, -97+360],
+			[47, 8+360],
+		],
+		{color: 'red', weight: 1, opacity: 0.5, smoothFactor: 1	}
+		).bindLabel('108.541 ms').addTo(map);
+
+		var cogentEuropeToCogentRouterLine = L.polyline([
+			[47, 8+360],
+			[38, -97+360],
+		],
+		{color: 'red', weight: 1, opacity: 0.5, smoothFactor: 1	}
+		).bindLabel('158.659 ms').addTo(map);
+
+		var cogentRouterToProxadFranceLine = L.polyline([
+			[38, -97+360],
+			[48.86, 2.35+360],
+		],
+		{color: 'red', weight: 1, opacity: 0.5, smoothFactor: 1	}
+		).bindLabel('13.775 ms').addTo(map);
+
+		var proxadFranceToNazLine = L.polyline([
+			[48.86, 2.35+360],
+			[46.3166, 6.0692+360],
+		],
+		{color: 'red', weight: 1, opacity: 0.5, smoothFactor: 1	}
+		).bindLabel('16.522 ms').addTo(map);
+
+
+
+
+
+
+
+		layersControl = new L.Control.Layers(baseLayers, mbTiles, {
+			collapsed: false
+		});
+
+		map.addControl(layersControl);
+	</script>
+</body>
+</html>
