@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TurtleSheet</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+
+	<style>
+
+		body {
+		font-family: Helvetica;
+		}
+
+		li {
+			list-style: none;
+		}
+		li:before {
+			content: "✓ ";
+		}
+
+		input {
+			border: none;
+			width: 80px;
+			font-size: 14px;
+			padding: 2px;
+		}
+
+		input:hover {
+			background-color: #eee;
+		}
+
+		input:focus {
+			background-color: #ccf;
+		}
+
+		input:not(:focus) {
+			text-align: right;
+		}
+
+		table {
+			border-collapse: collapse;  
+		}
+
+		td {
+			border: 1px solid #999;
+			padding: 0;
+		}
+
+		tr:first-child td, td:first-child {
+			background-color: #ccc;
+			padding: 1px 3px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		footer {
+			font-size: 80%;
+		}
+
+	</style>
+	<style>
+		.labelClass{
+			white-space:nowrap;
+			text-align:center;
+			border-radius:0%;
+			color: black
+		}
+		
+		.leaflet-container {
+    		background-color:rgba(255,0,0,0.0);
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- External scripts -->
+	<script src="leaflet/leaflet.js"></script>
+	<!--<script src="leaflet051.js"></script>-->
+	
+	<!-- Rotated marker from https://github.com/bbecquet/Leaflet.RotatedMarker-->
+	<script src="leaflet.rotatedMarker.js"></script> 
+
+	<!-- Leaflet to PNG-->
+	<script src="leaflet-image.js"></script> 
+		
+	<!-- Actual HTML layout -->
+
+	<h2>
+		TurtleSheet
+	</h2>
+	
+	Peter Burkimsher 2016-10-26
+	<br>
+		• Lost? See the <a href="readMe.html">Read Me</a>
+	</br>
+	<div onclick="railway();">
+		• Here from my StackOverflow question about railway maps? Click the <b>railway</b> button. 
+	</div>
+	
+	<p>
+	</p>
+	
+	<table>
+		<tr>
+			<td style="background-color:#FFFFFF;border: none;text-align: left;">
+				Import Area
+			</td>
+			<td style="background-color:#FFFFFF;border: none;text-align: left;">
+				Spreadsheet
+			</td>
+			<td style="background-color:#FFFFFF;border: none;text-align: left;">
+				Drawing
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color:#FFFFFF;border: none;">
+				<textarea id="importArea" rows="34" cols="10"></textarea>
+			</td>
+			<td style="background-color:#FFFFFF;border: none;">
+				<div style="overflow-y: scroll; height:450px; overflow-x: scroll; width:510px;">
+					<table id="spreadsheet" style=""></table>
+				</div>
+			</td>
+			<td style="background-color:#FFFFFF;">
+				<div id="drawing" style="width: 640px; height: 480px; float: right;"></div>
+			</td>
+			<td style="background-color:#FFFFFF;border: none;">
+				<div id="images"></div>
+			</td>
+			<td style="background-color:#FFFFFF;border: none;">
+				<table id="objects" style="display:none"></table>
+			</td>
+		</tr>
+	</table>
+	
+	<table>
+		<tr>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="importSheet();">
+				Import
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;display:none"
+			onclick="leafletImage(drawing, doImage);">
+				Export
+			</td>
+		</tr>
+
+	</table>
+	
+	<table>
+		<tr>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="clearSpreadsheet();">
+				Clear
+			</td>
+		</tr>
+		<tr>
+		<td style="display:none">
+			<input id="numberRowsField"></input>
+		</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;display:none"
+			onclick="setRows();">
+				Rows
+			</td>
+		</tr>
+		<td style="display:none">
+			<input id="numberColumnsField"></input>
+		</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;display:none"
+			onclick="setColumns();">
+				Columns
+			</td>
+		</tr>
+	</table>
+
+	<br></br>
+
+	<table>
+		<tr>
+			<td style="background-color:#FFFFFF;border: none;text-align: left;">
+				Logo Code
+			</td>
+			<td style="background-color:#FFFFFF;border: none;text-align: left;">
+				
+			</td>
+			<td style="background-color:#FFFFFF;border: none;text-align: left;">
+				JavaScript code
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color: #FFFFFF;border: 0px solid #FFFFFF;">
+				<textarea id="logoCodeArea" rows="10" cols="40"></textarea>
+			</td>
+			<td style="background-color: #FFFFFF;border: 0px solid #FFFFFF;">
+				<table>
+					<tr>
+						<td style="background-color: #FFFFFF;border: 0px solid #FFFFFF;" onclick="compile(logoCodeArea.value, '');">
+							<img src="images/SECompileScriptImage.png">
+						</td>
+						<td style="border: none;background-color: #FFFFFF; font-weight: normal;" onclick="compile(logoCodeArea.value, '');">
+							Compile
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color: #FFFFFF;border: 0px solid #FFFFFF;" onclick="load();" onclick="load();">
+							<img src="images/SEBundleContentsClosedImage.png">
+						</td>
+						<td style="border: none;">
+							Load
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color: #FFFFFF;border: 0px solid #FFFFFF;" onclick="save();" onclick="save();">
+							<img src="images/floppy_disk.png">
+						</td>
+						<td style="border: none;">
+							Save
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="background-color: #FFFFFF;border: 0px solid #FFFFFF;">
+				<textarea id="jsCodeArea" rows="10" cols="40"></textarea>
+			</td>
+			<td style="background-color: #FFFFFF;border: 0px solid #FFFFFF;" onclick="run();">
+				<img src="images/SERunScriptImage.png">
+			</td>
+			<td style="border: none;" onclick="run();">
+				Run
+			</td>
+		</tr>
+	</table>
+	
+	<table>
+		<tr>
+			<td style="background-color:#FFFFFF;border: none;text-align: left;">
+				Shortcuts
+			</td>
+		</tr>
+		<tr>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="lt(90);">
+				lt 90
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="fd(50);">
+				fd 50
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="rt(90);">
+				rt 90
+			</td>
+		</tr>
+		<tr>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="cg();">
+				cg
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="square();">
+				square
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="railway();">
+				railway
+			</td>
+		</tr>
+	</table>
+
+
+	<!-- Setup scripts -->
+
+	<script>
+	
+		// addObject - Add a new object to the list on the right
+		function addObject(objectType, objectName)
+		{
+			// Add the objects to the object table
+			objectTable = document.getElementById("objects");
+
+			// Create an empty <tr> element and add it to the last position of the table
+			//numberObjects = drawingObjects.length;
+			objectRow = objectTable.insertRow(numberObjects);
+
+			// Insert new cells (<td> elements) into the last row
+			objectCell = objectRow.insertCell(0);
+			objectCell.innerHTML = objectType;
+			objectCell = objectRow.insertCell(1);
+			objectCell.innerHTML = objectName;
+			
+			// Save the object name in an array
+			objectNames.push(objectName);
+		
+		} // end function addObject
+
+		// pd - Pen down. Start a new line. 
+		function pd() 
+		{
+			penIsUp = false;
+			
+			// Reset the line array
+			lineArray = new Array();
+			var turtleLatitude = turtle.getLatLng().lat;
+			var turtleLongitude = turtle.getLatLng().lng;
+			var turtleLatLng = new L.LatLng(turtleLatitude, turtleLongitude);			
+
+			lineArray.push(turtleLatLng);
+
+			// Support multiple lines
+			currentLineArray = currentLineArray + 1;
+			allLinesArrays.push(lineArray);
+
+			currentLineObject = currentLineObject + 1;
+			lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: 'black',weight: 1,opacity: 0.5,smoothFactor: 1});
+    	
+			drawing.addLayer(lineObject);
+		
+		
+			// The lines and labels are all in one array of drawing objects
+			drawingObjects.push(lineObject);
+			
+			// Add the line to the list on the right
+			addObject("Line", "Untitled");
+			
+			numberObjects = numberObjects + 1;
+			
+		} // end function pd
+
+		function globalVariables()
+		{
+			var drawing;
+			var turtle;
+			var penIsUp;
+			var lineArray;
+			var currentLineArray;
+			var allLinesArrays;
+			var currentLineObject;
+			var drawingObjects;
+			var numberObjects;
+			var objectTable;
+			var objectNames;
+			
+		} // end function globalVariables
+	
+		// Leaflet drawing area
+		function initialiseLeaflet()
+		{
+
+			var zoomLevel = 10;
+			
+			drawing = new L.Map("drawing",{
+				center: [0, 0],
+				zoom: zoomLevel,
+				zoomControl:true,
+				crs: L.CRS.Simple
+			});
+
+			drawing.setZoom(2);
+
+
+			drawing.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
+
+			// The turtle
+								
+			var TurtleIcon = L.Icon.extend({
+				options: {
+					iconSize:     [32, 32],
+					iconAnchor:   [16, 20],
+					popupAnchor:  [0, 0]
+				}
+			});
+		
+			var turtleIcon = new TurtleIcon({iconUrl: 'images/turtle.png'});
+
+			turtle = L.marker([0,0], {icon: turtleIcon,rotationOrigin: '16px 20px', rotationAngle: 0, opacity: 1}).addTo(drawing);
+
+			// Whether the pen is up or down
+			penIsUp = false;
+
+			// The line
+			lineArray = new Array();
+		
+			//lineArray.push([0, 0]);
+
+			// Support multiple lines
+			currentLineArray = 0;
+			allLinesArrays = new Array();
+			allLinesArrays.push(lineArray);
+
+			currentLineObject = 0;
+			var lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: 'black',weight: 1,opacity: 0.5,smoothFactor: 1});
+		
+			drawing.addLayer(lineObject);
+				
+			// The lines and labels are all in one array of drawing objects
+			drawingObjects = new Array();
+				
+			drawingObjects.push(lineObject);
+		
+			numberObjects = 1;
+		
+			// Add the objects to the object table
+			objectTable = document.getElementById("objects");
+
+			// Insert new cells (<td> elements) into the last row
+			var objectRow = objectTable.insertRow(0);
+			var objectCell = objectRow.insertCell(0);
+			objectCell.innerHTML = "Object";
+			objectCell = objectRow.insertCell(1);
+			objectCell.innerHTML = "Name";
+		
+			objectNames = new Array();
+		
+			pd();
+		} // end function initialiseLeaflet
+		
+		// Run the initialiseLeaflet function first
+		globalVariables();
+		initialiseLeaflet();
+		
+	</script>
+	
+	<script>
+		// Spreadsheet from http://jsfiddle.net/ondras/hYfN3/
+		
+		var localStorageColumns = localStorage["numberColumns"];
+		var localStorageRows = localStorage["numberRows"];
+		
+		if (localStorageColumns == null)
+		{
+			var numberColumns = 5;
+		} else {
+			var numberColumns = localStorageColumns;
+		}
+		
+		if (localStorageRows == null)
+		{
+			var numberRows = 10;
+		} else {
+			var numberRows = localStorageRows;
+		}
+		
+		buildSpreadsheet(numberColumns, numberRows);
+		
+		function buildSpreadsheet(numberColumns, numberRows)
+		{
+			// Erase a previous spreadsheet
+			document.getElementById("spreadsheet").innerHTML = "";
+			
+			// Write the number of rows and columns to the interface
+			document.getElementById("numberRowsField").value = numberRows;
+			document.getElementById("numberColumnsField").value = numberColumns;
+			
+			// For every row, build the spreadsheet one column at a time
+			for (var currentRow = 0; currentRow <= numberRows; currentRow++) 
+			{
+				var row = document.getElementById("spreadsheet").insertRow(-1);
+			
+				for (var currentColumn=0; currentColumn <= numberColumns; currentColumn++) 
+				{
+					var columnName = String.fromCharCode("A".charCodeAt(0)+currentColumn-1);
+					row.insertCell(-1).innerHTML = currentRow&&currentColumn ? "<input id='"+ columnName+currentRow +"'/>" : currentRow||columnName;
+				}
+			} // end for building the spreadsheet
+
+			var DATA={};
+			var INPUTS=[].slice.call(document.getElementById("spreadsheet").querySelectorAll("input"));
+		
+			INPUTS.forEach(
+				function(elm) {
+					elm.onfocus = function(e) 
+					{
+						e.target.value = localStorage[e.target.id] || "";
+					};
+		   
+					elm.onblur = function(e) 
+					{
+						localStorage[e.target.id] = e.target.value;
+						computeAll();
+					};
+		   
+					var getter = function() 
+					{
+						var value = localStorage[elm.id] || "";
+						if (value.charAt(0) == "=") 
+						{
+							with (DATA) return eval(value.substring(1));
+						} else { 
+							return isNaN(parseFloat(value)) ? value : parseFloat(value); 
+						}
+					};
+		   
+					Object.defineProperty(DATA, elm.id, {get:getter});
+					Object.defineProperty(DATA, elm.id.toLowerCase(), {get:getter});
+		   
+				} // end function elm
+			);
+			(
+				window.computeAll = function() 
+				{
+					INPUTS.forEach(
+					function(elm) 
+					{ 
+						try 
+						{ 
+							elm.value = DATA[elm.id]; 
+						} catch(e) 
+						{
+							// Don't do anything if no data is found
+						} 
+					});
+				}
+			)();
+		} // end function buildSpreadsheet
+		
+		function textBetween(thisText, startString, endString)
+		{
+			var start_pos = 0;
+			if (startString != 'start')
+			{
+				start_pos = thisText.indexOf(startString);
+						
+				// If the text does not contain the start string, return a blank string
+				if (start_pos < 0)
+				{
+					return '';
+				}
+						
+				// Skip the first startString characters
+				start_pos = start_pos + startString.length;
+			}
+					
+					
+			var end_pos = thisText.length;
+			if (endString != 'end')
+			{
+				end_pos = thisText.indexOf(endString,start_pos);
+			}
+					
+			// If the text does not have the end string after the start string, return the whole string after the start
+			if (end_pos < start_pos)
+			{
+				end_pos = thisText.length;
+			}
+					
+			var newText = thisText.substring(start_pos,end_pos);
+					
+			return newText;
+		} // end textBetween
+		
+		// contains - Does thisText contain searchString?
+		function contains(thisText, searchString)
+		{
+			if (thisText == null)
+			{
+				return false;
+			}
+			
+			return thisText.indexOf(searchString) != -1;
+		} // end function contains
+		
+	</script>
+	
+	
+	<!-- Interface event scripts -->
+	<script>
+	
+		// importSheet - Read tab-delimited text from importArea and put it into the spreadsheet
+		function importSheet()
+		{
+			// Read the text
+			var importText = importArea.value;
+			
+			importText=importText.split(/\r?\n/);
+			
+			var numberRows = importText.length;
+			
+			for (var currentRow = 1; currentRow <= numberRows; currentRow++) 
+			{
+			
+				var thisRow = importText[currentRow-1];
+				
+				thisRow = thisRow.split(/\t/);
+				
+				var numberColumns = thisRow.length;
+							
+				for (var currentColumn=1; currentColumn <= numberColumns; currentColumn++) 
+				{
+					var thisCell = thisRow[currentColumn-1];
+					
+					
+					var columnName = String.fromCharCode("A".charCodeAt(0)+currentColumn-1);
+
+					localStorage[columnName+currentRow] = thisCell;
+				} // end for every column on this row
+			
+			} // end for every row
+			
+			// Reload the spreadsheet
+			computeAll();
+			
+		} // end function importSheet
+	
+	
+		// Clear the spreadsheet
+		function clearSpreadsheet()
+		{
+			for (var currentRow = 0; currentRow <= numberRows; currentRow++) 
+			{
+				var row = document.getElementById("spreadsheet").insertRow(-1);
+			
+				for (var currentColumn=0; currentColumn <= numberColumns; currentColumn++) 
+				{
+					var columnName = String.fromCharCode("A".charCodeAt(0)+currentColumn-1);
+					
+					localStorage[columnName+currentRow] = "";
+				}
+			} // end for building the spreadsheet
+			
+			computeAll();
+		} // end function clearSpreadsheet
+		
+		// Set the number of rows in the spreadsheet
+		function setRows()
+		{
+			// Read the value from the interface
+			var newNumberRows = document.getElementById("numberRowsField").value;
+			
+			// If there is a new number of rows entered
+			if (newNumberRows != "")
+			{
+				numberRows = newNumberRows;
+			}
+			
+			// Save the new value to local storage
+			localStorage["numberRows"] = numberRows;
+			
+			// Rebuild the spreadsheet
+			buildSpreadsheet(numberColumns, numberRows);
+		} // end function setRows
+
+		// Set the number of rows in the spreadsheet
+		function setColumns()
+		{
+			// Read the value from the interface
+			var newNumberColumns = document.getElementById("numberColumnsField").value;
+			
+			// If there is a new number of rows entered
+			if (newNumberColumns != "")
+			{
+				numberColumns = newNumberColumns;
+			}
+			
+			// Save the new value to local storage
+			localStorage["numberColumns"] = numberColumns;
+			
+			// Rebuild the spreadsheet
+			buildSpreadsheet(numberColumns, numberRows);
+		} // end function setRows
+
+		// doImage - Read a PNG onto a canvas
+		function doImage(err, canvas) 
+		{
+				
+			var img = document.createElement('img');
+			var dimensions = drawing.getSize();
+			img.width = dimensions.x;
+			img.height = dimensions.y;
+			img.src = canvas.toDataURL();
+			document.getElementById('images').innerHTML = '';
+			document.getElementById('images').appendChild(img);
+		} // end function doImage		
+		
+		// Compile Logo code to JavaScript
+		function compile(logoCode, indent)
+		{			
+			logoCode=logoCode.split(/\r?\n/);
+			
+			var numberLines = logoCode.length;
+			
+			// For every line in the code
+			for (var currentLine = 0; currentLine < numberLines; currentLine++) 
+			{
+				// Get the line
+				var thisLine = logoCode[currentLine];
+				
+				// Split the command and the data
+				var thisCommand = textBetween(thisLine, "start", " ");
+				var thisData = textBetween(thisLine, " ", "end");
+				
+				// If this line contains square brackets, compile it differently
+				if (contains(thisData, "["))
+				{				
+					// If this is a repeat loop
+					if (contains(thisCommand,"repeat"))
+					{
+						compileRepeat(thisData);
+					} // end if repeat
+					
+					// If this is a label command
+					if (contains(thisCommand,"label"))
+					{					
+						thisData = textBetween(thisData, "[", "]");
+						
+						jsLine = indent + thisCommand + "(\"" + thisData + "\");\n";
+						appendJsCode(jsLine);
+					
+					} // end if label
+					
+				} else {
+				
+					// Build the JavaScript line
+					var jsLine = indent;
+					jsLine = jsLine + thisCommand;
+					jsLine = jsLine + "(";
+					
+					// If this data is not blank
+					if (thisData != "")
+					{
+						jsLine = jsLine + "\"";
+						jsLine = jsLine + thisData;
+						jsLine = jsLine + "\"";
+					} // end if thisData is not blank
+					
+					jsLine = jsLine + ")";
+					jsLine = jsLine + ";";
+					jsLine = jsLine + "\n";
+				
+					// Append the line to the JavaScript code
+					appendJsCode(jsLine);
+				}  // end if this line contains square brackets
+				
+			} // end for every line
+						
+		} // end function compile
+		
+		
+		// compileRepeat - make a loop and execute it
+		function compileRepeat(parameters)
+		{
+			var numberTimes = textBetween(parameters, "start", " ");
+			
+			var jsLine;
+			
+			jsLine = "var numberTimes = " + numberTimes + ";\n";
+			appendJsCode(jsLine);
+
+			jsLine = "for (currentTime = 0; currentTime < numberTimes; currentTime++)\n";
+			appendJsCode(jsLine);
+
+			jsLine = "{\n";
+			appendJsCode(jsLine);
+
+			var subCode = textBetween(parameters, "[", "]");
+			subCode=subCode.split(/ /);
+
+			var numberCommands = subCode.length;
+			
+			// For every command in the repeat loop
+			for (currentCommand = 0; currentCommand < numberCommands; currentCommand = currentCommand + 2)
+			{
+				var thisCommand = subCode[currentCommand];
+				var thisData = subCode[currentCommand+1];
+				
+				compile(thisCommand + " " + thisData, "	");
+				
+			} // end for every command
+
+			jsLine = "}\n";
+			appendJsCode(jsLine);
+			
+		} // end function compileRepeat
+		
+		// load - Load Logo Code from the localStorage
+		function load()
+		{
+			var logoCode = localStorage["logoCode"];
+			
+			document.getElementById("logoCodeArea").value = logoCode;
+		} // end function load
+		
+		// save - Save Logo Code to the localStorage
+		function save()
+		{
+			var logoCode = document.getElementById("logoCodeArea").value;
+						
+			localStorage["logoCode"] = logoCode;
+		} // end function save
+		
+		// Append code to the JS text area
+		function appendJsCode(thisLine)
+		{
+			var jsCode = jsCodeArea.value;
+			jsCode = jsCode + thisLine;
+			jsCodeArea.value = jsCode;
+		} // end appendJsCode
+		
+		// Run the JavaScript in the editor
+		function run() 
+		{
+    		return eval(jsCodeArea.value);
+		} // end function run
+
+		// Check if a value is a number
+		function isNumeric(n) 
+		{
+			return !isNaN(parseFloat(n)) && isFinite(n);
+		} // end function isNumeric
+
+		// Calculate the sin of a number of degrees
+		function sinDegrees(angle) 
+		{
+			return Math.sin(angle/180*Math.PI);
+		} // end function sinDegrees
+
+		// Calculate the cos of a number of degrees
+		function cosDegrees(angle) 
+		{
+			return Math.cos(angle/180*Math.PI);
+		} // end function cosDegrees
+
+		// Repeat - make a loop and execute it
+		function repeat(numberTimes, thisCode)
+		{
+			// For number of times to do the loop
+			for (currentTime = 0; currentTime < numberTimes; currentTime++)
+			{
+    			eval(thisCode);
+			} // end for number of times
+		} // end function repeat
+		
+
+
+	</script>
+
+	<!-- LogoWriter features -->
+	<script>
+
+		// rt - synonym for right
+		function rt(degrees) { right(degrees); }
+
+		// Turn right
+		function right(degrees)
+		{
+			var oldAngle = turtle.options.rotationAngle;
+						
+			// If it's not a number, it's probably a cell, so try to read it from local storage
+			if (isNumeric(degrees) == false)
+			{			
+				degrees = localStorage[degrees];
+			} else {
+				// If it is numeric, multiply it by 1 just to make sure. This caused problems with quoted integers before. 
+				degrees = degrees * 1;
+			} // end if not numeric
+			
+			var newAngle = oldAngle + degrees;
+			
+			if (newAngle >= 360)
+			{
+				newAngle = newAngle - 360;
+			}
+			
+			if (newAngle < 0)
+			{
+				newAngle = newAngle + 360;
+			}
+			turtle.setRotationAngle(newAngle);
+			
+		} // end function right
+
+		// Turn left
+		function left(degrees)
+		{
+			degrees = degrees * -1;
+			right(degrees);
+		} // end function left
+
+		// lt - synonym for left
+		function lt(degrees) { left(degrees); }
+		
+		// Go forward
+		// To do: teach the turtle how to calculate geometry for non-right angles
+		function forward(steps)
+		{
+			var oldLatitude = turtle.getLatLng().lat;
+			var oldLongitude = turtle.getLatLng().lng;
+			
+			var angle = turtle.options.rotationAngle;
+			
+			var newLatitude = oldLatitude;
+			var newLongitude = oldLongitude;
+						
+			// If it's not a number, it's probably a cell, so try to read it from local storage
+			if (isNumeric(steps) == false)
+			{			
+				steps = localStorage[steps];
+			} else {
+				// If it is numeric, multiply it by 1 just to make sure. This caused problems with quoted integers before. 
+				steps = steps * 1;
+			} // end if not numeric
+			
+			// Right angles are easy, and using a switch statement is good for educational purposes
+			switch (angle)
+			{
+				case 0:
+					newLatitude = newLatitude + steps; break;
+				case 90:
+					newLongitude = newLongitude + steps; break;
+				case 180:
+					newLatitude = newLatitude - steps; break;
+				case 270:
+					newLongitude = newLongitude - steps; break;
+				default:
+					// Calculate geometry. sohcahtoa!
+					var hypotenuse = steps;
+										
+					var opposite = sinDegrees(angle) * hypotenuse;;
+					var adjacent = cosDegrees(angle) * hypotenuse;
+					
+					newLongitude = newLongitude + opposite;
+					newLatitude = newLatitude + adjacent;
+
+					break;
+			} // end switch right angles
+			
+			// Move the turtle
+			var newLatLng = new L.LatLng(newLatitude, newLongitude);			
+			turtle.setLatLng(newLatLng);
+			
+			// If the pen is down, add the new point to the current line
+			if (penIsUp == false)
+			{
+				// Draw the line
+				allLinesArrays[currentLineArray].push([newLatitude, newLongitude]);
+				drawingObjects[currentLineObject].addLatLng([newLatitude, newLongitude]);
+			
+    			drawingObjects[currentLineObject].redraw();
+    		} // end if pen is up
+    		
+		} // end function forward
+		
+		// fd - synonym for forward
+		function fd(degrees) { forward(degrees); }
+		
+		// back - move the turtle back
+		function back(steps)
+		{
+			// Run forward with a negative number
+			forward(-1 * steps);
+		} // end function bk
+
+
+		// bk - synonym for back
+		function bk(steps) { back(steps); }
+
+		// ht - Hide the turtle
+		function ht() 
+		{ 
+			turtle.setOpacity(0);
+		} // end function ht
+
+		// st - Show the turtle
+		function st() 
+		{ 
+			turtle.setOpacity(1);
+		} // end function st
+
+		// cg - Clear graphics
+		function cg() 
+		{
+			// Move the turtle back to the centre and make it visible
+			var newLatLng = new L.LatLng(0, 0);
+			turtle.setLatLng(newLatLng);
+			turtle.setRotationAngle(0);
+			turtle.setOpacity(1);
+			
+			// Remove all markers
+			for(currentLayer in drawingObjects) 
+			{
+				try 
+            	{
+            		drawing.removeLayer(drawingObjects[currentLayer]);
+           		} catch(e) {
+               		alert("problem with " + e + drawing._layers[i]);
+           		} // end try to remove layer
+    		} // end for every layer
+			
+			// Reset the line array
+			lineArray = new Array();
+			lineArray.push([0, 0]);
+
+			// Support multiple lines
+			currentLineArray = 0;
+			allLinesArrays = new Array();
+			allLinesArrays.push(lineArray);
+
+			currentLineObject = 0;
+			lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: 'black',weight: 1,opacity: 0.5,smoothFactor: 1});
+    	
+			drawing.addLayer(lineObject);
+		
+		
+			// The lines and labels are all in one array of drawing objects
+			drawingObjects = new Array();
+		
+			drawingObjects.push(lineObject);
+    		
+		} // end function cg
+
+		// pu - Pen up. Stop adding points to the current line. 
+		function pu() 
+		{
+			penIsUp = true;
+						
+		} // end function pu	
+
+		// Circle
+		function circle()
+		{
+			var coordinates = turtle.getLatLng();
+			var radius = 1;
+						
+			var circleObject = new L.circle(coordinates, radius, {color: "#000000", fillColor:"#FFFFFF", fillOpacity: 1, weight: 1});
+			
+			drawing.addLayer(circleObject);
+			
+			addObject("Circle", "Untitled");
+			
+			// Add the label to drawing objects, so it can be cleared
+			drawingObjects.push(circleObject);
+
+		} // end function circle
+
+
+		// createLabelIcon
+		function createLabelIcon(labelText)
+		{
+			return L.divIcon(
+			{
+				className: "labelClass",
+				html: labelText
+			});
+		} // end function createLabelIcon
+
+		// label - Add a text label at the current position
+		function label(thisText)
+		{
+		
+			var markerLatLng = turtle.getLatLng();
+			
+			var turtleLatitude = markerLatLng.lat;
+			var turtleLongitude = markerLatLng.lng;
+			
+			var angle = turtle.options.rotationAngle;
+			
+			var markerLatitude = turtleLatitude;
+			var markerLongitude = turtleLongitude;
+			
+			var markerLatLng = new L.LatLng(markerLatitude, markerLongitude);
+			
+			var labelRotation=0;
+			var textAlign = "left";
+			
+			// Right angles are easy, and using a switch statement is good for educational purposes
+			switch (angle)
+			{
+				case 0:
+					labelRotation=0;
+					textAlign = "left";
+					break;
+				case 90:
+					labelRotation=90;
+					textAlign = "top";
+					break;
+				case 180:
+					//labelRotation=180;
+					
+					// Reading text upside down is hard
+					labelRotation=0;
+					textAlign = "right";
+					break;
+				case 270:
+					labelRotation=270;
+					textAlign = "bottom";
+					break;
+				default:
+					labelRotation=angle;
+					textAlign = "left";
+					break;
+			} // end switch right angles
+				
+			
+			var labelHtml = "<div id='thisLabel' style='transform: rotate("+labelRotation+"deg); -webkit-transform: rotate("+labelRotation+"deg);float:"+textAlign+"; '>" + thisText + "</div>";
+
+			// Add the label first, then move it based on the width.
+			var thisLabel = L.marker(markerLatLng, {icon:createLabelIcon(labelHtml)});
+			
+			// Add the label to drawing objects, so it can be cleared
+			drawingObjects.push(thisLabel);
+			
+			// Add the label to the drawing
+			thisLabel.addTo(drawing);
+			
+			addObject("Label",thisText);
+			
+			var test = document.getElementById("thisLabel");
+			var labelWidth = test.clientWidth;
+			var labelHeight = test.clientHeight;
+        	var turtleWidth = 8;
+        	
+        	// Set the id to something unique, like the label text
+        	test.setAttribute("id", thisText);
+						
+			var offset = 3;
+						
+			// Right angles are easy, and using a switch statement is good for educational purposes
+			
+			switch (angle)
+			{
+				case 0:
+					//markerLatitude = markerLatitude + offset;
+					markerLongitude = markerLongitude + offset;
+					break;
+				case 90:
+					markerLatitude = markerLatitude - offset;
+					//markerLongitude = markerLongitude + offset;
+					break;
+				case 180:
+					//markerLatitude = markerLatitude - offset;
+					markerLongitude = markerLongitude - offset;
+					break;
+				case 270:
+					markerLatitude = markerLatitude + (offset * 1.5);
+					//markerLongitude = markerLongitude - offset;
+					break;
+				default:
+					// Calculate geometry. sohcahtoa!
+					var hypotenuse = offset;
+										
+					var opposite = sinDegrees(angle) * hypotenuse;
+					var adjacent = cosDegrees(angle) * hypotenuse;
+					
+					markerLongitude = markerLongitude + opposite;
+					markerLatitude = markerLatitude + adjacent;
+
+					break;
+			} // end switch right angles
+			
+			
+			// Move the label						
+			markerLatLng = new L.LatLng(markerLatitude, markerLongitude);
+			
+			thisLabel.setLatLng(markerLatLng);
+			
+			
+			
+			//var thisCircle = L.circleMarker(markerLatLng, { fillColor: "#FFFFFF", radius: 6 } ).bindLabel("hello world", { noHide: true, opacity: 0.7, direction: 'right', offset: [-280, -32] }).addTo(drawing);
+		} // end function label
+
+	</script>
+	
+	
+	<!-- Drawings. These should normally be user-generated, but here are some examples. -->
+	<script>
+		// square
+		function square()
+		{
+
+			for (currentSide = 0; currentSide < 4; currentSide++)
+			{
+				fd(50);
+				rt(90);
+			} // end for each side
+		
+		} // end function square
+
+		// cube - from the original!
+		function cube()
+		{
+			square();
+			fd(50);
+			rt(45);
+			fd(25);
+			rt(45);
+			fd(50);
+			rt(180);
+			lt(45);
+			fd(25);
+			lt(45);
+			fd(50);
+			rt(180);
+			rt(45);
+			fd(25);
+			lt(45);
+			fd(50);
+		} // end function cube
+		
+		// Taiwan railway
+		function railway()
+		{
+			// Resize the drawing area
+			var drawingArea = document.getElementById("drawing");
+			drawingArea.style.width = "2000px";
+			drawingArea.style.height = "2000px";
+			
+			drawing.remove();
+			
+			initialiseLeaflet();
+		
+			importArea.value = "Badu 八堵	Sankeng 三坑 3	Keelung 基隆 5\n4\nQidu 七堵\n4\nBaifu 百福\n4\nWudu 五堵\n3\nXizhi 汐止\n2\nXike 汐科\n6\nNangang 南港\n5\nSongshan 松山\n8\nTaipei 臺北\n5\nWanhua 萬華\n6\nBanqiao 板橋\n3\nFuzhou 浮洲\n20\nShulin 樹林\n4\nSouth Shulin 南樹林\n4\nShanjia 山佳\n5\nYingge 鶯歌\n10\nTaoyuan 桃園\n6\nNeili 內壢\n5\nZhongli 中壢\n6\nPuxin 埔心\n5\nYangmei 楊梅\n6\nFugang 富岡\n5\nBaiHwu 北湖\n4\nHukou 湖口\n6\nXinfeng 新豐\n6\nZhubei 竹北\n5\nNorth Hsinchu 北新竹	Qianjia 千甲 4	Xinzhuang 新莊 4	Zhuzhong 竹中 3 (- Liujia 六家 5)	Shangyuan 上員 4	Ronghua 榮華 6	Zhudong 竹東 4	Hengshan 橫山 5	Jiuzantou 九讚頭 4	Hexing 合興 4	Fugui 富貴 3	Neiwan 內灣 5\n4\nHsinchu 新竹\n4\nlt(90);\nSanxingqiao 三姓橋\n4\nXiangshan 香山\n6\nQiding 崎頂\n6\nZhunan 竹南	Tanwen 談文 5	Dashan 大山 9	Houlong 後龍 4	Longgang 龍港 4	Baishatun 白沙屯 7	Xinpu 新埔 4	Tongxiao 通霄 6	Yuanli 苑裡 7	Rinan 日南 7	Dajia 大甲 6	Taichung Port 臺中港 5	Qingshui 清水 6	Shalu 沙鹿 5	Longjing 龍井 5	Dadu 大肚 6	Zhuifen 追分 6	Chenggong 成功 4\n5\nZaoqiao 造橋\n5\nFengfu 豐富\n5\nMiaoli 苗栗\n7\nNanshi 南勢\n5\nTongluo 銅鑼\n7\nSanyi 三義\n8\nTaian 泰安\n4\nHouli 后里\n8\nFengyuan 豐原\n6\nTanzi 潭子\n5\nTaiyuan 太原\n5\nTaichung 臺中\n4\nDaqing 大慶\n3\nWuri 烏日\n2\nXinwuri 新烏日\n4\nChenggong 成功	Zhuifen 追分 4	Dadu 大肚 7	Longjing 龍井 5	Shalu 沙鹿 6	Qingshui 清水 5	Taichung Port 臺中港 6	Dajia 大甲 6	Rinan 日南 5	Yuanli 苑裡 8	Tongxiao 通霄 7	Xinpu 新埔 5	Baishatun 白沙屯 4	Longgang 龍港 7	Houlong 後龍 4	Dashan 大山 4	Tanwen 談文 6	Zhunan 竹南 6\n8\nChanghua 彰化\n7\nHuatan 花壇\n4\nDacun 大村\n4\nYuanlin 員林\n4\nYongjing 永靖\n4\nShetou 社頭\n5\nTianzhong 田中\n19\nErshui 二水	Yuanquan 源泉 4	Zhuoshui 濁水 9	Longquan 龍泉 7	Jiji 集集 7	Shuili 水里 11	Checheng 車埕 5\n7\nLinnei 林內\n4\nShiliu 石榴\n5\nDouliu 斗六\n8\nDounan 斗南\n4\nShigui 石龜\n5\nDalin 大林\n6\nMinxiong 民雄\n5\nJiabei 嘉北\n4\nChiayi 嘉義\n6\nShuishang 水上\n4\nNanjing 南靖\n6\nHoubi 後壁\n7\nXinying 新營\n4\nLiuying 柳營\n5\nLinfengying 林鳳營\n6\nLongtian 隆田\n3\nBalin 拔林\n4\nShanhua 善化\n3\nNanke 南科\n4\nXinshi 新市\n6\nYongkang 永康\n4\nDaqiao 大橋\n4\nlt(90);\nTainan 臺南\n8\nBaoan 保安\n3\nRende 仁德\n4\nZhongzhou 中洲	Chang Jung Christian University 長榮大學 4	Shalun 沙崙 5\n5\nDahu 大湖\n4\nLuzhu 路竹\n9\nGangshan 岡山\n4\nQiaotou 橋頭\n4\nNanzi 楠梓\n6\nXinzuoying 新左營\n4\nZuoying 左營\n9\nKaohsiung 高雄\n8\nFengshan 鳳山\n3\nHouzhuang 後庄\n5\nJiuqutang 九曲堂\n5\nLiukuaicuo 六塊厝\n4\nPingtung 屏東\n3\nGuilai 歸來\n3\nLinluo 麟洛\n3\nXishi 西勢\n4\nZhutian 竹田\n19\nChaozhou 潮州\n6\nKanding 崁頂\n6\nNanzhou 南州\n5\nZhenan 鎮安\n6\nLinbian 林邊\n6\nJiadong 佳冬\n6\nDonghai 東海\n7\nFangliao 枋寮\n7\nJialu 加祿\n5\nNeishi 內獅\n6\nFangshan 枋山\n32\nGuzhuang 古莊\n5\nDawu 大武\n12\nLongxi 瀧溪\n10\nJinlun 金崙\n12\nTaimali 太麻里\n12\nZhiben 知本\n10\nKangle 康樂\n7\nlt(90);\nTaitung 臺東\n9\nShanli 山里\n7\nLuye 鹿野\n7\nRuiyuan 瑞源\n4\nRuihe 瑞和\n8\nGuanshan 關山\n9\nHaiduan 海端\n8\nChishang 池上\n8\nFuli 富里\n7\nDongzhu 東竹\n7\nDongli 東里\n8\nYuli 玉里\n11\nSanmin 三民\n14\nRuisui 瑞穗\n10\nFuyuan 富源\n4\nDafu 大富\n8\nGuangfu 光復\n7\nWanrong 萬榮\n8\nFenglin 鳳林\n6\nNanping 南平\n8\nFengtian 豐田\n5\nShoufeng 壽豐\n3\nPinghe 平和\n5\nZhixue 志學\n11\nJian 吉安\n6\nHualien 花蓮\n6\nBeipu 北埔\n5\nJingmei 景美\n5\nXincheng 新城\n4\nChongde 崇德\n8\nHeren 和仁\n8\nHeping 和平\n5\nHanben 漢本\n9\nWuta 武塔\n4\nNanao 南澳\n8\nDongao 東澳\n6\nYongle 永樂\n6\nSuaoxin 蘇澳新	Suao 蘇澳 5\n2\nXinma 新馬\n5\nlt(90);\nDongshan 冬山\n7\nLuodong 羅東\n3\nZhongli 中里\n2\nErjie 二結\n6\nYilan 宜蘭\n4\nSicheng 四城\n5\nJiaoxi 礁溪\n5\nDingpu 頂埔\n4\nToucheng 頭城\n4\nWaiao 外澳\n5\nGuishan 龜山\n5\nDaxi 大溪\n6\nDali 大里\n4\nShicheng 石城\n6\nFulong 福隆\n5\nGongliao 貢寮\n7\nShuangxi 雙溪\n5\nMudan 牡丹\n5\nSandiaoling 三貂嶺	Dahua 大華 8	Shifen 十分 7	Wanggu 望古 4	Lingjiao 嶺腳 5	Pingxi 平溪 3	Jingtong 菁桐 4\n5\nHoutong 猴硐\n7\nRuifang 瑞芳	NMMST 海科館 10 \n7\nSijiaoting 四腳亭\n4\nNuannuan 暖暖\n9\nBadu 八堵 ";
+			
+			jsCodeArea.value = "lt(90);\nfor (var currentStation=0;currentStation<=363;currentStation++)\n{\nvar thisStation = localStorage[\"A\"+currentStation];\n\nif (isNumeric(thisStation))\n{\nfd(thisStation);\n} else {\nif (contains(thisStation, ';'))\n{\neval(thisStation);\n} else {\nlabel(thisStation);\ncircle();\n} // end if this cell is a JS command\n} // end if this cell is a number\n} // end for every row\n";
+			
+			document.getElementById("numberRowsField").value = "365";
+			setRows();
+						
+			document.getElementById("numberColumnsField").value = "20";
+			setColumns();
+			
+			importSheet();
+			cg();
+			lt(90);
+			for (var currentStation=1;currentStation<=363;currentStation++)
+			{
+				var thisStation = localStorage["A"+currentStation];
+				
+				if (isNumeric(thisStation))
+				{
+					fd(thisStation);
+				} else {
+					if (contains(thisStation, ';'))
+					{
+						eval(thisStation);
+					} else {
+						label(thisStation);
+					circle();
+					} // end if this cell is a JS command
+				} // end if this cell is a number
+			} // end for every row
+			
+			drawing.setZoom(2);
+			drawing.panTo(new L.LatLng(-200, 50));
+
+			ht();
+		} // end function railway
+		
+	</script>
+
+	
+</body>
+</html>

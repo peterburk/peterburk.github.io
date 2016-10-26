@@ -1,0 +1,171 @@
+<html>
+	<head>
+		<title>
+			TurtleSheet Read Me
+		</title>
+			<style>
+			body {
+				font-family: Helvetica;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			TurtleSheet ReadMe
+		</h1>
+		
+		<br>
+			Peter Burkimsher 2016-10-26
+		</br>
+		<br>
+			peterburk@gmail.com
+		</br>
+
+		<h2>
+			What is TurtleSheet?
+		</h2>
+		
+		A plotting program based on <a href="http://mathforum.org/sum95/suzanne/basiclogo.html">LogoWriter</a>, integrated with a spreadsheet. 
+		
+		<h2>
+			What can I use it for?
+		</h2>
+			This is not "just a toy" (my housemate said that). There are many data-driven plots that Excel can't yet draw. 
+			<br>
+			For example:
+			</br>
+			Subway maps, Gantt chart, efficiency arrows, circuit diagram, axes, box plot, Venn diagram, traffic simulator, 
+			<br>population pyramid, phone tower hexagons, clock timing diagrams, tree graphs, chemistry, timelines...</br>
+			
+		<h2>
+			How do I use it?
+		</h2>
+		
+		<h3>
+			Basic operation
+		</h3>
+		<li>
+			Type some Logo code into the <b>Logo Code</b> field on the bottom left. 
+		</li>
+		<li>
+			Click <b>Compile</b>.
+		</li>
+		<li>
+			See the JS equivalent in the <b>JavaScript code</b> field. You can also type directly into here. 
+		</li>
+		<li>
+			Click <b>Run</b>. 
+		</li>
+		<li>
+			See the turtle move in the <b>Drawing</b> area on the top right. 
+		</li>
+		
+		<h3>
+			Other buttons
+		</h3>
+		<li>
+			<b>Import</b> takes tab-delimited data from the <b>Import Area</b> and copies it into the spreadsheet. 
+		</li>
+		<li>
+			<b>Clear</b> removes all data from the spreadsheet. 
+		</li>
+		<li>
+			<b>Save</b> copies the <b>Logo Code</b> field into HTML5 LocalStorage (a kind of cookie). 
+		</li>
+		<li>
+			<b>Load</b> brings back a saved program from LocalStorage and puts it into the <b>Logo Code</b> field. 
+		</li>
+		
+		<h3>
+			Shortcuts
+		</h3>
+		<li>
+			<b>lt 90</b> turns the turtle left by 90 degrees. 
+		</li>
+		<li>
+			<b>fd 50</b> moves the turtle forward by 50 steps (you might need to zoom out to see this). 
+		</li>
+		<li>
+			<b>rt 90</b> turns the turtle right by 90 degrees.
+		</li>
+		<li>
+			<b>cg</b> (clear graphics) clears the <b>Drawing</b> area and moves the turtle back to where it started.
+		</li>
+		<li>
+			<b>square</b> draws a square of size 50 pixels.
+		</li>
+		<li>
+			<b>railway</b> draws a subway-style map of the train network in Taiwan. 
+		</li>
+		
+		<h2>
+			What are some other commands?
+		</h2>
+		<li>
+			<b>bk 50</b> moves the turtle back by 50 pixels
+		</li>
+		<li>
+			<b>label [hello world]</b> draws a text label. 
+		</li>
+		<li>
+			<b>circle</b> draws a circle. 
+		</li>
+		<li>
+			<b>pu</b> (pen up) picks the pen off the paper - moving will not draw a line. 
+		</li>
+		<li>
+			<b>pd</b> (pen down) puts the pen down the paper - moving will start drawing a new line. 
+		</li>
+		<li>
+			<b>repeat 4 [fd 50 rt 90]</b> generates a for loop in JavaScript that draws a square. 
+		</li>
+		
+		<h2>
+			What new features can I expect in future?
+		</h2>
+		
+		<li>
+			Object-oriented design. Every time the pen is picked up and put down, a new object is created. 
+		</li>
+		<li>
+			Saving multiple "files" into LocalStorage. 
+		</li>
+		<li>
+			Compile subroutines in Logo code (to cube ...end). 
+		</li>
+		<li>
+			Import image into Drawing area.
+		</li>
+		<li>
+			Draggable turtle, objects. 
+		</li>
+		<li>
+			Onclick scripts. 
+		</li>
+		<li>
+			Animation, save gif. 
+		</li>
+		<li>
+			Multiple turtles.
+		</li>
+		<li>
+			Setsh to change the turtle icon.
+		</li>
+		<li>
+			Line colour, width.
+		</li>
+		<li>
+			Fill area.
+		</li>
+		<li>
+			Object awareness - don't draw a label over something else.
+		</li>
+		<li>
+			Diagonal selection in spreadsheet.
+		</li>
+		<li>
+			Jump turtle to new coordinates.
+		</li>
+		
+	</body>
+</html>
