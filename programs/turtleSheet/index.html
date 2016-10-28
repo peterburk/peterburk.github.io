@@ -1,3 +1,26 @@
+<!--
+	TurtleSheet
+	Peter Burkimsher 2016-10-27
+	
+	Railway:
+		Limited Express data to confirm stations in red
+	
+	To Do:
+		Object-oriented design. Every time the pen is picked up and put down, a new object is created.
+		Saving multiple "files" into LocalStorage.
+		Compile subroutines in Logo code (to cube ...end).
+		Draggable turtle, objects.
+		Onclick scripts.
+		Animation, save gif.
+		Multiple turtles.
+		Setsh to change the turtle icon.
+		Line colour, width.
+		Fill area.
+		Object awareness - don't draw a label over something else.
+		Diagonal selection in spreadsheet.
+		Jump turtle to new coordinates.
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,11 +106,15 @@
 	<!-- Rotated marker from https://github.com/bbecquet/Leaflet.RotatedMarker-->
 	<script src="leaflet.rotatedMarker.js"></script> 
 
+	<!-- Semicircle from https://github.com/jieter/Leaflet-semicircle -->
+	<script src="Semicircle.js"></script> 
+
 	<!-- Leaflet to PNG-->
 	<script src="leaflet-image.js"></script> 
 		
 	<!-- Actual HTML layout -->
 
+	
 	<h2>
 		TurtleSheet
 	</h2>
@@ -96,12 +123,10 @@
 	<br>
 		• Lost? See the <a href="readMe.html">Read Me</a>
 	</br>
-	<div onclick="railway();">
-		• Here from my StackOverflow question about railway maps? Click the <b>railway</b> button. 
-	</div>
 	
 	<p>
 	</p>
+	
 	
 	<table>
 		<tr>
@@ -293,7 +318,9 @@
 			
 			// Save the object name in an array
 			objectNames.push(objectName);
-		
+			
+			numberObjects = numberObjects + 1;
+			
 		} // end function addObject
 
 		// pd - Pen down. Start a new line. 
@@ -313,8 +340,8 @@
 			currentLineArray = currentLineArray + 1;
 			allLinesArrays.push(lineArray);
 
-			currentLineObject = currentLineObject + 1;
-			lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: 'black',weight: 1,opacity: 0.5,smoothFactor: 1});
+			currentLineObject = numberObjects - 1;
+			lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: 'black',weight: 1,opacity: 1,smoothFactor: 1});
     	
 			drawing.addLayer(lineObject);
 		
@@ -325,9 +352,40 @@
 			// Add the line to the list on the right
 			addObject("Line", "Untitled");
 			
-			numberObjects = numberObjects + 1;
 			
 		} // end function pd
+		
+		// dashedLine - Start drawing a dashed line. 
+		function dashedLine() 
+		{
+			penIsUp = false;
+			
+			// Reset the line array
+			lineArray = new Array();
+			var turtleLatitude = turtle.getLatLng().lat;
+			var turtleLongitude = turtle.getLatLng().lng;
+			var turtleLatLng = new L.LatLng(turtleLatitude, turtleLongitude);			
+
+			lineArray.push(turtleLatLng);
+
+			// Support multiple lines
+			currentLineArray = currentLineArray + 1;
+			allLinesArrays.push(lineArray);
+
+			currentLineObject = numberObjects - 1;
+			lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: '#d9701f',weight: 1,opacity: 1,dashArray: '10,10',smoothFactor: 1});
+    	
+			drawing.addLayer(lineObject);
+		
+		
+			// The lines and labels are all in one array of drawing objects
+			drawingObjects.push(lineObject);
+			
+			// Add the line to the list on the right
+			addObject("DashedLine", "Untitled");
+			
+			
+		} // end function dashedLine		
 
 		function globalVariables()
 		{
@@ -373,9 +431,9 @@
 				}
 			});
 		
-			var turtleIcon = new TurtleIcon({iconUrl: 'images/turtle.png'});
+			var thisTurtleIcon = new TurtleIcon({iconUrl: 'images/turtle.png'});
 
-			turtle = L.marker([0,0], {icon: turtleIcon,rotationOrigin: '16px 20px', rotationAngle: 0, opacity: 1}).addTo(drawing);
+			turtle = L.marker([0,0], {icon: thisTurtleIcon,rotationOrigin: '16px 20px', rotationAngle: 0, opacity: 1}).addTo(drawing);
 
 			// Whether the pen is up or down
 			penIsUp = false;
@@ -391,7 +449,7 @@
 			allLinesArrays.push(lineArray);
 
 			currentLineObject = 0;
-			var lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: 'black',weight: 1,opacity: 0.5,smoothFactor: 1});
+			var lineObject = new L.polyline(allLinesArrays[currentLineArray], {color: 'black',weight: 1,opacity: 1,smoothFactor: 1});
 		
 			drawing.addLayer(lineObject);
 				
@@ -416,6 +474,21 @@
 		
 			pd();
 		} // end function initialiseLeaflet
+
+		// resizeDrawing - Re-initialise Leaflet with a new map size
+		function resizeDrawing(newWidth, newHeight)
+		{
+			// Resize the drawing area
+			var drawingArea = document.getElementById("drawing");
+			drawingArea.style.width = newWidth;
+			drawingArea.style.height = newHeight;
+			
+			drawing.remove();
+			
+			initialiseLeaflet();
+
+		} // end function resizeDrawing
+
 		
 		// Run the initialiseLeaflet function first
 		globalVariables();
@@ -423,6 +496,7 @@
 		
 	</script>
 	
+
 	<script>
 		// Spreadsheet from http://jsfiddle.net/ondras/hYfN3/
 		
@@ -1018,12 +1092,17 @@
 		} // end function pu	
 
 		// Circle
-		function circle()
+		function circle(circleColour)
 		{
 			var coordinates = turtle.getLatLng();
 			var radius = 1;
-						
-			var circleObject = new L.circle(coordinates, radius, {color: "#000000", fillColor:"#FFFFFF", fillOpacity: 1, weight: 1});
+			
+			if (circleColour == null)
+			{
+				circleColour = "#FFFFFF";
+			}
+			
+			var circleObject = new L.circle(coordinates, radius, {color: "#000000", fillColor:circleColour, fillOpacity: 1, weight: 1});
 			
 			drawing.addLayer(circleObject);
 			
@@ -1033,6 +1112,58 @@
 			drawingObjects.push(circleObject);
 
 		} // end function circle
+
+		// semicircle
+		function semicircle(circleColour, thisStartAngle, thisStopAngle)
+		{
+			var coordinates = turtle.getLatLng();
+			var radius = 1;
+			
+			if (circleColour == null)
+			{
+				circleColour = "#FFFFFF";
+			}
+			
+			var circleObject = new L.circle(coordinates, radius, {color: "#000000", fillColor:circleColour, fillOpacity: 1, weight: 1, startAngle: thisStartAngle, stopAngle: thisStopAngle});
+			
+			drawing.addLayer(circleObject);
+			
+			addObject("Semicircle", "Untitled");
+			
+			// Add the label to drawing objects, so it can be cleared
+			drawingObjects.push(circleObject);
+
+		} // end function semicircle
+
+		// function halfCircleTop - A shortcut for a semicircle
+		function halfCircleTop(circleColour)
+		{
+			semicircle(circleColour, -90, 90);
+		} // end function halfCircleTop
+
+		// function halfCircleBottom - A shortcut for a semicircle
+		function halfCircleBottom(circleColour)
+		{
+			semicircle(circleColour, 90, 270);
+		} // end function halfCircleBottom
+
+		// function thirdCircleRight - A shortcut for a semicircle
+		function thirdCircleRight(circleColour)
+		{
+			semicircle(circleColour, 0, 120);
+		} // end function thirdCircleRight
+
+		// function thirdCircleBottom - A shortcut for a semicircle
+		function thirdCircleBottom(circleColour)
+		{
+			semicircle(circleColour, 120, 240);
+		} // end function thirdCircleBottom
+
+		// function thirdCircleLeft - A shortcut for a semicircle
+		function thirdCircleLeft(circleColour)
+		{
+			semicircle(circleColour, 240, 360);
+		} // end function thirdCircleLeft
 
 
 		// createLabelIcon
@@ -1159,6 +1290,20 @@
 			
 			//var thisCircle = L.circleMarker(markerLatLng, { fillColor: "#FFFFFF", radius: 6 } ).bindLabel("hello world", { noHide: true, opacity: 0.7, direction: 'right', offset: [-280, -32] }).addTo(drawing);
 		} // end function label
+		
+		// jump - Move the turtle to new coordinates without drawing a line
+		function jump(newLatitude, newLongitude)
+		{
+			// Lift the pen up
+			pu();
+			
+			// Move the turtle
+			var newLatLng = new L.LatLng(newLatitude, newLongitude);			
+			turtle.setLatLng(newLatLng);
+			
+			// Put the pen down
+			pd();
+		} // end function jump
 
 	</script>
 	
@@ -1198,21 +1343,14 @@
 			fd(50);
 		} // end function cube
 		
+		
 		// Taiwan railway
 		function railway()
 		{
-			// Resize the drawing area
-			var drawingArea = document.getElementById("drawing");
-			drawingArea.style.width = "2000px";
-			drawingArea.style.height = "2000px";
+				
+			importArea.value = "label(\"Badu 八堵\");halfCircleTop(\"#d91820\");halfCircleBottom(\"#000000\");\nlt(90);\nfd(3);\nlabel(\"Sankeng 三坑\");\ncircle();\nfd(5);\nlabel(\"Keelung 基隆\");circle(\"#d91820\");\nbk(8);\nrt(90);\n4\nlabel(\"Qidu 七堵\");circle(\"#d91820\");\n4\nBaifu 百福\n4\nWudu 五堵\n3\nlabel(\"Xizhi 汐止\");circle(\"#d91820\");\n2\ncircle();fd(1);label(\"Xike 汐科\");fd(5);\nlabel(\"Nangang 南港 <font color='#da5530'>HSR 高鐵</font> <font color='#1896dc'>MRT 捷運</font>\");thirdCircleRight(\"#f9bd93\");thirdCircleBottom(\"#1896dc\");thirdCircleLeft(\"#d91820\");\n5\nlabel(\"Songshan 松山 <font color='#1896dc'>MRT 捷運</font>\");halfCircleTop(\"#1896dc\");halfCircleBottom(\"#d91820\");\nfd(7);\nlabel(\"<b>Taipei 臺北</b> <font color='#da5530'>HSR 高鐵</font> <font color='#1896dc'>MRT 捷運</font>\");\nfd(1);\nthirdCircleRight(\"#f9bd93\");thirdCircleBottom(\"#1896dc\");thirdCircleLeft(\"#d91820\");\nfd(3);\nlabel(\"<font color='#1896dc'>(Longshan Temple MRT 龍山寺站捷運)</font>\");\nfd(2);\nhalfCircleTop(\"#1896dc\");halfCircleBottom(\"#d91820\");\nfd(1);\nlabel(\"Wanhua 萬華\");\nfd(5);\nlabel(\"Banqiao 板橋 <font color='#da5530'>HSR 高鐵</font> <font color='#1896dc'>MRT 捷運</font>\");thirdCircleRight(\"#f9bd93\");thirdCircleBottom(\"#1896dc\");thirdCircleLeft(\"#d91820\");\n3\nFuzhou 浮洲\n20\nlabel(\"Shulin 樹林\");circle(\"#d91820\");\n4\nSouth Shulin 南樹林\n4\nShanjia 山佳\n5\nlabel(\"Yingge 鶯歌\");circle(\"#d91820\");\n10\nlt(90);\npu();\ndashedLine();\nfd(10);\nlt(90);\nfd(9);\nrt(90);\nfd(10);\nrt(90);\nfd(20);\ncircle(\"#f9bd93\");\npu();\nbk(20);\nlt(90);\nbk(10);\nlt(90);\nbk(9);\nrt(90);\nbk(10);\npd();\nrt(90);\nlabel(\"Taoyuan 桃園\");circle(\"#d91820\");\n6\nNeili 內壢\n5\nlt(90);\npu();\ndashedLine();\nfd(20);\nlt(180);\ncircle(\"#f9bd93\");\npu();\nbk(2);\npd();\nlabel(\"<font color='#da5530'>Taoyuan HSR 桃園高鐵</font>\");\npu();\nfd(2);\nrt(180);\nbk(20);\nrt(90);\npd();\nlabel(\"Zhonglì 中壢\");circle(\"#d91820\");\n6\nPuxin 埔心\nfd(2);\nlt(90);\nfd(3);\nlabel(\"Yangmei 楊梅\");circle(\"#d91820\");\n6\nFugang 富岡\n5\nBaihwu 北湖\n4\nlabel(\"Hukou 湖口\");circle(\"#d91820\");\n6\nlabel(\"Xinfeng 新豐\");circle(\"#d91820\");\n6\nlabel(\"Zhubei 竹北\");circle(\"#d91820\");\n5\nlabel(\"North Hsinchu 北新竹\");circle(\"#000000\");\nlt(90);\nfd(4);label(\"Qianjia 千甲\");circle();\nfd(4);label(\"Xinzhuang 新莊\");circle();\nfd(3);label(\"Zhuzhong 竹中\");circle(\"#000000\");\nlt(90);\nfd(5);\npu();\ndashedLine();\nfd(4);\nlt(90);\nfd(5);\nlt(90);\nfd(7);\nrt(90);\nfd(2);\nrt(90);\nfd(3);\nlt(90);\nfd(4);\npu();\nbk(4);\nrt(90);\nbk(3);\nlt(90);\nbk(2);\nlt(90);\nbk(7);\nrt(90);\nbk(5);\nrt(90);\nbk(4);\npd();\nlabel(\"Liujia 六家 <font color='#da5530'>(Hsinchu HSR 新竹高鐵)</font>\");circle(\"#f9bd93\");\nbk(5);\nrt(90);\nfd(4);label(\"Shangyuan 上員\");circle();\nfd(6);label(\"Ronghua 榮華\");circle();\nfd(4);label(\"Zhudong 竹東\");circle();\nfd(5);label(\"Hengshan 橫山\");circle();\nfd(4);label(\"Jiuzantou 九讚頭\");circle();\nfd(4);label(\"Hexing 合興\");circle();\nfd(3);label(\"Fugui 富貴\");circle();\nfd(5);label(\"Neiwan 內灣\");circle();\nbk(46);\nrt(90);\n4\nlabel(\"<b>Hsinchu 新竹</b>\");circle(\"#d91820\");\n4\nSanxingqiao 三姓橋\n4\nXiangshan 香山\n6\nQiding 崎頂\n6\nlabel(\"Zhunan 竹南\");halfCircleTop(\"#d91820\");halfCircleBottom(\"#000000\");\nlt(90);\nfd(6);label(\"Tanwen 談文\");circle();\nfd(3);rt(90);fd(6);\nbk(6);\nlt(90);\nbk(9);\nrt(90);\n5\nZaoqiao 造橋\n5\nlt(90);\npu();\ndashedLine();\nfd(4);\nrt(90);\nfd(5);\nrt(90);\nfd(4);\npu();\nbk(4);\nlt(90);\nbk(5);\nlt(90);\nbk(4);\nrt(90);\npd();\nlabel(\"<font color='#da5530'>(Miaoli HSR 苗栗高鐵)</font> Fengfu 豐富\");circle(\"#f9bd93\");\n5\nlabel(\"Miaoli 苗栗\");circle(\"#d91820\");\n7\nNanshi 南勢\n5\nTongluo 銅鑼\n7\nSanyi 三義\n8\nTaian 泰安\n4\nlabel(\"Houli 后里\");circle(\"#d91820\");\n8\nlabel(\"Fengyuan 豐原\");circle(\"#d91820\");\n6\nTanzi 潭子\n5\nTaiyuan 太原\nfd(4);label(\"<b>Taichung 臺中</b>\");fd(1);circle(\"#d91820\");\nfd(3);label(\"Daqing 大慶\");fd(1);circle();\nfd(2);label(\"Wuri 烏日\");fd(1);circle();\n2\nlabel(\"<font color='#da5530'>(Taichung HSR 台中高鐵)</font> Xinwuri 新烏日\");halfCircleTop(\"#f9bd93\");halfCircleBottom(\"#d91820\");\n4\nlabel(\"Chenggong 成功\");circle(\"#000000\");\nlt(90);\nfd(4);label(\"Zhuifen 追分\");circle();\nfd(5);lt(90);fd(2);label(\"Dadu 大肚\");circle(\"#d91820\");\nfd(6);label(\"Longjing 龍井\");circle();\nfd(6);label(\"Shalu 沙鹿\");circle(\"#d91820\");\nfd(5);label(\"Qingshui 清水\");circle(\"#d91820\");\nfd(6);label(\"Taichung Port 臺中港\");circle();\nfd(6);label(\"Dajia 大甲\");circle(\"#d91820\");\nfd(6);label(\"Rinan 日南\");circle();\nfd(8);label(\"Yuanli 苑裡\");circle(\"#d91820\");\nfd(7);label(\"Tongxiao 通霄\");circle(\"#d91820\");\nfd(6);label(\"Xinpu 新埔\");circle();\nfd(4);label(\"Baishatun 白沙屯\");circle(\"#d91820\");\nfd(7);label(\"Longgang 龍港\");circle();\nfd(4);label(\"Houlong 後龍\");circle(\"#d91820\");\nfd(4);label(\"Dashan 大山\");circle();\nbk(77);\nrt(90);\nbk(9);\nrt(90);\n8\nlabel(\"Changhua 彰化\");circle(\"#d91820\");\n7\nHuatan 花壇\n4\nDacun 大村\n4\nlabel(\"Yuanlin 員林\");circle(\"#d91820\");\n4\nYongjing 永靖\n4\nlabel(\"Shetou 社頭\");circle(\"#d91820\");\n5\nlt(90);\npu();\ndashedLine();\nfd(30);\nlt(90);\nlabel(\"<font color='#da5530'>Changhua HSR 彰化高鐵</font>\");circle(\"#f9bd93\");\nrt(90);\npu();\nbk(30);\nrt(90);\npd();\nlabel(\"Tianzhong 田中\");circle(\"#d91820\");\n19\nlabel(\"Ershui 二水\");halfCircleBottom(\"#000000\");halfCircleTop(\"#d91820\");\nlt(90);\nfd(4);label(\"Yuanquan 源泉\");circle();\nfd(9);label(\"Zhuoshui 濁水\");circle();\nfd(7);label(\"Longquan 龍泉\");circle();\nfd(7);label(\"Jiji 集集\");circle();\nfd(11);label(\"Shuili 水里\");circle();\nfd(5);label(\"Checheng 車埕\");circle();\nbk(43);\nrt(90);\n7\nlabel(\"Linnei 林內\");circle(\"#d91820\");\n4\nShiliu 石榴\n5\nlabel(\"Douliu 斗六\");circle(\"#d91820\");\n8\nlt(90);\npu();\ndashedLine();\nfd(15);\nrt(90);\nfd(15);\nlt(90);\nfd(15);\nlt(90);\nlabel(\"<font color='#da5530'>Yunlin HSR 雲林高鐵</font>\");circle(\"#f9bd93\");\npu();\nrt(90);\nbk(15);\nrt(90);\nbk(15);\nlt(90);\nbk(15);\nrt(90);\npd();\nlabel(\"Dounan 斗南\");circle(\"#d91820\");\n4\nShigui 石龜\n5\nlabel(\"Dalin 大林\");circle(\"#d91820\");\n6\nlabel(\"Minxiong 民雄\");circle(\"#d91820\");\n5\nJiabei 嘉北\n4\nlt(90);\npu();\ndashedLine();\nfd(30);\nlt(90);\nlabel(\"<font color='#da5530'>Chiayi HSR 嘉義高鐵</font>\");circle(\"#f9bd93\");\nrt(90);\npu();\nbk(30);\nrt(90);\npd();\nlabel(\"Chiayi 嘉義\");circle(\"#d91820\");\n6\nShuishang 水上\n4\nNanjing 南靖\n6\nHoubi 後壁\n7\nlabel(\"Xinying 新營\");circle(\"#d91820\");\n4\nLiuying 柳營\n5\nLinfengying 林鳳營\n6\nlabel(\"Longtian 隆田\");circle(\"#d91820\");\n3\nBalin 拔林\n4\nlabel(\"Shanhua 善化\");circle(\"#d91820\");\n3\nNanke 南科\n4\nlabel(\"Xinshi 新市\");circle(\"#d91820\");\nfd(3);\nlt(90);\nfd(3);\nlabel(\"Yongkang 永康\");circle(\"#d91820\");\n4\nDaqiao 大橋\n4\nlabel(\"<b>Tainan 臺南</b>\");circle(\"#d91820\");\n8\nBaoan 保安\n3\nRende 仁德\n4\nlabel(\"Zhongzhou 中洲\");circle(\"#000000\");\nlt(90);\nfd(4);label(\"Chang Jung Christian University 長榮大學\");circle();\nfd(5);\nlt(90);\npu();\ndashedLine();\nfd(7);\nlt(90);\nfd(9);\ncircle();\npu();\nbk(9);\nrt(90);\nbk(7);\nrt(90);\ndashedLine();\nfd(16);\nlt(90);\nfd(19);\nlt(90);\nfd(25);\ncircle();\npu();\nbk(25);\nrt(90);\nbk(19);\nrt(90);\nbk(16);\nlabel(\"Shalun 沙崙 <font color='#da5530'>(Tainan HSR 台南高鐵)</font>\");circle(\"#f9bd93\");\nbk(9);\nrt(90);\npd();\n5\nlabel(\"Dahu 大湖\");circle(\"#d91820\");\n4\nlabel(\"Luzhu 路竹\");circle(\"#d91820\");\nfd(8);\nlabel(\"Gangshan 岡山\");\nfd(1);\ncircle(\"#d91820\");\nfd(2);\nlabel(\"<font color='#1896dc'>(Ciaotou Sugar Refinery MRT)</font>\");\nfd(3);\nlabel(\"Qiaotou 橋頭 <font color='#1896dc'>捷運</font>\");circle(\"#1896dc\");\n3\nlabel(\"Nanzi 楠梓\");circle(\"#d91820\");\n4\nlabel(\"<font color='#da5530'>(Zuoying HSR</font> <font color='#1896dc'>MRT</font><font color='#da5530'> 左營高鐵</font> <font color='#1896dc'>捷運</font><font color='#da5530'>)</font>\");\n2\nfd(1);label(\"Xinzuoying 新左營\");bk(1);thirdCircleRight(\"#f9bd93\");thirdCircleBottom(\"#1896dc\");thirdCircleLeft(\"#d91820\");\n4\nfd(1);label(\"Zuoying 左營\");bk(1);circle();\n9\nlabel(\"<b>Kaohsiung 高雄</b> <font color='#1896dc'>MRT 捷運</font>\");halfCircleTop(\"#1896dc\");halfCircleBottom(\"#d91820\");\n8\nlabel(\"Fengshan 鳳山\");circle(\"#d91820\");\n3\nHouzhuang 後庄\n5\nlabel(\"Jiuqutang 九曲堂\");circle(\"#d91820\");\n5\nLiukuaicuo 六塊厝\n4\nlabel(\"Pingtung 屏東\");circle(\"#d91820\");\n3\nGuilai 歸來\n3\nLinluo 麟洛\n3\nlabel(\"Xishi 西勢\");circle(\"#d91820\");\n4\nZhutian 竹田\n19\nlabel(\"Chaozhou 潮州\");circle(\"#d91820\");\n6\nKanding 崁頂\n6\nlabel(\"Nanzhou 南州\");circle(\"#d91820\");\n5\nZhenan 鎮安\n6\nlabel(\"Linbian 林邊\");circle(\"#d91820\");\n6\nJiadong 佳冬\n6\nDonghai 東海\n7\nlabel(\"Fangliao 枋寮\");circle(\"#d91820\");\n7\nJialu 加祿\n5\nNeishi 內獅\n6\nFangshan 枋山\n32\nGuzhuang 古莊\n5\nlabel(\"Dawu 大武\");circle(\"#d91820\");\n12\nlabel(\"Longxi 瀧溪\");circle(\"#d91820\");\nfd(7);\nlt(90);\nfd(3);\nlabel(\"Jinlun 金崙\");circle(\"#d91820\");\n12\nlabel(\"Taimali 太麻里\");circle(\"#d91820\");\n12\nlabel(\"Zhiben 知本\");circle(\"#d91820\");\n10\nlabel(\"Kangle 康樂\");circle(\"#d91820\");\n7\nlabel(\"<b>Taitung 臺東</b>\");circle(\"#d91820\");\n9\nShanli 山里\n7\nlabel(\"Luye 鹿野\");circle(\"#d91820\");\n7\nlabel(\"Ruiyuan 瑞源\");circle(\"#d91820\");\n4\nRuihe 瑞和\n8\nlabel(\"Guanshan 關山\");circle(\"#d91820\");\n9\nHaiduan 海端\n8\nlabel(\"Chishang 池上\");circle(\"#d91820\");\n8\nlabel(\"Fuli 富里\");circle(\"#d91820\");\n7\nlabel(\"Dongzhu 東竹\");circle(\"#d91820\");\n7\nlabel(\"Dongli 東里\");circle(\"#d91820\");\n8\nlabel(\"Yuli 玉里\");circle(\"#d91820\");\n11\nSanmin 三民\n14\nlabel(\"Ruisui 瑞穗\");circle(\"#d91820\");\n10\nlabel(\"Fuyuan 富源\");circle(\"#d91820\");\n4\nDafu 大富\n8\nlabel(\"Guangfu 光復\");circle(\"#d91820\");\n7\nlabel(\"Wanrong 萬榮\");circle(\"#d91820\");\n8\nlabel(\"Fenglin 鳳林\");circle(\"#d91820\");\n6\nNanping 南平\n8\nlabel(\"Fengtian 豐田\");circle(\"#d91820\");\n5\nlabel(\"Shoufeng 壽豐\");circle(\"#d91820\");\n3\nPinghe 平和\n5\nlabel(\"Zhixue 志學\");circle(\"#d91820\");\n11\nlabel(\"Jian 吉安\");circle(\"#d91820\");\n6\nlabel(\"Hualien 花蓮\");circle(\"#d91820\");\n6\nlabel(\"Beipu 北埔\");circle(\"#d91820\");\n5\nJingmei 景美\n5\nlabel(\"Xincheng 新城\");circle(\"#d91820\");\n4\nChongde 崇德\n8\nlabel(\"Heren 和仁\");circle(\"#d91820\");\n8\nlabel(\"Heping 和平\");circle(\"#d91820\");\n5\nHanben 漢本\n9\nWuta 武塔\n4\nlabel(\"Nanao 南澳\");circle(\"#d91820\");\n8\nlabel(\"Dongao 東澳\");circle(\"#d91820\");\n6\nlt(90);\nYongle 永樂\n6\nlabel(\"Suaoxin 蘇澳新\");halfCircleBottom(\"#000000\");halfCircleTop(\"#d91820\");\nlt(90);\nfd(5);label(\"Suao 蘇澳\");circle(\"#d91820\");\nbk(5);\nrt(90);\n2\ncircle();\nfd(1);\nlabel(\"Xinma 新馬\");\nfd(4);\nlabel(\"Dongshan 冬山\");circle(\"#d91820\");\n7\nlabel(\"Luodong 羅東\");circle(\"#d91820\");\n3\nZhonglǐ 中里\n2\ncircle();\nfd(1);\nlabel(\"Erjie 二結\");\nfd(5);\nlabel(\"Yilan 宜蘭\");circle(\"#d91820\");\n4\nSicheng 四城\n5\nlabel(\"Jiaoxi 礁溪\");circle(\"#d91820\");\n5\nDingpu 頂埔\n4\nlabel(\"Toucheng 頭城\");circle(\"#d91820\");\n4\nWaiao 外澳\n5\nGuishan 龜山\n5\nDaxi 大溪\n6\nDali 大里\n4\nShicheng 石城\n6\nlabel(\"Fulong 福隆\");circle(\"#d91820\");\n5\nlabel(\"Gongliao 貢寮\");circle(\"#d91820\");\n7\nlabel(\"Shuangxi 雙溪\");circle(\"#d91820\");\n5\nMudan 牡丹\n5\nlabel(\"Sandiaoling 三貂嶺\");circle(\"#000000\");\nlt(90);\nfd(8);rt(180);label(\"Dahua 大華\");circle();lt(180);\nfd(7);rt(180);label(\"Shifen 十分\");circle();lt(180);\nfd(4);rt(180);label(\"Wanggu 望古\");circle();lt(180);\nfd(5);rt(180);fd(1);label(\"Lingjiao 嶺腳\");bk(1);circle();lt(180);\nfd(3);rt(180);label(\"Pingxi 平溪\");circle();lt(180);\nfd(4);rt(180);label(\"Jingtong 菁桐\");circle();lt(180);\nbk(31);\nrt(90);\n5\nlabel(\"sHoutong 猴硐\");circle(\"#d91820\");\n7\nlt(90);\nfd(10);\npu();\nfd(1);label(\"Haikeguan\");bk(1);\nfd(5);label(\"(NMMST) 海科館\");bk(5);\npd();\ncircle();\nbk(10);\nrt(90);\nlabel(\"Ruifang 瑞芳\");circle(\"#d91820\");\n7\nSijiaoting 四腳亭\n4\nNuannuan 暖暖\n9\nlt(90);\npu();\nfd(60);\nrt(90);\nfd(50);\npd();\nrt(90);\nlabel(\"<img src=\\\"images/tra.png\\\">\");\npu();bk(155);lt(90);bk(25);rt(90);pd();\nlabel(\"<font size=96px><b>TRA Map 臺鐵地圖</b></font>\");\npu();bk(20);pd();\nlabel(\"Peter Burkimsher 林台平\");\npu();bk(5);pd();\nlabel(\"2016-10-28\");\npu();bk(8);pd();\ncircle(\"#000000\");pu();fd(1);rt(90);fd(1);lt(90);pd();label(\"Transfer station 轉乘站\");pu();rt(90);bk(1);lt(90);bk(1);\nbk(5);pd();\ncircle(\"#d91820\");pu();fd(1);rt(90);fd(1);lt(90);pd();label(\"Express 莒光\");pu();rt(90);bk(1);lt(90);bk(1);\nbk(5);pd();\ncircle(\"#f9bd93\");pu();fd(1);rt(90);fd(1);lt(90);pd();label(\"HSR 高鐵\");pu();rt(90);bk(1);lt(90);bk(1);\nbk(5);pd();\ncircle(\"#1896dc\");pu();fd(1);rt(90);fd(1);lt(90);pd();label(\"MRT 捷運\");pu();rt(90);bk(1);lt(90);bk(1);\nbk(5);rt(90);bk(7);\ndashedLine();\nfd(7);\npu();\nlt(90);\npu();fd(1);rt(90);fd(1);lt(90);pd();label(\"HSR shuttle bus 高鐵快捷公車\");pu();rt(90);bk(1);lt(90);bk(1);";
 			
-			drawing.remove();
-			
-			initialiseLeaflet();
-		
-			importArea.value = "Badu 八堵	Sankeng 三坑 3	Keelung 基隆 5\n4\nQidu 七堵\n4\nBaifu 百福\n4\nWudu 五堵\n3\nXizhi 汐止\n2\nXike 汐科\n6\nNangang 南港\n5\nSongshan 松山\n8\nTaipei 臺北\n5\nWanhua 萬華\n6\nBanqiao 板橋\n3\nFuzhou 浮洲\n20\nShulin 樹林\n4\nSouth Shulin 南樹林\n4\nShanjia 山佳\n5\nYingge 鶯歌\n10\nTaoyuan 桃園\n6\nNeili 內壢\n5\nZhongli 中壢\n6\nPuxin 埔心\n5\nYangmei 楊梅\n6\nFugang 富岡\n5\nBaiHwu 北湖\n4\nHukou 湖口\n6\nXinfeng 新豐\n6\nZhubei 竹北\n5\nNorth Hsinchu 北新竹	Qianjia 千甲 4	Xinzhuang 新莊 4	Zhuzhong 竹中 3 (- Liujia 六家 5)	Shangyuan 上員 4	Ronghua 榮華 6	Zhudong 竹東 4	Hengshan 橫山 5	Jiuzantou 九讚頭 4	Hexing 合興 4	Fugui 富貴 3	Neiwan 內灣 5\n4\nHsinchu 新竹\n4\nlt(90);\nSanxingqiao 三姓橋\n4\nXiangshan 香山\n6\nQiding 崎頂\n6\nZhunan 竹南	Tanwen 談文 5	Dashan 大山 9	Houlong 後龍 4	Longgang 龍港 4	Baishatun 白沙屯 7	Xinpu 新埔 4	Tongxiao 通霄 6	Yuanli 苑裡 7	Rinan 日南 7	Dajia 大甲 6	Taichung Port 臺中港 5	Qingshui 清水 6	Shalu 沙鹿 5	Longjing 龍井 5	Dadu 大肚 6	Zhuifen 追分 6	Chenggong 成功 4\n5\nZaoqiao 造橋\n5\nFengfu 豐富\n5\nMiaoli 苗栗\n7\nNanshi 南勢\n5\nTongluo 銅鑼\n7\nSanyi 三義\n8\nTaian 泰安\n4\nHouli 后里\n8\nFengyuan 豐原\n6\nTanzi 潭子\n5\nTaiyuan 太原\n5\nTaichung 臺中\n4\nDaqing 大慶\n3\nWuri 烏日\n2\nXinwuri 新烏日\n4\nChenggong 成功	Zhuifen 追分 4	Dadu 大肚 7	Longjing 龍井 5	Shalu 沙鹿 6	Qingshui 清水 5	Taichung Port 臺中港 6	Dajia 大甲 6	Rinan 日南 5	Yuanli 苑裡 8	Tongxiao 通霄 7	Xinpu 新埔 5	Baishatun 白沙屯 4	Longgang 龍港 7	Houlong 後龍 4	Dashan 大山 4	Tanwen 談文 6	Zhunan 竹南 6\n8\nChanghua 彰化\n7\nHuatan 花壇\n4\nDacun 大村\n4\nYuanlin 員林\n4\nYongjing 永靖\n4\nShetou 社頭\n5\nTianzhong 田中\n19\nErshui 二水	Yuanquan 源泉 4	Zhuoshui 濁水 9	Longquan 龍泉 7	Jiji 集集 7	Shuili 水里 11	Checheng 車埕 5\n7\nLinnei 林內\n4\nShiliu 石榴\n5\nDouliu 斗六\n8\nDounan 斗南\n4\nShigui 石龜\n5\nDalin 大林\n6\nMinxiong 民雄\n5\nJiabei 嘉北\n4\nChiayi 嘉義\n6\nShuishang 水上\n4\nNanjing 南靖\n6\nHoubi 後壁\n7\nXinying 新營\n4\nLiuying 柳營\n5\nLinfengying 林鳳營\n6\nLongtian 隆田\n3\nBalin 拔林\n4\nShanhua 善化\n3\nNanke 南科\n4\nXinshi 新市\n6\nYongkang 永康\n4\nDaqiao 大橋\n4\nlt(90);\nTainan 臺南\n8\nBaoan 保安\n3\nRende 仁德\n4\nZhongzhou 中洲	Chang Jung Christian University 長榮大學 4	Shalun 沙崙 5\n5\nDahu 大湖\n4\nLuzhu 路竹\n9\nGangshan 岡山\n4\nQiaotou 橋頭\n4\nNanzi 楠梓\n6\nXinzuoying 新左營\n4\nZuoying 左營\n9\nKaohsiung 高雄\n8\nFengshan 鳳山\n3\nHouzhuang 後庄\n5\nJiuqutang 九曲堂\n5\nLiukuaicuo 六塊厝\n4\nPingtung 屏東\n3\nGuilai 歸來\n3\nLinluo 麟洛\n3\nXishi 西勢\n4\nZhutian 竹田\n19\nChaozhou 潮州\n6\nKanding 崁頂\n6\nNanzhou 南州\n5\nZhenan 鎮安\n6\nLinbian 林邊\n6\nJiadong 佳冬\n6\nDonghai 東海\n7\nFangliao 枋寮\n7\nJialu 加祿\n5\nNeishi 內獅\n6\nFangshan 枋山\n32\nGuzhuang 古莊\n5\nDawu 大武\n12\nLongxi 瀧溪\n10\nJinlun 金崙\n12\nTaimali 太麻里\n12\nZhiben 知本\n10\nKangle 康樂\n7\nlt(90);\nTaitung 臺東\n9\nShanli 山里\n7\nLuye 鹿野\n7\nRuiyuan 瑞源\n4\nRuihe 瑞和\n8\nGuanshan 關山\n9\nHaiduan 海端\n8\nChishang 池上\n8\nFuli 富里\n7\nDongzhu 東竹\n7\nDongli 東里\n8\nYuli 玉里\n11\nSanmin 三民\n14\nRuisui 瑞穗\n10\nFuyuan 富源\n4\nDafu 大富\n8\nGuangfu 光復\n7\nWanrong 萬榮\n8\nFenglin 鳳林\n6\nNanping 南平\n8\nFengtian 豐田\n5\nShoufeng 壽豐\n3\nPinghe 平和\n5\nZhixue 志學\n11\nJian 吉安\n6\nHualien 花蓮\n6\nBeipu 北埔\n5\nJingmei 景美\n5\nXincheng 新城\n4\nChongde 崇德\n8\nHeren 和仁\n8\nHeping 和平\n5\nHanben 漢本\n9\nWuta 武塔\n4\nNanao 南澳\n8\nDongao 東澳\n6\nYongle 永樂\n6\nSuaoxin 蘇澳新	Suao 蘇澳 5\n2\nXinma 新馬\n5\nlt(90);\nDongshan 冬山\n7\nLuodong 羅東\n3\nZhongli 中里\n2\nErjie 二結\n6\nYilan 宜蘭\n4\nSicheng 四城\n5\nJiaoxi 礁溪\n5\nDingpu 頂埔\n4\nToucheng 頭城\n4\nWaiao 外澳\n5\nGuishan 龜山\n5\nDaxi 大溪\n6\nDali 大里\n4\nShicheng 石城\n6\nFulong 福隆\n5\nGongliao 貢寮\n7\nShuangxi 雙溪\n5\nMudan 牡丹\n5\nSandiaoling 三貂嶺	Dahua 大華 8	Shifen 十分 7	Wanggu 望古 4	Lingjiao 嶺腳 5	Pingxi 平溪 3	Jingtong 菁桐 4\n5\nHoutong 猴硐\n7\nRuifang 瑞芳	NMMST 海科館 10 \n7\nSijiaoting 四腳亭\n4\nNuannuan 暖暖\n9\nBadu 八堵 ";
-			
-			jsCodeArea.value = "lt(90);\nfor (var currentStation=0;currentStation<=363;currentStation++)\n{\nvar thisStation = localStorage[\"A\"+currentStation];\n\nif (isNumeric(thisStation))\n{\nfd(thisStation);\n} else {\nif (contains(thisStation, ';'))\n{\neval(thisStation);\n} else {\nlabel(thisStation);\ncircle();\n} // end if this cell is a JS command\n} // end if this cell is a number\n} // end for every row\n";
+			jsCodeArea.value = "lt(90);\nfor (var currentStation=0;currentStation<=662;currentStation++)\n{\nvar thisStation = localStorage[\"A\"+currentStation];\n\nif (isNumeric(thisStation))\n{\nfd(thisStation);\n} else {\nif (contains(thisStation, ';'))\n{\neval(thisStation);\n} else {\nlabel(thisStation);\ncircle();\n} // end if this cell is a JS command\n} // end if this cell is a number\n} // end for every row\n";
 			
 			document.getElementById("numberRowsField").value = "365";
 			setRows();
@@ -1220,10 +1358,12 @@
 			document.getElementById("numberColumnsField").value = "20";
 			setColumns();
 			
-			importSheet();
+			resizeDrawing("2000px", "2000px");
+
+			//importSheet();
 			cg();
 			lt(90);
-			for (var currentStation=1;currentStation<=363;currentStation++)
+			for (var currentStation=1;currentStation<=662;currentStation++)
 			{
 				var thisStation = localStorage["A"+currentStation];
 				
