@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>
+			TRA Map
+		</title>
+			<style>
+			body {
+				font-family: Helvetica;
+			}
+		</style>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>
+			Taiwan TRA Railway Map
+		</h1>
+		
+		Peter Burkimsher 2016-10-28
+		<br>
+			peterburk@gmail.com
+		</br>
+		
+		<a href="TRASchematicMap.jpg" target=_blank><img src="traSmall.jpg"></a>
+		
+		<br>
+		<a href="TRASchematicMap.jpg" target=_blank>Download Map 下載地圖</a>
+		</br>
+		
+		<h3>
+			What is the TRA map?
+		</h3>
+
+		A subway-style "schematic" map of the railway network in Taiwan. 
+		
+		<br>
+			The distance between each station is proportional to the maximum time between the stations. 
+		</br>
+
+		<br>
+			Express train stops, transfer stations, HSR and MRT connections are all shown. 
+		</br>
+		
+		HSR shuttle bus routes are also shown when those connect with TRA stations. 
+
+
+		<h3>
+			Why did you make it?
+		</h3>
+		
+		The existing map on the TRA website sucks. Only one region is shown at a time, and it is not bilingual. 
+				
+		<br>
+			I tried to go to Inland Rock music festival in Nantou. I stayed with friends in Taichung, and planned
+		</br> 
+			which trains to take from there. But they dropped me in Fengyuan, and I missed the train I wanted. 
+		<br>
+			I asked someone on the train: "Does this train go to Ershui?". She said yes. I didn't realise the mistake
+		</br> 
+			until I got to Taichung Port. I missed the concert and the charter bus back to Kaohsiung. I also had to pay
+		<br>
+			for a new bus ticket to get home. The total cost of the mistake was over 1600 NTD. I was not happy. 
+		</br> 
+
+		<h3>
+			How did you make it?
+		</h3>
+		
+		I wrote a new program called <a href="http://peterburk.github.com/programs/turtleSheet/index.html" target=_blank>TurtleSheet</a> to draw graphics using data from a spreadsheet. 
+		
+		<br>The drawing process can be controlled using JavaScript, which is very powerful.</br>
+		
+		I imported the data from <a href="traMapData.txt" target=_blank>this file</a>. I modified the data heavily during the process to add corners, colours and branch lines. 
+		
+		<br>I copy-pasted this data into the Import Area, and clicked the Import button.</br> 
+		
+		Then I wrote a simple JavaScript <a href="traParser.js" target=_blank>program</a> to go through the data and make labels and circles. 
+		
+		<br>Finally, I did a print-to-PDF, cropped the picture, and saved it as a JPG. </br>
+
+		<h3>
+			Why not just use Photoshop?
+		</h3>
+
+		At first, I did. I made a bilingual <a href="TRAGeographicMap.jpg" target=_blank>geographic map</a>. But the stations don't line up. 
+
+		<h3>
+			Why do some lines turn and turn back?
+		</h3>
+		
+		The length of the line is proportional to the time the bus takes. If there's no space, the line turns corners. 
+		
+		<br>
+			This is particularly a problem around Liujia. 
+		</br>
+
+		<h3>
+			What are the license terms?
+		</h3>
+		
+		The map is public domain, and you can use it wherever you want. I hope it helps somebody!
+
+		
+	</body>
+</html>
