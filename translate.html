@@ -239,9 +239,9 @@ teacher</textarea>
 						
 					} else {
 					
-						if (contains(pinyinDefinitionsToneData, thisCharacter) == true)
+						if (contains(pinyinDefinitionsToneData, "\n" + thisCharacter + "	") == true)
 						{
-							var thisCharacterLine = textBetween(pinyinDefinitionsToneData, thisCharacter + "	", "\n");
+							var thisCharacterLine = textBetween(pinyinDefinitionsToneData, "\n" + thisCharacter + "	", "\n");
 							
 							var thisCharacterArray = thisCharacterLine.split("	");
 							
@@ -267,12 +267,12 @@ teacher</textarea>
 						
 						} else {
 							chineseHtml = chineseHtml + thisCharacter;
-							pinyinHtml = pinyinHtml + " " + thisCharacter;
-							translatedHtml = translatedHtml + " " + thisCharacter;
+							pinyinHtml = pinyinHtml + thisCharacter;
+							translatedHtml = translatedHtml + thisCharacter;
 
 							chineseText = chineseText + thisCharacter;
-							pinyinText = pinyinText + " " + thisCharacter;
-							translatedText = translatedText + " " + thisCharacter;
+							pinyinText = pinyinText + thisCharacter;
+							translatedText = translatedText + thisCharacter;
 
 						} // end if the dictionary contains the character already
 					
