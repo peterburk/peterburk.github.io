@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>TRA</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;charset=utf-8"/>
+  <link rel="apple-touch-icon" href="images/SEScriptEditorX.png" />
+  <meta name="apple-touch-fullscreen" content="YES" />
+  <link rel="stylesheet" href="iui/iui.css" type="text/css" />
+		<script type="application/x-javascript" src="iui/iui.js"></script>
+		<script src="jquery-1.7.1.min.js"></script>
+		<!-- https://github.com/pugetive/plist_parser -->
+		<script type="text/javascript">
+        	iui.animOn = true;
+		</script>
+		
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<link rel="apple-touch-icon-precomposed" href="tra.jpg" />
+	</head>
+	
+	<body>
+		<div class="toolbar" id="thisToolbar">
+		<h1>Station</h1>
+        	<a id="backButton" class="button" href="#"></a>
+    	</div>
+
+		<ul id="home" title="Day" selected="true">
+			<li><a href="#monday">Monday</a></li>
+			<li><a href="#tuesday">Tuesday</a></li>
+			<li><a href="#wednesday">Wednesday</a></li>
+			<li><a href="#thursday">Thursday</a></li>
+			<li><a href="#friday">Friday</a></li>
+			<li><a href="#saturday">Saturday</a></li>
+			<li><a href="#sunday">Sunday</a></li>
+		</ul>
+		
+		<ul id="monday" title="Day">
+		
+		</ul>
+
+		<ul id="tuesday" title="Day">
+		</ul>
+
+		<ul id="wednesday" title="Day">
+		</ul>
+
+		<ul id="thursday" title="Day">
+		</ul>
+
+		<ul id="friday" title="Day">
+		</ul>
+
+		<ul id="saturday" title="Day">
+		</ul>
+
+		<ul id="sunday" title="Day">
+		</ul>
+
+		
+	</body>
+
+	<script>
+		var dayNames = ["sunday","monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+	
+ 		var startDate = new Date("2017-03-22");
+    	var endDate = new Date("2017-05-04");
+
+    	while(startDate < endDate)
+    	{
+    		var dateString = startDate.toISOString().substring(0, 10);
+    	
+    		var thisDayOffset  = startDate.getDay();
+    		
+    		var thisDay = dayNames[thisDayOffset];
+    		    		
+    		var thisDayLink = "<li><a href=\"" + dateString + ".html\">" + dateString + "</a></li>";
+    		
+    		$( "#" + thisDay ).append(thisDayLink);
+    		
+	    	var newDate = startDate.setDate(startDate.getDate() + 1);
+    		startDate = new Date(newDate);
+    	}
+
+	</script>
+
+</html>
