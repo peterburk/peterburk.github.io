@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>3011 092-V3</name><Style id="yellowLine"><LineStyle><color>ff00ffff</color><width>3</width></LineStyle></Style><Placemark><name>Route</name><styleUrl>#yellowLine</styleUrl><LineString><coordinates>120.322258,22.698381,0
+120.322281,22.698454,0
+120.322288,22.698420,0
+120.322273,22.698446,0
+120.322266,22.698395,0
+120.322273,22.698416,0
+120.322273,22.698423,0
+120.322281,22.698400,0
+120.322281,22.698410,0
+120.322311,22.698431,0
+120.322319,22.698465,0
+120.322319,22.698509,0
+120.322304,22.698534,0
+120.322319,22.698511,0
+120.322342,22.698492,0
+120.322319,22.698486,0
+120.322350,22.698450,0
+120.322304,22.698492,0
+120.322296,22.698523,0
+120.322311,22.698505,0
+120.322342,22.698477,0
+120.322357,22.698469,0
+120.322342,22.698488,0
+120.322311,22.698425,0
+120.322311,22.698442,0
+120.322288,22.698458,0
+120.322311,22.698477,0
+120.322350,22.698429,0
+120.322311,22.698429,0
+120.322288,22.698458,0
+120.322266,22.698397,0
+120.322266,22.698397,0
+120.322311,22.698393,0
+120.322266,22.698387,0
+120.322281,22.698393,0
+120.322311,22.698364,0
+120.322281,22.698355,0
+120.322288,22.698402,0
+120.322273,22.698368,0
+120.321632,22.698553,0
+120.321732,22.698690,0
+120.321732,22.698690,0
+120.321732,22.698690,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0
+120.321686,22.698694,0</coordinates></LineString></Placemark><Placemark><name>3011 15:36:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322258,22.698381,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:47:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322281,22.698454,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:48:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322288,22.698420,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:49:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322273,22.698446,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:50:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322266,22.698395,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:51:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322273,22.698416,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:52:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322273,22.698423,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:53:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322281,22.698400,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:54:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322281,22.698410,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:55:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698431,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:56:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322319,22.698465,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:57:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322319,22.698509,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:58:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322304,22.698534,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 15:59:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322319,22.698511,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:00:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322342,22.698492,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:01:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322319,22.698486,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:02:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322350,22.698450,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:03:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322304,22.698492,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:04:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322296,22.698523,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:05:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698505,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:06:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322342,22.698477,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:07:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322357,22.698469,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:08:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322342,22.698488,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:09:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698425,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:10:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698442,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:11:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322288,22.698458,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:12:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698477,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:13:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322350,22.698429,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:14:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698429,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:15:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322288,22.698458,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:16:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322266,22.698397,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:16:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322266,22.698397,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:18:21</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698393,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:19:41</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322266,22.698387,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:20:21</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322281,22.698393,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:21:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322311,22.698364,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:22:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322281,22.698355,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:23:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322288,22.698402,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:24:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.322273,22.698368,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:25:37</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321632,22.698553,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:26:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321732,22.698690,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:26:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321732,22.698690,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:26:17</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321732,22.698690,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 90, DutyStatus 90 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark>
+<Placemark><name>3011 16:29:39</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321686,22.698694,0.000000</coordinates></Point></Placemark></Document></kml>

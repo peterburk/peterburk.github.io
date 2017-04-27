@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>682 002-FT</name><Style id="yellowLine"><LineStyle><color>ff00ffff</color><width>3</width></LineStyle></Style><Placemark><name>Route</name><styleUrl>#yellowLine</styleUrl><LineString><coordinates>120.402237,22.639685,0
+120.364517,22.624945,0
+120.363831,22.625267,0
+120.363243,22.625839,0
+120.362335,22.627306,0
+120.362511,22.628637,0
+120.361610,22.628897,0
+120.357605,22.629127,0
+120.357384,22.630186,0
+120.357437,22.630463,0
+120.357567,22.631205,0
+120.357414,22.630264,0
+120.357307,22.627966,0</coordinates></LineString></Placemark><Placemark><name>682 15:36:40</name><description>GoBack 1, BusStatus 0, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.402237,22.639685,0.000000</coordinates></Point></Placemark>
+<Placemark><name>682 15:47:21</name><description>GoBack 1, BusStatus 90, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.364517,22.624945,0.000000</coordinates></Point></Placemark>
+<Placemark><name>682 15:49:21</name><description>GoBack 2, BusStatus 0, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.363243,22.625839,0.000000</coordinates></Point></Placemark>
+<Placemark><name>682 15:52:21</name><description>GoBack 2, BusStatus 0, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.361610,22.628897,0.000000</coordinates></Point></Placemark>
+<Placemark><name>682 15:56:20</name><description>GoBack 1, BusStatus 99, DutyStatus 1 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.357567,22.631205,0.000000</coordinates></Point></Placemark>
+<Placemark><name>682 15:58:40</name><description>GoBack 1, BusStatus 0, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.357307,22.627966,0.000000</coordinates></Point></Placemark></Document></kml>

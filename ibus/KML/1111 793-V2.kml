@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>1111 793-V2</name><Style id="yellowLine"><LineStyle><color>ff00ffff</color><width>3</width></LineStyle></Style><Placemark><name>Route</name><styleUrl>#yellowLine</styleUrl><LineString><coordinates>120.701012,23.109539,0
+120.701103,23.109465,0
+120.701057,23.109453,0
+120.700989,23.109463,0
+120.699707,23.108629,0
+120.698585,23.107794,0
+120.693962,23.105524,0
+120.689316,23.101635,0
+120.685440,23.100149,0
+120.682632,23.098175,0
+120.682381,23.093185,0
+120.683067,23.091732,0
+120.677155,23.080360,0
+120.673912,23.074459,0
+120.672714,23.071356,0
+120.673271,23.068052,0
+120.671974,23.065422,0
+120.670769,23.061184,0
+120.668014,23.058094,0
+120.667725,23.051023,0
+120.668068,23.046904,0
+120.666511,23.039921,0
+120.665230,23.035400,0
+120.663605,23.025452,0
+120.664101,23.021109,0
+120.664818,23.018663,0
+120.664200,23.007620,0
+120.664200,23.007620,0
+120.664200,23.007620,0
+120.647774,23.005003,0
+120.643127,22.997353,0
+120.642555,22.995518,0
+120.638657,22.995541,0
+120.635635,22.995701,0
+120.634193,22.997457,0
+120.634476,22.997961,0</coordinates></LineString></Placemark><Placemark><name>1111 15:36:47</name><description>GoBack 2, BusStatus 0, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.701012,23.109539,0.000000</coordinates></Point></Placemark>
+<Placemark><name>1111 15:47:27</name><description>GoBack 2, BusStatus 90, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.701103,23.109465,0.000000</coordinates></Point></Placemark>
+<Placemark><name>1111 15:48:27</name><description>GoBack 2, BusStatus 90, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.701057,23.109453,0.000000</coordinates></Point></Placemark>
+<Placemark><name>1111 15:49:27</name><description>GoBack 2, BusStatus 90, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.700989,23.109463,0.000000</coordinates></Point></Placemark>
+<Placemark><name>1111 15:50:47</name><description>GoBack 1, BusStatus 0, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.699707,23.108629,0.000000</coordinates></Point></Placemark></Document></kml>

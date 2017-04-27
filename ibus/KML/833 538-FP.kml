@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>833 538-FP</name><Style id="yellowLine"><LineStyle><color>ff00ffff</color><width>3</width></LineStyle></Style><Placemark><name>Route</name><styleUrl>#yellowLine</styleUrl><LineString><coordinates>120.321144,22.698784,0
+120.321144,22.698788,0
+120.321136,22.698788,0
+120.321144,22.698786,0</coordinates></LineString></Placemark><Placemark><name>833 23:56:26</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321144,22.698784,0.000000</coordinates></Point></Placemark>
+<Placemark><name>833 23:57:26</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321144,22.698788,0.000000</coordinates></Point></Placemark>
+<Placemark><name>833 23:58:46</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321136,22.698788,0.000000</coordinates></Point></Placemark>
+<Placemark><name>833 23:59:26</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.321144,22.698786,0.000000</coordinates></Point></Placemark></Document></kml>

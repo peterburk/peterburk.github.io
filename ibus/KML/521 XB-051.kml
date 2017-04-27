@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>521 XB-051</name><Style id="yellowLine"><LineStyle><color>ff00ffff</color><width>3</width></LineStyle></Style><Placemark><name>Route</name><styleUrl>#yellowLine</styleUrl><LineString><coordinates>120.337921,22.607470,0
+120.337982,22.606899,0
+120.337852,22.607470,0</coordinates></LineString></Placemark><Placemark><name>521 16:44:27</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.337982,22.606899,0.000000</coordinates></Point></Placemark></Document></kml>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>922 639-FP</name><Style id="yellowLine"><LineStyle><color>ff00ffff</color><width>3</width></LineStyle></Style><Placemark><name>Route</name><styleUrl>#yellowLine</styleUrl><LineString><coordinates>120.363342,22.625771,0
+120.363342,22.625351,0
+120.358269,22.626100,0
+120.356537,22.626051,0
+120.350571,22.625620,0
+120.349716,22.625521,0
+120.345222,22.625030,0</coordinates></LineString></Placemark><Placemark><name>922 23:53:44</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.363342,22.625771,0.000000</coordinates></Point></Placemark>
+<Placemark><name>922 23:55:44</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.358269,22.626100,0.000000</coordinates></Point></Placemark>
+<Placemark><name>922 23:57:24</name><description>GoBack 1, BusStatus 98, DutyStatus 0 </description><styleUrl>#car_services.png</styleUrl><Point><coordinates>120.350571,22.625620,0.000000</coordinates></Point></Placemark></Document></kml>
