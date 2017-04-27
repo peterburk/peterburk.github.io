@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet PHP/MBTiles Example</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<div id="map" style="width: 360px; height: 400px"></div>
+	<p></p>
+    <p>
+	<ul>
+	</ul>
+    </p>
+	<script src="leaflet.js"></script>
+	<script>
+		var map;
+
+		var mbTiles = new L.tileLayer('mbtiles.php?db=World.mbtiles&z={z}&x={x}&y={y}', {
+		    tms: true,
+		    attribution: '',
+		    opacity: 1
+		});
+
+		map = new L.Map("map",{
+			layers: [mbTiles]
+		}).fitWorld();
+
+
+		layersControl = new L.Control.Layers(baseLayers, {
+			collapsed: false
+		});
+
+		map.addControl(layersControl);
+	</script>
+</body>
+</html>

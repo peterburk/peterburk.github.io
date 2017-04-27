@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BAMB</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="leaflet-101/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+
+	<style>
+
+		body {
+		font-family: Helvetica;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="map" style="width: 1880px; height: 850px"></div>
+	<p></p>
+    <p>
+        <ul>
+        </ul>
+    </p>
+
+	<script src="leaflet-101/leaflet.js"></script>
+		
+	<script>
+		function textBetween(thisText, startString, endString)
+		{
+			var start_pos = 0;
+			if (startString != 'start')
+			{
+				start_pos = thisText.indexOf(startString);
+
+				// If the text does not contain the start string, return a blank string
+				if (start_pos < 0)
+				{
+					return '';
+				}
+
+				// Skip the first startString characters
+				start_pos = start_pos + startString.length;
+			}
+
+			var end_pos = thisText.length;
+			if (endString != 'end')
+			{
+				end_pos = thisText.indexOf(endString,start_pos);
+			}
+
+			// If the text does not have the end string after the start string, return the whole string after the start
+			if (end_pos < start_pos)
+			{
+				end_pos = thisText.length;
+			}
+
+			var newText = thisText.substring(start_pos,end_pos);
+
+			return newText;
+		} // end textBetween
+	</script>
+
+	<script>
+		function addGalileo(filename)
+		{
+			var xmlhttp = new XMLHttpRequest();
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+				   if (xmlhttp.status == 200) 
+				   {
+				   		// Parse Galileo data 
+					    var galileoXml = xmlhttp.responseText;
+					    var galileoLines = galileoXml.split("\n");  
+						
+						// For every line in the file
+						//for(var currentLine = 0; currentLine < 10; currentLine++)
+						for(var currentLine = 0; currentLine < galileoLines.length; currentLine++)
+						{
+							var thisLine = galileoLines[currentLine];
+							
+							// If this line is a point
+							if (thisLine.indexOf("<Point>") > 0)
+							{
+								var thisName = textBetween(thisLine, "<name>", "</name>");
+								var thisDescription = textBetween(thisLine, "<description>", "</description>");
+								var thisStyle = textBetween(thisLine, "<styleUrl>", "</styleUrl>");
+								var thisCoordinates = textBetween(thisLine, "<coordinates>", "</coordinates>");
+								var thisLongitude = textBetween(thisCoordinates, "start", ",");
+								var thisLatitude = textBetween(thisCoordinates, ",", ",");
+								
+								var thisUrl = "http://maps.google.com/maps?q="+thisLatitude+","+thisLongitude;
+								var thisLink="<a href="+thisUrl+" target=_blank>"+thisUrl+"</a>";
+
+								var popupText = "<b>"+thisName+"</b>\n<br>"+thisDescription+"</br><br>"+thisLink+"</br>";
+								
+								var thisMarker;
+								
+								var GalileoIcon = L.Icon.extend({
+									options: {
+										iconSize:     [29, 29],
+										iconAnchor:   [15, 29],
+										popupAnchor:  [0, 0]
+									}
+								});
+								
+								var otherIcon = new GalileoIcon({iconUrl: 'images/other.png'});
+								var food_drinkIcon = new GalileoIcon({iconUrl: 'images/food_drink.png'});
+								var shopIcon = new GalileoIcon({iconUrl: 'images/shop.png'});
+								var bankIcon = new GalileoIcon({iconUrl: 'images/bank.png'});
+								var car_servicesIcon = new GalileoIcon({iconUrl: 'images/car_services.png'});
+								var cultureIcon = new GalileoIcon({iconUrl: 'images/culture.png'});
+								var educationIcon = new GalileoIcon({iconUrl: 'images/education.png'});
+								var entertainmentIcon = new GalileoIcon({iconUrl: 'images/entertainment.png'});
+								var healthIcon = new GalileoIcon({iconUrl: 'images/health.png'});
+								var residenceIcon = new GalileoIcon({iconUrl: 'images/residence.png'});
+								var sportIcon = new GalileoIcon({iconUrl: 'images/sport.png'});
+
+								
+								if (thisStyle == "#other.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: otherIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#food_drink.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: food_drinkIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#shop.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: shopIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#bank.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: bankIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#car_services.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: car_servicesIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#culture.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: cultureIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#education.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: educationIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#entertainment.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: entertainmentIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#health.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: healthIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#residence.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: residenceIcon}).addTo(map);
+								}
+
+								if (thisStyle == "#sport.png")
+								{
+									thisMarker = L.marker([thisLatitude,thisLongitude], {icon: sportIcon}).addTo(map);
+								}
+
+							
+								thisMarker.bindPopup(popupText).openPopup();
+
+								//alert(thisLatitude);
+							}
+							
+						} // end for every line in the KML file
+					    
+				   } // end if it loaded the KML
+				   else if (xmlhttp.status == 400) {
+					  alert('There was an error 400');
+				   }
+				   else {
+					   alert('something else other than 200 was returned');
+				   }
+				}
+			};
+
+			xmlhttp.open("GET", "Bookmarks/"+filename, true);
+			xmlhttp.send();
+				
+		}
+
+		function searchAddress()
+		{
+			var searchText = document.getElementById("searchText").value;
+		
+			var xmlhttp = new XMLHttpRequest();
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+				   if (xmlhttp.status == 200) 
+				   {
+				   		// Parse Google data 
+					    var googleXml = xmlhttp.responseText + '';
+					    
+					    var googleJson = JSON.parse(googleXml);
+					    
+						var GoogleIcon = L.Icon.extend({
+							options: {
+							iconSize:     [20, 34],
+							iconAnchor:   [10, 34],
+							popupAnchor:  [2, -25]
+							}
+						});
+						var googleIcon = new GoogleIcon({iconUrl: 'images/gMarker.png'});
+					    			    
+					    for (var currentResult = 0; currentResult < googleJson["results"].length; currentResult++)
+					    {
+							var thisResult = googleJson["results"][currentResult];
+							var thisAddress = thisResult["formatted_address"];
+							var thisLatitude = thisResult["geometry"]["location"]["lat"];
+							var thisLongitude = thisResult["geometry"]["location"]["lng"];
+								
+							var thisUrl = "http://maps.google.com/maps?q="+thisLatitude+","+thisLongitude;
+							var thisLink="<a href="+thisUrl+" target=_blank>"+thisUrl+"</a>";
+
+							var popupText = "<b>"+searchText+"</b>\n<br>"+thisAddress+"</br><br>"+thisLink+"</br>";
+							
+							var thisMarker = L.marker([thisLatitude,thisLongitude], {icon: googleIcon}).addTo(map);
+							thisMarker.bindPopup(popupText).openPopup();
+							
+						}
+					    
+				   } // end if it loaded the KML
+				   else if (xmlhttp.status == 400) {
+					  alert('There was an error 400');
+				   }
+				   else {
+					   alert('something else other than 200 was returned');
+				   }
+				}
+			};
+
+			xmlhttp.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyC49dQLf5m5pTJ0wBuCJQoae9uxqYWjQhw&address="+searchText, true);
+			xmlhttp.send();
+				
+		} // end searchAddress
+
+		function searchQuery()
+		{
+			var searchText = document.getElementById("searchText").value;
+		
+			searchText=encodeURI(searchText);
+					
+			var xmlhttp = new XMLHttpRequest();
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+				   if (xmlhttp.status == 200) 
+				   {
+				   		// Parse Google data 
+					    var googleXml = xmlhttp.responseText + '';
+					    					    
+					    var googleJson = JSON.parse(googleXml);
+					    
+						var GoogleIcon = L.Icon.extend({
+							options: {
+							iconSize:     [20, 34],
+							iconAnchor:   [10, 34],
+							popupAnchor:  [2, -25]
+							}
+						});
+						var googleIcon = new GoogleIcon({iconUrl: 'images/gMarker.png'});
+
+						var thisStatus = googleJson["status"];
+						
+						if (thisStatus.indexOf("ZERO_RESULTS") >= 0)
+						{
+							alert("No results");
+						}
+					     
+					    for (var currentResult = 0; currentResult < googleJson["results"].length; currentResult++)
+					    {
+							var thisResult = googleJson["results"][currentResult];
+							var thisName = thisResult["name"];
+							var thisLatitude = thisResult["geometry"]["location"]["lat"];
+							var thisLongitude = thisResult["geometry"]["location"]["lng"];
+								
+							var thisUrl = "http://maps.google.com/maps?q="+thisLatitude+","+thisLongitude;
+							var thisLink="<a href="+thisUrl+" target=_blank>"+thisUrl+"</a>";
+							
+							searchText=decodeURI(searchText);
+							
+							var popupText = "<b>"+searchText+"</b>\n<br>"+thisName+"</br><br>"+thisLink+"</br>";
+							
+							var thisMarker = L.marker([thisLatitude,thisLongitude], {icon: googleIcon}).addTo(map);
+							thisMarker.bindPopup(popupText).openPopup();
+							
+						}
+					    
+				   } // end if it loaded the KML
+				   else if (xmlhttp.status == 400) {
+					  alert('There was an error 400');
+				   }
+				   else {
+					   alert('something else other than 200 was returned');
+				   }
+				}
+			};
+
+			var coordinates = document.getElementById("addCoordinates").value;
+			var thisRadius = document.getElementById("addCircleRadius").value;
+			var thisUrl = "googleMapsSearch.php?location="+coordinates+"&radius="+thisRadius+"&query="+searchText;
+			
+			xmlhttp.open("GET", thisUrl, true);
+						
+			xmlhttp.send();
+				
+		} // end searchQuery
+
+
+		function addMarker()
+		{
+			var GoogleIcon = L.Icon.extend({
+				options: {
+				iconSize:     [20, 34],
+				iconAnchor:   [10, 34],
+				popupAnchor:  [2, -25]
+				}
+			});
+			var googleIcon = new GoogleIcon({iconUrl: 'images/gMarker.png'});
+		
+			var coordinates = document.getElementById("addCoordinates").value;
+			var coordinatesArray = coordinates.split(',');
+			var marker = L.marker([coordinatesArray[0],coordinatesArray[1]], {icon: googleIcon}).addTo(map);
+
+			var url = "http://maps.google.com/maps?q="+coordinates;
+			var popupText="<a href="+url+" target=_blank>"+url+"</a>";
+			marker.bindPopup(popupText).openPopup();
+		}
+		
+		function addCircle()
+		{
+			var coordinates = document.getElementById("addCoordinates").value;
+			var coordinatesArray = coordinates.split(',');
+			var thisRadius = document.getElementById("addCircleRadius").value;
+			
+			// Radius is in km
+			thisRadius = thisRadius * 1000;
+						
+			var thisCircle = L.circle([coordinatesArray[0],coordinatesArray[1]], thisRadius).addTo(map);
+			
+			thisCircle.setRadius(thisRadius);
+		}
+
+		function setMapSource(mapName)
+		{
+
+			//map.remove();
+			
+			var mapFile = mapName + ".sqlitedb";
+
+			map.removeLayer(mapTiles);
+
+//			var mapTiles = new L.tileLayer('mbtiles.php?db=Life14.mbtiles&z={z}&x={x}&y={y}', {
+			mapTiles = new L.tileLayer('rmapstiles.php?db=maps/'+mapFile+'&z={z}&x={x}&y={y}', {
+				tms: true,
+				attribution: '',
+				opacity: 1
+			});
+
+			map.addLayer(mapTiles);
+
+
+//			map = new L.Map("map",{
+//				layers: [mbTiles]
+//			}).fitWorld();
+
+			var zoomLevel = 3;
+			var centerVerticalShift = 20;
+			var centerHorizontalShift = 20;
+
+//    		var zoomLevel = 14;
+//    		var centerVerticalShift = 25.052398;
+//    		var centerHorizontalShift = 121.558062;
+
+			//map = new L.Map("map",{
+			//	layers: [mapTiles],
+			//	center: [centerVerticalShift, centerHorizontalShift],
+			//	zoom: zoomLevel,
+			//	zoomControl:true
+			//});
+			
+
+		}
+
+
+	</script>
+	<script>
+		var map;
+
+//		var mapTiles = new L.tileLayer('mbtiles.php?db=Life14.mbtiles&z={z}&x={x}&y={y}', {
+		var mapTiles = new L.tileLayer('rmapstiles.php?db=maps/Life%2014%20Taiwan%2018.sqlitedb&z={z}&x={x}&y={y}', {
+		    tms: true,
+		    attribution: '',
+		    opacity: 1
+		});
+
+//		map = new L.Map("map",{
+//			layers: [mbTiles]
+//		}).fitWorld();
+
+//    	var zoomLevel = 3;
+//    	var centerVerticalShift = 20;
+//    	var centerHorizontalShift = 20;
+
+    	var zoomLevel = 16;
+    	var centerVerticalShift = 22.645155308576122;
+    	var centerHorizontalShift = 120.30910134315492;
+
+//    	var zoomLevel = 14;
+//    	var centerVerticalShift = 25.052398;
+//    	var centerHorizontalShift = 121.558062;
+
+		map = new L.Map("map",{
+			layers: [mapTiles],
+			center: [centerVerticalShift, centerHorizontalShift],
+			zoom: zoomLevel,
+			zoomControl:true
+		});
+
+         map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
+
+		//layersControl = new L.Control.Layers(baseLayers, {
+		//	collapsed: false
+		//});
+
+		L.control.scale({imperial: false, maxWidth: 500}).addTo(map);
+
+		map.on('click', function(e) {
+			var latitude = e.latlng.lat;
+			var longitude = e.latlng.lng;
+			var coordinates = latitude+","+longitude;
+			document.getElementById("addCoordinates").value = coordinates;
+		});
+
+		//map.addControl(layersControl);
+		
+		
+
+	</script>
+	
+	<table>
+		<tr>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="addGalileo('Changhua YouBikes.kml');">
+				Changhua YouBikes
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="addGalileo('Kaohsiung City Bikes.kml');">
+				Kaohsiung City Bikes
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="addGalileo('Pingtung Public Bikes.kml');">
+				Pingtung Public Bikes
+			</td>
+			<td style="width:100px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="addGalileo('Taipei UBikes.kml');">
+				Taipei UBikes
+			</td>
+    	</tr>
+	</table>
+    <table>
+		<tr>
+			<td style="width:200px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="setMapSource('Life 14 Taiwan 18');">
+				Taiwan 18
+			</td>
+			<td style="width:200px;height:20px;background-color:#44C4C4;text-align:center;"
+			onclick="setMapSource('Life 16 Taiwan 18 ZH-TW');">
+				台灣 18
+			</td>
+    	</tr>
+	</table>
+	<table>
+		<tr>
+			<td>
+    			<textarea id="addCoordinates" name="addCoordinates" rows="2" cols="40"></textarea>
+    		</td>
+			<td style="width:100px;height:10px;background-color:#BBBBBB;text-align:center;"
+			onclick="addMarker();">
+				Add
+			</td>
+    	</tr>
+    </table>
+    <table>
+		<tr>
+			<td>
+    			<textarea id="addCircleRadius" name="addCircleRadius" rows="2" cols="10"></textarea>
+    		</td>
+			<td style="width:50px;height:5px;background-color:#BBBBBB;text-align:center;"
+			onclick="addCircle();">
+				Circle
+			</td>
+    	</tr>
+	</table>
+    <table>
+		<tr>
+			<td>
+    			<textarea id="searchText" name="searchText" rows="2" cols="10"></textarea>
+    		</td>
+			<td style="width:50px;height:5px;background-color:#BBBBBB;text-align:center;"
+			onclick="searchAddress();">
+				Address
+			</td>
+			<td style="width:50px;height:5px;background-color:#BBBBBB;text-align:center;"
+			onclick="searchQuery();">
+				Query
+			</td>
+    	</tr>
+	</table>
+	
+	<p></p>
+	
+	BAMB = Build A Map Bilingual = bambi = deer = D二 = D2 = dì tú = 地圖 = map. 
+	
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apartment</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+#map {
+	width: 80%;
+	height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
+		
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<div id="map" style="width: 1440px; height: 700px"></div>
+	<p></p>
+    <p>
+	<ul>
+	</ul>
+    </p>
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+  <script src="jquery-1.10.2.min.js"></script>
+	<script>
+		
+		var map;
+
+		var mbTiles = new L.tileLayer('mbtiles.php?db=Life14.mbtiles&z={z}&x={x}&y={y}', {
+		    tms: true,
+		    attribution: '',
+		    opacity: 1
+		});
+
+		map = new L.Map("map",{
+			layers: [mbTiles],
+			    center: [10.663816, 77.014621],
+    			zoom: 13
+		});
+
+//var jsonFilename = window.location.search.replace( "?filename=", "./" );
+
+var redStyle = {
+    "color": "#ff3300",
+    "weight": 1,
+    "opacity": 1,
+    "fillOpacity": 0.5
+};
+
+var blueStyle = {
+    "color": "#3399ff",
+    "weight": 1,
+    "opacity": 1,
+    "fillOpacity": 0.5
+};
+
+var jsonFilename = "./Apartment.json";
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
+
+var geojsonFeature = {
+    "type": "Feature",
+    "id": "tracking",
+    "properties": {
+        "name": "Name",
+        "popupContent": "popupContent"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [77.014621, 10.663816]
+    }
+};
+
+L.geoJson(geojsonFeature, {
+    onEachFeature: onEachFeature
+}).addTo(map);    
+    
+    
+		layersControl = new L.Control.Layers(baseLayers, {
+			collapsed: false
+		});
+
+		map.addControl(layersControl);
+		
+		
+		
+		function refreshGeo()
+{
+	navigator.geolocation.getCurrentPosition(geoPeter, GEOdeclined);
+}
+
+function geoPeter(position) {
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
+
+// get the timestamp
+var timestamp = Math.round((new Date()).getTime() / 1000);
+var latitude = position.coords.latitude;
+var longitude = position.coords.longitude;
+
+latitude = "77.024621";
+longitude = "10.763816";
+
+var geojsonFeature = {
+    "type": "Feature",
+    "id": "tracking",
+    "properties": {
+        "name": "Name",
+        "popupContent": "popupContent"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [latitude, longitude]
+    }
+};
+
+L.geoJson(geojsonFeature, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+
+
+}
+
+
+// this is used when the visitor bottles it and hits the "Don't Share" option
+function GEOdeclined(error) {
+  document.getElementById('geo').innerHTML = 'Error: ' + error.message;
+}
+
+
+var i = 0, loop_length = 50, loop_speed = 1000;
+
+function loop()
+{
+	i+= 1; 
+	/* Here is your code. Balabala...*/
+	alert("refreshing");
+	refreshGeo();
+	
+	if (i===loop_length) clearInterval(handler);
+}
+
+var handler = setInterval(loop, loop_speed);
+
+
+	</script>
+</body>
+</html>

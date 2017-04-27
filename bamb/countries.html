@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countries</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+#map {
+	width: 800px;
+	height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
+		
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<div id="map" style="width: 800px; height: 200px"></div>
+	<p></p>
+    <p>
+	<ul>
+	</ul>
+    </p>
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+  <script src="jquery-1.10.2.min.js"></script>
+	<script>
+		
+		var map;
+
+		var mbTiles = new L.tileLayer('mbtiles.php?db=World.mbtiles&z={z}&x={x}&y={y}', {
+		    tms: true,
+		    attribution: '',
+		    opacity: 1
+		});
+
+		map = new L.Map("map",{
+			layers: [mbTiles]
+		}).fitWorld();
+
+//var jsonFilename = window.location.search.replace( "?filename=", "./" );
+
+var redStyle = {
+    "color": "#ff3300",
+    "weight": 1,
+    "opacity": 1,
+    "fillOpacity": 0.5
+};
+
+var blueStyle = {
+    "color": "#3399ff",
+    "weight": 1,
+    "opacity": 1,
+    "fillOpacity": 0.5
+};
+
+var jsonFilename = "./ne-countries-50m.json";
+
+  $.getJSON(jsonFilename, function(data) {
+    var geojson = L.geoJson(data, {
+      style: blueStyle,
+      onEachFeature: function (feature, layer) 
+      {
+	layer.bindPopup(feature.properties.name);
+      }
+    });
+    geojson.addTo(map);
+  });
+
+
+		layersControl = new L.Control.Layers(baseLayers, {
+			collapsed: false
+		});
+
+		map.addControl(layersControl);
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet PHP/MBTiles Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<a href="https://github.com/bmcbride/PHP-MBTiles-Server"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+	<div id="map" style="width: 600px; height: 400px"></div>
+	<p>This example demonstrates the ability to view layers from an <a href="https://github.com/mapbox/mbtiles-spec" target="_blank">MBTiles</a> sqlite database file.</p>
+    <p>
+        <ul>
+            <li>Download the PHP-MBTiles-Server PHP script here: <a href="https://github.com/bmcbride/PHP-MBTiles-Server/blob/master/mbtiles.php" target="_blank">PHP-MBTiles-Server</a> (requires PHP/PDO).</li>
+            <li>Download the geography-class.mbtiles file here: <a href="http://a.tiles.mapbox.com/mapbox/download/geography-class.mbtiles">http://a.tiles.mapbox.com/mapbox/download/geography-class.mbtiles</a> (~130 MB).</li>
+        </ul>
+    </p>
+	<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+	<script>
+		var map;
+
+		var mapquestOSM = new L.TileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png", {
+			maxZoom: 17,
+			subdomains: ["otile1", "otile2", "otile3", "otile4"],
+			attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>. Map data (c) <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.'
+		});
+
+		var mapquestOAM = new L.TileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg", {
+			maxZoom: 17,
+			subdomains: ["oatile1", "oatile2", "oatile3", "oatile4"],
+			attribution: 'Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a>. Map data (c) <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA.'
+		});
+
+		var hostedTiles = new L.tileLayer('http://{s}.tiles.mapbox.com/v3/mapbox.geography-class/{z}/{x}/{y}.png', {
+		    tms: false,
+		    attribution: 'Tiles Courtesy of <a href="http://tiles.mapbox.com/mapbox/map/geography-class" target="_blank">MapBox</a>',
+		    subdomains: ["a", "b", "c", "d"],
+		    opacity: 0.7
+		});
+
+		var mbTiles = new L.tileLayer('mbtiles.php?db=geography-class.mbtiles&z={z}&x={x}&y={y}', {
+		    tms: true,
+		    attribution: 'Tiles Courtesy of <a href="http://tiles.mapbox.com/mapbox/map/geography-class" target="_blank">MapBox</a>',
+		    opacity: 0.7
+		});
+
+		map = new L.Map("map",{
+			layers: [mapquestOSM, mbTiles]
+		}).fitWorld();
+
+		var baseLayers = {
+			"MapQuest Streets": mapquestOSM,
+			"MapQuest Aerial": mapquestOAM
+		};
+		var overlays = {
+			"Local MBTiles File": mbTiles,
+			"Hosted Tiles": hostedTiles
+		};
+
+		layersControl = new L.Control.Layers(baseLayers, overlays, {
+			collapsed: false
+		});
+
+		map.addControl(layersControl);
+	</script>
+</body>
+</html>

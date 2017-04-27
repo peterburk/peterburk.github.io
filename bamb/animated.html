@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">			    
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+	<script src="pct-trail-partial.js"></script>
+	<script src="AnimatedMarker.js"></script>
+		<style type="text/css">
+			html, body {
+				margin: 0 auto;
+				padding: 0px;
+				width: 500px;
+				height: 500px;
+			}
+			#map {
+				width: 500px;
+				height: 500px;
+			}
+	</style>
+	</head>
+<body>
+    <div id="map"></div>
+    <script type="text/javascript">
+
+// init the map
+var map;
+
+var mbTiles = new L.tileLayer('mbtiles.php?db=Pollachi18.mbtiles&z={z}&x={x}&y={y}', 
+	{
+		tms: true,
+		attribution: '',
+		opacity: 1
+	});
+
+map = new L.Map("map",
+	{
+		layers: [mbTiles],
+		center: [10.659018, 77.003273],
+		zoom: 18
+	});
+
+
+var animatedMarker;
+
+// create geojson layer
+var geojson = new L.geoJson(pct);
+geojson.addTo(map);
+
+// temporary array to store geojson lat, lon
+var temp = [];
+
+var eachLayer = geojson.eachLayer(function (layer){
+
+
+	var coordinates = layer.feature.geometry.coordinates;
+	var len = coordinates.length;
+	var i = 0;
+	len = 0;
+
+	for (i; i<len; i++)
+	{
+		var lat = coordinates[i][1],
+		lon = coordinates[i][0];
+		// reverse order of lon, lat for L.polyline
+
+		lat = 10.663816;
+		lon = 77.014621;
+
+		lon = lon + i/10;
+		// getLocation();
+
+		//temp.push([lat, lon]);
+	}
+}); // end eachLayer
+
+
+var i = 0;
+var loop_length = 20;
+var loop_speed = 1000;
+
+var markers = new Array();
+
+var line = new L.polyline(temp),
+	animatedMarker = L.animatedMarker(line.getLatLngs(), 
+	{
+		autoStart: false,
+		distance: 500,
+		interval: 1000
+	});
+
+
+
+function loop()
+{
+
+	var getLocation = function refreshGeo()
+	{
+
+		var peterLocation = function geoPeter(position) 
+		{
+			// alert("geopeter");
+			var timestamp = Math.round((new Date()).getTime() / 1000);
+			var lat = position.coords.latitude;
+			var lon = position.coords.longitude;
+			//lat = 10.763816;
+			//lon = 77.024621;
+
+			var temp = [];
+
+			//  document.getElementById('geo').innerHTML = 'Error: ' + error.message;
+
+			temp.push([lat, lon]);
+
+		// map.removeLayer(animatedMarker);
+			var previousMarker = i - 1;
+			var nextMarker = i + 2;
+	    map.removeLayer(animatedMarker);
+		// delete markers[i]; 
+
+			// animatedMarker.setLatLng(L.latLng(lat,lon));
+			var newMarker;
+			
+			var line = new L.polyline(temp),
+				newMarker = L.animatedMarker(line.getLatLngs(), 
+				{
+					autoStart: false,
+					distance: 500,
+					interval: 1000
+				});
+
+			map.addLayer(newMarker);
+			animatedMarker = newMarker;
+			markers[nextMarker] = animatedMarker;
+
+		}
+
+		// this is used when the visitor bottles it and hits the "Don't Share" option
+		var declinedLocation = function GEOdeclined(error) 
+		{
+			// alert("geodeclined");
+
+			var temp = [];
+
+			//  document.getElementById('geo').innerHTML = 'Error: ' + error.message;
+			lat = 10.669018;
+			lon = 77.003273;
+
+			temp.push([lat, lon]);
+
+			var line = new L.polyline(temp),
+				animatedMarker = L.animatedMarker(line.getLatLngs(), 
+					{
+						autoStart: false,
+						distance: 500,
+						interval: 1000
+					});
+
+			map.addLayer(animatedMarker);
+
+		}
+
+		navigator.geolocation.getCurrentPosition(peterLocation, declinedLocation);
+		//lat = 10.763816;
+		//lon = 77.024621;
+		//temp.push(lon);
+
+	} // end getLocation
+
+	i+= 1; 
+	/* Here is your code. Balabala...*/
+	// alert("refreshing");
+	getLocation();
+	
+	if (i===loop_length) clearInterval(handler);
+}
+
+var handler = setInterval(loop, loop_speed);
+
+
+map.addLayer(animatedMarker);
+
+var flag = 0; // the variable used to signalise the animation stop
+
+function pan_map()
+{
+	map.panTo({lon: animatedMarker['_latlng'].lng, lat: animatedMarker['_latlng'].lat});;
+}
+pan_map(); // pan the map to the marker start position
+
+// set the interval timer
+var vInterval = setInterval(function()
+	{
+		if (flag == 1)
+		{
+			animatedMarker.stop();
+			clearInterval(vInterval); // stops the interval timing, also
+		}
+		pan_map(); // pan the map to follow the marker
+	}, 100);
+
+// delay start so that data has time to load
+Timeout = setTimeout(function()
+	{
+		animatedMarker.start();
+	}, 3000);
+
+// function to track animatedMarker's position
+// and stop it at given lat lon values
+var checkLatLon = function(e) 
+{
+	var lat = 32.608639206779,
+	lon = -116.49114320162762;
+	if (e.latlng.lng === lon && e.latlng.lat === lat)
+	{
+		flag = 1; // signals the animation can be stopped
+	}
+	refreshGeo();
+}
+
+// event listener to check animatedMarker's position
+// animatedMarker.on('move', checkLatLon);
+
+
+    </script>	
+</body>
+</html>
