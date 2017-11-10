@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PlinyPedia</title>
+		<meta charset="x-mac-roman">
+	</head>
+	<style type="text/css">
+			body { 
+				font-family:sans-serif;
+				font-size: 35px;
+			}
+			li { 
+				padding:2px; 
+			}
+			table, th, td {
+			   margin:0px 100px; 
+			   border: 1px solid black;
+			   border-collapse: collapse;
+			   text-align: center;
+			}
+			div.heading {
+				text-decoration: none;
+				font-family:sans-serif;
+				font-size:large;
+				color:black;
+				margin:0px 0px; 
+			}
+			h1 {
+				margin:0px 0px; 
+			}
+			div.heading a:link {
+				text-decoration: none;
+				font-family:sans-serif;
+				color:black;
+			}
+
+			div.heading a:visited {
+				text-decoration: none;
+				font-family:sans-serif;
+				color:black;
+			}
+
+			div.heading a:hover {
+				text-decoration: underline;
+				font-family:sans-serif;
+				color:black;
+			}
+
+			div.heading a:active {
+				text-decoration: underline;
+				font-family:sans-serif;
+				color:black;
+			}
+			div.explanation {
+				text-decoration: none;
+				font-family:sans-serif;
+				font-size:small;
+				margin:0px 20px; 
+				color:black;
+				width:500px;
+			}
+			div.explanation a:link {
+				text-decoration: none;
+				font-family:sans-serif;
+			}
+
+			div.explanation a:visited {
+				text-decoration: none;
+				font-family:sans-serif;
+			}
+
+			div.explanation a:hover {
+				text-decoration: underline;
+				font-family:sans-serif;
+			}
+
+			div.explanation a:active {
+				text-decoration: underline;
+				font-family:sans-serif;
+			}
+			div.majorlink { 
+				margin:0px 50px; 
+				font-family:sans-serif;
+				font-size:medium;
+				color:blue;
+			}
+			div.majorlink a:link {
+				text-decoration: none;
+				font-family:sans-serif;
+				color:blue;
+			}
+
+			div.majorlink a:visited {
+				text-decoration: none;
+				font-family:sans-serif;
+				color:blue;
+			}
+
+			div.majorlink a:hover {
+				text-decoration: underline;
+				font-family:sans-serif;
+				color:blue;
+			}
+
+			div.majorlink a:active {
+				text-decoration: underline;
+				font-family:sans-serif;
+				color:blue;
+			}
+			
+body > .toolbar {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #2d3642;
+    border-top: 1px solid #6d84a2;
+    padding: 10px;
+    height: 45px;
+    background: url(../../iui/toolbar.png) #6d84a2 repeat-x;
+}
+
+.toolbar > h1 {
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    margin: 1px 0 0 -75px;
+    height: 45px;
+    font-size: 20px;
+    width: 150px;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #FFFFFF;
+}
+
+.button {
+    position: absolute;
+    overflow: hidden;
+    top: 8px;
+    right: 6px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(../../iui/toolButton.png) 0 5 0 5;
+}
+
+#backButton {
+    display: none;
+    left: 6px;
+    right: auto;
+    padding: 0;
+    max-width: 55px;
+    border-width: 0 8px 0 14px;
+    margin-top: 8px;
+    margin-left: 10px;
+    -webkit-border-image: url(../../iui/backButton.png) 0 8 0 14;
+}
+
+.content {
+	margin-left: 50px;
+	padding: 50px;
+}
+
+	</style>
+	<body>
+	
+	<div class="toolbar">
+        <h1 id="pageTitle">PlinyPedia</h1>
+        <a id="backButton" class="button" href="../../index.html" style="display: inline;">Browse</a>
+    </div>
+    
+    <div class="content">
+    
+		<div class="heading">
+			<h1>
+				PlinyPedia
+			</h1>
+		</div>
+
+		<div class="explanation">
+			<p>
+				Friends, Romans and countrymen - lend me your ears!
+			</p>
+			<p>
+				<a href="https://peterburk.github.com" target=_blank>Peter Burkimsher</a>, 2017-11-10
+			</p>
+			<p>
+				Text provided by Perseus Digital Library. Original version available for viewing and download at http://www.perseus.tufts.edu/hopper/.
+			</p>			
+		</div>
+		
+		<div class="heading">
+			<h3>
+				What is PlinyPedia?
+			</h3>
+		</div>
+		
+		<div class="explanation">
+			<p>
+				<a href="https://en.wikipedia.org/wiki/Natural_History_(Pliny)" target=_blank><i>Naturalis Historia</i></a> was the world's first encyclopedia, written by Pliny The Elder in 79 AD. He died when the volcano Vesuvius erupted. 
+			</p>			
+			<p>
+				I like to read Wikipedia for fun (I keep an <a href="http://www.haukap.com/wiki2touch/" target=_blank>offline</a> copy on my phone, 10GB). Every day I also read another ancient book, the Bible. Naturalis Historia is shorter than the Bible, although the Bible has better reading plans and study notes. 
+			</p>
+			<p>
+				People remember military events, but not academic discoveries. This site is made "lest we forget" the lessons of the past. 
+			</p>
+			<p>
+				The original text at Perseus is more suitable for desktop reading. <a href="../../index.html">PlinyPedia</a> is reformatted to be mobile-friendly using iUI. I parsed the XML, split the text into books and chapters, moved footnotes to the bottom of the page, and added a basic search function. I built it quickly so the design is very basic, but it should load fast. 
+			</p>
+		</div>
+
+		<div class="heading">
+			<h3>
+				What can I learn from PlinyPedia?
+			</h3>
+		</div>
+
+		<div class="explanation">
+			<ul>
+				<li>
+					Swiss milk was famous. "<a href="../8.%20Book%20VIII.%20The%20Nature%20Of%20The%20Terrestrial%20Animals./70.%20Chap.%2070.%20(45.)-Oxen;%20Their%20Generation..html#ref_4" target=_blank>[oxen]</a> that are bred in the Alps... give a great quantity of milk". In the same article, the oxen that walk backwards while eating due to their large horns might be the now-extinct aurochs. 
+				</li>
+				<li>
+					Doctors were too expensive and didn't know what they're doing. "the <a href="../29.%20Book%20XXIX.%20Remedies%20Derived%20From%20Living%20Creatures./8.%20Chap.%208.-Evils%20Attendant%20Upon%20The%20Practice%20Of%20Medicine..html#ref_15" target=_blank>rapacious bargains</a> made with their patients"
+				</li>
+				<li>
+					The first alphabet was Phoenician/Ionian. "consent among all nations to adopt the <a href="../7.%20Book%20VII.%20Man,%20His%20Birth,%20His%20Organization,%20And%20The%20Invention%20Of%20The%20Arts./58.%20Chap.%2058.%20(57.)-The%20Things%20About%20Which%20Mankind%20First%20Of%20All%20Agreed.%20The%20Ancient%20Letters..html" target=_blank>letters</a> now used by the Ionians"
+				</li>
+				<li>
+					If you're attacked by a dog, sit down. "By <a href="../8.%20Book%20VIII.%20The%20Nature%20Of%20The%20Terrestrial%20Animals./61.%20Chap.%2061.%20(40.)-The%20Qualities%20Of%20The%20Dog;%20Examples%20Of%20Ts%20Attachment%20To%20Its%20Master;%20Nations%20Which%20Have%20Kept%20Dogs%20For%20The%20Purposes%20Of%20War..html#ref_8" target=_blank>sitting down on the ground</a>, we may arrest their most impetuous attack"
+				</li>
+				<li>
+					You can make bulletproof wool. "<a href="../8.%20Book%20VIII.%20The%20Nature%20Of%20The%20Terrestrial%20Animals./73.%20Chap.%2073.%20(43.)-The%20Different%20Kinds%20Of%20Wool,%20And%20Their%20Colours..html#ref_18" target=_blank>Wool</a> is compressed also for making a felt, which, if soaked in vinegar, is capable of resisting iron even"
+				</li>
+				<li>
+					Cotton is described as "<a href="../12.%20Book%20XII.%20The%20Natural%20History%20Of%20Trees/21.%20Chap.%2021.%20(10.)-Trees%20Of%20The%20Islands%20Of%20The%20Persian%20Sea.%20The%20Cotton%20Tree..html" target=_blank>trees that bear wool</a>."
+				</li>
+				<li>
+					<a href="../../search.html" target=_blank>Search</a> and <a href="../../index.html" target=_blank>Browse</a> to find out even more!
+				</li>
+			</ul>			
+		</div>
+
+		<div class="heading">
+			<h3>
+				Tell me more about Romans. 
+			</h3>
+		</div>
+
+		<div class="explanation">
+			<ul>
+				<li>
+					They built a lot of roads. See the <a href="http://sashat.me/2017/06/03/roman-roads/" target=_blank>subway-style map</a> by Sasha Trubetskoy, or the <a href="http://orbis.stanford.edu" target=_blank>Google Maps-style navigation system</a> by Stanford's Orbis lab. 
+				</li>
+				<li>
+					They were clean. They built a lot of baths, with fresh water provided by aqueducts. 
+				</li>
+				<li>
+					They ate <a href="https://en.wikipedia.org/wiki/Gnocchi#Origin" target=_blank>gnocchi</a>. 
+				</li>
+				<li>
+					They traded with the other major world powers in the Middle East and China. 
+				</li>
+				<li>
+					People they invaded were given <a href="https://en.wikipedia.org/wiki/Roman_citizenship#Citizenship_as_a_tool_of_Romanization" target=_blank>citizenship</a> (imagine if people in Iraq and Afghanistan were given American citizenship). 
+				</li>
+				<li>
+					Hate crimes <a href="https://eidolon.pub/barbarians-inside-the-gate-part-i-c175057b340f" target=_blank>existed</a>, but the government protected immigrants. 
+				</li>
+				<li>
+					The birth rate declined, so people were <a href="https://en.wikipedia.org/wiki/Roman_censor#cite_ref-70" target=_blank>fined</a> for being single. 
+				</li>
+			</ul>			
+		</div>
+
+		<div class="heading">
+			<h3>
+				It's a pity that Roman civilisation fell. 
+			</h3>
+		</div>
+
+		<div class="explanation">
+			<p>
+				It didn't. 
+			</p>
+			<p>
+				Political changes made people move around, but the knowledge was never really lost. 
+			</p>
+			<p>
+				The Roman Republic came first, governed by the Senate. Caesar Augustus was a rich man who used political instability to get "temporary" power over the provinces and become a dictator, the first Emperor. Watch <a href="https://en.wikipedia.org/wiki/Gladiator_(2000_film)" target=_blank>Gladiator (2000)</a> for more about this. Despite Caesar's head being on the coins, the Roman cultural identity was <a href="https://en.wikipedia.org/wiki/SPQR" target=_blank>The Senate and People of Rome</a>. 
+			</p>
+			<p>
+				When the Western Roman Empire slowly fell apart, the academics moved to the eastern capital, Byzantium (Istanbul). They stayed there for another 1000 years until the Ottoman Turks invaded. 
+			</p>
+			<p>
+				The academics then moved back to Rome and started the Renaissance. The rest, they say, is modern history. 
+			</p>
+			<p>
+				My parents learned Latin at school. The Catholic church used it until 1965. 
+				<a href="https://simple.wikipedia.org/wiki/Writing_system#/media/File:WritingSystemsOfTheWorld.png" target=_blank>Most of the world</a> still uses the Latin alphabet. 
+				People can still study Classics at university. 
+			</p>
+			<p>
+				We're still building upon the knowledge of the ancients, and we have better communication now with the other world powers in the Middle East and China so we can learn from their research. 
+				Let's not ruin that with wars, but keep peace and development. 
+				The Western world is not developed because of "white Anglo-saxon English-speaking Protestants"; Westerners are the descendants of a multi-racial, international civilisation that spanned Europe, Africa, and parts of the Middle East. 
+			</p>
+			<p>
+				We are Romans. 
+			</p>
+		</div>
+
+		<div class="heading">
+			<h3>
+				To Do
+			</h3>
+		</div>
+
+		<div class="explanation">
+			<ul>
+				<li>
+					Device-specific CSS - text is too large on desktop, too small on mobile. 
+				</li>
+				<li>
+					Convert cross-references ("See B. xix. c. 7.") into hyperlinks. 
+				</li>
+				<li>
+					Add footnotes with modern names of historical places. 
+				</li>
+				<li>
+					Show footnotes in a popup instead of scrolling to the bottom of the page. 
+				</li>
+				<li>
+					PlinyWiki - make a wiki so people can annotate the text easily. 
+				</li>
+				<li>
+					A parallel Latin/English word-by-word translator to help people learn Latin, like <a href="https://pingtype.github.io" target=_blank>Pingtype</a> does for Chinese. 
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	
+	</body>
+</html>
