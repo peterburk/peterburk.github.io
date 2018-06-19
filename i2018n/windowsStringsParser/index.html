@@ -1,0 +1,559 @@
+<!--
+	WindowsStrings convertToJson
+	Peter Burkimsher 2018-06-06
+	
+	Aligns strings exported from shell32.dll
+	
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Windows Strings</title>
+  	  	
+		<meta charset="utf-8" />
+		
+		<style>
+		.DefaultButtonOuter
+		{
+			border: 2px solid black ;
+			border-radius: 8px;
+			width: 96px;
+			height: 26px;
+			text-align: center;
+			
+			/*background-color: #99999a;*/
+			background: #99999a; /* For browsers that do not support gradients */
+			/*background: -webkit-linear-gradient(left top, red, yellow);*/ /* For Safari 5.1 to 6.0 */
+			/*background: -o-linear-gradient(bottom right, red, yellow);*/ /* For Opera 11.1 to 12.0 */
+			/*background: -moz-linear-gradient(bottom right, red, yellow); */ /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to bottom right, #dcdbde, #737374); /* Standard syntax */
+		}
+
+		.ButtonInner
+		{
+			border: 1px solid black ;
+			border-radius: 5px;
+			background-color: #dcdbde;
+			width: 88px;
+			height: 18px;
+			text-align: center;
+			margin: 3px;
+			
+		    line-height: 18px;
+	        font-family: "Charcoal CY", "Virtue", Geneva, sans-serif;
+			font-size: 11px;
+			color: #000000;
+		}
+		
+		.ButtonInner:active
+		{
+		    background:#666666;
+		    color: #ffffff;
+		}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div id="outputHtml"></div>
+  		<textarea id="searchTextArea" rows="10" cols="20" style="font-family:Geneva, sans-serif;">This PC</textarea>
+		
+		<div id="defaultButton" class="DefaultButtonOuter">
+			<div id="parseButton" class="ButtonInner" onclick="parseButtonClicked();">
+				Parse
+			</div>
+		</div>
+
+		<div id="grepCombinedButton" class="ButtonInner" onclick="grepCombinedButtonClicked();">
+			Grep Combined
+		</div>
+
+		<div id="grepEnglishButton" class="ButtonInner" onclick="grepEnglishButtonClicked();">
+			Grep English
+		</div>
+
+		<div id="keyButton" class="ButtonInner" onclick="keyButtonClicked();">
+			Key
+		</div>
+
+		
+	</body>
+	
+	<script>
+		
+		var languages = [];
+		
+		var languagesStrings = [];
+		
+		var combinedXml = "";
+		var englishXml = "";
+		
+		function textBetween(thisText, startString, endString)
+		{
+			//debugLog("textBetween(" + thisText + "," + startString + "," + endString + ")");
+			
+			if (thisText == undefined)
+			{
+				return "";
+			}
+			
+			var start_pos = 0;
+			if (startString != 'start')
+			{
+				start_pos = thisText.indexOf(startString);
+
+				// If the text does not contain the start string, return a blank string
+				if (start_pos < 0)
+				{
+					return '';
+				}
+
+				// Skip the first startString characters
+				start_pos = start_pos + startString.length;
+			}
+
+			var end_pos = thisText.length;
+			if (endString != 'end')
+			{
+				end_pos = thisText.indexOf(endString,start_pos);
+			}
+
+			// If the text does not have the end string after the start string, return the whole string after the start
+			if (end_pos < start_pos)
+			{
+				end_pos = thisText.length;
+			}
+
+			var newText = thisText.substring(start_pos,end_pos);
+
+			return newText;
+		} // end textBetween
+		
+		function replaceChars(thisString, searchString, replaceString)
+		{
+			//debugLog("replaceChars(" + thisString + "," + searchString + "," + replaceString + ")");
+
+			return thisString.split(searchString).join(replaceString);
+		} // end function replaceChars
+		
+		// Write to file response handler
+		function writeToFileResponseHandler(e, request)
+		{
+		
+		} // end function writeToFile
+
+
+		// Write to file - call a PHP script to write a file
+		function writeToFile(filename, thisString)
+		{
+			//debugLog("writeToFile(" + filename + "," + thisString + ")");
+
+			var request = new XMLHttpRequest();
+			request.open('POST', 'writeToFile.php', true);
+			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+			thisString = replaceChars(thisString, "&", "and")
+
+			request.onreadystatechange = function(e) { return writeToFileResponseHandler.call(e, request); };
+			
+			var requestData = "filename=" + filename + "&" + "data=" + thisString;
+
+			request.send(requestData);
+
+		} // end function writeToFile
+		
+		function appendToFileResponseHandler(request)
+		{
+		  //debugLog("appendToFileResponseHandler");
+		  if (request.readyState == 4)
+		  {
+			// The request is done
+			if (request.status == 200)
+			{
+			  // All is well	  
+			}
+		  }
+
+		  return;
+		}
+		  
+		function appendToFile(filename, thisString)
+		{
+			//debugLog("appendToFile(" + filename + "," + thisString + ")");
+			
+				var request = new XMLHttpRequest();
+				request.open('POST', 'appendToFile.php', true);
+				request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+				request.onreadystatechange =
+		  		function(e) { return appendToFileResponseHandler.call(e, request); };
+
+				var requestData = "filename=" + filename + "&" + "data=" + thisString;
+
+				request.send(requestData);
+
+		} // end function appendToFile
+
+		
+		function loadLanguage(filename)
+		{
+			//debugLog("loadDictionary(" + filename + ")");
+
+			var xmlhttp = new XMLHttpRequest();
+
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+				   if (xmlhttp.status == 200) 
+				   {
+						
+						var thisText = xmlhttp.responseText;
+						languages.push(thisText);
+
+					    
+				   } // end if it loaded the KML
+				   else if (xmlhttp.status == 400) {
+					  alert('error loading language');
+				   }
+				   else {
+					   alert('error loading language');
+				   }
+				}
+			};
+
+			xmlhttp.open("GET", filename, true);
+			xmlhttp.send();
+				
+		} // end function loadDictionary
+		
+
+		loadLanguage("Combined/stringsExport_1025.txt");
+		loadLanguage("Combined/stringsExport_1026.txt");
+		loadLanguage("Combined/stringsExport_1027.txt");
+		loadLanguage("Combined/stringsExport_1028.txt");
+		loadLanguage("Combined/stringsExport_1029.txt");
+		loadLanguage("Combined/stringsExport_1030.txt");
+		loadLanguage("Combined/stringsExport_1031.txt");
+		loadLanguage("Combined/stringsExport_1032.txt");
+		loadLanguage("Combined/stringsExport_1033.txt");
+		loadLanguage("Combined/stringsExport_1035.txt");
+		loadLanguage("Combined/stringsExport_1036.txt");
+		loadLanguage("Combined/stringsExport_1037.txt");
+		loadLanguage("Combined/stringsExport_1038.txt");
+		loadLanguage("Combined/stringsExport_1039.txt");
+		loadLanguage("Combined/stringsExport_1040.txt");
+		loadLanguage("Combined/stringsExport_1041.txt");
+		loadLanguage("Combined/stringsExport_1042.txt");
+		loadLanguage("Combined/stringsExport_1043.txt");
+		loadLanguage("Combined/stringsExport_1044.txt");
+		loadLanguage("Combined/stringsExport_1045.txt");
+		loadLanguage("Combined/stringsExport_1046.txt");
+		loadLanguage("Combined/stringsExport_1048.txt");
+		loadLanguage("Combined/stringsExport_1049.txt");
+		loadLanguage("Combined/stringsExport_1050.txt");
+		loadLanguage("Combined/stringsExport_1051.txt");
+		loadLanguage("Combined/stringsExport_1052.txt");
+		loadLanguage("Combined/stringsExport_1053.txt");
+		loadLanguage("Combined/stringsExport_1054.txt");
+		loadLanguage("Combined/stringsExport_1055.txt");
+		loadLanguage("Combined/stringsExport_1056.txt");
+		loadLanguage("Combined/stringsExport_1057.txt");
+		loadLanguage("Combined/stringsExport_1058.txt");
+		loadLanguage("Combined/stringsExport_1059.txt");
+		loadLanguage("Combined/stringsExport_1060.txt");
+		loadLanguage("Combined/stringsExport_1061.txt");
+		loadLanguage("Combined/stringsExport_1062.txt");
+		loadLanguage("Combined/stringsExport_1063.txt");
+		loadLanguage("Combined/stringsExport_1064.txt");
+		loadLanguage("Combined/stringsExport_1065.txt");
+		loadLanguage("Combined/stringsExport_1066.txt");
+		loadLanguage("Combined/stringsExport_1067.txt");
+		loadLanguage("Combined/stringsExport_1068.txt");
+		loadLanguage("Combined/stringsExport_1069.txt");
+		loadLanguage("Combined/stringsExport_1071.txt");
+		loadLanguage("Combined/stringsExport_1076.txt");
+		loadLanguage("Combined/stringsExport_1077.txt");
+		loadLanguage("Combined/stringsExport_1078.txt");
+		loadLanguage("Combined/stringsExport_1079.txt");
+		loadLanguage("Combined/stringsExport_1081.txt");
+		loadLanguage("Combined/stringsExport_1082.txt");
+		loadLanguage("Combined/stringsExport_1086.txt");
+		loadLanguage("Combined/stringsExport_1087.txt");
+		loadLanguage("Combined/stringsExport_1088.txt");
+		loadLanguage("Combined/stringsExport_1089.txt");
+		loadLanguage("Combined/stringsExport_1090.txt");
+		loadLanguage("Combined/stringsExport_1091.txt");
+		loadLanguage("Combined/stringsExport_1092.txt");
+		loadLanguage("Combined/stringsExport_1093.txt");
+		loadLanguage("Combined/stringsExport_1094.txt");
+		loadLanguage("Combined/stringsExport_1095.txt");
+		loadLanguage("Combined/stringsExport_1096.txt");
+		loadLanguage("Combined/stringsExport_1097.txt");
+		loadLanguage("Combined/stringsExport_1098.txt");
+		loadLanguage("Combined/stringsExport_1099.txt");
+		loadLanguage("Combined/stringsExport_1100.txt");
+		loadLanguage("Combined/stringsExport_1101.txt");
+		loadLanguage("Combined/stringsExport_1102.txt");
+		loadLanguage("Combined/stringsExport_1104.txt");
+		loadLanguage("Combined/stringsExport_1106.txt");
+		loadLanguage("Combined/stringsExport_1107.txt");
+		loadLanguage("Combined/stringsExport_1108.txt");
+		loadLanguage("Combined/stringsExport_1110.txt");
+		loadLanguage("Combined/stringsExport_1111.txt");
+		loadLanguage("Combined/stringsExport_1115.txt");
+		loadLanguage("Combined/stringsExport_1116.txt");
+		loadLanguage("Combined/stringsExport_1118.txt");
+		loadLanguage("Combined/stringsExport_1121.txt");
+		loadLanguage("Combined/stringsExport_1124.txt");
+		loadLanguage("Combined/stringsExport_1128.txt");
+		loadLanguage("Combined/stringsExport_1130.txt");
+		loadLanguage("Combined/stringsExport_1132.txt");
+		loadLanguage("Combined/stringsExport_1134.txt");
+		loadLanguage("Combined/stringsExport_1136.txt");
+		loadLanguage("Combined/stringsExport_1139.txt");
+		loadLanguage("Combined/stringsExport_1152.txt");
+		loadLanguage("Combined/stringsExport_1153.txt");
+		loadLanguage("Combined/stringsExport_1158.txt");
+		loadLanguage("Combined/stringsExport_1159.txt");
+		loadLanguage("Combined/stringsExport_1160.txt");
+		loadLanguage("Combined/stringsExport_1164.txt");
+		loadLanguage("Combined/stringsExport_1169.txt");
+		loadLanguage("Combined/stringsExport_1170.txt");
+		loadLanguage("Combined/stringsExport_2051.txt");
+		loadLanguage("Combined/stringsExport_2052.txt");
+		loadLanguage("Combined/stringsExport_2057.txt");
+		loadLanguage("Combined/stringsExport_2058.txt");
+		loadLanguage("Combined/stringsExport_2068.txt");
+		loadLanguage("Combined/stringsExport_2070.txt");
+		loadLanguage("Combined/stringsExport_2108.txt");
+		loadLanguage("Combined/stringsExport_2117.txt");
+		loadLanguage("Combined/stringsExport_2118.txt");
+		loadLanguage("Combined/stringsExport_2137.txt");
+		loadLanguage("Combined/stringsExport_3082.txt");
+		loadLanguage("Combined/stringsExport_3084.txt");
+		loadLanguage("Combined/stringsExport_3179.txt");
+		loadLanguage("Combined/stringsExport_5146.txt");
+		loadLanguage("Combined/stringsExport_9242.txt");		
+		
+		function parseButtonClicked()
+		{
+			var outputHtml = "";
+			var outputText = "";
+			
+			
+			var numberLanguages = languages.length;
+			outputHtml = outputHtml + "Languages: " + numberLanguages + " loaded";
+
+			for (var currentLanguage = 0; currentLanguage < numberLanguages; currentLanguage++)
+			{
+				var thisLanguage = languages[currentLanguage];
+			
+				var thisLanguageAlignedStrings = new Array(65536).join(".").split(".");
+			
+				var thisLanguageName = textBetween(thisLanguage, "start", "\n");
+				
+				if (thisLanguageName == "thisLangId~1033")
+				{
+					englishXml = thisLanguage;
+				}
+				
+				thisLanguageAlignedStrings[0] = thisLanguageName;
+				
+				var thisLanguageArray = thisLanguage.split("<key>");
+			
+
+				var numberKeys = thisLanguageArray.length;
+				for (var currentKey = 1; currentKey < numberKeys; currentKey++)
+				{
+					var thisKeyString = thisLanguageArray[currentKey];
+					var thisKey = textBetween(thisKeyString, "start", "</key>");
+					var thisString = textBetween(thisKeyString, "<string>", "</string>");
+				
+					var thisKeyInt = parseInt(thisKey,10);
+				
+					thisLanguageAlignedStrings[thisKeyInt] = thisString;
+				
+				} // end for every key
+								
+				languagesStrings.push(thisLanguageAlignedStrings);
+				
+				//var thisLanguageJson = JSON.stringify(thisLanguageAlignedStrings);
+				
+				//writeToFile("JSON/" + thisLanguageName + ".json", thisLanguageJson);
+			}
+			
+			//appendToFile("combinedHtml.html", "<table>\n");
+			
+			for (var currentKey = 0; currentKey < 65536; currentKey++)
+			{
+			
+				var thisKeyXml = "<key>" + currentKey + "</key><languages>";
+
+				for (var currentLanguage = 0; currentLanguage < numberLanguages; currentLanguage++)
+				{
+					var thisLanguageStrings = languagesStrings[currentLanguage];
+					var thisLanguageName = thisLanguageStrings[0];
+
+					var thisLanguageStringKey = thisLanguageStrings[currentKey];
+					
+					if (thisLanguageStringKey != "")
+					{
+						thisKeyXml = thisKeyXml + "<" + thisLanguageName + ">" + thisLanguageStringKey + "</" + thisLanguageName + ">";
+					}
+										
+				}
+				
+				thisKeyXml = thisKeyXml + "</languages>" + "\n";
+				
+				combinedXml = combinedXml + thisKeyXml;
+				
+				
+				//writeToFile("XML/" + currentKey + ".xml", thisKeyXml);
+				
+			} // end for every key
+			
+			combinedXml = replaceChars(combinedXml, "\n", "\\n");
+			combinedXml = replaceChars(combinedXml, "\r", "\\r");
+			combinedXml = replaceChars(combinedXml, "<key>", "\n<key>");
+				
+			
+			//var combinedJson = JSON.stringify(languagesStrings);
+			//writeToFile("JSON/combinedLanguages.json", combinedJson);
+			//writeToFile("combinedHtml.html", combinedHtml);
+			
+			//outputHtml = combinedHtml;
+			
+			document.getElementById("outputHtml").innerHTML = outputHtml;
+			
+		} // end function parseButtonClicked
+		
+		function grepCombinedButtonClicked()
+		{
+			var searchString = document.getElementById("searchTextArea").value;
+			
+			var searchRegexString = "^";
+			searchRegexString = searchRegexString + "(.*" + searchString + ".*)";
+			searchRegexString = searchRegexString + "$";
+			var searchRegex = new RegExp(searchRegexString, "gm");
+				
+			var resultsArray = combinedXml.match(searchRegex);
+			
+			var resultsArrayLength = resultsArray.length;
+			
+			var outputText = "";
+			
+			for (var currentItem = 0; currentItem < resultsArrayLength; currentItem++)
+			{
+				var thisItem = resultsArray[currentItem];
+				
+				outputText = outputText + thisItem + "\n";
+			}
+			
+			document.getElementById("searchTextArea").value = outputText;
+
+		} // end function grepCombinedButtonClicked
+
+		function grepEnglishButtonClicked()
+		{
+			var searchString = document.getElementById("searchTextArea").value;
+			
+			var searchRegexString = "^";
+			searchRegexString = searchRegexString + "(.*" + searchString + ".*)";
+			searchRegexString = searchRegexString + "$";
+			var searchRegex = new RegExp(searchRegexString, "gm");
+				
+			var resultsArray = englishXml.match(searchRegex);
+			
+			var resultsArrayLength = 0;
+			
+			if (resultsArray == null)
+			{
+				resultsArrayLength = 0;
+			} else {
+				resultsArrayLength = resultsArray.length;
+			}
+			
+			var outputText = "";
+			
+			for (var currentItem = 0; currentItem < resultsArrayLength; currentItem++)
+			{
+				var thisItem = resultsArray[currentItem];
+				
+				outputText = outputText + thisItem + "\n";
+			}
+			
+			document.getElementById("searchTextArea").value = outputText;
+
+		} // end function grepEnglishButtonClicked
+
+
+		function keyButtonClicked()
+		{
+			var thisKey = document.getElementById("searchTextArea").value;
+			var thisKeyInt = parseInt(thisKey,10);
+			
+			var numberLanguages = languages.length;
+			
+			var thisKeyXml = "<key>" + thisKeyInt + "</key><languages>";
+
+			for (var currentLanguage = 0; currentLanguage < numberLanguages; currentLanguage++)
+			{
+				var thisLanguageStrings = languagesStrings[currentLanguage];
+				var thisLanguageName = thisLanguageStrings[0];
+
+				var thisLanguageStringKey = thisLanguageStrings[thisKeyInt];
+				
+				if (thisLanguageStringKey != "")
+				{
+					thisKeyXml = thisKeyXml + "<" + thisLanguageName + ">" + thisLanguageStringKey + "</" + thisLanguageName + ">";
+				}
+				
+			}
+			
+			thisKeyXml = thisKeyXml + "</languages>" + "\n";
+			
+			//thisKeyXml = replaceChars(thisKeyXml, "\n", "\\n");
+			thisKeyXml = replaceChars(thisKeyXml, "<thisLangId", "\n<thisLangId");
+			
+			
+			document.getElementById("searchTextArea").value = thisKeyXml;
+
+			
+		} // end function keyButtonClicked
+		
+		
+		function returnKey(thisKeyInt)
+		{
+			var numberLanguages = languages.length;
+			
+			var thisKeyXml = "<key>" + thisKeyInt + "</key><languages>";
+
+			for (var currentLanguage = 0; currentLanguage < numberLanguages; currentLanguage++)
+			{
+				var thisLanguageStrings = languagesStrings[currentLanguage];
+				var thisLanguageName = thisLanguageStrings[0];
+
+				var thisLanguageStringKey = thisLanguageStrings[thisKeyInt];
+				
+				if (thisLanguageStringKey != "")
+				{
+					thisKeyXml = thisKeyXml + "<" + thisLanguageName + ">" + thisLanguageStringKey + "</" + thisLanguageName + ">";
+				}
+				
+			}
+			
+			thisKeyXml = thisKeyXml + "</languages>" + "\n";
+			
+			//thisKeyXml = replaceChars(thisKeyXml, "\n", "\\n");
+			thisKeyXml = replaceChars(thisKeyXml, "<thisLangId", "\n<thisLangId");
+			
+			
+			return thisKeyXml;
+
+			
+		} // end function returnKey
+		
+		
+	</script>
+</html>

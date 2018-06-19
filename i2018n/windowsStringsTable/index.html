@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+        <style>
+
+@font-face {
+    font-family: "Charcoal CY";
+    src: url("fonts/Charcoal.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Virtue";
+    src: url("fonts/virtue.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SimSun";
+    src: url("fonts/SimSun.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Jhenghei";
+    src: url("fonts/MicrosoftJhengHeiRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PingfangLocal";
+    src: local("PingFang-TC-Regular");
+}
+
+@font-face {
+    font-family: "Pingfang";
+    src: url("fonts/PingFang1.ttf") format("truetype");
+}
+
+      body {
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+      
+      table td {
+      white-space: nowrap;
+      }
+		
+	a:hover, a:visited, a:link, a:active
+	{
+		color:#000000;
+	    text-decoration: none;
+	}
+		
+      .chinese_1 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+        color:#000000;
+		font-size: 30px;
+		display:inline;
+      }
+
+      .chinese_2 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#f82423;
+font-size: 30px;
+display:inline;
+      }
+
+      .chinese_3 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#189c19;
+font-size: 30px;
+display:inline;
+      }
+
+      .chinese_4 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#178FD1;
+font-size: 30px;
+display:inline;
+      }
+
+      .chinese_5 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+font-size: 30px;
+display:inline;
+      }
+
+      .chinese_6 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+font-size: 30px;
+display:inline;
+      }
+
+      .chinese_7 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+font-size: 30px;
+display:inline;
+      }
+      
+      .chinese_8 {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+font-size: 30px;
+display:inline;
+      }
+
+
+      .pinyin_1 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .pinyin_2 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#f82423;
+display:inline;
+      }
+
+      .pinyin_3 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#189c19;
+display:inline;
+      }
+
+      .pinyin_4 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#178FD1;
+display:inline;
+      }
+
+      .pinyin_5 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .taiwanese_1 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+        color:#797986;
+		display:inline;
+      }
+
+      .taiwanese_2 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#178FD1;
+display:inline;
+      }
+
+      .taiwanese_3 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#0000FF;
+display:inline;
+      }
+
+      .taiwanese_4 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#505050;
+display:inline;
+      }
+
+      .taiwanese_5 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#F82423;
+display:inline;
+      }
+
+      .taiwanese_7 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+      
+      .taiwanese_8 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#707070;
+display:inline;
+      }
+
+      .cantonese_1 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+        color:#929292;
+		display:inline;
+      }
+
+      .cantonese_2 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#FF8080;
+display:inline;
+      }
+
+      .cantonese_3 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#797986;
+font-size: 30px;
+display:inline;
+      }
+
+      .cantonese_4 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#0000FF;
+display:inline;
+      }
+
+      .cantonese_5 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#F82423;
+display:inline;
+      }
+
+      .cantonese_6 {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .hangul {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+        color:#000000;
+		font-size: 26px;
+		display:inline;
+      }
+
+      .tang {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .japanese {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .vietnamese {
+        font-family: "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .englishInChinese {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .literal {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+      .english {
+        font-family: "Pingfang", "Jhenghei", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#000000;
+display:inline;
+      }
+
+
+		.DefaultButtonOuter
+		{
+			border: 2px solid black ;
+			border-radius: 8px;
+			width: 96px;
+			height: 26px;
+			text-align: center;
+			
+			/*background-color: #99999a;*/
+			background: #99999a; /* For browsers that do not support gradients */
+			/*background: -webkit-linear-gradient(left top, red, yellow);*/ /* For Safari 5.1 to 6.0 */
+			/*background: -o-linear-gradient(bottom right, red, yellow);*/ /* For Opera 11.1 to 12.0 */
+			/*background: -moz-linear-gradient(bottom right, red, yellow); */ /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to bottom right, #dcdbde, #737374); /* Standard syntax */
+		}
+
+		.ButtonInner
+		{
+			border: 1px solid black ;
+			border-radius: 5px;
+			background-color: #dcdbde;
+			width: 88px;
+			height: 18px;
+			text-align: center;
+			margin: 3px;
+			
+		    line-height: 18px;
+	        font-family: "Charcoal CY", "Virtue", Geneva, sans-serif;
+			font-size: 11px;
+			color: #000000;
+		}
+		
+		.ButtonInner:active
+		{
+		    background:#666666;
+		    color: #ffffff;
+		}
+
+		.key
+		{
+			border: 1px solid black ;
+			border-radius: 5px;
+			background-color: #dcdbde;
+			width: 18px;
+			height: 18px;
+			text-align: center;
+			margin: 3px;
+			
+		    line-height: 18px;
+	        font-family: Geneva, sans-serif;
+			font-size: 11px;
+			color: #000000;
+		}
+
+
+			#matrix {
+				background: black;
+				float: center;
+			}
+
+			#matrix td {
+			    padding: 7px;
+    			margin: 0px;
+    			float: center;
+				background: black;
+				font: 54px arial;
+				
+				height: 80px;
+			}
+
+			#matrix tr {
+				height: 80px;
+			}
+
+
+			#matrix p {
+			    opacity: 0;
+			    margin-top: -25px;
+			    text-align: center;
+
+				height: 80px;
+
+			    -webkit-transition: margin-top 2s ease-in;
+			    -moz-transition: margin-top 2s ease-in;
+			    -o-transition: margin-top 2s ease-in;
+			    -ms-transition: margin-top 2s ease-in;
+			    transition: margin-top 2s ease-in;
+			}
+			
+			#matrix p.load {
+			    opacity: 1;
+			    margin-top: 25px;
+			}
+
+     .dialogWithDropShadow
+     {
+         -webkit-box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+         -moz-box-shadow: 1px 1px 0px rgba(0, 0, 0, 1); 
+     }
+
+@font-face {
+    font-family: "SmallSealScript";
+    src: url("fonts/FangzhengXiaozhuantiFont-TraditionalChinese.ttf") format("truetype");
+}
+
+      .smallSealScript_1 {
+        font-family: "SmallSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+        color:black;
+		font-size: 30px;
+		display:inline;
+      }
+
+      .smallSealScript_2 {
+        font-family: "SmallSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#f82423;
+font-size: 30px;
+display:inline;
+      }
+
+      .smallSealScript_3 {
+        font-family: "SmallSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#189c19;
+font-size: 30px;
+display:inline;
+      }
+
+      .smallSealScript_4 {
+        font-family: "SmallSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#178FD1;
+font-size: 30px;
+display:inline;
+      }
+
+@font-face {
+    font-family: "LargeSealScript";
+    src: url("fonts/JDFZHUANF.ttf") format("truetype");
+}
+
+      .largeSealScript_1 {
+        font-family: "LargeSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+        color:black;
+		font-size: 30px;
+		display:inline;
+      }
+
+      .largeSealScript_2 {
+        font-family: "LargeSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#f82423;
+font-size: 30px;
+display:inline;
+      }
+
+      .largeSealScript_3 {
+        font-family: "LargeSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#189c19;
+font-size: 30px;
+display:inline;
+      }
+
+      .largeSealScript_4 {
+        font-family: "LargeSealScript", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#178FD1;
+font-size: 30px;
+display:inline;
+      }
+
+
+@font-face {
+    font-family: "OracleBones";
+    src: url("fonts/bnujgw.ttf") format("truetype");
+}
+
+      .oracleBones_1 {
+        font-family: "OracleBones", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+        color:black;
+		font-size: 30px;
+		display:inline;
+      }
+
+      .oracleBones_2 {
+        font-family: "OracleBones", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#f82423;
+font-size: 30px;
+display:inline;
+      }
+
+      .oracleBones_3 {
+        font-family: "OracleBones", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#189c19;
+font-size: 30px;
+display:inline;
+      }
+
+      .oracleBones_4 {
+        font-family: "OracleBones", "Heiti TC Light", Tahoma, Geneva, sans-serif;
+color:#178FD1;
+font-size: 30px;
+display:inline;
+      }
+
+
+    </style>		
+	</head>
+
+	<body>
+<table>
+<tr><td></td><td>String Key</td><td>Windows 2000 Icon</td><td>Windows XP Icon</td><td>Windows 7 Icon</td><td>Windows 10 Icon</td><td>English (United States)</td><td>Spanish (Spain)</td><td>Russian (Russia)</td><td>Chinese (PRC)</td><td>Chinese (Taiwan)</td><td>Chinese (Pingtype)</td><td>Japanese (Japan)</td><td>Korean (Korea)</td><td>Hindi (India)</td><td>Arabic (Saudi Arabia)</td></tr>
+<tr><td>Language ID</td><td></td><td></td><td></td><td></td><td></td><td>1033</td><td>3082</td><td>1049</td><td>2052</td><td>1028</td><td></td><td>1041</td><td>1042</td><td>1081</td><td>1025</td></tr>
+<tr><td></td><td>30480</td><td><img width=32px src="images/explorer_win2000_myComputer.png"></td><td><img width=32px src="images/shell32_winxp_123_mycomputer.png"></td><td><img width=32px src="images/imageres_win7_1251_computer.png"></td><td><img width=32px src="images/imageres_109.png"></td><td>Computer</td><td>Equipo</td><td>Компьютер</td><td>计算机</td><td>電腦</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine0Word0Character0" class="chinese_4 chinese_4_loaded">電</div><div id="chineseLine0Word0Character1" class="chinese_3 chinese_3_loaded">腦</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine0Word0Character0" class="pinyin_4"><span style="font-size:18px">d</span><span style="font-size:17px">i</span><span style="font-size:15px">à</span><span style="font-size:14px">n</span></div> <div id="pinyinLine0Word0Character1" class="pinyin_3"><span style="font-size:18px">n</span><span style="font-size:14px">ǎ</span><span style="font-size:18px">o</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine0Word0Character0" class="literal">computer</div></td><td></td><td></td></tr></tbody></table><div id="englishLine0Word0Character0" class="english">C</div><div id="englishLine0Word0Character1" class="english">o</div><div id="englishLine0Word0Character2" class="english">m</div><div id="englishLine0Word0Character3" class="english">p</div><div id="englishLine0Word0Character4" class="english">u</div><div id="englishLine0Word0Character5" class="english">t</div><div id="englishLine0Word0Character6" class="english">e</div><div id="englishLine0Word0Character7" class="english">r</div> </td><td>コンピューター</td><td>컴퓨터</td><td>कंप्‍यूटर</td><td>الكمبيوتر</td></tr>
+<tr><td></td><td>9216</td><td></td><td></td><td></td><td><img width=32px src="images/shell32_windows10en_16.png"></td><td>This PC</td><td>Este equipo</td><td>Этот компьютер</td><td>此电脑</td><td>本機</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine18Word0Character0" class="chinese_3 chinese_3_loaded">本</div></td><td><div id="chineseLine18Word1Character0" class="chinese_1 chinese_1_loaded">機</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine18Word0Character0" class="pinyin_3"><span style="font-size:18px">b</span><span style="font-size:14px">ě</span><span style="font-size:18px">n</span></div> </td><td><div id="pinyinLine18Word1Character0" class="pinyin_1"><span style="font-size:16px">jī</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine18Word0Character0" class="literal">this</div></td><td> <div id="literalLine18Word1Character0" class="literal">machine</div></td><td></td><td></td></tr></tbody></table><div id="englishLine18Word0Character0" class="english">T</div><div id="englishLine18Word0Character1" class="english">h</div><div id="englishLine18Word0Character2" class="english">i</div><div id="englishLine18Word0Character3" class="english">s</div> <div id="englishLine18Word1Character0" class="english">P</div><div id="englishLine18Word1Character1" class="english">C</div> </td><td>PCネットワーク</td><td>내 PC</td><td>यह PC</td><td>هذا الكمبيوتر</td></tr>
+<tr><td></td><td>30481</td><td><img width=32px src="images/shell32_windows_2000_100.png"></td><td><img width=32px src="images/shell32_winxp_142_network.png"></td><td><img width=32px src="images/imageres_win7_183_network.png"></td><td><img width=32px src="images/imageres_25.png"></td><td>Network</td><td>Red</td><td>Сеть</td><td>网络</td><td>網路</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine9Word0Character0" class="chinese_3 chinese_3_loaded">網</div><div id="chineseLine9Word0Character1" class="chinese_4 chinese_4_loaded">路</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine9Word0Character0" class="pinyin_3"><span style="font-size:18px">w</span><span style="font-size:14px">ǎ</span><span style="font-size:14px">n</span><span style="font-size:18px">g</span></div> <div id="pinyinLine9Word0Character1" class="pinyin_4"><span style="font-size:18px">l</span><span style="font-size:14px">ù</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine9Word0Character0" class="literal">network</div></td><td></td><td></td></tr></tbody></table><div id="englishLine9Word0Character0" class="english">N</div><div id="englishLine9Word0Character1" class="english">e</div><div id="englishLine9Word0Character2" class="english">t</div><div id="englishLine9Word0Character3" class="english">w</div><div id="englishLine9Word0Character4" class="english">o</div><div id="englishLine9Word0Character5" class="english">r</div><div id="englishLine9Word0Character6" class="english">k</div> </td><td>ネットワーク</td><td>네트워크</td><td>नेटवर्क</td><td>الشبكة</td></tr>
+<tr><td></td><td>12712</td><td><img width=32px src="images/shell32_windows2000_260.png"></td><td><img width=32px src="images/shell32_winxp_182_controlpanel.png"></td><td><img width=32px src="images/shell32_win7_276_controlpanel.png"></td><td><img width=32px src="images/shell32_windows10en_22.png"></td><td>Control Panel</td><td>Panel de control</td><td>Панель управления</td><td>控制面板</td><td>控制台</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine2Word0Character0" class="chinese_4 chinese_4_loaded">控</div><div id="chineseLine2Word0Character1" class="chinese_4 chinese_4_loaded">制</div></td><td><div id="chineseLine2Word1Character0" class="chinese_2 chinese_2_loaded">台</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine2Word0Character0" class="pinyin_4"><span style="font-size:18px">k</span><span style="font-size:17px">ò</span><span style="font-size:15px">n</span><span style="font-size:14px">g</span></div> <div id="pinyinLine2Word0Character1" class="pinyin_4"><span style="font-size:18px">z</span><span style="font-size:16px">h</span><span style="font-size:14px">ì</span></div> </td><td><div id="pinyinLine2Word1Character0" class="pinyin_2"><span style="font-size:14px">t</span><span style="font-size:16px">á</span><span style="font-size:18px">i</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine2Word0Character0" class="literal">control</div></td><td> <div id="literalLine2Word1Character0" class="literal">station</div></td><td></td><td></td></tr></tbody></table><div id="englishLine2Word0Character0" class="english">C</div><div id="englishLine2Word0Character1" class="english">o</div><div id="englishLine2Word0Character2" class="english">n</div><div id="englishLine2Word0Character3" class="english">t</div><div id="englishLine2Word0Character4" class="english">r</div><div id="englishLine2Word0Character5" class="english">o</div><div id="englishLine2Word0Character6" class="english">l</div> <div id="englishLine2Word1Character0" class="english">P</div><div id="englishLine2Word1Character1" class="english">a</div><div id="englishLine2Word1Character2" class="english">n</div><div id="englishLine2Word1Character3" class="english">e</div><div id="englishLine2Word1Character4" class="english">l</div> </td><td>コントロール パネル</td><td>제어판</td><td>नियंत्रण कक्ष</td><td>لوحة التحكم</td></tr>
+<tr><td></td><td>29984</td><td><img width=32px src="images/mydocs_windows2000_5.png"></td><td><img width=32px src="images/shell32_winxp_796_mydocuments.png"></td><td><img width=32px src="images/imageres_win7_1283_documents.png"></td><td><img width=32px src="images/imageres_112.png"></td><td>Documents</td><td>Documentos</td><td>Документы</td><td>文档</td><td>文件</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine5Word0Character0" class="chinese_2 chinese_2_loaded">文</div><div id="chineseLine5Word0Character1" class="chinese_4 chinese_4_loaded">件</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine5Word0Character0" class="pinyin_2"><span style="font-size:14px">w</span><span style="font-size:16px">é</span><span style="font-size:18px">n</span></div> <div id="pinyinLine5Word0Character1" class="pinyin_4"><span style="font-size:18px">j</span><span style="font-size:17px">i</span><span style="font-size:15px">à</span><span style="font-size:14px">n</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine5Word0Character0" class="literal">file</div></td><td></td><td></td></tr></tbody></table><div id="englishLine5Word0Character0" class="english">D</div><div id="englishLine5Word0Character1" class="english">o</div><div id="englishLine5Word0Character2" class="english">c</div><div id="englishLine5Word0Character3" class="english">u</div><div id="englishLine5Word0Character4" class="english">m</div><div id="englishLine5Word0Character5" class="english">e</div><div id="englishLine5Word0Character6" class="english">n</div><div id="englishLine5Word0Character7" class="english">t</div><div id="englishLine5Word0Character8" class="english">s</div> </td><td>ドキュメント</td><td>문서</td><td>दस्तावेज़</td><td>المستندات</td></tr>
+<tr><td></td><td>17451</td><td><img width=32px src="images/mydocs_windows2000_11.png"></td><td><img width=32px src="images/shell32_winxp_808_pictures.png"></td><td><img width=32px src="images/imageres_win7_1296_pictures.png"></td><td><img width=32px src="images/imageres_113.png"></td><td>Pictures</td><td>Imágenes</td><td>Изображения</td><td>图片</td><td>圖片</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine11Word0Character0" class="chinese_2 chinese_2_loaded">圖</div><div id="chineseLine11Word0Character1" class="chinese_4 chinese_4_loaded">片</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine11Word0Character0" class="pinyin_2"><span style="font-size:14px">t</span><span style="font-size:18px">ú</span></div> <div id="pinyinLine11Word0Character1" class="pinyin_4"><span style="font-size:18px">p</span><span style="font-size:17px">i</span><span style="font-size:15px">à</span><span style="font-size:14px">n</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine11Word0Character0" class="literal">image</div></td><td></td><td></td></tr></tbody></table><div id="englishLine11Word0Character0" class="english">P</div><div id="englishLine11Word0Character1" class="english">i</div><div id="englishLine11Word0Character2" class="english">c</div><div id="englishLine11Word0Character3" class="english">t</div><div id="englishLine11Word0Character4" class="english">u</div><div id="englishLine11Word0Character5" class="english">r</div><div id="englishLine11Word0Character6" class="english">e</div><div id="englishLine11Word0Character7" class="english">s</div> </td><td>ピクチャ</td><td>사진</td><td>चित्र</td><td>الصور</td></tr>
+<tr><td></td><td>21795</td><td><img width=32px src="images/shell32_windows_2000_361.png"></td><td><img width=32px src="images/shell32_winxp_1366_favorites.png"></td><td><img width=32px src="images/imageres_win7_1335_favouries.png"></td><td><img width=32px src="images/imageres_115.png"></td><td>Favorites</td><td>Favoritos</td><td>Избранное</td><td>收藏夹</td><td>我的最愛</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine7Word0Character0" class="chinese_3 chinese_3_loaded">我</div><div id="chineseLine7Word0Character1" class="chinese_1 chinese_1_loaded">的</div></td><td><div id="chineseLine7Word1Character0" class="chinese_4 chinese_4_loaded">最</div><div id="chineseLine7Word1Character1" class="chinese_4 chinese_4_loaded">愛</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine7Word0Character0" class="pinyin_3"><span style="font-size:16px">wǒ</span></div> <div id="pinyinLine7Word0Character1" class="pinyin_1"><span style="font-size:16px">de</span></div> </td><td><div id="pinyinLine7Word1Character0" class="pinyin_4"><span style="font-size:18px">z</span><span style="font-size:16px">u</span><span style="font-size:14px">ì</span></div> <div id="pinyinLine7Word1Character1" class="pinyin_4"><span style="font-size:18px">à</span><span style="font-size:14px">i</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine7Word0Character0" class="literal">my</div></td><td> <div id="literalLine7Word1Character0" class="literal">favorite</div></td><td></td><td></td></tr></tbody></table><div id="englishLine7Word0Character0" class="english">F</div><div id="englishLine7Word0Character1" class="english">a</div><div id="englishLine7Word0Character2" class="english">v</div><div id="englishLine7Word0Character3" class="english">o</div><div id="englishLine7Word0Character4" class="english">r</div><div id="englishLine7Word0Character5" class="english">i</div><div id="englishLine7Word0Character6" class="english">t</div><div id="englishLine7Word0Character7" class="english">e</div><div id="englishLine7Word0Character8" class="english">s</div> </td><td>お気に入り</td><td>즐겨찾기</td><td>पसंद</td><td>المفضلة</td></tr>
+<tr><td></td><td>9031</td><td><img width=32px src="images/shell32_windows_2000_227.png"></td><td><img width=32px src="images/shell32_winxp_348_searches.png"></td><td><img width=32px src="images/imageres_win7_106_searches.png"></td><td><img width=32px src="images/imageres_18.png"></td><td>Searches </td><td>Búsquedasn</td><td>ПоискиYНе </td><td>搜索 </td><td>搜尋 </td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine16Word0Character0" class="chinese_1 chinese_1_loaded">搜</div><div id="chineseLine16Word0Character1" class="chinese_2 chinese_2_loaded">尋</div></td><td></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine16Word0Character0" class="pinyin_1"><span style="font-size:16px">sōu</span></div> <div id="pinyinLine16Word0Character1" class="pinyin_2"><span style="font-size:14px">x</span><span style="font-size:16px">ú</span><span style="font-size:18px">n</span></div> </td><td></td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine16Word0Character0" class="literal">search</div></td><td></td><td></td><td></td></tr></tbody></table><div id="englishLine16Word0Character0" class="english">S</div><div id="englishLine16Word0Character1" class="english">e</div><div id="englishLine16Word0Character2" class="english">a</div><div id="englishLine16Word0Character3" class="english">r</div><div id="englishLine16Word0Character4" class="english">c</div><div id="englishLine16Word0Character5" class="english">h</div><div id="englishLine16Word0Character6" class="english">e</div><div id="englishLine16Word0Character7" class="english">s</div>  </td><td>検索</td><td>검색%병합이 </td><td>खोज </td><td>نتائج </td></tr>
+<tr><td></td><td>17450</td><td></td><td><img width=32px src="images/shell32_winxp_820_music.png"></td><td><img width=32px src="images/imageres_win7_1234_music.png"></td><td><img width=32px src="images/imageres_108.png"></td><td>Music</td><td>Música</td><td>Музыка</td><td>音乐</td><td>音樂</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine8Word0Character0" class="chinese_1 chinese_1_loaded">音</div><div id="chineseLine8Word0Character1" class="chinese_4 chinese_4_loaded">樂</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine8Word0Character0" class="pinyin_1"><span style="font-size:16px">yīn</span></div> <div id="pinyinLine8Word0Character1" class="pinyin_4"><span style="font-size:18px">y</span><span style="font-size:16px">u</span><span style="font-size:14px">è</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine8Word0Character0" class="literal">music</div></td><td></td><td></td></tr></tbody></table><div id="englishLine8Word0Character0" class="english">M</div><div id="englishLine8Word0Character1" class="english">u</div><div id="englishLine8Word0Character2" class="english">s</div><div id="englishLine8Word0Character3" class="english">i</div><div id="englishLine8Word0Character4" class="english">c</div> </td><td>ミュージック</td><td>음악</td><td>संगीत</td><td>الموسيقى</td></tr>
+<tr><td></td><td>17452</td><td></td><td><img width=32px src="images/shell32_winxp_832_videos.png"></td><td><img width=32px src="images/imageres_win7_1309_videos.png"></td><td><img width=32px src="images/imageres_189.png"></td><td>Videos</td><td>Vídeos</td><td>Видео</td><td>视频</td><td>視訊</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine19Word0Character0" class="chinese_4 chinese_4_loaded">視</div><div id="chineseLine19Word0Character1" class="chinese_4 chinese_4_loaded">訊</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine19Word0Character0" class="pinyin_4"><span style="font-size:18px">s</span><span style="font-size:16px">h</span><span style="font-size:14px">ì</span></div> <div id="pinyinLine19Word0Character1" class="pinyin_4"><span style="font-size:18px">x</span><span style="font-size:16px">ù</span><span style="font-size:14px">n</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine19Word0Character0" class="literal">video</div></td><td></td><td></td></tr></tbody></table><div id="englishLine19Word0Character0" class="english">V</div><div id="englishLine19Word0Character1" class="english">i</div><div id="englishLine19Word0Character2" class="english">d</div><div id="englishLine19Word0Character3" class="english">e</div><div id="englishLine19Word0Character4" class="english">o</div><div id="englishLine19Word0Character5" class="english">s</div> </td><td>ビデオ</td><td>비디오</td><td>वीडियोज़</td><td>ملفات</td></tr>
+<tr><td></td><td>29997</td><td></td><td></td><td><img width=32px src="images/imageres_win7_1989_contacts.png"></td><td><img width=32px src="images/imageres_181.png"></td><td>Contacts</td><td>Contactos</td><td>Контакты</td><td>联系人</td><td>連絡人</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine1Word0Character0" class="chinese_2 chinese_2_loaded">連</div><div id="chineseLine1Word0Character1" class="chinese_4 chinese_4_loaded">絡</div></td><td><div id="chineseLine1Word1Character0" class="chinese_2 chinese_2_loaded">人</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine1Word0Character0" class="pinyin_2"><span style="font-size:14px">l</span><span style="font-size:15px">i</span><span style="font-size:17px">á</span><span style="font-size:18px">n</span></div> <div id="pinyinLine1Word0Character1" class="pinyin_4"><span style="font-size:18px">l</span><span style="font-size:16px">u</span><span style="font-size:14px">ò</span></div> </td><td><div id="pinyinLine1Word1Character0" class="pinyin_2"><span style="font-size:14px">r</span><span style="font-size:16px">é</span><span style="font-size:18px">n</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine1Word0Character0" class="literal">contact</div></td><td> <div id="literalLine1Word1Character0" class="literal">people</div></td><td></td><td></td></tr></tbody></table><div id="englishLine1Word0Character0" class="english">C</div><div id="englishLine1Word0Character1" class="english">o</div><div id="englishLine1Word0Character2" class="english">n</div><div id="englishLine1Word0Character3" class="english">t</div><div id="englishLine1Word0Character4" class="english">a</div><div id="englishLine1Word0Character5" class="english">c</div><div id="englishLine1Word0Character6" class="english">t</div><div id="englishLine1Word0Character7" class="english">s</div> </td><td>連絡先</td><td>연락처</td><td>संपर्क</td><td>جهات</td></tr>
+<tr><td></td><td>21798</td><td></td><td></td><td><img width=32px src="images/imageres_win7_2028_downloads.png"></td><td><img width=32px src="images/imageres_184.png"></td><td>Downloads</td><td>Descargas</td><td>Загрузки</td><td>下载</td><td>下載</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine6Word0Character0" class="chinese_4 chinese_4_loaded">下</div><div id="chineseLine6Word0Character1" class="chinese_4 chinese_4_loaded">載</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine6Word0Character0" class="pinyin_4"><span style="font-size:18px">x</span><span style="font-size:16px">i</span><span style="font-size:14px">à</span></div> <div id="pinyinLine6Word0Character1" class="pinyin_4"><span style="font-size:18px">z</span><span style="font-size:16px">à</span><span style="font-size:14px">i</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine6Word0Character0" class="literal">download</div></td><td></td><td></td></tr></tbody></table><div id="englishLine6Word0Character0" class="english">D</div><div id="englishLine6Word0Character1" class="english">o</div><div id="englishLine6Word0Character2" class="english">w</div><div id="englishLine6Word0Character3" class="english">n</div><div id="englishLine6Word0Character4" class="english">l</div><div id="englishLine6Word0Character5" class="english">o</div><div id="englishLine6Word0Character6" class="english">a</div><div id="englishLine6Word0Character7" class="english">d</div><div id="englishLine6Word0Character8" class="english">s</div> </td><td>ダウンロード</td><td>다운로드</td><td>डाउनलोड्स</td><td>التنزيلات</td></tr>
+<tr><td></td><td>38243</td><td></td><td></td><td><img width=32px src="images/shell32_win7_1999_save.png"></td><td><img width=32px src="images/shell32_windows10en_16761.png"></td><td>Save </td><td>Guardar </td><td>Сохранить </td><td>保存 </td><td>儲存檔案 </td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine15Word0Character0" class="chinese_2 chinese_2_loaded">儲</div><div id="chineseLine15Word0Character1" class="chinese_2 chinese_2_loaded">存</div></td><td><div id="chineseLine15Word1Character0" class="chinese_3 chinese_3_loaded">檔</div><div id="chineseLine15Word1Character1" class="chinese_4 chinese_4_loaded">案</div></td><td></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine15Word0Character0" class="pinyin_2"><span style="font-size:14px">c</span><span style="font-size:16px">h</span><span style="font-size:18px">ú</span></div> <div id="pinyinLine15Word0Character1" class="pinyin_2"><span style="font-size:14px">c</span><span style="font-size:16px">ú</span><span style="font-size:18px">n</span></div> </td><td><div id="pinyinLine15Word1Character0" class="pinyin_3"><span style="font-size:18px">d</span><span style="font-size:14px">ǎ</span><span style="font-size:14px">n</span><span style="font-size:18px">g</span></div> <div id="pinyinLine15Word1Character1" class="pinyin_4"><span style="font-size:18px">à</span><span style="font-size:14px">n</span></div> </td><td></td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine15Word0Character0" class="literal">save</div></td><td> <div id="literalLine15Word1Character0" class="literal">file</div></td><td></td><td></td><td></td></tr></tbody></table><div id="englishLine15Word0Character0" class="english">S</div><div id="englishLine15Word0Character1" class="english">a</div><div id="englishLine15Word0Character2" class="english">v</div><div id="englishLine15Word0Character3" class="english">e</div>  </td><td>保存 </td><td>저장 </td><td>सहेजें </td><td>حفظ </td></tr>
+<tr><td></td><td>33561</td><td></td><td></td><td><img width=32px src="images/shell32_win7_1288_copy.png"></td><td><img width=32px src="images/shell32_win10_1250_copy.png"></td><td>Copy</td><td>Copiar</td><td>Копировать</td><td>复制</td><td>複製</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine3Word0Character0" class="chinese_4 chinese_4_loaded">複</div><div id="chineseLine3Word0Character1" class="chinese_4 chinese_4_loaded">製</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine3Word0Character0" class="pinyin_4"><span style="font-size:18px">f</span><span style="font-size:14px">ù</span></div> <div id="pinyinLine3Word0Character1" class="pinyin_4"><span style="font-size:18px">z</span><span style="font-size:16px">h</span><span style="font-size:14px">ì</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine3Word0Character0" class="literal">copy</div></td><td></td><td></td></tr></tbody></table><div id="englishLine3Word0Character0" class="english">C</div><div id="englishLine3Word0Character1" class="english">o</div><div id="englishLine3Word0Character2" class="english">p</div><div id="englishLine3Word0Character3" class="english">y</div> </td><td>コピー</td><td>복사</td><td>Copy</td><td>نسخ</td></tr>
+<tr><td></td><td>33560</td><td></td><td></td><td><img width=32px src="images/shell32_win7_1297_cut.png"></td><td><img width=32px src="images/shell32_windows10en_16762.png"></td><td>Cut</td><td>Cortar</td><td>Вырезать</td><td>剪切</td><td>剪下</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine4Word0Character0" class="chinese_3 chinese_3_loaded">剪</div><div id="chineseLine4Word0Character1" class="chinese_4 chinese_4_loaded">下</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine4Word0Character0" class="pinyin_3"><span style="font-size:18px">j</span><span style="font-size:14px">i</span><span style="font-size:14px">ǎ</span><span style="font-size:18px">n</span></div> <div id="pinyinLine4Word0Character1" class="pinyin_4"><span style="font-size:18px">x</span><span style="font-size:16px">i</span><span style="font-size:14px">à</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine4Word0Character0" class="literal">cut</div> <div id="literalLine4Word0Character1" class="literal">out</div></td><td></td><td></td></tr></tbody></table><div id="englishLine4Word0Character0" class="english">C</div><div id="englishLine4Word0Character1" class="english">u</div><div id="englishLine4Word0Character2" class="english">t</div> </td><td>切り取り</td><td>잘라내기</td><td>Cut</td><td>قص</td></tr>
+<tr><td></td><td>33562</td><td></td><td></td><td><img width=32px src="images/shell32_win7_1306_paste.png"></td><td><img width=32px src="images/shell32_windows10en_16763.png"></td><td>Paste</td><td>Pegar</td><td>Вставить</td><td>粘贴</td><td>貼上</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine10Word0Character0" class="chinese_1 chinese_1_loaded">貼</div><div id="chineseLine10Word0Character1" class="chinese_4 chinese_4_loaded">上</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine10Word0Character0" class="pinyin_1"><span style="font-size:16px">tiē</span></div> <div id="pinyinLine10Word0Character1" class="pinyin_4"><span style="font-size:18px">s</span><span style="font-size:17px">h</span><span style="font-size:16px">à</span><span style="font-size:15px">n</span><span style="font-size:14px">g</span></div> </td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine10Word0Character0" class="literal">paste</div></td><td></td><td></td></tr></tbody></table><div id="englishLine10Word0Character0" class="english">P</div><div id="englishLine10Word0Character1" class="english">a</div><div id="englishLine10Word0Character2" class="english">s</div><div id="englishLine10Word0Character3" class="english">t</div><div id="englishLine10Word0Character4" class="english">e</div> </td><td>貼り付け</td><td>붙여넣기</td><td>Paste</td><td>لصق</td></tr>
+<tr><td></td><td>30388</td><td><img width=32px src="images/shell32_windows_2000_178.png"></td><td><img width=32px src="images/shell32_winxp_273_recyclebinfull.png"></td><td><img width=32px src="images/imageres_win7_627_recyclebinfull.png"></td><td><img width=32px src="images/imageres_54.png"></td><td>Recycle Bin (full)</td><td>Papelera de reciclaje (llena)</td><td>Корзина (полная)</td><td>回收站(满)</td><td>資源回收筒 (滿)</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine13Word0Character0" class="chinese_1 chinese_1_loaded">資</div><div id="chineseLine13Word0Character1" class="chinese_2 chinese_2_loaded">源</div></td><td><div id="chineseLine13Word1Character0" class="chinese_2 chinese_2_loaded">回</div><div id="chineseLine13Word1Character1" class="chinese_1 chinese_1_loaded">收</div><div id="chineseLine13Word1Character2" class="chinese_3 chinese_3_loaded">筒</div></td><td></td><td><div class="englishInChinese">(</div></td><td></td><td><div id="chineseLine13Word2Character0" class="chinese_3 chinese_3_loaded">滿</div></td><td><div class="englishInChinese">)</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine13Word0Character0" class="pinyin_1"><span style="font-size:16px">zī</span></div> <div id="pinyinLine13Word0Character1" class="pinyin_2"><span style="font-size:14px">y</span><span style="font-size:15px">u</span><span style="font-size:17px">á</span><span style="font-size:18px">n</span></div> </td><td><div id="pinyinLine13Word1Character0" class="pinyin_2"><span style="font-size:14px">h</span><span style="font-size:16px">u</span><span style="font-size:18px">í</span></div> <div id="pinyinLine13Word1Character1" class="pinyin_1"><span style="font-size:16px">shōu</span></div> <div id="pinyinLine13Word1Character2" class="pinyin_3"><span style="font-size:18px">t</span><span style="font-size:14px">ǒ</span><span style="font-size:14px">n</span><span style="font-size:18px">g</span></div> </td><td></td><td><div class="englishInChinese">(</div></td><td></td><td><div id="pinyinLine13Word2Character0" class="pinyin_3"><span style="font-size:18px">m</span><span style="font-size:14px">ǎ</span><span style="font-size:18px">n</span></div> </td><td><div class="englishInChinese">)</div></td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine13Word0Character0" class="literal">resources</div></td><td> <div id="literalLine13Word1Character0" class="literal">recycle</div> <div id="literalLine13Word1Character1" class="literal">bin</div></td><td></td><td>(</td><td></td><td> <div id="literalLine13Word2Character0" class="literal">full</div></td><td>)</td><td></td><td></td></tr></tbody></table><div id="englishLine13Word0Character0" class="english">R</div><div id="englishLine13Word0Character1" class="english">e</div><div id="englishLine13Word0Character2" class="english">c</div><div id="englishLine13Word0Character3" class="english">y</div><div id="englishLine13Word0Character4" class="english">c</div><div id="englishLine13Word0Character5" class="english">l</div><div id="englishLine13Word0Character6" class="english">e</div> <div id="englishLine13Word1Character0" class="english">B</div><div id="englishLine13Word1Character1" class="english">i</div><div id="englishLine13Word1Character2" class="english">n</div> <div id="englishLine13Word2Character0" class="english">(</div><div id="englishLine13Word2Character1" class="english">f</div><div id="englishLine13Word2Character2" class="english">u</div><div id="englishLine13Word2Character3" class="english">l</div><div id="englishLine13Word2Character4" class="english">l</div><div id="englishLine13Word2Character5" class="english">)</div> </td><td>ごみ箱 (いっぱい)</td><td>휴지통 (가득 참)</td><td>रीसायकल बिन (पूरा भरा)</td><td>سلة المحذوفات (ممتلئة)</td></tr>
+<tr><td></td><td>30389</td><td><img width=32px src="images/shell32_windows_2000_172.png"></td><td><img width=32px src="images/shell32_winxp_264_recyclebinempty.png"></td><td><img width=32px src="images/imageres_win7_640_recyclebinempty.png"></td><td><img width=32px src="images/imageres_55.png"></td><td>Recycle Bin (empty)</td><td>Papelera de reciclaje (vacía)</td><td>Корзина (пустая)</td><td>回收站(空)</td><td>資源回收筒 (空)</td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine12Word0Character0" class="chinese_1 chinese_1_loaded">資</div><div id="chineseLine12Word0Character1" class="chinese_2 chinese_2_loaded">源</div></td><td><div id="chineseLine12Word1Character0" class="chinese_2 chinese_2_loaded">回</div><div id="chineseLine12Word1Character1" class="chinese_1 chinese_1_loaded">收</div><div id="chineseLine12Word1Character2" class="chinese_3 chinese_3_loaded">筒</div></td><td></td><td><div class="englishInChinese">(</div></td><td></td><td><div id="chineseLine12Word2Character0" class="chinese_1 chinese_1_loaded">空</div></td><td><div class="englishInChinese">)</div></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine12Word0Character0" class="pinyin_1"><span style="font-size:16px">zī</span></div> <div id="pinyinLine12Word0Character1" class="pinyin_2"><span style="font-size:14px">y</span><span style="font-size:15px">u</span><span style="font-size:17px">á</span><span style="font-size:18px">n</span></div> </td><td><div id="pinyinLine12Word1Character0" class="pinyin_2"><span style="font-size:14px">h</span><span style="font-size:16px">u</span><span style="font-size:18px">í</span></div> <div id="pinyinLine12Word1Character1" class="pinyin_1"><span style="font-size:16px">shōu</span></div> <div id="pinyinLine12Word1Character2" class="pinyin_3"><span style="font-size:18px">t</span><span style="font-size:14px">ǒ</span><span style="font-size:14px">n</span><span style="font-size:18px">g</span></div> </td><td></td><td><div class="englishInChinese">(</div></td><td></td><td><div id="pinyinLine12Word2Character0" class="pinyin_1"><span style="font-size:16px">kōng</span></div> </td><td><div class="englishInChinese">)</div></td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine12Word0Character0" class="literal">resources</div></td><td> <div id="literalLine12Word1Character0" class="literal">recycle</div> <div id="literalLine12Word1Character1" class="literal">bin</div></td><td></td><td>(</td><td></td><td> <div id="literalLine12Word2Character0" class="literal">empty</div></td><td>)</td><td></td><td></td></tr></tbody></table><div id="englishLine12Word0Character0" class="english">R</div><div id="englishLine12Word0Character1" class="english">e</div><div id="englishLine12Word0Character2" class="english">c</div><div id="englishLine12Word0Character3" class="english">y</div><div id="englishLine12Word0Character4" class="english">c</div><div id="englishLine12Word0Character5" class="english">l</div><div id="englishLine12Word0Character6" class="english">e</div> <div id="englishLine12Word1Character0" class="english">B</div><div id="englishLine12Word1Character1" class="english">i</div><div id="englishLine12Word1Character2" class="english">n</div> <div id="englishLine12Word2Character0" class="english">(</div><div id="englishLine12Word2Character1" class="english">e</div><div id="englishLine12Word2Character2" class="english">m</div><div id="englishLine12Word2Character3" class="english">p</div><div id="englishLine12Word2Character4" class="english">t</div><div id="englishLine12Word2Character5" class="english">y</div><div id="englishLine12Word2Character6" class="english">)</div> </td><td>ごみ箱 (空)</td><td>휴지통 (비어 있음)</td><td>रीसायकल बिन (खाली)</td><td>سلة المحذوفات (فارغة)</td></tr>
+<tr><td></td><td>3281</td><td></td><td><img width=32px src="images/restart.png"></td><td></td><td></td><td>Restart </td><td>Reiniciar </td><td>Перезагрузить </td><td>重新启动 </td><td>重新開機 </td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine14Word0Character0" class="chinese_2 chinese_2_loaded">重</div><div id="chineseLine14Word0Character1" class="chinese_1 chinese_1_loaded">新</div><div id="chineseLine14Word0Character2" class="chinese_1 chinese_1_loaded">開</div></td><td><div id="chineseLine14Word1Character0" class="chinese_1 chinese_1_loaded">機</div></td><td></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine14Word0Character0" class="pinyin_2"><span style="font-size:14px">c</span><span style="font-size:15px">h</span><span style="font-size:16px">ó</span><span style="font-size:17px">n</span><span style="font-size:18px">g</span></div> <div id="pinyinLine14Word0Character1" class="pinyin_1"><span style="font-size:16px">xīn</span></div> <div id="pinyinLine14Word0Character2" class="pinyin_1"><span style="font-size:16px">kāi</span></div> </td><td><div id="pinyinLine14Word1Character0" class="pinyin_1"><span style="font-size:16px">jī</span></div> </td><td></td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine14Word0Character0" class="literal">restart</div></td><td> <div id="literalLine14Word1Character0" class="literal">machine</div></td><td></td><td></td><td></td></tr></tbody></table><div id="englishLine14Word0Character0" class="english">R</div><div id="englishLine14Word0Character1" class="english">e</div><div id="englishLine14Word0Character2" class="english">s</div><div id="englishLine14Word0Character3" class="english">t</div><div id="englishLine14Word0Character4" class="english">a</div><div id="englishLine14Word0Character5" class="english">r</div><div id="englishLine14Word0Character6" class="english">t</div>  </td><td>再起動 </td><td>다시 </td><td>Restart </td><td>إعادة </td></tr>
+<tr><td></td><td>33280</td><td><img width=32px src="images/shell32_windows2000_Shutdown.png"></td><td><img width=32px src="images/241.png"></td><td></td><td></td><td>Shutdown </td><td>Apagar </td><td>Отключить </td><td>关机 </td><td>關機 </td><td><table><tbody><tr class="chineseLine"><td><div id="chineseLine17Word0Character0" class="chinese_1 chinese_1_loaded">關</div></td><td><div id="chineseLine17Word1Character0" class="chinese_1 chinese_1_loaded">機</div></td><td></td><td></td><td></td></tr><tr class="pinyinLine"><td><div id="pinyinLine17Word0Character0" class="pinyin_1"><span style="font-size:16px">guān</span></div> </td><td><div id="pinyinLine17Word1Character0" class="pinyin_1"><span style="font-size:16px">jī</span></div> </td><td></td><td></td><td></td></tr><tr class="literalLine"><td> <div id="literalLine17Word0Character0" class="literal">turn</div> <div id="literalLine17Word0Character1" class="literal">off</div></td><td> <div id="literalLine17Word1Character0" class="literal">machine</div></td><td></td><td></td><td></td></tr></tbody></table><div id="englishLine17Word0Character0" class="english">S</div><div id="englishLine17Word0Character1" class="english">h</div><div id="englishLine17Word0Character2" class="english">u</div><div id="englishLine17Word0Character3" class="english">t</div><div id="englishLine17Word0Character4" class="english">d</div><div id="englishLine17Word0Character5" class="english">o</div><div id="englishLine17Word0Character6" class="english">w</div><div id="englishLine17Word0Character7" class="english">n</div>  </td><td>シャットダウン </td><td>시스템 </td><td>Shutdown </td><td>إيقاف </td></tr>
+</table>		
+	</body>
+</html>
