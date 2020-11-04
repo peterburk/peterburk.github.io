@@ -26,6 +26,8 @@ cc -lcurses binaremote.c -o binaremote
  * • Repeat the input code a second time for verification
  * • Quiet mode: Only print the actions, not the state
  * • Multiple threads, screen output separate to button input
+ * • Another state machine describing the current TV volume level, channel, brightness
+ * • Timeout to reset state if no button is pressed for 5 seconds
  * • Infrared remote output to go to a real TV
  * 
  * Done:
@@ -33,6 +35,7 @@ cc -lcurses binaremote.c -o binaremote
  * • Parsing the input code as a string
  * • Adding pushed buttons to a queue
  * • Displaying messages about current state and future options to user
+ * • Entering other characters returns to default state
  */
 
 
@@ -383,6 +386,8 @@ int main(int argc, char *argv[])
 				// If anything else is typed, ignore it. 
 				
 				default:
+					printw("Unknown key pressed\n");
+					printMessage(&keysQueue);
 				break;
 			} // end switch(inputChar)
 			
