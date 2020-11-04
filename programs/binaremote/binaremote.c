@@ -347,7 +347,8 @@ int main(int argc, char *argv[])
 	while ((inputChar = getch()) != 'x') 
 	{
 		// If a character is pressed. getch() runs often, and ERR is the default if nothing is pressed. 
-		if(inputChar != ERR) {
+		if(inputChar != ERR)
+		{
 		
 			// Any new input clears the screen
 			clear();
@@ -406,42 +407,42 @@ int main(int argc, char *argv[])
 			if (contains(returnBitString, "000") == 1)
 			{
 				printw("ACTION: TV ON\n");
-        	}
+			}
 
 			if (contains(returnBitString, "001") == 1)
 			{
 				printw("ACTION: Volume-\n");
-        	}
+			}
 
 			if (contains(returnBitString, "010") == 1)
 			{
 				printw("ACTION: Channel+\n");
-        	}
+			}
 			
 			if (contains(returnBitString, "011") == 1)
 			{
 				printw("ACTION: Channel-\n");
-        	}
+			}
 
 			if (contains(returnBitString, "100") == 1)
 			{
 				printw("ACTION: Brightness+\n");
-        	}
+			}
 			
 			if (contains(returnBitString, "101") == 1)
 			{
 				printw("ACTION: Brightness-\n");
-        	}
+			}
 
 			if (contains(returnBitString, "110") == 1)
 			{
 				printw("ACTION: Volume+\n");
-        	}
+			}
 
 			if (contains(returnBitString, "111") == 1)
 			{
 				printw("ACTION: Off\n");
-        	}
+			}
 
 			// Clear the return string
 			sprintf(returnBitString, "");
