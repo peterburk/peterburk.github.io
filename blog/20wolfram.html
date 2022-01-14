@@ -1,0 +1,2463 @@
+<html lang="en" op="item">
+	<head>
+	  	<title>20 Years of Wolfram</title>
+	
+		<meta charset="utf-8" />
+
+		<meta name="referrer" content="origin">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+			body  { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; }
+			td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#828282; }
+	
+			.admin td   { font-family:Verdana, Geneva, sans-serif; font-size:8.5pt; color:#000000; }
+			.subtext td { font-family:Verdana, Geneva, sans-serif; font-size:  7pt; color:#828282; }
+	
+			input    { font-family:monospace; font-size:10pt; }
+			input[type=\"submit\"] { font-family:Verdana, Geneva, sans-serif; }
+			textarea { font-family:monospace; font-size:10pt; resize:both; }
+	
+			a:link    { color:#000000; text-decoration:underline; }
+			a:visited { color:#828282; text-decoration:none; }
+	
+			.default { font-family:Verdana, Geneva, sans-serif; font-size: 10pt; color:#828282; }
+			.admin   { font-family:Verdana, Geneva, sans-serif; font-size:8.5pt; color:#000000; }
+			.title   { font-family:Verdana, Geneva, sans-serif; font-size: 10pt; color:#000000; overflow:hidden; }
+			.subtext { font-family:Verdana, Geneva, sans-serif; font-size:  7pt; color:#828282; }
+			.yclinks { font-family:Verdana, Geneva, sans-serif; font-size:  8pt; color:#828282; }
+			.pagetop { font-family:Verdana, Geneva, sans-serif; font-size: 10pt; color:#222222; line-height:12px; }
+			.comhead { font-family:Verdana, Geneva, sans-serif; font-size:  8pt; color:#828282; }
+			.comment { font-family:Verdana, Geneva, sans-serif; font-size:  9pt; }
+			.hnname  { margin-right: 5px; }
+	
+			.emoji { font-family:Verdana, Geneva, sans-serif; font-size: 20pt; padding-top:10px}
+
+	
+			#hnmain { min-width: 796px; }
+	
+			.title a { word-break: break-word; }
+	
+			.comment a:link, .comment a:visited { text-decoration: underline; }
+			.noshow { display: none; }
+			.nosee { visibility: hidden; pointer-events: none; cursor: default }
+	
+			.c00, .c00 a:link { color:#000000; }
+			.c5a, .c5a a:link, .c5a a:visited { color:#5a5a5a; }
+			.c73, .c73 a:link, .c73 a:visited { color:#737373; }
+			.c82, .c82 a:link, .c82 a:visited { color:#828282; }
+			.c88, .c88 a:link, .c88 a:visited { color:#888888; }
+			.c9c, .c9c a:link, .c9c a:visited { color:#9c9c9c; }
+			.cae, .cae a:link, .cae a:visited { color:#aeaeae; }
+			.cbe, .cbe a:link, .cbe a:visited { color:#bebebe; }
+			.cce, .cce a:link, .cce a:visited { color:#cecece; }
+			.cdd, .cdd a:link, .cdd a:visited { color:#dddddd; }
+	
+			.pagetop a:visited { color:#000000;}
+			.topsel a:link, .topsel a:visited { color:#ffffff; }
+	
+			.subtext a:link, .subtext a:visited { color:#828282; }
+			.subtext a:hover { text-decoration:underline; }
+	
+			.comhead a:link, .subtext a:visited { color:#828282; }
+			.comhead a:hover { text-decoration:underline; }
+	
+			.hnmore a:link, a:visited { color:#828282; }
+			.hnmore { text-decoration:underline; }
+	
+			.default p { margin-top: 8px; margin-bottom: 0px; }
+	
+			.pagebreak {page-break-before:always}
+	
+			pre { overflow: auto; padding: 2px; white-space: pre-wrap; overflow-wrap:anywhere; }
+			pre:hover { overflow:auto }
+	
+			.votearrow {
+			  width:      10px;
+			  height:     10px;
+			  border:     0px;
+			  margin:     3px 2px 6px;
+			  background: url("grayarrow.gif")
+			  no-repeat;
+			}
+	
+			.votelinks.nosee div.votearrow.rotate180 {
+			  display: none;
+			}
+	
+			table.padtab td { padding:0px 10px }
+	
+			@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+			  .votearrow { background-size: 10px; background-image: url("grayarrow2x.gif"); }
+			}
+	
+			.rotate180 {
+			  -webkit-transform: rotate(180deg);  /* Chrome and other webkit browsers */
+			  -moz-transform:    rotate(180deg);  /* FF */
+			  -o-transform:      rotate(180deg);  /* Opera */
+			  -ms-transform:     rotate(180deg);  /* IE9 */
+			  transform:         rotate(180deg);  /* W3C complaint browsers */
+	
+			  /* IE8 and below */
+			  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=-1, DX=0, DY=0, SizingMethod='auto expand')";
+			}
+	
+			/* mobile device */
+			@media only screen
+			and (min-width : 300px)
+			and (max-width : 750px) {
+			  #hnmain { width: 100%; min-width: 0; }
+			  body { padding: 0; margin: 0; width: 100%; -webkit-text-size-adjust: none; }
+			  td { height: inherit !important; }
+			  .title, .comment { font-size: inherit;  }
+			  span.pagetop { display: block; margin: 3px 5px; font-size: 12px; line-height: normal }
+			  span.pagetop b { display: block; font-size: 15px; }
+			  table.comment-tree .comment a { display: inline-block; max-width: 200px; overflow: hidden; white-space: nowrap;
+				text-overflow: ellipsis; vertical-align:top; }
+			  img[src='s.gif'][width='40'] { width: 12px; }
+			  img[src='s.gif'][width='80'] { width: 24px; }
+			  img[src='s.gif'][width='120'] { width: 36px; }
+			  img[src='s.gif'][width='160'] { width: 48px; }
+			  img[src='s.gif'][width='200'] { width: 60px; }
+			  img[src='s.gif'][width='240'] { width: 72px; }
+			  img[src='s.gif'][width='280'] { width: 84px; }
+			  img[src='s.gif'][width='320'] { width: 96px; }
+			  img[src='s.gif'][width='360'] { width: 108px; }
+			  img[src='s.gif'][width='400'] { width: 120px; }
+			  img[src='s.gif'][width='440'] { width: 132px; }
+			  img[src='s.gif'][width='480'] { width: 144px; }
+			  img[src='s.gif'][width='520'] { width: 156px; }
+			  img[src='s.gif'][width='560'] { width: 168px; }
+			  img[src='s.gif'][width='600'] { width: 180px; }
+			  img[src='s.gif'][width='640'] { width: 192px; }
+			  img[src='s.gif'][width='680'] { width: 204px; }
+			  img[src='s.gif'][width='720'] { width: 216px; }
+			  img[src='s.gif'][width='760'] { width: 228px; }
+			  img[src='s.gif'][width='800'] { width: 240px; }
+			  img[src='s.gif'][width='840'] { width: 252px; }
+			  .title { font-size: 11pt; line-height: 14pt;  }
+			  .subtext { font-size: 9pt; }
+			  .itemlist { padding-right: 5px;}
+			  .votearrow { transform: scale(1.3,1.3); margin-right: 6px; }
+			  .votearrow.rotate180 {
+				-webkit-transform: rotate(180deg) scale(1.3,1.3);  /* Chrome and other webkit browsers */
+				-moz-transform:    rotate(180deg) scale(1.3,1.3);  /* FF */
+				-o-transform:      rotate(180deg) scale(1.3,1.3);  /* Opera */
+				-ms-transform:     rotate(180deg) scale(1.3,1.3);  /* IE9 */
+				transform:         rotate(180deg) scale(1.3,1.3);  /* W3C complaint browsers */
+			  }
+			  .votelinks { min-width: 18px; }
+			  .votelinks a { display: block; margin-bottom: 9px; }
+			  input[type='text'], input[type='number'], textarea { font-size: 16px; width: 90%; }
+			}
+	
+			.comment { max-width: 1215px; overflow-wrap:anywhere; }
+	
+	
+	
+			@media only screen and (min-width : 300px) and (max-width : 389px) {
+			  .comment { max-width: 270px; overflow: hidden }
+			}
+			@media only screen and (min-width : 390px) and (max-width : 509px) {
+			  .comment { max-width: 350px; overflow: hidden }
+			}
+			@media only screen and (min-width : 510px) and (max-width : 599px) {
+			  .comment { max-width: 460px; overflow: hidden }
+			}
+			@media only screen and (min-width : 600px) and (max-width : 689px) {
+			  .comment { max-width: 540px; overflow: hidden }
+			}
+			@media only screen and (min-width : 690px) and (max-width : 809px) {
+			  .comment { max-width: 620px; overflow: hidden }
+			}
+			@media only screen and (min-width : 810px) and (max-width : 899px) {
+			  .comment { max-width: 730px; overflow: hidden }
+			}
+			@media only screen and (min-width : 900px) and (max-width : 1079px) {
+			  .comment { max-width: 810px; overflow: hidden }
+			}
+			@media only screen and (min-width : 1080px) and (max-width : 1169px) {
+			  .comment { max-width: 970px; overflow: hidden }
+			}
+			@media only screen and (min-width : 1170px) and (max-width : 1259px) {
+			  .comment { max-width: 1050px; overflow: hidden }
+			}
+			@media only screen and (min-width : 1260px) and (max-width : 1349px) {
+			  .comment { max-width: 1130px; overflow: hidden }
+			}
+		</style>
+
+	</head>
+	<body>
+
+	
+
+<center>
+	<table id="hnmain" border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#f6f6ef">
+		<tbody>
+			<tr>
+				<td bgcolor="#ff6600"> </td>
+			</tr>
+			<tr>
+				<td> 
+				<table class="fatitem" border="0">
+					<tbody>
+						<tr class="athing" id="29904654">
+							<td align="right" valign="top" class="title"><span class="rank"></span></td>
+							<td valign="top" class="votelinks"> 
+							<center>
+								<a id="up_29904654" class="clicky" href="vote?id=29904654&amp;how=up&amp;auth=d7fdf9bbb56f9558349bce445760786f8dbfb929&amp;goto=item%3Fid%3D29904654"> </a> 
+							</center>
+							</td>
+							<td class="title"> 
+							<div style="font-size: 12pt;">
+								20 Years of Wolfram: Sierpiński triangles everywhere 
+							</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"></td>
+						</tr>
+						<tr style="height:2px">
+						</tr>
+						<tr>
+							<td colspan="2"></td>
+							<td> 
+							<p>
+								2022-01-15 Peter Burkimsher 
+							</p>
+							<p>
+								<div>
+									<div class="title">
+										Hypotheses: 
+									</div>
+									<div style="margin-left:7em">
+										Hypothesis 1: The most efficient algorithm is a <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm" target="_blank">Binary search</a> on a sorted list. 
+									</div>
+									<div style="margin-left:7em">
+										Hypothesis 2: Everything is a <a href="https://en.wikipedia.org/wiki/Binary_tree" target="_blank">binary tree</a>. 
+									</div>
+									<div style="margin-left:7em">
+										Hypothesis 3: We can <a href="https://en.wikipedia.org/wiki/Quicksort" target="_blank">Quicksort</a> the world together. 
+									</div>
+								</div>
+							</p>
+							<p>
+								<div>
+									<p>
+									<div class="title">
+										What does this have to do with Wolfram? 
+									</div>
+									<div style="margin-left:7em">
+										20 years ago, in <a href="https://en.wikipedia.org/wiki/A_New_Kind_of_Science" target="_blank">A New Kind of Science, Steven Wolfram</a> gave many examples of natural systems, fundamental physics, and programming in multiple dimensions. 
+										<div style="margin-left:7em" class="subtext">
+											I believe that every dimension is an XML tag, a field in a database, a column in an Excel spreadsheet. 
+										</div>
+									</div>
+									</p>
+									<div style="margin-left:7em">
+										The mathematical tool of <a href="https://news.ycombinator.com/item?id=29779403" target="_blank">cellular automata</a>, a form of 2D visual programming, can be used to distil simple algorithms from complex, apparently random, behaviour. 
+									</div>
+								</div>
+							</p>
+							<p>
+								<div>
+									<div class="title">
+										What does a binary tree look like in culture? 
+									</div>
+									<div style="margin-left:7em">
+										Let's look at a collection of culture categories from <a href="https://github.com/peterburk/sortlikes" target="_blank">sortLikes</a>. 
+										<div style="margin-left:7em" class="subtext">
+											technically this meta-list could be in a hierarchy of folders with only 2 items, but if it still fits on my laptop screen, it's good enough for engineering purposes today. 
+										</div>
+									</div>
+								</div>
+							</p>
+							<p>
+									<div style="margin-left:7em">
+										All the algorithms appear to be: <span style="color:#FFC1C2">"please" input</span>, 
+																		 <span style="color:#BD993E">"thank you" upwards</span>, 
+																		 <span style="color:#644882">"suggest" ideas</span>, 
+																		 <span style="color:#CD8658">"keep trying" feedback</span>, 
+																		 <span style="color:#000000">"love your neighbour"</span> sideways
+																		 , and 
+																		 <span style="color:#1CAA30">"grow", "create the next generation"</span> downwards. 
+									</div>
+							</p>
+							<p>
+								<div>
+									<div class="title">
+										Is this finished? 
+									</div>
+									<div style="margin-left:7em">
+										Apologies, I would've liked to add more notes, references, ideas, full sentences, etc, but you're smart, and you'll figure it out. 
+									</div>
+								</div>
+							</p>
+							<p>
+								<div>
+									<div class="title">
+										What's the goal? 
+									</div>
+									<div style="margin-left:7em">
+										<span style="color:#BD993E">Say thank you to those who came before.</span>
+										<div style="margin-left:7em">
+											Minimise entropy. 
+										</div>
+										<div style="margin-left:7em">
+											Maximise connectedness. 
+										</div>
+									</div>
+									<div style="margin-left:7em">
+										<span style="color:#1CAA30">Teach those who come after. </span>
+									</div>
+								</div>
+							</p>
+							</td>
+						</tr>
+						<tr style="height:10px">
+						</tr>
+					</tbody>
+				</table>
+				<br> <br> 
+				<table border="0" class="comment-tree">
+					<tr class="athing comtr" id="SoftwareTree">
+						<td> 
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">💻 </span> <span class="title"> Software <span class="navs"> | </span> <a class="togg clicky" id="SoftwareTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: LogoWriter? Scratch? 
+												</div>
+												<div style="margin-left:7em" class="subtext">
+													Subsets: {"App Page", "Information Technology Company", "Internet Cafe", "Internet Company", "Internet Service Provider", "Software", "Software Company", "Web Designer"} 
+												</div>
+												<div>
+													<p>
+														<div class="default" style="margin-left:7em">
+															There are 2 hard problems in computer science: cache invalidation, naming things, and off-by-1 errors. 
+															<div style="margin-left:7em" class="subtext">
+																-- Phil Karlton, Leon Bamboogiewoogie @secretGeek, Martin Fowler 
+															</div>
+															<div style="margin-left:7em" class="subtext">
+																<a href="https://martinfowler.com/bliki/TwoHardThings.html" target="_blank">https://martinfowler.com/bliki/TwoHardThings.html</a> 
+															</div>
+														</div>
+													</p>
+												</div>
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															<div>
+																Off-by-one errors: 
+																<div class="subtext" style="margin-left:7em">
+																	not knowing 0 and 1 
+																</div>
+															</div>
+															<div>
+																Naming things: 
+																<div class="subtext" style="margin-left:7em">
+																	<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" target="_blank">this</a>.func() ≠ that.func() 
+																</div>
+															</div>
+															<div>
+																Cache invalidation: 
+																<div class="subtext" style="margin-left:7em">
+																	i forgot 
+																</div>
+															</div>
+														</div>
+													</p>
+												</div>
+												<div>
+													<p>
+														<div class="default" style="margin-left:7em">
+															My younger son said “coding is basically just ifs and for loops.” 
+															<div style="margin-left:7em" class="subtext">
+																-- John Carmack @ID_AA_Carmack 
+															</div>
+															<div style="margin-left:7em" class="subtext">
+																<a href="https://twitter.com/ID_AA_Carmack/status/1466934223831506951" target="_blank">https://twitter.com/ID_AA_Carmack/status/1466934223831506951</a> 
+															</div>
+															<div style="margin-left:7em" class="subtext">
+																<a href="https://news.ycombinator.com/item?id=29442307" target="_blank">https://news.ycombinator.com/item?id=29442307</a> 
+															</div>
+															<div>
+																<p>
+																	<div class="title" style="margin-left:7em">
+																		if: 
+																		<div style="margin-left:2em">
+																			Naming things. 
+																		</div>
+																	</div>
+																</p>
+																<p>
+																	<div class="title" style="margin-left:7em">
+																		for loop: 
+																		<div style="margin-left:5em">
+																			Recursion. 
+																		</div>
+																		<div style="margin-left:9em" class="subtext">
+																			And we're back to Sierpiński triangles. 
+																		</div>
+																		<div style="margin-left:9em" class="subtext">
+																			<a href="https://en.wikipedia.org/wiki/Recursion#In_mathematics" target="_blank">https://en.wikipedia.org/wiki/Recursion#In_mathematics</a> 
+																		</div>
+																	</div>
+																</p>
+															</div>
+														</div>
+													</p>
+												</div>
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															<div>
+																<div class="subtext" style="margin-left:7em">
+																	Wolfram - A New Kind of Science p717 
+																</div>
+															</div>
+															<div style="margin-left:7em">
+																<p>
+																	<div class="default">
+																		<div>
+																			"the remarkable assertion that the Principle of Computational Equivalence makes is that in practice this is not the case, and that instead there is essentially just one highest level of computational sophistication, and this is achieved by almost all processes that do not seem obviously simple." 
+																		</div>
+																	</div>
+																</p>
+																<p>
+																	<div class="default">
+																		<div>
+																			"it is possible to construct universal systems that can perform essentially any computation" 
+																		</div>
+																	</div>
+																</p>
+																<div style="margin-left:7em">
+																	<p>
+																		<div class="title">
+																			<div>
+																				-> There is only one most-efficient algorithm, and it's <a href="https://en.wikipedia.org/wiki/Turing_completeness" target=_blank>Turing-complete</a>. 
+																			</div>
+																		</div>
+																		<div class="title">
+																			<div>
+																				-> <a href="https://en.wikipedia.org/wiki/Rule_110" target=_blank>Rule 110</a> is <a href="https://en.wikipedia.org/wiki/Turing_completeness" target=_blank>Turing-complete</a>, but I think that <a href="https://en.wikipedia.org/wiki/Rule_90" target=_blank>Rule 90</a> is more efficient 
+																				<div class="subtext" style="margin-left:7em">
+																				(fewer steps to neighbours, lower entropy). 
+																				</div>
+																			</div>
+																		</div>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</p>
+												</div>
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															<div>
+																<div class="subtext" style="margin-left:7em">
+																	Wolfram - A New Kind of Science p754 
+																</div>
+															</div>
+															<div style="margin-left:7em">
+																<p>
+																	<div class="default">
+																		<div>
+																			"Whether a pattern in a cellular automaton ever dies out can be viewed as analogous to a version of the halting problem for Turing machines." 
+																		</div>
+																	</div>
+																</p>
+																<p>
+																	<div class="title">
+																		<div>
+																			-> Hypothesis: all patterns cease except Sierpiński triangle. 
+																		</div>
+																	</div>
+																</p>
+																<div style="margin-left:7em">
+																	<p>
+																		<div class="title">
+																			<div>
+																				-> Proof: something to do with prime numbers becoming less common, but I'm not a mathematician. 
+																			</div>
+																			<div style="margin-left:7em">
+																				At 2<sup>n</sup> scaling, cellular automaton will reach Sierpiński triangle pattern rapidly. 
+																			</div>
+																			<div style="margin-left:7em">
+																				Prime numbers will probably screw it up, but for a finite time, until another prime fixes it. 
+																			</div>
+																		</div>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</p>
+												</div>
+												</span> 
+											</div>
+											</td>
+										
+										</div>
+										
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					
+					
+					
+					<tr class="athing comtr" id="AccommodationTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🏠 </span> <span class="title"> Accommodation <span class="navs"> | </span> <a class="togg clicky" id="AccommodationTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Doll houses. Monopoly. 
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Bed and Breakfast", "Cabin", "Campground", "Cottage", "Dorm", "Halfway House", "Hospitality Service", "Hostel", "Hotel", "Hotel & Lodging", "Hotel Resort", "Housing & Homeless Shelter", "Housing Assistance Service", "Inn", "Lodge", "Motel", "Residence", "Retirement & Assisted Living Facility", "Vacation Home Rental"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="default" style="margin-left:7em">
+															Investment is in {stocks, bonds, property} 
+															<div style="margin-left:7em" class="subtext">
+																-- Wayne Chen 
+															</div>
+															<div>
+																<p>
+																	<div class="title" style="margin-left:7em">
+																		privatisation makes companies get richer
+																	</div>
+																	<div class="title" style="margin-left:7em">
+																		companies and banks profiting self will destabilise government
+																	</div>
+																</p>
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					
+					
+					
+					<tr class="athing comtr" id="ArtTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+												<div style="margin-top:2px; margin-bottom:-20px;">
+													<span class="emoji">🎨 </span>  <span class="title"> Art <span class="navs"> | </span> <a class="togg clicky" id="ArtTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+												</div>
+												<br> 
+												<div class="comment">
+													<div style="margin-left:7em" class="subtext">
+														Games: Free Draw!, skribbl.io
+													</div>
+												
+													<div style="margin-left:7em" class="subtext">
+														Subsets: 
+															{"Actor", "Art", "Art Gallery", "Art Museum", "Art School", "Artist", "Arts & Crafts Store", "Arts & Entertainment", "Arts & Humanities Website", "Camera Store", "Camera-Photo", "Circus", "Comedian", "Comedy Club", "Comic Bookstore", "Contemporary Art Museum", "Cultural Center", "Design Museum", "Entertainment Website", "Fictional Character", "Florist", "Glass Manufacturer", "Graphic Designer", "Hobby Store", "Just For Fun", "Lighting Store", "Modern Art Museum", "Museum-Art Gallery", "Performance & Event Venue", "Performance Art", "Performance Art Theatre", "Performing Arts", "Performing Arts School", "Photographer", "Photography Videography", "Theatrical Play", "Theatrical Productions", "Visual Arts"}
+													</div>
+												
+													<div>
+														<p>
+															<div class="default" style="margin-left:7em">
+																"Cosmetics"
+																<div style="margin-left:7em" class="subtext">
+																	Games: Make up master
+																</div>
+																<div style="margin-left:7em" class="subtext">
+																	Subsets: 
+																	{"Barber Shop", "Beauty Salon", "Beauty Store", "Beauty Supply Store", "Beauty, Cosmetic & Personal Care", "Beauty-Cosmetics Company", "Cosmetics Store", "Hair Extensions Service", "Hair Removal Service", "Hair Salon", "Lifestyle Service", "Makeup Artist", "Modeling Agency", "Nail Salon", "Plastic Surgeon", "Skin Care Service", "Tanning Salon", "Tattoo & Piercing Shop", "Teeth Whitening Service"}
+																</div>
+															</div>
+														</p>
+													</div>
+
+													<div>
+														<p>
+															<div class="default" style="margin-left:7em">
+																"Dancing"
+																<div style="margin-left:7em" class="subtext">
+																	Games: Dance Dance Revolution
+																</div>
+																<div style="margin-left:7em" class="subtext">
+																	Subsets: 
+																	{"Dance & Night Club", "Dance School", "Dance Studio", "Dancer"}
+																</div>
+															</div>
+														</p>
+													</div>
+
+													<div>
+														<p>
+															<div class="default" style="margin-left:7em">
+																<img src="Colour cycle.jpg"></img>
+															</div>
+														</p>
+													</div>
+
+												
+													<div>
+														<p>
+															<div class="title" style="margin-left:7em">
+																Create. 
+															</div>
+														</p>
+													</div>
+												
+												
+													<div>
+														<p>
+															<div class="title" style="margin-left:7em">
+																Art: 
+																<div>
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			perspective, choose point for "infinity" and draw lines from there 
+																		</div>
+																	</p>
+																	
+																	<p>
+																		<div class="default" style="margin-left:7em">
+																			<a href="https://lawsofux.com/" target=_blank>https://lawsofux.com/</a>
+																		</div>
+																		<div class="title" style="margin-left:7em">
+																			probably correlated with
+																		</div>
+																		<div class="default" style="margin-left:7em">
+																			<a href="https://github.com/dwmkerr/hacker-laws" target=_blank>https://github.com/dwmkerr/hacker-laws</a>
+																		</div>
+																	</p>
+																	
+																	
+																</div>
+															</div>
+														</p>
+													</div>
+
+
+													<div>
+														<p>
+															<div class="title" style="margin-left:7em">
+																Dance: 
+																<div>
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			simple steps, repeated. 
+																		</div>
+																	</p>
+																</div>
+															</div>
+														</p>
+													</div>
+
+
+													<div>
+														<p>
+															<div class="title" style="margin-left:7em">
+																Theatre: 
+																<div>
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			memorise lines, scripted conversations. Running a program created by the screenwriters. 
+																		</div>
+																	</p>
+																
+																
+																	<div>
+																		<p>
+																			<div class="default" style="margin-left:7em">
+																				"Tragedy and comedy are the basis of all theater."
+																				<div style="margin-left:7em" class="subtext">
+																					-- baskethead
+																				</div>
+
+																				<div style="margin-left:7em" class="subtext">
+																					<a href="https://news.ycombinator.com/item?id=29871868" target="_blank">https://news.ycombinator.com/item?id=29871868</a> 
+																				</div>
+
+																			</div>
+																		</p>
+																	</div>
+
+																
+																
+																</div>
+															</div>
+														</p>
+													</div>
+												
+
+													<div>
+														<p>
+															<div class="title" style="margin-left:7em">
+																Photography: 
+																<div>
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			rule of thirds. Contrast. 
+																		</div>
+																	</p>
+																</div>
+															</div>
+														</p>
+													</div>
+
+												
+												</td>
+											</div>
+											</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					
+					
+					<tr class="athing comtr" id="BanksTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">💵 </span> <span class="title"> Banks <span class="navs"> | </span> <a class="togg clicky" id="BanksTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Monopoly
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Accountant", "Automated Teller Machine (ATM)", "Bank", "Brokerage Firm", "Casino", "Commercial Bank", "Finance", "Finance Company", "Financial Consultant", "Financial Planner", "Financial Service", "Insurance Agent", "Insurance Broker", "Insurance Company", "Investing Service", "Investment Management Company"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Compound interest = recursion
+														</div>
+														<div class="title" style="margin-left:7em">
+															currencies = naming things
+														</div>
+													</p>
+												</div>
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Personal finance
+														</div>
+														<div class="title" style="margin-left:7em">
+															Balancing budget is easy when all expenses are base-2 (e.g. $2, $4, $8, $16, $32, $64, $128, $256, $512). Tip accordingly. 
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of BanksTree -->
+					
+					
+					
+					
+					<tr class="athing comtr" id="CausesTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">☮️ </span>  <span class="title"> Causes <span class="navs"> | </span> <a class="togg clicky" id="CausesTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Natural Disasters
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Cause", "Charity Organization", "Community Organization", "Emergency Rescue Service", "Environmental Conservation Organization", "Environmental Service", "Government Organization", "Non-Governmental Organization (NGO)", "Nonprofit Organization", "Organization", "Organization-Institution Type", "Social Service"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Love your neighbour
+														</div>
+													</p>
+												</div>
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of CausesTree -->
+					
+					
+					
+					
+					
+					<tr class="athing comtr" id="ChildrenTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">👨‍👨‍👧‍👦 </span> <span class="title"> Children <span class="navs"> | </span> <a class="togg clicky" id="ChildrenTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Adopt and raise a cute kid
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Adoption Service", "Baby & Children's Clothing Store", "Baby Goods-Kids Goods", "Bridal Shop", "Child Care Service", "Child Protective Service", "Dating Service", "Playground", "Pregnancy Care Center", "Preschool", "Reproductive Service", "Teens & Kids Website", "Wedding Planning Service"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Create the next generation. Welcome newcomers. 
+														</div>
+													</p>
+												</div>
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of ChildrenTree -->
+
+					
+					
+					<tr class="athing comtr" id="CleaningTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">♻️</span> &nbsp; <span class="title"> Cleaning <span class="navs"> | </span> <a class="togg clicky" id="CleaningTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Cleaning simulator
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Cleaning Service", "Dry Cleaner", "Janitorial Service", "Maid & Butler", "Public Toilet"}
+												</div>
+												
+												
+												
+												<div>
+													<p>
+														<div class="default" style="margin-left:7em">
+															Leave the code cleaner than you found it. 
+															<div style="margin-left:7em" class="subtext">
+																-- UncleBob
+															</div>
+															<div style="margin-left:7em" class="subtext">
+																<a href="https://www.youtube.com/watch?v=BSaAMQVq01E&t=2021s" target="_blank">https://www.youtube.com/watch?v=BSaAMQVq01E&t=2021s</a> 
+															</div>
+															<div style="margin-left:7em" class="subtext">
+																<a href="https://github.com/dwmkerr/hacker-laws#the-scout-rule" target="_blank">https://github.com/dwmkerr/hacker-laws#the-scout-rule</a> 
+															</div>
+														</div>
+													</p>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Leave the world cleaner than you found it. 
+															<div class="subtext" style="margin-left:7em">
+																Pick up litter while biking to work, while walking a pet, while jogging. 
+															</div>
+														</div>
+													</p>
+												</div>
+
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Love your neighbour. 
+															<div class="subtext" style="margin-left:7em">
+																Pick up other peoples' litter, not only your own. 
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												
+											</td>
+										</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of CleaningTree -->
+					
+					
+					
+					
+					
+					<tr class="athing comtr" id="ConstructionTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🏗️ ️</span> <span class="title"> Construction <span class="navs"> | </span> <a class="togg clicky" id="ConstructionTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: LEGO
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Apartment & Condo Building", "Appliance Manufacturer", "Appliances", "Architect", "Architectural Designer", "Bridge", "Building Materials", "Campus Building", "Carpenter", "Carpet & Flooring Store", "Chemical Company", "City Infrastructure", "Commercial Real Estate Agency", "Construction Company", "Damage Restoration Service", "Electric Utility Provider", "Engineering Service", "Forestry & Logging", "Furniture", "Furniture Repair & Upholstery Service", "Furniture Store", "Gardener", "Home", "Home & Garden Store", "Home & Garden Website", "Home Decor", "Home Goods Store", "Home Improvement", "Household Supplies", "Industrial Company", "Interior Design Studio", "Landscape Company", "Mattress Store", "Mattress Wholesaler", "Metal Fabricator", "Mining Company", "Patio-Garden", "Public Utility Company", "Real Estate", "Real Estate Agent", "Real Estate Developer", "Real Estate Service", "Real Estate Title & Development", "Solar Energy Service", "Upholstery Service"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Create the next generation. 
+														</div>
+													</p>
+												</div>
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of ConstructionTree -->
+
+					
+					
+					
+					
+					<tr class="athing comtr" id="CookingTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🍽️️ ️</span> <span class="title"> Cooking <span class="navs"> | </span> <a class="togg clicky" id="CookingTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Sushi shop simulator
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"African Restaurant", "Agricultural Service", "Agriculture", "Agriculture Company", "American Restaurant", "Asian Fusion Restaurant", "Asian Restaurant", "Australian Restaurant", "Bagel Shop", "Bakery", "Barbecue Restaurant", "Belgian Restaurant", "Bossam-Jokbal Restaurant", "Brazilian Restaurant", "Breakfast & Brunch Restaurant", "British Restaurant", "Bubble Tea Shop", "Buffet Restaurant", "Bunsik Restaurant", "Burger Restaurant", "Butcher Shop", "Cafe", "Cafeteria", "Canadian Restaurant", "Candy Store", "Cantonese Restaurant", "Caribbean Restaurant", "Caterer", "Chef", "Chicken Joint", "Chinese Restaurant", "Chocolate Shop", "Coffee Shop", "Comfort Food Restaurant", "Community Garden", "Continental Restaurant", "Convenience Store", "Cooking School", "Cr\u00eaperie", "Cuisine", "Cupcake Shop", "Deli", "Dessert Shop", "Dim Sum Restaurant", "Diner", "Donburi Restaurant", "Dongbei Restaurant", "Ethnic Grocery Store", "European Restaurant", "Family Style Restaurant", "Farm", "Farmers Market", "Fast Food Restaurant", "Fondue Restaurant", "Food & Beverage", "Food & Beverage Company", "Food Consultant", "Food Delivery Service", "Food Stand", "Food Truck", "Foodservice Distributor", "French Restaurant", "Frozen Yogurt Shop", "Fruit & Vegetable Store", "Gastropub", "Gelato Shop", "German Restaurant", "Gluten-Free Restaurant", "Greek Restaurant", "Grocery Store", "Health Food Restaurant", "Hong Kong Restaurant", "Hot Dog Joint", "Hot Pot Restaurant", "Hungarian Restaurant", "Ice Cream Shop", "Indian Restaurant", "Italian Restaurant", "Japanese Restaurant", "Kebab Shop", "Kitchen-Cooking", "Korean Restaurant", "Kushikatsu Restaurant", "Latin American Restaurant", "Malaysian Restaurant", "Market", "Mediterranean Restaurant", "Mexican Restaurant", "Middle Eastern Restaurant", "Modern European Restaurant", "Mongolian Restaurant", "Moroccan Restaurant", "New American Restaurant", "Night Market", "Okonomiyaki Restaurant", "Organic Grocery Store", "Personal Chef", "Peruvian Restaurant", "Pho Restaurant", "Picnic Ground", "Pizza Place", "Polish Restaurant", "Ramen Restaurant", "Restaurant", "Restaurant Supply Store", "Restaurant Wholesaler", "Russian Restaurant", "Salad Bar", "Sandwich Shop", "Scandinavian Restaurant", "Seafood Restaurant", "Seasonal Store", "Shabu Shabu Restaurant", "Shaved Ice Shop", "Singaporean Restaurant", "Smoothie & Juice Bar", "Soul Food Restaurant", "Soup Restaurant", "South African Restaurant", "Spanish Restaurant", "Specialty Grocery Store", "Steakhouse", "Sukiyaki Restaurant", "Supermarket", "Sushi Restaurant", "Szechuan-Sichuan Restaurant", "Taiwanese Restaurant", "Tapas Bar & Restaurant", "Tea Room", "Teppanyaki Restaurant", "Tex-Mex Restaurant", "Thai Restaurant", "Theme Restaurant", "Tonkatsu Restaurant", "Turkish Restaurant", "Udon Restaurant", "Unagi Restaurant", "Urban Farm", "Vegetarian-Vegan Restaurant", "Vietnamese Restaurant", "Wagashi Restaurant", "Wholesale Bakery", "Yakiniku Restaurant", "Yoshoku Restaurant"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Process. 
+														</div>
+													</p>
+												</div>
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of CookingTree -->
+
+					
+					
+					
+					
+					
+					<tr class="athing comtr" id="DrinkingTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🍺️️ ️</span> <span class="title"> Drinking <span class="navs"> | </span> <a class="togg clicky" id="DrinkingTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Boba simulator 	// oh you kids are too cute and innocent
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Bar", "Bar & Grill", "Bartending Service", "Beer Bar", "Beer Garden", "Brewery", "Cocktail Bar", "Distillery", "Dive Bar", "Drink", "Duty-Free Shop", "Gay Bar", "Homebrew Supply Store", "Hookah Lounge", "Lounge", "Pub", "Sake Bar", "Whisky Bar", "Wine Bar", "Wine, Beer & Spirits Store", "Wine-Spirits", "Winery-Vineyard"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Beer is safer to drink than dirty water, if you live in the Middle Ages. Breweries now producing hand sanitiser. 
+														</div>
+													</p>
+												</div>
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Wine settles over time, becomes more pure. 
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of DrinkingTree -->
+
+					
+
+					
+					
+					<tr class="athing comtr" id="DrivingTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🚙 ️</span>  <span class="title"> Driving <span class="navs"> | </span> <a class="togg clicky" id="DrivingTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Mario Kart		// subset of transport?
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Automotive Body Shop", "Automotive Consultant", "Automotive Customization Shop", "Automotive Glass Service", "Automotive Manufacturer", "Automotive Parts Store", "Automotive Repair Shop", "Automotive Restoration Service", "Automotive Service", "Automotive Store", "Automotive Wholesaler", "Automotive, Aircraft & Boat", "Car Dealership", "Car Rental", "Car Stereo Store", "Cars", "Driving School", "Exotic Car Rental", "Motor Vehicle Company", "Motorcycle Dealership", "Motorcycle Manufacturer", "Motorcycle Repair Shop", "Motorsports Store"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															<a href="https://www.nzta.govt.nz/roadcode" target=_blank>Road code</a> is programming code. Memorising it involves practice. 
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of DrivingTree -->
+
+					
+
+					
+					<tr class="athing comtr" id="EducationTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🎓️</span>   <span class="title"> Education <span class="navs"> | </span> <a class="togg clicky" id="EducationTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Royale High
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Academic Camp", "Author", "Blogger", "Book", "Book & Magazine Distributor", "Book Genre", "Book Series", "Books & Magazines", "Bookstore", "Civilization Museum", "College & University", "Community College", "Community Museum", "Concentration or Major", "Education", "Education Website", "Educational Consultant", "Educational Research Center", "Elementary School", "Field of Study", "High School", "History Museum", "Independent Bookstore", "Junior High School", "Language School", "Library", "Literary Arts", "Literary Editor", "Middle School", "Museum", "Personal Blog", "Planetarium", "Private School", "Public School", "Publisher", "Reference Website", "Religious School", "School", "Science", "Science Museum", "Science Website", "Science, Technology & Engineering", "Scientist", "Speakeasy", "Specialty School", "Speech Pathologist", "Teacher", "Test Preparation Center", "Trade School", "Tutor-Teacher", "Website", "Writer"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Communication:
+															<div class="subtext" style="margin-left:12em">
+																{reading, writing, listening, speaking, typing, singing, doing, going}
+																
+																
+																<div class="title" style="margin-left:7em">
+																	{reading, listening}
+																	<p>
+																		<div class="default" style="margin-left:7em">
+																			<div>1. Read or listen to something in your target language. </div>
+																			<div>2. Work out the meaning of a word you don't know (using a dictionary, teacher, context clues etc)... </div>
+																			<div>Making an enormous word list is kind of taking the language out of the language.</div>
+																			<div style="margin-left:7em" class="subtext">
+																				-- laurieg
+																			</div>
+																			<div style="margin-left:7em" class="subtext">
+																				<a href="https://news.ycombinator.com/item?id=28362413" target="_blank">https://news.ycombinator.com/item?id=28362413</a> 
+																			</div>
+																		</div>
+																	</p>
+																</div>
+
+																<div class="title" style="margin-left:7em">
+																	{writing, speaking}
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			<div>
+																				writing is hard for me, because my hand hurts when using a pen
+																				<div style="margin-left:7em" class="subtext">
+																					<a href="https://pingtype.github.io/docs/failed.html#copyingCharacters" target="_blank">https://pingtype.github.io/docs/failed.html#copyingCharacters</a> 
+																				</div>
+																			</div>
+																			
+																		</div>
+																		<div class="title" style="margin-left:7em">
+																			<div>
+																				speaking is the most difficult for me, because it requires practice with human beings
+																				<div style="margin-left:7em" class="subtext">
+																					<a href="https://pingtype.github.io/docs/blog.html#speaking" target="_blank">https://pingtype.github.io/docs/blog.html#speaking</a> 
+																				</div>
+																			</div>
+																		</div>
+																		
+																	</p>
+																</div>
+
+
+																<div class="title" style="margin-left:7em">
+																	{typing}
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			<div>typing is easiest for me, because I can copy-paste</div>
+																		</div>
+																	</p>
+																</div>
+
+																<div class="title" style="margin-left:7em">
+																	{singing}
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			<div>most memes contain song references</div>
+																			<div>singing is verbal copy-paste</div>
+																			<div>background music, clapping along, waving: synchronises heartbeats</div>
+																		</div>
+																	</p>
+																</div>
+
+																<div class="title" style="margin-left:7em">
+																	{doing}
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			<div>people can't read</div>
+																			<div>people just copy what they see others doing</div>
+																			<div> -> need to lead by example</div>
+																		</div>
+																	</p>
+																</div>
+
+																<div class="title" style="margin-left:7em">
+																	{going}
+																	<p>
+																		<div class="title" style="margin-left:7em">
+																			<div>new perspectives lead to new ideas</div>
+																		</div>
+																	</p>
+																</div>
+
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Science:
+															<div class="subtext" style="margin-left:12em">
+																{sociology, psychology, biology, chemistry, physics, maths}
+																<div style="margin-left:7em" class="subtext">
+																	<a href="https://xkcd.com/435/" target="_blank">https://xkcd.com/435/</a>
+																</div>
+																
+																<div class="title" style="margin-left:7em">
+																	Biology
+																	<p>
+																		<div class="default" style="margin-left:7em">
+																			<div>Phylogenetic tree of genome size is a binary tree </div>
+																			<div style="margin-left:7em" class="subtext">
+																				<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Tree_of_life_with_genome_size.svg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/5/5b/Tree_of_life_with_genome_size.svg</a>
+																			</div>
+																		</div>
+																	</p>
+																</div>
+
+
+															</div>
+														</div>
+													</p>
+												</div>
+												
+
+
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of EducationTree -->
+
+					
+					
+					
+					
+					
+					<tr class="athing comtr" id="GamesTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🎲️ ️</span> <span class="title"> Games <span class="navs"> | </span> <a class="togg clicky" id="GamesTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Roblox 			// so meta
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Amusement & Theme Park", "Arcade", "Board Game", "Escape Game Room", "Esports League", "Esports Team", "Fairground", "Game Publisher", "Games-Toys", "Gaming Video Creator", "Laser Tag Center", "Magician", "Professional Gamer", "Toy Store", "Video Game", "Video Game Store"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Most games are about sorting a database, finding local optima (minima or maxima) and communicating a message
+														</div>
+														<div class="title" style="margin-left:7em">
+															e.g. UNO is minimising entropy of colour, numbers
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of GamesTree -->
+
+
+					
+					
+					<tr class="athing comtr" id="HealthTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🏥 ️</span>  <span class="title"> Health <span class="navs"> | </span> <a class="togg clicky" id="HealthTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Hospital roleplay
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Alternative & Holistic Health Service", "Aromatherapy Service", "Biotechnology Company", "Blood Bank", "Cemetery", "Day Spa", "Dentist & Dental Office", "Dermatologist", "Doctor", "Drug Addiction Treatment Center", "General Dentist", "Health & Wellness Website", "Health Food Store", "Health Spa", "Health-Beauty", "Healthcare Administrator", "Hospital", "Massage Service", "Medical & Health", "Medical Center", "Medical Company", "Medical Research Center", "Medical School", "Medical Service", "Medical Spa", "Medical Supply Store", "Mental Health Service", "Nutritionist", "Occupational Safety and Health Service", "Occupational Therapist", "Orthodontist", "Pharmaceuticals", "Pharmacy - Drugstore", "Physical Therapist", "Psychologist", "Psychotherapist", "Reflexologist", "Safety & First Aid Service", "Spa", "Vitamins-Supplements", "Weight Loss Center"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															WHO list of essential medicines. 
+														</div>
+														<div class="title" style="margin-left:7em">
+															Most frequent problems are in the I/O. 
+														</div>
+														<div class="title" style="margin-left:7em">
+															Most complicated problems are when there are interactions between organs. 
+														</div>
+														<div class="title" style="margin-left:7em">
+															Every organ is connected to the heartbeat. 
+														</div>
+													</p>
+												</div>
+														
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Training surgeons is done using virtual reality
+															<div class="subtext" style="margin-left:7em">
+																<a href="https://www.washingtonpost.com/video-games/2020/01/09/surgery-simulators-medical-mishaps-space-video-games-are-helping-doctors-do-their-jobs/" target=_blank>https://www.washingtonpost.com/video-games/2020/01/09/surgery-simulators-medical-mishaps-space-video-games-are-helping-doctors-do-their-jobs/</a>
+															</div>
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of HealthTree -->
+					
+					
+					
+					
+					<tr class="athing comtr" id="InternationalTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji"> 🌍 ️</span> <span class="title"> International <span class="navs"> | </span> <a class="togg clicky" id="InternationalTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Airplane 3
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Airline Company", "Airline Industry Service", "Airport", "Airport Lounge", "Airport Terminal", "Boat Tour Agency", "City", "Community Center", "Community Service", "Consulate & Embassy", "Country", "Country Club - Clubhouse", "County", "Cruise Agency", "Cruise Line", "Eco Tour Agency", "Exchange Program", "Geographical Place", "Historical Place", "Hot Air Balloon Tour Agency", "Island", "Landmark & Historical Place", "Language", "Local & Travel Website", "Local Service", "Locality", "Monument", "Neighborhood", "Port", "Public Garden", "Region", "Regional Website", "Social Club", "Society & Culture Website", "State", "State-Province-Region", "Statue & Fountain", "Time zone", "Tour Agency", "Tour Guide", "Tourist Information Center", "Township", "Translator", "Travel Agency", "Travel Company", "Travel Service", "TypeAhead", "Youth Organization"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Travel expands the database of experience. 
+														</div>
+													</p>
+													<p>
+														<div class="title" style="margin-left:7em">
+															New ways of naming things. 
+														</div>
+													</p>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Outside comfort zone is a good way. 
+														</div>
+													</p>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Some countries are more welcoming of newcomers. Those countries grow. 
+														</div>
+													</p>
+												</div>
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Environmentalism. 
+														</div>
+													</p>
+												</div>
+
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of InternationalTree -->
+					
+					
+					
+					<tr class="athing comtr" id="NewsTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji"> 🗞️ ️</span> <span class="title"> News <span class="navs"> | </span> <a class="togg clicky" id="NewsTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: ?
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Advertising Agency", "Advertising-Marketing", "Broadcasting & Media Production Company", "Cable & Satellite Company", "Copywriting Service", "Course", "Entertainer", "Episode", "Internet Marketing Service", "Journalist", "Magazine", "Marketing Agency", "Marketing Consultant", "Media", "Media Agency", "Media-News Company", "Monarch", "Movie-Television Studio", "News & Media Website", "News Personality", "Newspaper", "Newsstand", "Party Entertainment Service", "Personal Website", "Podcast", "Public Figure", "Public Relations Agency", "Radio Station", "Show", "Signs & Banner Service", "Social Media Agency", "TV", "TV & Movies", "TV Channel", "TV Genre", "TV Network", "TV Season", "TV Show", "TV-Movie Award", "Talent Agent", "Writing Service"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Propaganda? Naming things. 
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of NewsTree -->
+
+
+					
+					
+					<tr class="athing comtr" id="BusinessTree">
+						<td> 
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji"> 📈️ ️</span> <span class="title"> Business <span class="navs"> | </span> <a class="togg clicky" id="BusinessTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Retail
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Auditorium", "Business & Economy Website", "Business Center", "Business Consultant", "Business Service", "Business Supply Service", "Career Counselor", "Commercial & Industrial", "Commercial & Industrial Equipment Supplier", "Commercial Equipment", "Consulting Agency", "Convention Center", "Corporate Office", "Counselor", "Employment Agency", "Entrepreneur", "Environmental Consultant", "Labor Union", "Management Service", "Market Research Consultant", "Meeting Room", "Motivational Speaker", "Office Supplies", "Printing Service", "Professional Service", "Recruiter", "Work Position", "Work Project", "Workplace & Office"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Management
+
+															<div class="default" style="margin-left:7em">
+																<div>
+																	I liked the idea of an org chart with the directors at the bottom and the people who make things actually happen at the top.
+																</div>
+																<div>
+																	CEO is really the "servant of all" (with apologies to William Tenn)
+																</div>
+																
+																<div class="subtext" style="margin-left:7em">
+																	<div>
+																		-- gumby
+																	</div>
+																	<div>
+																		<a href="https://news.ycombinator.com/item?id=28678055" target=_blank>https://news.ycombinator.com/item?id=28678055</a>
+																	</div>
+																</div>
+																
+															</div>
+
+
+														</div>
+													</p>
+												</div>
+
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Toyota Production System
+															
+															<div class="subtext" style="margin-left:7em">
+																<a href="https://en.wikipedia.org/wiki/Toyota_Production_System" target=_blank>https://en.wikipedia.org/wiki/Toyota_Production_System</a>
+															</div>
+															
+															<p>
+																<div class="default" style="margin-left:7em">
+																	
+																	<div>
+																		muri: design out overburden
+	
+																		<div class="title" style="margin-left:7em">
+																			forgetfulness, cache invalidation
+																		</div>
+	
+																	</div>
+																	<div>
+																		mura: design out inconsistency
+																		
+																		<div class="title" style="margin-left:7em">
+																			naming things
+																		</div>
+																		
+																	</div>
+																	<div>
+																		muda: eliminate waste
+	
+																		<div class="title" style="margin-left:7em">
+																			efficiency, off-by-1 errors
+																		</div>
+																	</div>
+																
+																</div>
+															</p>
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of BusinessTree -->
+					
+					
+					
+					
+					
+					<tr class="athing comtr" id="MilitaryTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🎖️️</span>  <span class="title"> Military <span class="navs"> | </span> <a class="togg clicky" id="MilitaryTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Age of Empires, Unreal Tournament, Quake, Doom
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Aerospace Company", "Armed Forces", "Aviation School", "Defense Company", "Flight School", "Law Enforcement Agency", "Military Base", "Police Station"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Strategy is more important than size of army. 
+															<div>
+																e.g. King David, Sun Tzu
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of MilitaryTree -->
+
+
+					
+					
+					<tr class="athing comtr" id="MoviesTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🎥️️</span> <span class="title"> Movies <span class="navs"> | </span> <a class="togg clicky" id="MoviesTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: ? // subset of media?
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Entertainment Service", "Drive-In Movie Theater", "Event Videographer", "Film Director", "Movie", "Movie & Music Store", "Movie Character", "Movie Genre", "Movie Theater", "Producer", "Video", "Video Creator"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Plot is an echo. 
+															<div class="title" style="margin-left:7em">
+																<div>
+																	Starts by introducing characters. 
+																</div>
+																<div>
+																	Foreshadowing of problems and solutions. 
+																</div>
+																<div>
+																	Then everything falls apart. 
+																</div>
+																<div>
+																	Hero sacrifices themself to save the day. 
+																</div>
+																<div>
+																	All the problems solve. 
+																</div>
+																<div>
+																	And everything becomes better than before. 
+																</div>
+																
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of MoviesTree -->
+					
+					
+					
+					
+					
+					<tr class="athing comtr" id="MusicTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🎧</span> <span class="title"> Music <span class="navs"> | </span> <a class="togg clicky" id="MusicTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Musical chairs		// subset of media?
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Album", "Band", "Concert Tour", "DJ", "Event", "Event Planner", "Festival", "Jazz & Blues Club", "Karaoke", "Live Music Venue", "Music", "Music Award", "Music Chart", "Music Lessons & Instruction School", "Music Production Studio", "Music Store", "Music Video", "Musical Genre", "Musical Instrument", "Musical Instrument Store", "Musician", "Musician-Band", "Orchestra", "Playlist", "Private Members Club", "Record Label", "Song", "Symphony", "Ticket Sales"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Echoes. Reverb. 
+														</div>
+														<div class="title" style="margin-left:7em">
+															KTV playlist. 
+															
+															<div class="subtext" style="margin-left:7em">
+																<a href="https://www.youtube.com/playlist?list=PLfNF8TQij08oma_987vYrzswd4z90aeXD" target=_blank>https://www.youtube.com/playlist?list=PLfNF8TQij08oma_987vYrzswd4z90aeXD</a>
+															</div>
+
+															<div class="title" style="margin-left:7em">
+																Stayin' Alive - Bee Gees. 
+															</div>
+															
+															<div class="title" style="margin-left:7em">
+																Clint Eastwood - Gorillaz. 
+															</div>
+															
+														</div>
+													</p>
+												</div>
+												
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of MusicTree -->
+
+					
+					
+					
+					
+					<tr class="athing comtr" id="PetsTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">😸</span> <span class="title"> Pets <span class="navs"> | </span> <a class="togg clicky" id="PetsTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Adopt Me, Pet Sim X
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Animal", "Animal Shelter", "Aquatic Pet Store", "Dog Trainer", "Dog Walker", "Kennel", "Pet", "Pet Groomer", "Pet Service", "Pet Sitter", "Pet Store", "Pet Supplies", "Petting Zoo", "Veterinarian", "Wildlife Sanctuary", "Zoo"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="default" style="margin-left:7em">
+															<div>
+															I saw a wasp help another wasp get its leg out of a gap between a light fixture and some siding... 
+															</div>
+															<div>
+															I went and found how many neurons they have in their brain, I can’t find it now but it was under a million maybe 500k or so. 
+															</div>
+															<div>
+															I thought it was remarkably complex behavior.
+															</div>
+															<div class="subtext" style="margin-left:7em">
+																-- jcims
+															</div>
+															<div class="subtext" style="margin-left:7em">
+																<a href="https://news.ycombinator.com/item?id=28373983" target=_blank>https://news.ycombinator.com/item?id=28373983</a>
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of PetsTree -->
+
+					
+					
+					
+					
+					<tr class="athing comtr" id="PoliticsTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🏛️</span> <span class="title"> Politics <span class="navs"> | </span> <a class="togg clicky" id="PoliticsTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: ?
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"City Hall", "Government Building", "Government Official", "Government Website", "Intellectual Property Lawyer", "Labor & Employment Lawyer", "Lawyer & Law Firm", "Legal Service", "Political Candidate", "Political Ideology", "Political Organization", "Political Party", "Politician", "Public & Government Service", "Public Service", "Public Square - Plaza"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															<div>
+															Naming things. 
+															</div>
+															<div>
+															Individual vs communal approach. 
+																<div style="margin-left:7em">
+																	Ironic that North Korea, the most individualist country, professes to be Communist. 
+																</div>
+																<div style="margin-left:7em">
+																	And the US, which professes to be the Land of the Free individuals, was built by welcoming newcomers. 
+																</div>
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of PoliticsTree -->
+
+					
+					
+					
+					
+					<tr class="athing comtr" id="ReligionTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">⛪️</span> <span class="title"> Religion <span class="navs"> | </span> <a class="togg clicky" id="ReligionTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: ?
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"The Holy Bible", "Apostolic Church", "Assemblies of God", "Baptist Church", "Catholic Church", "Charismatic Church", "Christian Church", "Church", "Church of Christ", "Church of God", "Evangelical Church", "Independent Church", "Mission", "Nazarene Church", "Nondenominational Church", "Presbyterian Church", "Religious Bookstore", "Religious Center", "Religious Organization", "Religious Place of Worship", "Religious organisation", "Religious centre","Astrologist", "Buddhist Temple", "Church of Jesus Christ of Latter-day Saints", "Yoga Studio"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="default" style="margin-left:7em">
+															<div>
+															The Bible is like the Rosetta Stone: it's the most translated work in the world, ~800,000 words long, delimited by verse, and generally translated with great care by literate members of society.
+															</div>
+															<div>
+															The academic value of projects like this is immense and it's great to see it on the front page.
+																<div class="subtext" style="margin-left:7em">
+																	-- david_allison
+																</div>
+																<div class="subtext" style="margin-left:7em">
+																	<a href="https://news.ycombinator.com/item?id=28497854" target=_blank>https://news.ycombinator.com/item?id=28497854</a>
+																</div>
+															</div>
+														</div>
+													</p>
+												</div>
+
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															<div>
+																The Sierpinski Triangle is an excellent image of infinity, the eternal One. 
+															</div>
+															<div>
+																We can never see the whole picture, but what little we do see teaches us to make ourselves 0 and make God 1. 
+															</div>
+														</div>
+													</p>
+													<p>
+														<div class="title" style="margin-left:7em">
+															<div>
+																It is through selfless, agape, sacrificial love, that Jesus died for us. 
+															</div>
+															<div>
+																Likewise, we now lay down our lives for God's service, not for our own selfish gain. 
+															</div>
+														</div>
+													</p>
+												</div>
+
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of ReligionTree -->
+
+					
+					
+					
+					<tr class="athing comtr" id="SportTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🏀️</span> <span class="title"> Sport <span class="navs"> | </span> <a class="togg clicky" id="SportTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Tag, skiing, sailing, swimming, skiing
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Amateur Sports Team", "Archery Range", "Athlete", "Baseball Stadium", "Batting Cage", "Beach", "Beach Resort", "Biking", "Boat Service", "Bowling Alley", "Canoe & Kayak Rental", "Coach", "Equestrian Center", "Fitness Boot Camp", "Fitness Model", "Golf Course & Country Club", "Gym-Physical Fitness Center", "Hiking", "Ice Skating Rink", "Lake", "Marina", "Martial Arts School", "Mountain Biking Shop", "Ocean", "Outdoor & Sporting Goods Company", "Outdoor Equipment Store", "Paragliding", "Park", "Personal Coach", "Personal Trainer", "Professional Sports Team", "Public Swimming Pool", "Race Track", "Recreation & Sports Website", "Recreation Center", "Recreation Spot", "River", "Rock Climbing Gym", "Rodeo", "School Sports Team", "Scuba Diving Center", "Skate Shop", "Skiing", "Skydiving Center", "Snorkeling Spot", "Sport", "Sporting Goods Store", "Sports", "Sports & Fitness Instruction", "Sports & Recreation", "Sports & Recreation Venue", "Sports Bar", "Sports Club", "Sports Event", "Sports League", "Sports Promoter", "Sports Team", "Sportswear Store", "Stadium, Arena & Sports Venue", "Surf Shop", "Surfing Spot", "Swimming", "Tennis Court"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															For exercise or competitiveness?
+															<div style="margin-left:7em">
+																Competition is comparable to military. 
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Exercise can be part of regular routine
+															<div style="margin-left:7em">
+																e.g. swim to soak nails, bike to work. 
+															</div>
+														</div>
+													</p>
+												</div>
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of SportTree -->
+
+
+					
+
+					<tr class="athing comtr" id="TransportTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🚄</span> <span class="title"> Transport <span class="navs"> | </span> <a class="togg clicky" id="TransportTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: Biking?
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Bus Line", "Cargo & Freight Company", "Energy Company", "Harbor", "Marine Service Station", "Railroad Company", "Railway Station", "Scooter Rental", "Storage Facility", "Subway Station", "Towing Service", "Train Station", "Transit Hub", "Transit Stop", "Transportation Service", "Travel & Transportation"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															What's the name of the bus driver?
+															<div class="subtext" style="margin-left:7em">
+																<a href="https://www.riddlesandanswers.com/v/231020/youre-the-bus-driver-pay-attention-and-listen-real-close-there-will-be-a-test-after-this-theres/" target=_blank>https://www.riddlesandanswers.com/v/231020/youre-the-bus-driver-pay-attention-and-listen-real-close-there-will-be-a-test-after-this-theres/</a>
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Everyone says "thank you" to the bus driver
+															<div style="margin-left:7em">
+																-> Bus drivers have the most glory. 
+															</div>
+															<div style="margin-left:7em">
+																Idea: Implementing a Universal Serial Bus service, with litter collection and postal delivery on the same vehicles, would be more efficient. 
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Bicycle-powered bus services can be organised by communities, with no budget and minimal hardware. 
+															<div class="subtext" style="margin-left:7em">
+																<a href="https://www.npr.org/2021/10/22/1047341052/barcelona-bicibus-kids-parents-bike-ride-to-school" target=_blank>https://www.npr.org/2021/10/22/1047341052/barcelona-bicibus-kids-parents-bike-ride-to-school</a>
+															</div>
+														</div>
+													</p>
+												</div>
+
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Idea: Implementing a Universal Serial Bus service, with litter collection and postal delivery on the same vehicles, would be more efficient. 
+														</div>
+													</p>
+												</div>
+
+
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of TransportTree -->
+
+
+					
+					
+					
+					<tr class="athing comtr" id="HardwareTree">
+						<td> 
+							
+							<table border="0">
+								<tbody>
+									<tr>
+										<td class="default"> 
+											<div style="margin-left:3em">
+											<div style="margin-top:2px; margin-bottom:-20px;">
+												<span class="emoji">🎛️</span> <span class="title"> Hardware <span class="navs"> | </span> <a class="togg clicky" id="HardwareTree" n="1" href="javascript:void(0)">[-] </a> <span class="onstory"> </span> </span> 
+											</div>
+											<br> 
+											<div class="comment">
+												<div style="margin-left:7em" class="subtext">
+													Games: LEGO Mindstorms. Arduino and Raspberry Pi are educational but also pretty professional, lines are blurry. 
+												</div>
+												
+												<div style="margin-left:7em" class="subtext">
+													Subsets: 
+													{"Audio Visual Equipment Store", "Automation Service", "Computer Company", "Computer Repair Service", "Computer Store", "Computer Training School", "Computers & Internet Website", "Computers (Brand)", "Electronics", "Electronics Company", "Electronics Store", "Mobile Phone Shop", "Phone-Tablet", "Robotics Company", "Screen Printing & Embroidery", "Sewing & Alterations", "Technology Company", "Telecommunication Company", "Tools-Equipment"}
+												</div>
+												
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Mechanical engineering
+															<div class="title" style="margin-left:7em">
+																6 simple machines
+																<div class="default">
+																	{ Lever, Wheel and axle, Pulley, Inclined plane, Wedge, Screw }
+																	<div class="subtext" style="margin-left:7em">
+																		<a href="https://en.wikipedia.org/wiki/Simple_machine" target=_blank>https://en.wikipedia.org/wiki/Simple_machine</a>
+																	</div>
+																	
+																	<div class="title" style="margin-left:3em">
+																		inclined plane,
+																					<div class="subtext" style="margin-left:3em">
+																						// gravity (?) // not only gravity // inclined plane is like a wide lever
+																					</div>
+
+																		<div class="title" style="margin-left:3em">
+																				lever, 
+																						<div class="subtext" style="margin-left:3em">
+																							// straight line
+																						</div>
+																		
+																			<div class="title" style="margin-left:3em">
+																						wedge, 			
+																							<div class="subtext" style="margin-left:3em">
+																								// fulcrum. fixed point on ground. GND 0. Triangle. Sierpinski Triangle. 
+																							</div>
+																				<div class="title" style="margin-left:3em">
+																								wheel		
+																								<div class="subtext" style="margin-left:3em">
+																									<div>
+																										// continuous motion, round circle (?) or a spiral? do circles exist? yes. ours are imperfect though. 
+																									</div>
+																									<div>
+																										// Maddy said it's the bearings that break in appliances. 
+																									</div>
+																								</div>
+																				</div>
+																			</div>
+																			<div class="title" style="margin-left:3em">
+																						axle, 			// turn, change the world // balance electron spin // balance like yin yang cosmic microwave background, 2 axles
+																			</div>
+																		</div>
+																		<div class="title" style="margin-left:3em">
+																				pulley, 			// rotation equivalent to lever on wedge // bicycle is 2x pulleys with gears (cone), digital-analogue converter moving forward
+																		</div>
+																	</div>
+																	<div class="title" style="margin-left:3em">
+																		screw					// reproduce // make a spiral cone from a round circle and straight line. 
+																	</div>
+
+																</div>
+															</div>
+														</div>
+													</p>
+												</div>
+												
+												
+												
+												<div>
+													<p>
+														<div class="default" style="margin-left:7em">
+															{rocket engine's thrust, pistons of a steam locomotive} are PWM-controlled
+															<div class="subtext" style="margin-left:7em">
+																<div>
+																	-- Animats
+																</div>
+																<div>
+																	<a href="https://news.ycombinator.com/item?id=28422283" target=_blank>https://news.ycombinator.com/item?id=28422283</a>
+																</div>
+															</div>
+														</div>
+													</p>
+												</div>
+
+												
+												<div>
+													<p>
+														<div class="title" style="margin-left:7em">
+															Electronic engineering
+														</div>
+													</p>
+													<p>
+														<div class="title" style="margin-left:3em">
+															Thank you Farhad for teaching how to debug a PCB with no schematic. 
+															<div class="title" style="margin-left:3em">
+																Lift inductors (the large square components with only 2 pins) to binary-search to find the short-out. 
+															</div>
+														</div>
+													</p>
+													<p>
+														<div class="title" style="margin-left:3em">
+															We will walk on <a href="https://www.biblegateway.com/passage/?search=Revelation+21%3A21&version=NLT" target=_blank>streets of gold</a> in the circuit of life. 
+														</div>
+													</p>
+												</div>
+												
+												
+											</td>
+										</div>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr> <!-- end of HardwareTree -->
+
+
+					
+					
+					
+
+					
+					
+					<!-- end of trees -->
+				</tr>
+			</tbody>
+		</table>
+	</center>
+
+	</body>
+
+	<script>
+
+		function $(id) { return document.getElementById(id); }
+		function byClass (el, cl) { return el ? el.getElementsByClassName(cl) : [] }
+		function byTag (el, tg) { return el ? el.getElementsByTagName(tg) : [] }
+		function allof (cl) { return byClass(document, cl) }
+		function classes (el) { return (el && el.className && el.className.split(' ')) || []; }
+		function hasClass (el, cl) { return afind(cl, classes(el)) }
+		function addClass (el, cl) { if (el) { var a = classes(el); if (!afind(cl, a)) { a.unshift(cl); el.className = a.join(' ')}} }
+		function remClass (el, cl) { if (el) { var a = classes(el); arem(a, cl); el.className = a.join(' ') } }
+		function uptil (el, f) { if (el) return f(el) ? el : uptil (el.parentNode, f) }
+		function upclass (el, cl) { return uptil(el, function (x) { return hasClass(x, cl) }) }
+		function html (el) { return el ? el.innerHTML : null; }
+		function attr (el, name) { return el.getAttribute(name) }
+		function tonum (x) { var n = parseFloat(x); return isNaN(n) ? null : n }
+		function remEl (el) { el.parentNode.removeChild(el) }
+		function posf (f, a) { for (var i=0; i < a.length; i++) { if (f(a[i])) return i; } return -1; }
+		function apos (x, a) { return (typeof x == 'function') ? posf(x,a) : Array.prototype.indexOf.call(a,x) }
+		function afind (x, a) { var i = apos(x, a); return (i >= 0) ? a[i] : null; }
+		function acut (a, m, n) { return Array.prototype.slice.call(a, m, n) }
+		function aeach (fn, a) { return Array.prototype.forEach.call(a, fn) }
+		function arem (a, x) { var i = apos(x, a); if (i >= 0) { a.splice(i, 1); } return a; }
+		function alast (a) { return a[a.length - 1] }
+		function vis(el, on) { if (el) { (on ? remClass : addClass)(el, 'nosee') } }
+		function setshow (el, on) { (on ? remClass : addClass)(el, 'noshow') }
+		function noshow (el) { setshow(el, false) }
+
+		function ind (tr) {
+		  var el = byClass(tr, 'ind')[0];
+		  return el ? tonum(attr(el, 'indent')) : null;
+		}
+
+		function vurl (id, how, auth, _goto) {
+		  return "vote?id=" + id + "&how=" + how + "&auth=" + auth + "&goto=" + _goto + "&js=t"
+		}
+
+		function vote (id, how, auth, _goto) {
+		  vis($('up_' + id), how == 'un');
+		  vis($('down_' + id), how == 'un');
+		  var unv = '';
+		  if (how != 'un') {
+			unv = " | <a id='un_" + id + "' class='clicky' " +
+			  "href='" + vurl(id, 'un', auth, _goto) + "'>" +
+			  (how == 'up' ? 'unvote' : 'undown') + "</a>"
+		  }
+		  $('unv_' + id).innerHTML = unv;
+		  new Image().src = vurl(id, how, auth, _goto);
+		}
+
+		function kid1 (el) {
+		  while (el = el.nextElementSibling) {
+			if (hasClass(el, 'comtr')) return el;
+		  }
+		}
+
+		function kidvis (tr, hide) {
+		  var n0 = ind(tr), n = ind(kid1(tr)), coll = false;
+		  if (n > n0) {
+			while (tr = kid1(tr)) {
+			  if (ind(tr) <= n0) {
+				break;
+			  } else if (hide) {
+				setshow(tr, false);
+			  } else if (ind(tr) == n) {
+				coll = hasClass(tr, 'coll');
+				setshow(tr, true);
+			  } else if (!coll) {
+				setshow(tr, true);
+			  }
+			}
+		  }
+		}
+
+		function toggle (id) {
+		  var tr = $(id), on = !hasClass(tr, 'coll');
+		  commstate(tr, on);
+		  kidvis(tr, on);
+		  if ($('logout')) {
+			new Image().src = 'collapse?id=' + id + (on ? '' : '&un=true');
+		  }
+		}
+
+		function commstate (tr, coll) {
+		  (coll ? addClass : remClass)(tr, 'coll');
+		  vis(byClass(tr, 'votelinks')[0], !coll);
+		  setshow(byClass(tr, 'comment')[0], !coll);
+		  var el = byClass(tr, 'togg')[0];
+		  el.innerHTML = coll ? ('[+]') : '[-]';
+		}
+
+		function onop () { return attr(byTag(document,'html')[0],'op') }
+
+		function ranknum (el) {
+		  var s = html(el) || "";
+		  var a = s.match(/[0-9]+/);
+		  if (a) {
+			return tonum(a[0]);
+		  }
+		}
+
+		var n1 = ranknum(allof('rank')[0]) || 1;
+
+		function newstory (pair) {
+		  if (pair) {
+			var sp = alast(allof('spacer'));
+			sp.insertAdjacentHTML('afterend', pair[0] + sp.outerHTML);
+			fixranks();
+			if (onop() == 'newest') {
+			  var n = ranknum(alast(allof('rank')));
+			  allof('morelink')[0].href = 'newest?next=' + pair[1] + '&n=' + (n + 1);
+			}
+		  }
+		}
+
+		function fixranks () {
+		  var rks = allof('rank');
+		  aeach(function (rk) { rk.innerHTML = (apos(rk,rks) + n1) + '.' }, rks);
+		}
+
+		function moreurl() { return allof('morelink')[0].href }
+		function morenext () { return tonum(moreurl().split('next=')[1]) }
+
+		function hidestory (el, id) {
+		  for (var i=0; i < 3; i++) { remEl($(id).nextSibling) }
+		  remEl($(id));
+		  fixranks();
+		  var next = (onop() == 'newest' && morenext()) ? ('&next=' + morenext()) : '';
+		  var url = el.href.replace('hide', 'snip-story').replace('goto', 'onop');
+		  fetch(url + next).then(r => r.json()).then(newstory);
+		}
+
+		function onclick (ev) {
+		  var el = upclass(ev.target, 'clicky');
+		  if (el) {
+			var u = new URL(el.href, location);
+			var p = u.searchParams;
+			if (u.pathname == '/vote') {
+			  vote(p.get('id'), p.get('how'), p.get('auth'), p.get('goto'));
+			} else if (u.pathname == '/hide') {
+			  hidestory(el, p.get('id'));
+			} else if (hasClass(el, 'togg')) {
+			  toggle(attr(el, 'id'));
+			} else {
+			  $(u.hash.substring(1)).scrollIntoView({behavior: "smooth"})
+			}
+			ev.stopPropagation();
+			ev.stopImmediatePropagation();
+			ev.preventDefault();
+			return false;
+		  }
+		}
+		
+		
+		function toggleAllTreeViews()
+		{
+			document.addEventListener("click", onclick);
+			
+			var treeViews = document.getElementsByClassName("togg clicky");
+			
+			var numberTreeViews = treeViews.length;
+			
+			for (var currentTreeView = 0; currentTreeView < numberTreeViews; currentTreeView++)
+			{
+				treeViews[currentTreeView].click();
+			}
+		} // end function toggleAllTreeViews
+		
+		
+		// Start by showing all tree views shrunk
+		toggleAllTreeViews();
+		
+		document.getElementsByClassName("togg clicky")[0].click();
+		
+		document.getElementsByClassName("togg clicky")[2].click();
+		
+		document.getElementsByClassName("togg clicky")[25].click();
+		
+	</script>
+
+</html>
