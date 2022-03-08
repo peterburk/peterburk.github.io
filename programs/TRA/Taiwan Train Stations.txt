@@ -1,0 +1,456 @@
+From http://163.29.3.97/mobile_en/query.jsp
+
+<id>1001</id><name>Keelung</name>
+<id>1002</id><name>Badu</name>
+<id>1003</id><name>Qidu</name>
+<id>1004</id><name>Wudu</name>
+<id>1005</id><name>Xizhi</name>
+<id>1006</id><name>Nangang</name>
+<id>1007</id><name>Songshan</name>
+<id>1008</id><name>Taipei</name>
+<id>1009</id><name>Wanhua</name>
+<id>1011</id><name>Banqiao</name>
+<id>1012</id><name>Shulin</name>
+<id>1013</id><name>Shanjia</name>
+<id>1014</id><name>Yingge</name>
+<id>1015</id><name>Taoyuan</name>
+<id>1016</id><name>Neili</name>
+<id>1017</id><name>Zhongli</name>
+<id>1018</id><name>Puxin</name>
+<id>1019</id><name>Yangmei</name>
+<id>1020</id><name>Fugang</name>
+<id>1021</id><name>Hukou</name>
+<id>1022</id><name>Xinfeng</name>
+<id>1023</id><name>Zhubei</name>
+<id>1024</id><name>North Hsinchu</name>
+<id>1025</id><name>Hsinchu</name>
+<id>1026</id><name>Xiangshan</name>
+<id>1027</id><name>Qiding</name>
+<id>1028</id><name>Zhunan</name>
+<id>1029</id><name>Sankeng</name>
+<id>1030</id><name>Baifu</name>
+<id>1031</id><name>Xike</name>
+<id>1032</id><name>Fuzhou</name>
+<id>1033</id><name>BaiHwu</name>
+<id>1034</id><name>South Shulin</name>
+<id>1035</id><name>Sanxingqiao</name>
+<id>1102</id><name>Tanwen</name>
+<id>1104</id><name>Dashan</name>
+<id>1105</id><name>Houlong</name>
+<id>1106</id><name>Longgang</name>
+<id>1107</id><name>Baishatun</name>
+<id>1108</id><name>Xinpu</name>
+<id>1109</id><name>Tongxiao</name>
+<id>1110</id><name>Yuanli</name>
+<id>1111</id><name>Rinan</name>
+<id>1112</id><name>Dajia</name>
+<id>1113</id><name>Taichung Port</name>
+<id>1114</id><name>Qingshui</name>
+<id>1115</id><name>Shalu</name>
+<id>1116</id><name>Longjing</name>
+<id>1117</id><name>Dadu</name>
+<id>1118</id><name>Zhuifen</name>
+<id>1120</id><name>Changhua</name>
+<id>1202</id><name>Huatan</name>
+<id>1203</id><name>Yuanlin</name>
+<id>1204</id><name>Yongjing</name>
+<id>1205</id><name>Shetou</name>
+<id>1206</id><name>Tianzhong</name>
+<id>1207</id><name>Ershui</name>
+<id>1208</id><name>Linnei</name>
+<id>1209</id><name>Shiliu</name>
+<id>1210</id><name>Douliu</name>
+<id>1211</id><name>Dounan</name>
+<id>1212</id><name>Shigui</name>
+<id>1213</id><name>Dalin</name>
+<id>1214</id><name>Minxiong</name>
+<id>1215</id><name>Chiayi</name>
+<id>1217</id><name>Shuishang</name>
+<id>1218</id><name>Nanjing</name>
+<id>1219</id><name>Houbi</name>
+<id>1220</id><name>Xinying</name>
+<id>1221</id><name>Liuying</name>
+<id>1222</id><name>Linfengying</name>
+<id>1223</id><name>Longtian</name>
+<id>1224</id><name>Balin</name>
+<id>1225</id><name>Shanhua</name>
+<id>1226</id><name>Xinshi</name>
+<id>1227</id><name>Yongkang</name>
+<id>1228</id><name>Tainan</name>
+<id>1229</id><name>Baoan</name>
+<id>1230</id><name>Zhongzhou</name>
+<id>1231</id><name>Dahu</name>
+<id>1232</id><name>Luzhu</name>
+<id>1233</id><name>Gangshan</name>
+<id>1234</id><name>Qiaotou</name>
+<id>1235</id><name>Nanzi</name>
+<id>1236</id><name>Zuoying</name>
+<id>1238</id><name>Kaohsiung</name>
+<id>1239</id><name>Daqiao</name>
+<id>1240</id><name>Dacun</name>
+<id>1241</id><name>Jiabei</name>
+<id>1242</id><name>Xinzuoying</name>
+<id>1243</id><name>Rende</name>
+<id>1244</id><name>Nanke</name>
+<id>1302</id><name>Zaoqiao</name>
+<id>1304</id><name>Fengfu</name>
+<id>1305</id><name>Miaoli</name>
+<id>1307</id><name>Nanshi</name>
+<id>1308</id><name>Tongluo</name>
+<id>1310</id><name>Sanyi</name>
+<id>1314</id><name>Taian</name>
+<id>1315</id><name>Houli</name>
+<id>1317</id><name>Fengyuan</name>
+<id>1318</id><name>Tanzi</name>
+<id>1319</id><name>Taichung</name>
+<id>1320</id><name>Wuri</name>
+<id>1321</id><name>Chenggong</name>
+<id>1322</id><name>Daqing</name>
+<id>1323</id><name>Taiyuan</name>
+<id>1324</id><name>Xinwuri</name>
+<id>1402</id><name>Fengshan</name>
+<id>1403</id><name>Houzhuang</name>
+<id>1404</id><name>Jiuqutang</name>
+<id>1405</id><name>Liukuaicuo</name>
+<id>1406</id><name>Pingtung</name>
+<id>1407</id><name>Guilai</name>
+<id>1408</id><name>Linluo</name>
+<id>1409</id><name>Xishi</name>
+<id>1410</id><name>Zhutian</name>
+<id>1411</id><name>Chaozhou</name>
+<id>1412</id><name>Kanding</name>
+<id>1413</id><name>Nanzhou</name>
+<id>1414</id><name>Zhenan</name>
+<id>1415</id><name>Linbian</name>
+<id>1416</id><name>Jiadong</name>
+<id>1417</id><name>Donghai</name>
+<id>1418</id><name>Fangliao</name>
+<id>1502</id><name>Jialu</name>
+<id>1503</id><name>Neishi</name>
+<id>1504</id><name>Fangshan</name>
+<id>1507</id><name>Guzhuang</name>
+<id>1508</id><name>Dawu</name>
+<id>1510</id><name>Longxi</name>
+<id>1512</id><name>Jinlun</name>
+<id>1514</id><name>Taimali</name>
+<id>1516</id><name>Zhiben</name>
+<id>1517</id><name>Kangle</name>
+<id>1602</id><name>Jian</name>
+<id>1604</id><name>Zhixue</name>
+<id>1605</id><name>Pinghe</name>
+<id>1606</id><name>Shoufeng</name>
+<id>1607</id><name>Fengtian</name>
+<id>1609</id><name>Nanping</name>
+<id>1610</id><name>Fenglin</name>
+<id>1611</id><name>Wanrong</name>
+<id>1612</id><name>Guangfu</name>
+<id>1613</id><name>Dafu</name>
+<id>1614</id><name>Fuyuan</name>
+<id>1616</id><name>Ruisui</name>
+<id>1617</id><name>Sanmin</name>
+<id>1619</id><name>Yuli</name>
+<id>1620</id><name>Antung</name>
+<id>1621</id><name>Dongli</name>
+<id>1622</id><name>Dongzhu</name>
+<id>1623</id><name>Fuli</name>
+<id>1624</id><name>Chishang</name>
+<id>1625</id><name>Haiduan</name>
+<id>1626</id><name>Guanshan</name>
+<id>1628</id><name>Ruihe</name>
+<id>1629</id><name>Ruiyuan</name>
+<id>1630</id><name>Luye</name>
+<id>1631</id><name>Shanli</name>
+<id>1632</id><name>Taitung</name>
+<id>1703</id><name>Yongle</name>
+<id>1704</id><name>Dongao</name>
+<id>1705</id><name>Nanao</name>
+<id>1706</id><name>Wuta</name>
+<id>1708</id><name>Hanben</name>
+<id>1709</id><name>Heping</name>
+<id>1710</id><name>Heren</name>
+<id>1711</id><name>Chongde</name>
+<id>1712</id><name>Xincheng</name>
+<id>1713</id><name>Jingmei</name>
+<id>1714</id><name>Beipu</name>
+<id>1715</id><name>Hualien</name>
+<id>1802</id><name>Nuannuan</name>
+<id>1803</id><name>Sijiaoting</name>
+<id>1804</id><name>Ruifang</name>
+<id>1805</id><name>Houtong</name>
+<id>1806</id><name>Sandiaoling</name>
+<id>1807</id><name>Mudan</name>
+<id>1808</id><name>Shuangxi</name>
+<id>1809</id><name>Gongliao</name>
+<id>1810</id><name>Fulong</name>
+<id>1811</id><name>Shicheng</name>
+<id>1811</id><name>Shicheng</name></select></td>
+<id>1812</id><name>Dali</name>
+<id>1813</id><name>Daxi</name>
+<id>1814</id><name>Guishan</name>
+<id>1815</id><name>Waiao</name>
+<id>1816</id><name>Toucheng</name>
+<id>1817</id><name>Dingpu</name>
+<id>1818</id><name>Jiaoxi</name>
+<id>1819</id><name>Sicheng</name>
+<id>1820</id><name>Yilan</name>
+<id>1821</id><name>Erjie</name>
+<id>1822</id><name>Zhongli</name>
+<id>1823</id><name>Luodong</name>
+<id>1824</id><name>Dongshan</name>
+<id>1825</id><name>Xinma</name>
+<id>1826</id><name>Suaoxin</name>
+<id>1827</id><name>Suao</name>
+<id>1903</id><name>Dahua</name>
+<id>1904</id><name>Shifen</name>
+<id>1905</id><name>Wanggu</name>
+<id>1906</id><name>Lingjiao</name>
+<id>1907</id><name>Pingxi</name>
+<id>1908</id><name>Jingtong</name>
+<id>2203</id><name>Zhuzhong</name>
+<id>2204</id><name>Shangyuan</name>
+<id>2205</id><name>Zhudong</name>
+<id>2206</id><name>Hengshan</name>
+<id>2207</id><name>Jiuzantou</name>
+<id>2208</id><name>Hexing</name>
+<id>2209</id><name>Fugui</name>
+<id>2210</id><name>Neiwan</name>
+<id>2211</id><name>Ronghua</name>
+<id>2212</id><name>Qianjia</name>
+<id>2213</id><name>Xinzhuang</name>
+<id>2214</id><name>Liujia</name>
+<id>2702</id><name>Yuanquan</name>
+<id>2703</id><name>Zhuoshui</name>
+<id>2704</id><name>Longquan</name>
+<id>2705</id><name>Jiji</name>
+<id>2706</id><name>Shuili</name>
+<id>2707</id><name>Checheng</name>
+<id>5101</id><name>Chang Jung Christian University</name>
+<id>5102</id><name>Shalun</name></select></td>
+<id>6103</id><name>NMMST</name>
+
+
+1001 Keelung 基隆
+1002 Badu 八堵
+1003 Qidu 七堵
+1004 Wudu 五堵
+1005 Xizhi 汐止
+1006 Nangang 南港
+1007 Songshan 松山
+1008 Taipei 臺北
+1009 Wanhua 萬華
+1011 Banqiao 板橋
+1012 Shulin 樹林
+1013 Shanjia 山佳
+1014 Yingge 鶯歌
+1015 Taoyuan 桃園
+1016 Neili 內壢
+1017 Zhongli 中壢
+1018 Puxin 埔心
+1019 Yangmei 楊梅
+1020 Fugang 富岡
+1021 Hukou 湖口
+1022 Xinfeng 新豐
+1023 Zhubei 竹北
+1024 North Hsinchu 北新竹
+1025 Hsinchu 新竹
+1026 Xiangshan 香山
+1027 Qiding 崎頂
+1028 Zhunan 竹南
+1029 Sankeng 三坑
+1030 Baifu 百福
+1031 Xike 汐科
+1032 Fuzhou 浮洲
+1033 BaiHwu 北湖
+1034 South Shulin 南樹林
+1035 Sanxingqiao 三姓橋
+1102 Tanwen 談文
+1104 Dashan 大山
+1105 Houlong 後龍
+1106 Longgang 龍港
+1107 Baishatun 白沙屯
+1108 Xinpu 新埔
+1109 Tongxiao 通霄
+1110 Yuanli 苑裡
+1111 Rinan 日南
+1112 Dajia 大甲
+1113 Taichung Port 臺中港
+1114 Qingshui 清水
+1115 Shalu 沙鹿
+1116 Longjing 龍井
+1117 Dadu 大肚
+1118 Zhuifen 追分
+1120 Changhua 彰化
+1202 Huatan 花壇
+1203 Yuanlin 員林
+1204 Yongjing 永靖
+1205 Shetou 社頭
+1206 Tianzhong 田中
+1207 Ershui 二水
+1208 Linnei 林內
+1209 Shiliu 石榴
+1210 Douliu 斗六
+1211 Dounan 斗南
+1212 Shigui 石龜
+1213 Dalin 大林
+1214 Minxiong 民雄
+1215 Chiayi 嘉義
+1217 Shuishang 水上
+1218 Nanjing 南靖
+1219 Houbi 後壁
+1220 Xinying 新營
+1221 Liuying 柳營
+1222 Linfengying 林鳳營
+1223 Longtian 隆田
+1224 Balin 拔林
+1225 Shanhua 善化
+1226 Xinshi 新市
+1227 Yongkang 永康
+1228 Tainan 臺南
+1229 Baoan 保安
+1230 Zhongzhou 中洲
+1231 Dahu 大湖
+1232 Luzhu 路竹
+1233 Gangshan 岡山
+1234 Qiaotou 橋頭
+1235 Nanzi 楠梓
+1236 Zuoying 左營
+1238 Kaohsiung 高雄
+1239 Daqiao 大橋
+1240 Dacun 大村
+1241 Jiabei 嘉北
+1242 Xinzuoying 新左營
+1243 Rende 仁德
+1244 Nanke 南科
+1302 Zaoqiao 造橋
+1304 Fengfu 豐富
+1305 Miaoli 苗栗
+1307 Nanshi 南勢
+1308 Tongluo 銅鑼
+1310 Sanyi 三義
+1314 Taian 泰安
+1315 Houli 后里
+1317 Fengyuan 豐原
+1318 Tanzi 潭子
+1319 Taichung 臺中
+1320 Wuri 烏日
+1321 Chenggong 成功
+1322 Daqing 大慶
+1323 Taiyuan 太原
+1324 Xinwuri 新烏日
+1402 Fengshan 鳳山
+1403 Houzhuang 後庄
+1404 Jiuqutang 九曲堂
+1405 Liukuaicuo 六塊厝
+1406 Pingtung 屏東
+1407 Guilai 歸來
+1408 Linluo 麟洛
+1409 Xishi 西勢
+1410 Zhutian 竹田
+1411 Chaozhou 潮州
+1412 Kanding 崁頂
+1413 Nanzhou 南州
+1414 Zhenan 鎮安
+1415 Linbian 林邊
+1416 Jiadong 佳冬
+1417 Donghai 東海
+1418 Fangliao 枋寮
+1502 Jialu 加祿
+1503 Neishi 內獅
+1504 Fangshan 枋山
+1507 Guzhuang 古莊
+1508 Dawu 大武
+1510 Longxi 瀧溪
+1512 Jinlun 金崙
+1514 Taimali 太麻里
+1516 Zhiben 知本
+1517 Kangle 康樂
+1602 Jian 吉安
+1604 Zhixue 志學
+1605 Pinghe 平和
+1606 Shoufeng 壽豐
+1607 Fengtian 豐田
+1609 Nanping 南平
+1610 Fenglin 鳳林
+1611 Wanrong 萬榮
+1612 Guangfu 光復
+1613 Dafu 大富
+1614 Fuyuan 富源
+1616 Ruisui 瑞穗
+1617 Sanmin 三民
+1619 Yuli 玉里
+1621 Dongli 東里
+1622 Dongzhu 東竹
+1623 Fuli 富里
+1624 Chishang 池上
+1625 Haiduan 海端
+1626 Guanshan 關山
+1628 Ruihe 瑞和
+1629 Ruiyuan 瑞源
+1630 Luye 鹿野
+1631 Shanli 山里
+1632 Taitung 臺東
+1703 Yongle 永樂
+1704 Dongao 東澳
+1705 Nanao 南澳
+1706 Wuta 武塔
+1708 Hanben 漢本
+1709 Heping 和平
+1710 Heren 和仁
+1711 Chongde 崇德
+1712 Xincheng 新城
+1713 Jingmei 景美
+1714 Beipu 北埔
+1715 Hualien 花蓮
+1802 Nuannuan 暖暖
+1803 Sijiaoting 四腳亭
+1804 Ruifang 瑞芳
+1805 Houtong 猴硐
+1806 Sandiaoling 三貂嶺
+1807 Mudan 牡丹
+1808 Shuangxi 雙溪
+1809 Gongliao 貢寮
+1810 Fulong 福隆
+1811 Shicheng 石城
+1812 Dali 大里
+1813 Daxi 大溪
+1814 Guishan 龜山
+1815 Waiao 外澳
+1816 Toucheng 頭城
+1817 Dingpu 頂埔
+1818 Jiaoxi 礁溪
+1819 Sicheng 四城
+1820 Yilan 宜蘭
+1821 Erjie 二結
+1822 Zhongli 中里
+1823 Luodong 羅東
+1824 Dongshan 冬山
+1825 Xinma 新馬
+1826 Suaoxin 蘇澳新
+1827 Suao 蘇澳
+1903 Dahua 大華
+1904 Shifen 十分
+1905 Wanggu 望古
+1906 Lingjiao 嶺腳
+1907 Pingxi 平溪
+1908 Jingtong 菁桐
+2203 Zhuzhong 竹中
+2204 Shangyuan 上員
+2205 Zhudong 竹東
+2206 Hengshan 橫山
+2207 Jiuzantou 九讚頭
+2208 Hexing 合興
+2209 Fugui 富貴
+2210 Neiwan 內灣
+2211 Ronghua 榮華
+2212 Qianjia 千甲
+2213 Xinzhuang 新莊
+2214 Liujia 六家
+2702 Yuanquan 源泉
+2703 Zhuoshui 濁水
+2704 Longquan 龍泉
+2705 Jiji 集集
+2706 Shuili 水里
+2707 Checheng 車埕
+5101 Chang Jung Christian University 長榮大學
+5102 Shalun 沙崙
+6103 NMMST 海科館

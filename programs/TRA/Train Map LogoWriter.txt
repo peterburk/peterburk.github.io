@@ -1,0 +1,684 @@
+label("Badu 八堵");halfCircleTop("#d91820");halfCircleBottom("#000000");
+lt(90);
+fd(3);
+label("Sankeng 三坑");
+circle();
+fd(5);
+label("Keelung 基隆");circle("#d91820");
+bk(8);
+rt(90);
+4
+label("Qidu 七堵");circle("#d91820");
+4
+Baifu 百福
+4
+Wudu 五堵
+3
+label("Xizhi 汐止");circle("#d91820");
+2
+circle();fd(1);label("Xike 汐科");fd(5);
+label("Nangang 南港 <font color='#da5530'>HSR 高鐵</font> <font color='#1896dc'>MRT 捷運</font>");thirdCircleRight("#f9bd93");thirdCircleBottom("#1896dc");thirdCircleLeft("#d91820");
+5
+label("Songshan 松山 <font color='#1896dc'>MRT 捷運</font>");halfCircleTop("#1896dc");halfCircleBottom("#d91820");
+fd(7);
+label("<b>Taipei 臺北</b> <font color='#da5530'>HSR 高鐵</font> <font color='#1896dc'>MRT 捷運</font>");
+fd(1);
+thirdCircleRight("#f9bd93");thirdCircleBottom("#1896dc");thirdCircleLeft("#d91820");
+fd(3);
+label("<font color='#1896dc'>(Longshan Temple MRT 龍山寺站捷運)</font>");
+fd(2);
+halfCircleTop("#1896dc");halfCircleBottom("#d91820");
+fd(1);
+label("Wanhua 萬華");
+fd(5);
+label("Banqiao 板橋 <font color='#da5530'>HSR 高鐵</font> <font color='#1896dc'>MRT 捷運</font>");thirdCircleRight("#f9bd93");thirdCircleBottom("#1896dc");thirdCircleLeft("#d91820");
+3
+Fuzhou 浮洲
+20
+label("Shulin 樹林");circle("#d91820");
+4
+South Shulin 南樹林
+4
+Shanjia 山佳
+5
+label("Yingge 鶯歌");circle("#d91820");
+10
+lt(90);
+pu();
+dashedLine();
+fd(10);
+lt(90);
+fd(9);
+rt(90);
+fd(10);
+rt(90);
+fd(20);
+circle("#f9bd93");
+pu();
+bk(20);
+lt(90);
+bk(10);
+lt(90);
+bk(9);
+rt(90);
+bk(10);
+pd();
+rt(90);
+label("Taoyuan 桃園");circle("#d91820");
+6
+Neili 內壢
+5
+lt(90);
+pu();
+dashedLine();
+fd(20);
+lt(180);
+circle("#f9bd93");
+pu();
+bk(2);
+pd();
+label("<font color='#da5530'>Taoyuan HSR 桃園高鐵</font>");
+pu();
+fd(2);
+rt(180);
+bk(20);
+rt(90);
+pd();
+label("Zhonglì 中壢");circle("#d91820");
+6
+Puxin 埔心
+fd(2);
+lt(90);
+fd(3);
+label("Yangmei 楊梅");circle("#d91820");
+6
+Fugang 富岡
+5
+Baihwu 北湖
+4
+label("Hukou 湖口");circle("#d91820");
+6
+label("Xinfeng 新豐");circle("#d91820");
+6
+label("Zhubei 竹北");circle("#d91820");
+5
+label("North Hsinchu 北新竹");circle("#000000");
+lt(90);
+fd(4);label("Qianjia 千甲");circle();
+fd(4);label("Xinzhuang 新莊");circle();
+fd(3);label("Zhuzhong 竹中");circle("#000000");
+lt(90);
+fd(5);
+pu();
+dashedLine();
+fd(4);
+lt(90);
+fd(5);
+lt(90);
+fd(7);
+rt(90);
+fd(2);
+rt(90);
+fd(3);
+lt(90);
+fd(4);
+pu();
+bk(4);
+rt(90);
+bk(3);
+lt(90);
+bk(2);
+lt(90);
+bk(7);
+rt(90);
+bk(5);
+rt(90);
+bk(4);
+pd();
+label("Liujia 六家 <font color='#da5530'>(Hsinchu HSR 新竹高鐵)</font>");circle("#f9bd93");
+bk(5);
+rt(90);
+fd(4);label("Shangyuan 上員");circle();
+fd(6);label("Ronghua 榮華");circle();
+fd(4);label("Zhudong 竹東");circle();
+fd(5);label("Hengshan 橫山");circle();
+fd(4);label("Jiuzantou 九讚頭");circle();
+fd(4);label("Hexing 合興");circle();
+fd(3);label("Fugui 富貴");circle();
+fd(5);label("Neiwan 內灣");circle();
+pu();
+bk(46);
+rt(90);
+pd();
+4
+label("<b>Hsinchu 新竹</b>");circle("#d91820");
+4
+Sanxingqiao 三姓橋
+4
+Xiangshan 香山
+6
+Qiding 崎頂
+6
+label("Zhunan 竹南");halfCircleTop("#d91820");halfCircleBottom("#000000");
+lt(90);
+fd(6);label("Tanwen 談文");circle();
+fd(3);rt(90);fd(6);
+//label("Dashan 大山");circle();
+//fd(4);label("Houlong 後龍");circle();
+//fd(4);label("Longgang 龍港");circle();
+//fd(7);label("Baishatun 白沙屯");circle();
+//fd(4);label("Xinpu 新埔");circle();
+//fd(6);label("Tongxiao 通霄");circle();
+//fd(7);label("Yuanli 苑裡");circle();
+//fd(8);label("Rinan 日南");circle();
+//fd(6);label("Dajia 大甲");circle();
+//fd(6);label("Taichung Port 臺中港");circle();
+//fd(6);label("Qingshui 清水");circle();
+//fd(5);label("Shalu 沙鹿");circle();
+//fd(6);label("Longjing 龍井");circle();
+//fd(6);label("Dadu 大肚");circle();
+//fd(7);label("Zhuifen 追分");circle();
+//fd(4);label("Chenggong 成功");circle();
+//bk(92);
+bk(6);
+lt(90);
+bk(9);
+rt(90);
+5
+Zaoqiao 造橋
+5
+lt(90);
+pu();
+dashedLine();
+fd(4);
+rt(90);
+fd(5);
+rt(90);
+fd(4);
+pu();
+bk(4);
+lt(90);
+bk(5);
+lt(90);
+bk(4);
+rt(90);
+pd();
+label("<font color='#da5530'>(Miaoli HSR 苗栗高鐵)</font> Fengfu 豐富");circle("#f9bd93");
+5
+label("Miaoli 苗栗");circle("#d91820");
+7
+Nanshi 南勢
+5
+Tongluo 銅鑼
+7
+Sanyi 三義
+8
+Taian 泰安
+4
+label("Houli 后里");circle("#d91820");
+8
+label("Fengyuan 豐原");circle("#d91820");
+6
+Tanzi 潭子
+5
+Taiyuan 太原
+fd(4);label("<b>Taichung 臺中</b>");fd(1);circle("#d91820");
+fd(3);label("Daqing 大慶");fd(1);circle();
+fd(2);label("Wuri 烏日");fd(1);circle();
+2
+label("<font color='#da5530'>(Taichung HSR 台中高鐵)</font> Xinwuri 新烏日");halfCircleTop("#f9bd93");halfCircleBottom("#d91820");
+4
+label("Chenggong 成功");circle("#000000");
+lt(90);
+fd(4);label("Zhuifen 追分");circle();
+fd(5);lt(90);fd(2);label("Dadu 大肚");circle("#d91820");
+fd(6);label("Longjing 龍井");circle();
+fd(6);label("Shalu 沙鹿");circle("#d91820");
+fd(5);label("Qingshui 清水");circle("#d91820");
+fd(6);label("Taichung Port 臺中港");circle();
+fd(6);label("Dajia 大甲");circle("#d91820");
+fd(6);label("Rinan 日南");circle();
+fd(8);label("Yuanli 苑裡");circle("#d91820");
+fd(7);label("Tongxiao 通霄");circle("#d91820");
+fd(6);label("Xinpu 新埔");circle();
+fd(4);label("Baishatun 白沙屯");circle("#d91820");
+fd(7);label("Longgang 龍港");circle();
+fd(4);label("Houlong 後龍");circle("#d91820");
+fd(4);label("Dashan 大山");circle();
+//fd(9);label("Tanwen 談文");circle();
+//fd(6);label("Zhunan 竹南");circle();
+//bk(92);
+bk(77);
+rt(90);
+bk(9);
+rt(90);
+8
+label("Changhua 彰化");circle("#d91820");
+7
+Huatan 花壇
+4
+Dacun 大村
+4
+label("Yuanlin 員林");circle("#d91820");
+4
+Yongjing 永靖
+4
+label("Shetou 社頭");circle("#d91820");
+5
+lt(90);
+pu();
+dashedLine();
+fd(30);
+lt(90);
+label("<font color='#da5530'>Changhua HSR 彰化高鐵</font>");circle("#f9bd93");
+rt(90);
+pu();
+bk(30);
+rt(90);
+pd();
+label("Tianzhong 田中");circle("#d91820");
+19
+label("Ershui 二水");halfCircleBottom("#000000");halfCircleTop("#d91820");
+lt(90);
+fd(4);label("Yuanquan 源泉");circle();
+fd(9);label("Zhuoshui 濁水");circle();
+fd(7);label("Longquan 龍泉");circle();
+fd(7);label("Jiji 集集");circle();
+fd(11);label("Shuili 水里");circle();
+fd(5);label("Checheng 車埕");circle();
+bk(43);
+rt(90);
+7
+label("Linnei 林內");circle("#d91820");
+4
+Shiliu 石榴
+5
+label("Douliu 斗六");circle("#d91820");
+8
+lt(90);
+pu();
+dashedLine();
+fd(15);
+rt(90);
+fd(15);
+lt(90);
+fd(15);
+lt(90);
+label("<font color='#da5530'>Yunlin HSR 雲林高鐵</font>");circle("#f9bd93");
+pu();
+rt(90);
+bk(15);
+rt(90);
+bk(15);
+lt(90);
+bk(15);
+rt(90);
+pd();
+label("Dounan 斗南");circle("#d91820");
+4
+Shigui 石龜
+5
+label("Dalin 大林");circle("#d91820");
+6
+label("Minxiong 民雄");circle("#d91820");
+5
+Jiabei 嘉北
+4
+lt(90);
+pu();
+dashedLine();
+fd(2);
+lt(90);
+fd(4);
+rt(90);
+fd(24);
+lt(90);
+label("<font color='#da5530'>Chiayi HSR 嘉義高鐵</font>");circle("#f9bd93");
+rt(90);
+pu();
+bk(24);
+lt(90);
+bk(4);
+rt(90);
+bk(2);
+pd();
+6Beimen 北門30Jhuci 竹崎26Jhangnaoliao 樟腦寮12Dulishan 獨立山12Liyuanliao 梨園寮10Jiaoliping 交力坪16Shueisheliao 水社寮16Fenqihu 奮起湖
+pu();
+bk(128);
+rt(90);
+pd();
+label("Chiayi 嘉義");circle("#d91820");
+6
+Shuishang 水上
+4
+Nanjing 南靖
+6
+Houbi 後壁
+7
+label("Xinying 新營");circle("#d91820");
+4
+Liuying 柳營
+5
+Linfengying 林鳳營
+6
+label("Longtian 隆田");circle("#d91820");
+3
+Balin 拔林
+4
+label("Shanhua 善化");circle("#d91820");
+3
+Nanke 南科
+4
+label("Xinshi 新市");circle("#d91820");
+fd(3);
+lt(90);
+fd(3);
+label("Yongkang 永康");circle("#d91820");
+4
+Daqiao 大橋
+4
+label("<b>Tainan 臺南</b>");circle("#d91820");
+8
+Baoan 保安
+3
+Rende 仁德
+4
+label("Zhongzhou 中洲");circle("#000000");
+lt(90);
+fd(4);label("Chang Jung Christian University 長榮大學");circle();
+fd(5);
+lt(90);
+pu();
+dashedLine();
+fd(7);
+lt(90);
+fd(9);
+circle();
+pu();
+bk(9);
+rt(90);
+bk(7);
+rt(90);
+dashedLine();
+fd(16);
+lt(90);
+fd(19);
+lt(90);
+fd(25);
+circle();
+pu();
+bk(25);
+rt(90);
+bk(19);
+rt(90);
+bk(16);
+label("Shalun 沙崙 <font color='#da5530'>(Tainan HSR 台南高鐵)</font>");circle("#f9bd93");
+bk(9);
+rt(90);
+pd();
+5
+label("Dahu 大湖");circle("#d91820");
+4
+label("Luzhu 路竹");circle("#d91820");
+fd(8);
+label("Gangshan 岡山");
+fd(1);
+circle("#d91820");
+fd(2);
+label("<font color='#1896dc'>(Ciaotou Sugar Refinery MRT)</font>");
+fd(3);
+label("Qiaotou 橋頭 <font color='#1896dc'>捷運</font>");circle("#1896dc");
+3
+label("Nanzi 楠梓");circle("#d91820");
+4
+label("<font color='#da5530'>(Zuoying HSR</font> <font color='#1896dc'>MRT</font><font color='#da5530'> 左營高鐵</font> <font color='#1896dc'>捷運</font><font color='#da5530'>)</font>");
+2
+fd(1);label("Xinzuoying 新左營");bk(1);thirdCircleRight("#f9bd93");thirdCircleBottom("#1896dc");thirdCircleLeft("#d91820");
+4
+fd(1);label("Zuoying 左營");bk(1);circle();
+9
+label("<b>Kaohsiung 高雄</b> <font color='#1896dc'>MRT 捷運</font>");halfCircleTop("#1896dc");halfCircleBottom("#d91820");
+8
+label("Fengshan 鳳山");circle("#d91820");
+3
+Houzhuang 後庄
+5
+label("Jiuqutang 九曲堂");circle("#d91820");
+5
+Liukuaicuo 六塊厝
+4
+label("Pingtung 屏東");circle("#d91820");
+3
+Guilai 歸來
+3
+Linluo 麟洛
+3
+label("Xishi 西勢");circle("#d91820");
+4
+Zhutian 竹田
+19
+label("Chaozhou 潮州");circle("#d91820");
+6
+Kanding 崁頂
+6
+label("Nanzhou 南州");circle("#d91820");
+5
+Zhenan 鎮安
+6
+label("Linbian 林邊");circle("#d91820");
+6
+Jiadong 佳冬
+6
+Donghai 東海
+7
+label("Fangliao 枋寮");circle("#d91820");
+7
+Jialu 加祿
+5
+Neishi 內獅
+6
+Fangshan 枋山
+32
+Guzhuang 古莊
+5
+label("Dawu 大武");circle("#d91820");
+12
+label("Longxi 瀧溪");circle("#d91820");
+fd(7);
+lt(90);
+fd(3);
+label("Jinlun 金崙");circle("#d91820");
+12
+label("Taimali 太麻里");circle("#d91820");
+12
+label("Zhiben 知本");circle("#d91820");
+10
+label("Kangle 康樂");circle("#d91820");
+7
+label("<b>Taitung 臺東</b>");circle("#d91820");
+9
+Shanli 山里
+7
+label("Luye 鹿野");circle("#d91820");
+7
+label("Ruiyuan 瑞源");circle("#d91820");
+4
+Ruihe 瑞和
+8
+label("Guanshan 關山");circle("#d91820");
+9
+Haiduan 海端
+8
+label("Chishang 池上");circle("#d91820");
+8
+label("Fuli 富里");circle("#d91820");
+7
+label("Dongzhu 東竹");circle("#d91820");
+7
+label("Dongli 東里");circle("#d91820");
+8
+label("Yuli 玉里");circle("#d91820");
+11
+Sanmin 三民
+14
+label("Ruisui 瑞穗");circle("#d91820");
+10
+label("Fuyuan 富源");circle("#d91820");
+4
+Dafu 大富
+8
+label("Guangfu 光復");circle("#d91820");
+7
+label("Wanrong 萬榮");circle("#d91820");
+8
+label("Fenglin 鳳林");circle("#d91820");
+6
+Nanping 南平
+8
+label("Fengtian 豐田");circle("#d91820");
+5
+label("Shoufeng 壽豐");circle("#d91820");
+3
+Pinghe 平和
+5
+label("Zhixue 志學");circle("#d91820");
+11
+label("Jian 吉安");circle("#d91820");
+6
+label("Hualien 花蓮");circle("#d91820");
+6
+label("Beipu 北埔");circle("#d91820");
+5
+Jingmei 景美
+5
+label("Xincheng 新城");circle("#d91820");
+4
+Chongde 崇德
+8
+label("Heren 和仁");circle("#d91820");
+8
+label("Heping 和平");circle("#d91820");
+5
+Hanben 漢本
+9
+Wuta 武塔
+4
+label("Nanao 南澳");circle("#d91820");
+8
+label("Dongao 東澳");circle("#d91820");
+6
+lt(90);
+Yongle 永樂
+6
+label("Suaoxin 蘇澳新");halfCircleBottom("#000000");halfCircleTop("#d91820");
+lt(90);
+fd(5);label("Suao 蘇澳");circle("#d91820");
+bk(5);
+rt(90);
+2
+circle();
+fd(1);
+label("Xinma 新馬");
+fd(4);
+label("Dongshan 冬山");circle("#d91820");
+7
+label("Luodong 羅東");circle("#d91820");
+3
+Zhonglǐ 中里
+2
+circle();
+fd(1);
+label("Erjie 二結");
+fd(5);
+label("Yilan 宜蘭");circle("#d91820");
+4
+Sicheng 四城
+5
+label("Jiaoxi 礁溪");circle("#d91820");
+5
+Dingpu 頂埔
+4
+label("Toucheng 頭城");circle("#d91820");
+4
+Waiao 外澳
+5
+Guishan 龜山
+5
+Daxi 大溪
+6
+Dali 大里
+4
+Shicheng 石城
+6
+label("Fulong 福隆");circle("#d91820");
+5
+label("Gongliao 貢寮");circle("#d91820");
+7
+label("Shuangxi 雙溪");circle("#d91820");
+5
+Mudan 牡丹
+5
+label("Sandiaoling 三貂嶺");circle("#000000");
+lt(90);
+fd(8);rt(180);label("Dahua 大華");circle();lt(180);
+fd(7);rt(180);label("Shifen 十分");circle();lt(180);
+fd(4);rt(180);label("Wanggu 望古");circle();lt(180);
+fd(5);rt(180);fd(1);label("Lingjiao 嶺腳");bk(1);circle();lt(180);
+fd(3);rt(180);label("Pingxi 平溪");circle();lt(180);
+fd(4);rt(180);label("Jingtong 菁桐");circle();lt(180);
+bk(31);
+rt(90);
+5
+label("Houtong 猴硐");circle("#d91820");
+7
+lt(90);
+fd(10);
+pu();
+fd(1);label("Haikeguan");bk(1);
+fd(5);label("(NMMST) 海科館");bk(5);
+pd();
+circle();
+bk(10);
+rt(90);
+label("Ruifang 瑞芳");circle("#d91820");
+7
+Sijiaoting 四腳亭
+4
+Nuannuan 暖暖
+9
+lt(90);
+pu();
+fd(40);
+rt(90);
+fd(40);
+pd();
+rt(90);
+label("<img src=\"images/tra.png\">");
+pu();bk(125);lt(90);bk(25);rt(90);pd();
+label("<font size=96px><b>TRA Map 臺鐵地圖</b></font>");
+pu();bk(20);pd();
+label("Peter Burkimsher 林台平");
+pu();bk(5);pd();
+label("2016-10-28");
+pu();bk(5);pd();
+label("http://peterburk.github.com/tra/");
+pu();bk(8);pd();
+circle("#000000");pu();fd(1);rt(90);fd(1);lt(90);pd();label("Transfer station 轉乘站");pu();rt(90);bk(1);lt(90);bk(1);
+bk(5);pd();
+circle("#d91820");pu();fd(1);rt(90);fd(1);lt(90);pd();label("Express 莒光");pu();rt(90);bk(1);lt(90);bk(1);
+bk(5);pd();
+circle("#f9bd93");pu();fd(1);rt(90);fd(1);lt(90);pd();label("HSR 高鐵");pu();rt(90);bk(1);lt(90);bk(1);
+bk(5);pd();
+circle("#1896dc");pu();fd(1);rt(90);fd(1);lt(90);pd();label("MRT 捷運");pu();rt(90);bk(1);lt(90);bk(1);
+bk(5);rt(90);bk(7);
+dashedLine();
+fd(7);
+pu();
+lt(90);
+pu();fd(1);rt(90);fd(1);lt(90);pd();label("HSR shuttle bus 高鐵快捷公車");pu();rt(90);bk(1);lt(90);bk(1);
+bk(5);rt(90);bk(4);
+pd();
+rt(90);fd(1);bk(1);lt(90);fd(1);rt(90);fd(1);bk(1);lt(90);fd(1);rt(90);fd(1);bk(1);lt(90);fd(1);rt(90);fd(1);bk(1);lt(90);fd(1);rt(90);fd(1);bk(1);lt(90);
+pu();
+lt(90);
+pu();fd(1);rt(90);fd(1);lt(90);pd();label("5 mins 五分");pu();rt(90);bk(1);lt(90);bk(1);
