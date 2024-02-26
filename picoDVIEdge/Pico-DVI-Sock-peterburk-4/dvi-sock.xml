@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/peter/Desktop/Pico-DVI-Sock-master/Pico-DVI-Sock-peterburk-4/dvi-sock.kicad_sch</source>
+    <date>Sunday, February 18, 2024 at 10:08:50 PM</date>
+    <tool>Eeschema 7.0.10</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Pico DVI Sock (or Shim, or something, idk what to call it)</title>
+        <company>Luke Wren</company>
+        <rev>A</rev>
+        <date>2021-02-02</date>
+        <source>dvi-sock.kicad_sch</source>
+        <comment number="1" value="and stick the board into a breadboard. Micro-USB one end, video the other end."/>
+        <comment number="2" value="low-profile on the bottom, so you can fit headers to the remaining Pico I/O pins"/>
+        <comment number="3" value="DMI (the H is silent) connector onto the end opposite the micro-USB. It's pretty "/>
+        <comment number="4" value="The raspberry end of a RPi Pico is surface mounted onto this board, to fit a"/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>Conn_01x05</value>
+      <footprint>dvi-sock:castellated_2.54mm_smd_x5</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48557612-ccea-4adc-8c5a-57a8d08b6b1d</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x05</value>
+      <footprint>dvi-sock:castellated_2.54mm_smd_x5</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6204cd4f-6f23-4a40-aa3e-d0d1b71d2dae</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x03</value>
+      <footprint>dvi-sock:castellated_2.54mm_smd_x3</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39177b7a-4f12-4234-a226-be4653ad45a9</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>2.54mm_2p_nofit</value>
+      <footprint>dvi-sock:PinHeader_1x02_P2.54mm_Vertical_nosilk</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>75fbad22-fe4b-42cd-9207-f22e60e2566f</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>215e3696-90fa-4df6-be1b-c3ad13561ccd</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f93768cb-f1c3-41b2-92e1-c3d1424b593f</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6dbdebac-27f4-48bc-8359-29312b3fa29d</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>caddb1d5-92cf-4f40-840f-073edfce8dfb</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>763d41a5-4d92-4e1e-95fd-13b8ba3b26c4</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>33e90045-da2b-49bd-a35d-fde1c2ddd884</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4d92403c-fc92-4486-84a0-1292f9fa268d</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>887799b5-c76a-40f2-af6f-6a5dd0c66804</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>~</value>
+      <footprint>hdmiFemale:hdmiFemale</footprint>
+      <libsource lib="hdmifemalesymbol" part="hdmiFemaleSymbol" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="dvi-sock.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c2e21c16-efd0-4c31-97c8-1f9d6cc95bdd</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x05">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hdmifemalesymbol" part="hdmiFemaleSymbol">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Footprint">HdmiLibrary:hdmiFemale</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TDMS_Channel_2+" type="bidirectional"/>
+        <pin num="2" name="TDMS_Channel_2_Ground" type="power_in"/>
+        <pin num="3" name="TDMS_Channel_2-" type="bidirectional"/>
+        <pin num="4" name="TDMS_Channel_1+" type="bidirectional"/>
+        <pin num="5" name="TDMS_Channel_1_Ground" type="power_in"/>
+        <pin num="6" name="TDMS_Channel_1-" type="bidirectional"/>
+        <pin num="7" name="TDMS_Channel_0+" type="bidirectional"/>
+        <pin num="8" name="TDMS_Channel_0_Ground" type="power_in"/>
+        <pin num="9" name="TDMS_Channel_0-" type="bidirectional"/>
+        <pin num="10" name="TDMS_Clock+" type="bidirectional"/>
+        <pin num="11" name="TDMS_Clock_Ground" type="power_in"/>
+        <pin num="12" name="TDMS_Clock-" type="bidirectional"/>
+        <pin num="13" name="CEC" type="bidirectional"/>
+        <pin num="14" name="HEAC-" type="bidirectional"/>
+        <pin num="15" name="DDC_1" type="bidirectional"/>
+        <pin num="16" name="DDC_2" type="bidirectional"/>
+        <pin num="17" name="DDC_CEC_Ground" type="power_in"/>
+        <pin num="18" name="+5V_Power" type="power_in"/>
+        <pin num="19" name="HEAC+" type="bidirectional"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="hdmifemalesymbol">
+      <uri>/Users/peter/Desktop/Pico-DVI-Sock-master/Pico-DVI-Sock-peterburk/hdmifemalesymbol.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="+5V_Power" pintype="power_in"/>
+    </net>
+    <net code="2" name="/CK+">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="TDMS_Clock+" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="/CK-">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="TDMS_Clock-" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/D0+">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="TDMS_Channel_0+" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/D0-">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="TDMS_Channel_0-" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/D1+">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="TDMS_Channel_1+" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/D1-">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="TDMS_Channel_1-" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/D2+">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="TDMS_Channel_2+" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/D2-">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="TDMS_Channel_2-" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/PICO_CK+">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="11" name="/PICO_CK-">
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/PICO_D0+">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/PICO_D0-">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/PICO_D1+">
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="/PICO_D1-">
+      <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/PICO_D2+">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="/PICO_D2-">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="GND">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="TDMS_Clock_Ground" pintype="power_in"/>
+      <node ref="U1" pin="17" pinfunction="DDC_CEC_Ground" pintype="power_in"/>
+      <node ref="U1" pin="2" pinfunction="TDMS_Channel_2_Ground" pintype="power_in"/>
+      <node ref="U1" pin="5" pinfunction="TDMS_Channel_1_Ground" pintype="power_in"/>
+      <node ref="U1" pin="8" pinfunction="TDMS_Channel_0_Ground" pintype="power_in"/>
+    </net>
+    <net code="19" name="unconnected-(J3-Pin_1-Pad1)">
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(J3-Pin_3-Pad3)">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(U1-CEC-Pad13)">
+      <node ref="U1" pin="13" pinfunction="CEC" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U1-DDC_1-Pad15)">
+      <node ref="U1" pin="15" pinfunction="DDC_1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U1-DDC_2-Pad16)">
+      <node ref="U1" pin="16" pinfunction="DDC_2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U1-HEAC+-Pad19)">
+      <node ref="U1" pin="19" pinfunction="HEAC+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U1-HEAC--Pad14)">
+      <node ref="U1" pin="14" pinfunction="HEAC-" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>
