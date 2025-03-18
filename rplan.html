@@ -166,7 +166,7 @@
 			
 			var rplanOffset = prefsLines[3];
 			
-			var rplanIndex = parseInt(rplanOffset) + parseInt(daysDifference) + 27;
+			var rplanIndex = (parseInt(rplanOffset) + parseInt(daysDifference)) * 2 + 10;
 			var rplanLines = readingPlan.split("\n");
 			
 			var rplanChapter = rplanLines[rplanIndex];
