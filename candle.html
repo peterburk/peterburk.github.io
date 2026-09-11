@@ -198,7 +198,7 @@
             alt="Smoke"
         >
 
-        <button id="startButton">
+        <button id="startButton" style="visibility:hidden">
             Start microphone
         </button>
 
@@ -293,37 +293,255 @@
             return Math.sqrt(sum / data.length);
         }
 
+/*
+ * ---------------------------------------------------------
+ * BLOW DETECTION
+ * ---------------------------------------------------------
+ *
+ * The algorithm maintains a rolling 1-second history of
+ * microphone volume.
+ *
+ * A blow is detected when:
+ *
+ *     current volume > ambient average × BLOW_RATIO
+ *
+ * and this condition remains true for at least 200 ms.
+ *
+ * This makes the detector respond to a sudden increase
+ * rather than simply responding to loud sounds.
+ */
+
+
+/*
+ * Configuration
+ */
+const AVERAGE_PERIOD = 1000;   // 1 second
+const BLOW_DURATION = 200;     // 200 milliseconds
+
+/*
+ * How much louder than the ambient average the sound
+ * must become before we consider it a possible blow.
+ *
+ * 2.0 means:
+ *
+ *     current volume > 2 × average volume
+ *
+ * Increase this to make blow detection harder.
+ */
+const BLOW_RATIO = 2.0;
+
+
+/*
+ * Volume samples.
+ *
+ * Each entry has:
+ *
+ * {
+ *     volume: Number,
+ *     time: Number
+ * }
+ */
+let volumeHistory = [];
+
+
+/*
+ * Time at which the current possible blow started.
+ *
+ * null means that we are not currently detecting
+ * a possible blow.
+ */
+let possibleBlowStart = null;
+
+
+/*
+ * Calculate the current microphone volume.
+ */
+function getVolume() {
+
+    const data =
+        new Uint8Array(analyser.fftSize);
+
+    analyser.getByteTimeDomainData(data);
+
+    let sum = 0;
+
+    for (let i = 0; i < data.length; i++) {
 
         /*
-         * Watch the microphone for a blow.
+         * Convert the microphone sample from
+         * 0...255 to approximately -1...+1.
          */
-        function detectBlow() {
+        const value =
+            (data[i] - 128) / 128;
 
-            if (candleBlownOut) {
-                return;
-            }
+        sum += value * value;
+    }
 
-            const volume = getVolume();
+    /*
+     * RMS volume.
+     */
+    return Math.sqrt(sum / data.length);
+}
+
+
+/*
+ * Add a volume measurement to the rolling history.
+ */
+function addVolumeSample(volume) {
+
+    const now = performance.now();
+
+    volumeHistory.push({
+        volume: volume,
+        time: now
+    });
+
+    /*
+     * Remove samples older than 1 second.
+     */
+    const oldestAllowed =
+        now - AVERAGE_PERIOD;
+
+    while (
+        volumeHistory.length > 0 &&
+        volumeHistory[0].time < oldestAllowed
+    ) {
+        volumeHistory.shift();
+    }
+}
+
+
+/*
+ * Calculate the average volume over the previous
+ * one second.
+ *
+ * IMPORTANT:
+ *
+ * We exclude the most recent sample from the
+ * ambient average. This prevents the loud blow
+ * itself from immediately raising the baseline.
+ */
+function getAmbientAverage() {
+
+    if (volumeHistory.length < 2) {
+        return 0;
+    }
+
+    const newestTime =
+        volumeHistory[volumeHistory.length - 1].time;
+
+    let sum = 0;
+    let count = 0;
+
+    for (let i = 0; i < volumeHistory.length; i++) {
+
+        /*
+         * Exclude the newest sample.
+         */
+        if (
+            volumeHistory[i].time <
+            newestTime
+        ) {
+
+            sum += volumeHistory[i].volume;
+            count++;
+        }
+    }
+
+    if (count === 0) {
+        return 0;
+    }
+
+    return sum / count;
+}
+
+/*
+ * Detect a sudden increase in volume.
+ */
+function detectBlow() {
+
+    if (candleBlownOut) {
+        return;
+    }
+
+    const now = performance.now();
+
+    /*
+     * Measure the current volume.
+     */
+    const currentVolume = getVolume();
+
+    /*
+     * Add it to our rolling 1-second history.
+     */
+    addVolumeSample(currentVolume);
+
+    /*
+     * Calculate the ambient volume.
+     */
+    const ambientAverage =
+        getAmbientAverage();
+
+
+    /*
+     * Don't attempt detection until we have
+     * approximately 1 second of background data.
+     */
+    if (volumeHistory.length > 5) {
+
+        /*
+         * Determine whether the current sound is
+         * significantly louder than the ambient level.
+         */
+        const suddenIncrease =
+            currentVolume >
+            ambientAverage * BLOW_RATIO;
+
+
+        if (suddenIncrease) {
 
             /*
-             * Adjust this value to make the candle
-             * easier or harder to blow out.
-             *
-             * Lower = more sensitive
-             * Higher = less sensitive
+             * A possible blow has started.
              */
-            const BLOW_THRESHOLD = 0.18;
+            if (possibleBlowStart === null) {
 
-            if (volume > BLOW_THRESHOLD) {
+                possibleBlowStart = now;
+            }
+
+
+            /*
+             * Has the increase lasted for at least
+             * 200 milliseconds?
+             */
+            const duration =
+                now - possibleBlowStart;
+
+
+            if (duration >= BLOW_DURATION) {
 
                 blowOutCandle();
 
                 return;
             }
 
-            animationFrame =
-                requestAnimationFrame(detectBlow);
+        } else {
+
+            /*
+             * The sound dropped back toward ambient
+             * levels, so cancel the possible blow.
+             */
+            possibleBlowStart = null;
         }
+    }
+
+
+    /*
+     * Continue monitoring.
+     */
+    animationFrame =
+        requestAnimationFrame(detectBlow);
+}
+
 
 
         /*
@@ -385,7 +603,7 @@
             startMicrophone
         );
         
-        //document.getElementById("startButton").click();
+        document.getElementById("startButton").click();
     </script>
 
 </body>
