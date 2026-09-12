@@ -214,148 +214,184 @@
         let audioContext;
         let analyser;
         let microphone;
-        let animationFrame;
-
-        let candleBlownOut = false;
-
-        /*
-         * Start microphone
-         */
-        async function startMicrophone() {
-
-            try {
-
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    audio: true
-                });
-
-                audioContext = new (
-                    window.AudioContext ||
-                    window.webkitAudioContext
-                )();
-
-                analyser = audioContext.createAnalyser();
-
-                /*
-                 * Smaller FFT size gives us a simple,
-                 * responsive measurement of the sound level.
-                 */
-                analyser.fftSize = 512;
-
-                microphone =
-                    audioContext.createMediaStreamSource(stream);
-
-                microphone.connect(analyser);
-
-                startButton.classList.add("hidden");
-
-                message.textContent =
-                    "";
-
-                detectBlow();
-
-            } catch (error) {
-
-                console.error(
-                    "Could not access microphone:",
-                    error
-                );
-
-                message.textContent =
-                    "Please allow microphone access.";
-            }
-        }
-
-
-        /*
-         * Calculate the current microphone volume.
-         */
-        function getVolume() {
-
-            const data =
-                new Uint8Array(analyser.fftSize);
-
-            analyser.getByteTimeDomainData(data);
-
-            let sum = 0;
-
-            for (let i = 0; i < data.length; i++) {
-
-                /*
-                 * Audio data is centred around 128.
-                 */
-                const value =
-                    (data[i] - 128) / 128;
-
-                sum += value * value;
-            }
-
-            return Math.sqrt(sum / data.length);
-        }
 
 /*
- * ---------------------------------------------------------
- * BLOW DETECTION
- * ---------------------------------------------------------
+ * =========================================================
+ * FREQUENCY-AWARE BLOW DETECTION
+ * =========================================================
  *
- * The algorithm maintains a rolling 1-second history of
- * microphone volume.
+ * This detector combines:
  *
- * A blow is detected when:
+ *  1. A 1-second moving average of volume
+ *  2. Sudden increase in volume
+ *  3. Frequency analysis
+ *  4. A 200 ms confirmation period
  *
- *     current volume > ambient average × BLOW_RATIO
+ * The idea is to detect:
  *
- * and this condition remains true for at least 200 ms.
+ *       sudden + sustained + breath-like sound
  *
- * This makes the detector respond to a sudden increase
- * rather than simply responding to loud sounds.
+ * rather than simply:
+ *
+ *       loud sound
  */
 
 
 /*
- * Configuration
+ * ---------------------------------------------------------
+ * SETTINGS
+ * ---------------------------------------------------------
  */
-const AVERAGE_PERIOD = 1000;   // 1 second
-const BLOW_DURATION = 200;     // 200 milliseconds
 
 /*
- * How much louder than the ambient average the sound
- * must become before we consider it a possible blow.
+ * Length of the ambient-volume moving average.
+ */
+const AVERAGE_PERIOD = 1000;
+
+
+/*
+ * The volume must remain above the ambient
+ * level for this long before we extinguish
+ * the candle.
+ */
+const BLOW_DURATION = 200;
+
+
+/*
+ * How much louder the sound must be than
+ * the ambient average.
  *
- * 2.0 means:
- *
- *     current volume > 2 × average volume
- *
- * Increase this to make blow detection harder.
+ * 2.0 = twice the ambient volume.
  */
 const BLOW_RATIO = 2.0;
 
 
 /*
- * Volume samples.
+ * Frequency range used for detecting airflow.
  *
- * Each entry has:
+ * These are deliberately fairly broad ranges.
  *
- * {
- *     volume: Number,
- *     time: Number
- * }
+ * Blowing produces a broad spectrum of noise,
+ * rather than the strong harmonic peaks normally
+ * associated with singing or speech.
  */
+const LOW_FREQUENCY = 100;
+const HIGH_FREQUENCY = 4000;
+
+
+/*
+ * Minimum amount of spectral energy that must
+ * exist in the selected frequency range.
+ */
+const MIN_SPECTRAL_ENERGY = 0.10;
+
+
+/*
+ * How "flat" the spectrum should be.
+ *
+ * Speech and singing tend to have strong
+ * frequency peaks (harmonics).
+ *
+ * A breath/blow tends to be more noise-like,
+ * producing energy across many frequencies.
+ */
+const MIN_SPECTRAL_FLATNESS = 0.18;
+
+
+/*
+ * ---------------------------------------------------------
+ * STATE
+ * ---------------------------------------------------------
+ */
+
 let volumeHistory = [];
 
-
-/*
- * Time at which the current possible blow started.
- *
- * null means that we are not currently detecting
- * a possible blow.
- */
 let possibleBlowStart = null;
 
+let candleBlownOut = false;
+
+let animationFrame;
+
 
 /*
- * Calculate the current microphone volume.
+ * ---------------------------------------------------------
+ * MICROPHONE SETUP
+ * ---------------------------------------------------------
  */
+
+async function startMicrophone() {
+
+    try {
+
+        const stream =
+            await navigator.mediaDevices.getUserMedia({
+                audio: {
+                    echoCancellation: false,
+                    noiseSuppression: false,
+                    autoGainControl: false
+                }
+            });
+
+
+        audioContext = new (
+            window.AudioContext ||
+            window.webkitAudioContext
+        )();
+
+
+        /*
+         * Analyser configuration.
+         *
+         * fftSize controls the number of samples
+         * used for frequency analysis.
+         */
+        analyser = audioContext.createAnalyser();
+
+        analyser.fftSize = 1024;
+
+        /*
+         * Smooth the frequency measurements slightly.
+         */
+        analyser.smoothingTimeConstant = 0.2;
+
+
+        microphone =
+            audioContext.createMediaStreamSource(stream);
+
+        microphone.connect(analyser);
+
+
+        startButton.classList.add("hidden");
+
+        message.textContent =
+            "Blow into the microphone to extinguish the candle!";
+
+
+        /*
+         * Start the detection loop.
+         */
+        detectBlow();
+
+
+    } catch (error) {
+
+        console.error(
+            "Could not access microphone:",
+            error
+        );
+
+        message.textContent =
+            "Please allow microphone access.";
+    }
+}
+
+
+/*
+ * ---------------------------------------------------------
+ * TIME-DOMAIN VOLUME
+ * ---------------------------------------------------------
+ */
+
 function getVolume() {
 
     const data =
@@ -365,11 +401,12 @@ function getVolume() {
 
     let sum = 0;
 
+
     for (let i = 0; i < data.length; i++) {
 
         /*
-         * Convert the microphone sample from
-         * 0...255 to approximately -1...+1.
+         * Convert 0...255 into approximately
+         * -1...+1.
          */
         const value =
             (data[i] - 128) / 128;
@@ -377,49 +414,53 @@ function getVolume() {
         sum += value * value;
     }
 
+
     /*
      * RMS volume.
      */
-    return Math.sqrt(sum / data.length);
+    return Math.sqrt(
+        sum / data.length
+    );
 }
 
 
 /*
- * Add a volume measurement to the rolling history.
+ * ---------------------------------------------------------
+ * MOVING AVERAGE
+ * ---------------------------------------------------------
  */
+
 function addVolumeSample(volume) {
 
-    const now = performance.now();
+    const now =
+        performance.now();
+
 
     volumeHistory.push({
         volume: volume,
         time: now
     });
 
+
     /*
-     * Remove samples older than 1 second.
+     * Keep only the last 1 second.
      */
     const oldestAllowed =
         now - AVERAGE_PERIOD;
+
 
     while (
         volumeHistory.length > 0 &&
         volumeHistory[0].time < oldestAllowed
     ) {
+
         volumeHistory.shift();
     }
 }
 
 
 /*
- * Calculate the average volume over the previous
- * one second.
- *
- * IMPORTANT:
- *
- * We exclude the most recent sample from the
- * ambient average. This prevents the loud blow
- * itself from immediately raising the baseline.
+ * Calculate the ambient average.
  */
 function getAmbientAverage() {
 
@@ -427,111 +468,388 @@ function getAmbientAverage() {
         return 0;
     }
 
-    const newestTime =
-        volumeHistory[volumeHistory.length - 1].time;
 
     let sum = 0;
     let count = 0;
 
-    for (let i = 0; i < volumeHistory.length; i++) {
 
-        /*
-         * Exclude the newest sample.
-         */
-        if (
-            volumeHistory[i].time <
-            newestTime
-        ) {
+    /*
+     * Do not include the newest sample.
+     *
+     * This prevents a blow from immediately
+     * increasing its own baseline.
+     */
+    for (
+        let i = 0;
+        i < volumeHistory.length - 1;
+        i++
+    ) {
 
-            sum += volumeHistory[i].volume;
-            count++;
-        }
+        sum += volumeHistory[i].volume;
+
+        count++;
     }
+
 
     if (count === 0) {
         return 0;
     }
 
+
     return sum / count;
 }
 
+
 /*
- * Detect a sudden increase in volume.
+ * ---------------------------------------------------------
+ * FREQUENCY ANALYSIS
+ * ---------------------------------------------------------
+ *
+ * Returns information about the frequency spectrum.
  */
+function analyseFrequencies() {
+
+    /*
+     * Frequency data is expressed in decibels,
+     * from approximately -100 dB to 0 dB.
+     */
+    const frequencyData =
+        new Float32Array(
+            analyser.frequencyBinCount
+        );
+
+
+    analyser.getFloatFrequencyData(
+        frequencyData
+    );
+
+
+    /*
+     * Frequency represented by each FFT bin.
+     */
+    const frequencyPerBin =
+        audioContext.sampleRate /
+        analyser.fftSize;
+
+
+    let totalEnergy = 0;
+
+    let selectedEnergy = 0;
+
+
+    /*
+     * Calculate energy distribution.
+     */
+    for (
+        let i = 0;
+        i < frequencyData.length;
+        i++
+    ) {
+
+        const frequency =
+            i * frequencyPerBin;
+
+
+        /*
+         * Ignore frequencies outside our
+         * selected range.
+         */
+        if (
+            frequency < LOW_FREQUENCY ||
+            frequency > HIGH_FREQUENCY
+        ) {
+            continue;
+        }
+
+
+        /*
+         * Convert dB into linear magnitude.
+         */
+        const magnitude =
+            Math.pow(
+                10,
+                frequencyData[i] / 20
+            );
+
+
+        const energy =
+            magnitude * magnitude;
+
+
+        selectedEnergy += energy;
+
+        totalEnergy += energy;
+    }
+
+
+    /*
+     * Proportion of energy in the selected
+     * frequency band.
+     */
+    let spectralEnergyRatio = 0;
+
+
+    if (totalEnergy > 0) {
+
+        spectralEnergyRatio =
+            selectedEnergy /
+            totalEnergy;
+    }
+
+
+    /*
+     * -----------------------------------------------------
+     * SPECTRAL FLATNESS
+     * -----------------------------------------------------
+     *
+     * Spectral flatness measures how noise-like
+     * the sound is.
+     *
+     * A value closer to 1 means:
+     *
+     *     noise-like / flat spectrum
+     *
+     * A low value means:
+     *
+     *     strong peaks / tonal sound
+     *
+     * Singing generally has strong harmonic peaks,
+     * whereas blowing is more noise-like.
+     */
+
+    let logSum = 0;
+    let arithmeticSum = 0;
+    let binCount = 0;
+
+
+    for (
+        let i = 0;
+        i < frequencyData.length;
+        i++
+    ) {
+
+        const frequency =
+            i * frequencyPerBin;
+
+
+        if (
+            frequency < LOW_FREQUENCY ||
+            frequency > HIGH_FREQUENCY
+        ) {
+            continue;
+        }
+
+
+        const magnitude =
+            Math.pow(
+                10,
+                frequencyData[i] / 20
+            );
+
+
+        /*
+         * Prevent log(0).
+         */
+        const safeMagnitude =
+            Math.max(
+                magnitude,
+                0.000001
+            );
+
+
+        logSum +=
+            Math.log(safeMagnitude);
+
+        arithmeticSum +=
+            magnitude;
+
+        binCount++;
+    }
+
+
+    let spectralFlatness = 0;
+
+
+    if (
+        binCount > 0 &&
+        arithmeticSum > 0
+    ) {
+
+        const geometricMean =
+            Math.exp(
+                logSum / binCount
+            );
+
+
+        const arithmeticMean =
+            arithmeticSum / binCount;
+
+
+        spectralFlatness =
+            geometricMean /
+            arithmeticMean;
+    }
+
+
+    return {
+        spectralEnergyRatio,
+        spectralFlatness
+    };
+}
+
+
+/*
+ * ---------------------------------------------------------
+ * BLOW DETECTION
+ * ---------------------------------------------------------
+ */
+
 function detectBlow() {
 
     if (candleBlownOut) {
         return;
     }
 
-    const now = performance.now();
+
+    const now =
+        performance.now();
+
 
     /*
-     * Measure the current volume.
+     * -----------------------------------------------
+     * STEP 1
+     *
+     * Measure current volume.
+     * -----------------------------------------------
      */
-    const currentVolume = getVolume();
+
+    const currentVolume =
+        getVolume();
+
 
     /*
-     * Add it to our rolling 1-second history.
+     * Add it to the 1-second history.
      */
     addVolumeSample(currentVolume);
 
+
     /*
-     * Calculate the ambient volume.
+     * -----------------------------------------------
+     * STEP 2
+     *
+     * Calculate ambient volume.
+     * -----------------------------------------------
      */
+
     const ambientAverage =
         getAmbientAverage();
 
 
     /*
-     * Don't attempt detection until we have
-     * approximately 1 second of background data.
+     * -----------------------------------------------
+     * STEP 3
+     *
+     * Frequency analysis.
+     * -----------------------------------------------
      */
-    if (volumeHistory.length > 5) {
 
-        /*
-         * Determine whether the current sound is
-         * significantly louder than the ambient level.
-         */
-        const suddenIncrease =
+    const frequency =
+        analyseFrequencies();
+
+
+    /*
+     * -----------------------------------------------
+     * STEP 4
+     *
+     * Detect sudden volume increase.
+     * -----------------------------------------------
+     */
+
+    let suddenIncrease = false;
+
+
+    if (ambientAverage > 0) {
+
+        suddenIncrease =
             currentVolume >
             ambientAverage * BLOW_RATIO;
+    }
 
 
-        if (suddenIncrease) {
+    /*
+     * -----------------------------------------------
+     * STEP 5
+     *
+     * Check frequency characteristics.
+     * -----------------------------------------------
+     */
 
-            /*
-             * A possible blow has started.
-             */
-            if (possibleBlowStart === null) {
-
-                possibleBlowStart = now;
-            }
-
-
-            /*
-             * Has the increase lasted for at least
-             * 200 milliseconds?
-             */
-            const duration =
-                now - possibleBlowStart;
+    const hasEnoughSpectralEnergy =
+        frequency.spectralEnergyRatio >
+        MIN_SPECTRAL_ENERGY;
 
 
-            if (duration >= BLOW_DURATION) {
+    const isNoiseLike =
+        frequency.spectralFlatness >
+        MIN_SPECTRAL_FLATNESS;
 
-                blowOutCandle();
 
-                return;
-            }
+    /*
+     * A possible blow needs all three:
+     *
+     *   1. Sudden increase
+     *   2. Sufficient broadband energy
+     *   3. Noise-like spectrum
+     */
+    const possibleBlow =
+        suddenIncrease &&
+        hasEnoughSpectralEnergy &&
+        isNoiseLike;
 
-        } else {
 
-            /*
-             * The sound dropped back toward ambient
-             * levels, so cancel the possible blow.
-             */
-            possibleBlowStart = null;
+    /*
+     * -----------------------------------------------
+     * STEP 6
+     *
+     * Require the condition to persist for
+     * at least 200 milliseconds.
+     * -----------------------------------------------
+     */
+
+    if (possibleBlow) {
+
+        /*
+         * Start timing the possible blow.
+         */
+        if (possibleBlowStart === null) {
+
+            possibleBlowStart = now;
         }
+
+
+        const duration =
+            now - possibleBlowStart;
+
+
+        /*
+         * Blow confirmed.
+         */
+        if (duration >= BLOW_DURATION) {
+
+            blowOutCandle();
+
+            return;
+        }
+
+
+    } else {
+
+        /*
+         * The sound no longer looks like a blow.
+         *
+         * Cancel the timer.
+         */
+        possibleBlowStart = null;
     }
 
 
@@ -539,69 +857,90 @@ function detectBlow() {
      * Continue monitoring.
      */
     animationFrame =
-        requestAnimationFrame(detectBlow);
+        requestAnimationFrame(
+            detectBlow
+        );
 }
 
 
+/*
+ * ---------------------------------------------------------
+ * EXTINGUISH CANDLE
+ * ---------------------------------------------------------
+ */
 
-        /*
-         * Extinguish the candle.
-         */
-        function blowOutCandle() {
+function blowOutCandle() {
 
-            candleBlownOut = true;
+    candleBlownOut = true;
 
-            /*
-             * Stop microphone processing.
-             */
-            if (animationFrame) {
-                cancelAnimationFrame(animationFrame);
-            }
 
-            /*
-             * Replace lit candle with extinguished candle.
-             */
+    /*
+     * Stop animation loop.
+     */
+    if (animationFrame) {
+
+        cancelAnimationFrame(
+            animationFrame
+        );
+    }
+
+
+    /*
+     * Replace the candle image.
+     */
             candle.src = "data:image/jpeg;base64,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";
 
-            /*
-             * Remove flame.
-             */
-            flame.style.display = "none";
 
-            /*
-             * Show smoke.
-             */
-            smoke.style.opacity = "1";
-
-            smoke.style.animation =
-                "smoke 2.5s ease-out forwards";
-
-            message.textContent =
-                "";
-
-            /*
-             * Stop microphone stream after
-             * the candle has been blown out.
-             */
-            if (microphone && microphone.mediaStream) {
-
-                microphone.mediaStream
-                    .getTracks()
-                    .forEach(track => track.stop());
-            }
-        }
+    /*
+     * Remove flame.
+     */
+    flame.style.display =
+        "none";
 
 
-        /*
-         * Start listening when the user presses the button.
-         *
-         * Browsers generally require microphone access to
-         * begin after a user interaction.
-         */
-        startButton.addEventListener(
-            "click",
-            startMicrophone
-        );
+    /*
+     * Show smoke.
+     */
+    smoke.style.opacity =
+        "1";
+
+
+    smoke.style.animation =
+        "smoke 2.5s ease-out forwards";
+
+
+    message.textContent =
+        "";
+
+
+    /*
+     * Stop microphone.
+     */
+    if (
+        microphone &&
+        microphone.mediaStream
+    ) {
+
+        microphone.mediaStream
+            .getTracks()
+            .forEach(
+                track => track.stop()
+            );
+    }
+}
+
+
+/*
+ * ---------------------------------------------------------
+ * START BUTTON
+ * ---------------------------------------------------------
+ */
+
+startButton.addEventListener(
+    "click",
+    startMicrophone
+);
+
         
         document.getElementById("startButton").click();
     </script>
