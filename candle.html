@@ -771,6 +771,7 @@ function finishCalibration() {
     
 // Hide it first.
     smoke.classList.remove("show");
+    candleBlownOut = false;
 
     // Force the browser to recognise the reset.
     void smoke.offsetWidth;
@@ -1216,9 +1217,9 @@ function showSmoke() {
  */
 
 function blowOutCandle() {
-    //if (candleBlownOut) {
-    //    return;
-    //}
+    if (candleBlownOut) {
+        return;
+    }
 //
     candleBlownOut = true;
 
