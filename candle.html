@@ -254,7 +254,7 @@ const AVERAGE_PERIOD = 1000;
  * level for this long before we extinguish
  * the candle.
  */
-const BLOW_DURATION = 200;
+const BLOW_DURATION = 50;
 
 
 /*
@@ -364,7 +364,7 @@ async function startMicrophone() {
         startButton.classList.add("hidden");
 
         message.textContent =
-            "Blow into the microphone to extinguish the candle!";
+            "";
 
 
         /*
@@ -812,7 +812,7 @@ function detectBlow() {
      * STEP 6
      *
      * Require the condition to persist for
-     * at least 200 milliseconds.
+     * at least 50 milliseconds.
      * -----------------------------------------------
      */
 
